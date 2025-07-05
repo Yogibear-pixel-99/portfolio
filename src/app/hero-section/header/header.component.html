@@ -46,17 +46,27 @@
     <img src="images/hero-section/4.png" />
   </div>
   <div class="lang-wrapper">
-
-   
-    <span (click)="changeLang()" [ngClass]="{'selected' : lang === 'en', 'not-selected' : lang === 'de'}">EN</span> 
-    
-    
-    <div class="lang-line">
-      <div class="lang-dot"></div>
+    <div class="lang-single-wrapper">
+      <span
+        (click)="changeLang()"
+        [ngClass]="{ selected: lang === 'en', 'not-selected': lang === 'de' }"
+        >EN</span
+      ><img [ngClass]="{'select-hover': lang === 'de'}" src="images/hero-section/Toggle.png" />
     </div>
 
+    <div class="lang-line">
+      <div
+        class="lang-dot"
+        [ngClass]="{ 'dot-de': lang === 'de', 'dot-en': lang === 'en' }"
+      ></div>
+    </div>
 
-    <span (click)="changeLang()" [ngClass]="{'selected' : lang === 'de', 'not-selected' : lang === 'en'}">DE</span>
+    <div class="lang-single-wrapper">
+      <span
+        (click)="changeLang()"
+        [ngClass]="{ 'selected': lang === 'de', 'not-selected': lang === 'en' }"
+        >DE</span
+      ><img [ngClass]="{'select-hover' : lang === 'en'}" src="images/hero-section/Toggle.png" />
+    </div>
   </div>
 </section>
-
