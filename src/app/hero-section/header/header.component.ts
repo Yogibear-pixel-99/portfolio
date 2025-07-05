@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../services/languages/language.service';
 
 @Component({
   standalone: true,
@@ -9,9 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-lang: string = "de";
+langService = inject(LanguageService);
 
 changeLang(){
-  this.lang === "de" ? this.lang = "en" : this.lang = "de";
+  this.langService.lang === "de" ? this.langService.lang = "en" : this.langService.lang = "de";
 }
 }

@@ -1,5 +1,14 @@
 <section>
-    <div class="hero">
-        <app-header></app-header>
+  <app-header></app-header>
+
+  <div class="main-wrapper">
+    <div class="hello-wrapper">
+        <div class="animate-hello"></div>
+        <span class="hero-button">{{langService.data['hero'].hello[langService.lang]}}</span>
     </div>
+    <div></div>
+    <div></div>
+    <div class="hero-button touch">{{langService.data['hero'].touch[langService.lang]}}</div>
+  </div>
+  <div></div>
 </section>

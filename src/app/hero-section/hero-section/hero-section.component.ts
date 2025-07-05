@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
+import { LanguageService } from '../../services/languages/language.service';
 
 @Component({
   standalone: true,
@@ -9,5 +10,5 @@ import { HeaderComponent } from "../header/header.component";
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-
+langService = inject(LanguageService);
 }

@@ -1,16 +1,32 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/mixins.scss" as mixins;
+@use "../../styles/fonts.scss";
+
+
 section {
-    background-color: white;
-
-    width: 100dvw;
-    height: 100dvh;
-}
-
-.hero {
+    background-color: colors.$main-white;
     background-image: url('../../../../public/images/hero-section/her-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    width: 100%;
-    height: 100%;
-    
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.main-wrapper {
+@include mixins.absolute-ctr();
+}
+
+.hero-button {
+    font-family: bricolage, sans-serif;
+    font-weight: 500;
+    color: colors.$main-white;
+    border: solid colors.$main-white 1px;
+    @include mixins.flex-spbtw-ctr-row(center);
+    padding: 12px 24px;
+    border-radius: 100px;;
+}
+
+.touch {
+    box-shadow: 2px 4px 0 0 colors.$main-white;
 }
