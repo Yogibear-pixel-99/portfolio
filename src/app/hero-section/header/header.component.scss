@@ -1,0 +1,86 @@
+@use "../../styles/mixins.scss" as mixins;
+@use "../../styles/fonts.scss";
+@use "../../styles/colors.scss" as colors;
+
+section {
+  margin: 0 auto;
+  color: white;
+  height: 80px;
+  width: 90%;
+  @include mixins.flex-spbtw-ctr-row();
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo path {
+  transition: fill 0.5s ease-in-out;
+}
+
+.logo:hover path {
+  fill: colors.$main-yellow;
+}
+
+.link-wrapper {
+  position: relative;
+  @include mixins.flex-spbtw-ctr-row(center, center);
+
+  > img {
+    @include mixins.absolute-ctr();
+    width: 120px;
+    height: 40px;
+    clip-path: inset(0 120px 0 0);
+  }
+}
+.link-wrapper:nth-of-type(2) {
+  position: relative;
+  @include mixins.flex-spbtw-ctr-row(center, center);
+
+  > img {
+    @include mixins.absolute-ctr();
+    width: 120px;
+    height: 40px;
+    clip-path: inset(0 0 40px 0);
+  }
+}
+
+.link {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: bricolage, sans-serif;
+  z-index: 10;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover + img {
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 0.3s;
+  }
+}
+
+.lang-wrapper {
+  @include mixins.flex-spbtw-ctr-row();
+
+  > span {
+    font-weight: 600;
+    font-family: bricolage, sans-serif;
+    font-size: 16px;
+  }
+}
+
+.selected {
+    color: colors.$main-red;
+    pointer-events: none;
+}
+
+.not-selected {
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        color: blue;
+    }
+    }

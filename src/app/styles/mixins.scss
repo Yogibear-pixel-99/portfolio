@@ -1,0 +1,14 @@
+
+@mixin flex-spbtw-ctr-row($jf-ct: space-between, $al-it: center, $fl-dir: row) {
+    display: flex;
+    justify-content: $jf-ct;
+    align-items: $al-it;
+    flex-direction: $fl-dir;
+}
+
+@mixin absolute-ctr(){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
