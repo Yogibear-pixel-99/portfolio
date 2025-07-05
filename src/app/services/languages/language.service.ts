@@ -32,6 +32,10 @@ data: {[key: string]: any} = {
       en: "Hello World",
       de: "Hallo Welt"
     },
+    helloHover : {
+      en: "I'M JOACHIM PÜRCHER",
+      de: "ICH HEIßE JOACHIM PÜRCHER",
+    },
     touch : {
       en: "Get in Touch",
       de: "Kontakt aufnehmen"
