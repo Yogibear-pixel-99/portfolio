@@ -2,73 +2,58 @@
 @use "../../styles/mixins.scss" as mixins;
 @use "../../styles/fonts.scss";
 
-
 section {
-    background-color: colors.$main-white;
-    background-image: url('../../../../public/images/hero-section/her-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    width: 100dvw;
-    height: 100dvh;
+  background-color: colors.$main-white;
+  background-image: url("../../../../public/images/hero-section/her-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 .main-wrapper {
-@include mixins.absolute-ctr();
-@include mixins.flex-spbtw-ctr-row(space-between, center, column);
-width: 70%;
-height: 60%;
+  @include mixins.absolute-ctr();
+  @include mixins.flex-spbtw-ctr-row(space-between, center, column);
+  width: 70%;
+  height: 60%;
 }
 
 .hero-button {
-    font-family: bricolage, sans-serif;
-    font-weight: 500;
-    color: colors.$main-white;
-    border: solid colors.$main-white 1px;
-    @include mixins.flex-spbtw-ctr-row(center);
-    align-self: flex-start;
-    padding: 12px 24px;
-    border-radius: 100px;
-    width: 200px;
-    height: 40px;
-    text-wrap: nowrap;
+  font-family: bricolage, sans-serif;
+  font-weight: 500;
+  color: colors.$main-white;
+  border: solid colors.$main-white 1px;
+  @include mixins.flex-spbtw-ctr-row(center);
+  align-self: flex-start;
+  padding: 12px 24px;
+  border-radius: 100px;
+  width: 200px;
+  height: 40px;
+  text-wrap: nowrap;
 }
 
 .hello-wrapper {
-    align-self: flex-start;
+  align-self: flex-start;
 
-    > div {
-        position: relative;
-        overflow: hidden;
-    }
-}
-
-.animate-hand {
+  > div {
     position: relative;
-    width: 275px;
-    height: 40px;
-}
-
-.hand-wrapper-animate {
-    transform: translateX(120px);
+    overflow: hidden;
+  }
 }
 
 .hand-wrapper {
-    position: absolute;
-    right: calc(50% - 20px);
-    width: 40px;
-    height: 40px;
-    @include mixins.flex-spbtw-ctr-row(center);
-    transition: transform ease-in-out 0.4s;
+margin-left: auto;
+  width: 40px;
+  height: 40px;
+}
 
-    > .hand-logo {
-        filter: opacity(0);
-        animation: animate-hand-logo-main-back forwards 0.6s ease;
-    }
+.hand-logo {
+     animation: animate-hand-logo-main-back forwards 0.6s ease;
 }
 
 .hand-logo-animate {
-animation: animate-hand-logo-main forwards 0.6s ease;
+  animation: animate-hand-logo-main forwards 0.6s ease;
 }
 
 @keyframes animate-hand-logo-main {
@@ -94,47 +79,81 @@ animation: animate-hand-logo-main forwards 0.6s ease;
 }
 
 .hello-button {
-    transition: all 0.3s ease-in-out;
-    position: relative;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 
-    > span {
-        @include mixins.absolute-ctr();
-        z-index: 10;
+  > span {
+    @include mixins.absolute-ctr();
+    z-index: 10;
 
-        &:hover {
-            cursor: default;
-        }
+    &:hover {
+      cursor: default;
     }
+  }
 }
 
 .touch-button {
-    box-shadow: 2px 4px 0 0 colors.$main-white;
-    align-self: flex-end;
+  box-shadow: 2px 4px 0 0 colors.$main-white;
+  align-self: flex-end;
 }
 
 .hello-hover {
+  animation: hello-bounce 1s forwards;
+}
+
+@keyframes hello-bounce {
+  0% {
+    width: 200px;
+  }
+  50% {
+    width: 285px;
+  }
+  85% {
+    width: 270px; /* Überdehnung */
+  }
+  100% {
+    width: 275px; /* leicht zurück */
+  }
+
+}
+
+.hello-hover-back {
+    animation: hello-bounce-back 1s forwards;
+}
+
+@keyframes hello-bounce-back {
+  0% {
     width: 275px;
+  }
+  50% {
+    width: 190px; /* leicht zurück */
+  }
+  85% {
+    width: 205px; /* Überdehnung */
+  }
+  100% {
+    width: 200px;
+  }
 }
 
 .hello-name-mask {
-    @include mixins.absolute-ctr();
-    width: 0;
-    height: 40px;
-    background-color: colors.$main-blue;
-    z-index: 5;
-    transition: width ease-in-out 0.4s;
+  @include mixins.absolute-ctr();
+  width: 0;
+  height: 40px;
+  background-color: colors.$main-blue;
+  z-index: 5;
+  transition: width ease-in-out 0.4s;
 }
 
 .hello-button-hover {
-    width: 275px;
+  width: 275px;
 }
 
 .hide-hello-name {
-    
-    transition: filter 0.3s ease-in-out;
-    filter: opacity(0);
+  transition: filter 0.3s ease-in-out;
+  filter: opacity(0);
 }
 
 .show-hello-name {
-    filter: opacity(1);
+  filter: opacity(1);
 }

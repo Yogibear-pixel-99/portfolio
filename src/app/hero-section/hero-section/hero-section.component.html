@@ -3,7 +3,7 @@
 
   <div class="main-wrapper">
     <div class="hello-wrapper">
-      <div class="animate-hand">
+      <div [ngClass]="helloEnterAnimate ? 'hello-hover' : 'hello-hover-back'">
         <div class="hand-wrapper"
         [ngClass]="{'hand-wrapper-animate' : helloEnterAnimate === true}">
           <svg [ngClass]="helloEnterAnimate === true ? 'hand-logo-animate' : 'hand-logo'"
@@ -24,7 +24,7 @@
         (mouseover)="showName(); helloEnterAnimate = true"
         (mouseout)="hideName(); helloEnterAnimate = false"
         class="hero-button hello-button"
-        [ngClass]="{ 'hello-hover': helloEnterAnimate === true }"
+        [ngClass]="helloEnterAnimate ? 'hello-hover' : 'hello-hover-back'"
       >
         <span
           class="hide-hello-name"
