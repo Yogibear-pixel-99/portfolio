@@ -27,7 +27,6 @@ circleLinks: CircleLink[] = [
   {linkImgSrc : "images/hero-section/mail.svg", linkHref : "mailto:joachim.puercher@gmail.com", imgAltText : "email logo"}
 ]
 
-
 showName(){
 setTimeout(() => this.helloEnterText = true, 150);
 }

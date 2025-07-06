@@ -35,7 +35,7 @@
   </div>
   <div class="link-wrapper">
     <div class="link">{{langService.data['header'].skills[langService.lang]}}</div>
-    <img src="images/hero-section/2.png" />
+    <img [ngClass]="langService.lang === 'de' ? 'de-underline' : 'en-underline' " src="images/hero-section/2.png" />
   </div>
   <div class="link-wrapper">
     <div class="link">{{langService.data['header'].projects[langService.lang]}}</div>

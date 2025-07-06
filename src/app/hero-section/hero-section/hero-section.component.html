@@ -96,7 +96,7 @@
         <span
           (mouseenter)="hoverLetterSecond = letterIndex"
           (mouseleave)="hoverLetterSecond = null"
-          class="single-letter"
+          class="single-letter" [ngStyle]="{'z-index' : letterIndex}"
           >{{
             hoverLetterSecond === letterIndex
               ? langService.data["hero"].mainSingle.secondHover[
