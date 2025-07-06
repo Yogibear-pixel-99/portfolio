@@ -15,8 +15,8 @@ section {
 .main-wrapper {
   @include mixins.absolute-ctr();
   @include mixins.flex-spbtw-ctr-row(space-between, center, column);
-  width: 70%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
 }
 
 .hero-button {
@@ -28,7 +28,7 @@ section {
   align-self: flex-start;
   padding: 12px 24px;
   border-radius: 100px;
-  width: 200px;
+  width: 145px;
   height: 40px;
   text-wrap: nowrap;
 }
@@ -95,6 +95,14 @@ margin-left: auto;
 .touch-button {
   box-shadow: 2px 4px 0 0 colors.$main-white;
   align-self: flex-end;
+  width: auto;
+  transition: all ease 0.3s;
+
+  &:hover {
+    transform: translate(2px, 4px);
+    background-color: colors.$main-red;
+    box-shadow: 0 0 0 0 colors.$main-white;
+  }
 }
 
 .hello-hover {
@@ -103,16 +111,16 @@ margin-left: auto;
 
 @keyframes hello-bounce {
   0% {
-    width: 200px;
+    width: 145px;
   }
   50% {
     width: 285px;
   }
   85% {
-    width: 270px; /* Überdehnung */
+    width: 270px;
   }
   100% {
-    width: 275px; /* leicht zurück */
+    width: 275px;
   }
 
 }
@@ -126,13 +134,13 @@ margin-left: auto;
     width: 275px;
   }
   50% {
-    width: 190px; /* leicht zurück */
+    width: 135px;
   }
   85% {
-    width: 205px; /* Überdehnung */
+    width: 150px;
   }
   100% {
-    width: 200px;
+    width: 145px;
   }
 }
 
@@ -156,4 +164,54 @@ margin-left: auto;
 
 .show-hello-name {
   filter: opacity(1);
+}
+
+.single-letter {
+    color: colors.$main-white;
+  font-family: bricolage, sans-serif;
+  font-size: clamp(64px, 10vw, 128px);
+  font-weight: 700;
+
+  &:hover {
+    color: colors.$main-yellow;
+    cursor: default;
+  }
+}
+
+.main-text-wrapper {
+    width: 100%;
+}
+
+.frontend-wrapper {
+    position: relative;
+    @include mixins.flex-spbtw-ctr-row();
+    margin-right: auto;
+}
+
+.pic-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include mixins.flex-spbtw-ctr-row(center, center, column);
+    padding: 10px 10px 4px;
+    background-color: colors.$main-white;
+    font-family: kalam-700, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    transform: rotate(8deg);
+
+    > img {
+        filter: grayscale(1);
+        width: 176px;
+        height: 176px;
+        margin-bottom: 6px;
+    }
+}
+
+.dev-wrapper {
+    justify-self: flex-end;
+}
+
+.show-image {
+    filter: grayscale(0) !important;
 }

@@ -13,8 +13,12 @@ import { CommonModule } from '@angular/common';
 export class HeroSectionComponent {
 langService = inject(LanguageService);
 
-helloEnterText = false;
-helloEnterAnimate = false;
+helloEnterText:boolean = false;
+helloEnterAnimate:boolean = false;
+profilHovered:boolean = false;
+
+hoverLetterFirst: number | null = null;
+hoverLetterSecond: number | null = null;
 
 
 showName(){

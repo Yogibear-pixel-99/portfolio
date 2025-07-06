@@ -4,9 +4,14 @@
   <div class="main-wrapper">
     <div class="hello-wrapper">
       <div [ngClass]="helloEnterAnimate ? 'hello-hover' : 'hello-hover-back'">
-        <div class="hand-wrapper"
-        [ngClass]="{'hand-wrapper-animate' : helloEnterAnimate === true}">
-          <svg [ngClass]="helloEnterAnimate === true ? 'hand-logo-animate' : 'hand-logo'"
+        <div
+          class="hand-wrapper"
+          [ngClass]="{ 'hand-wrapper-animate': helloEnterAnimate === true }"
+        >
+          <svg
+            [ngClass]="
+              helloEnterAnimate === true ? 'hand-logo-animate' : 'hand-logo'
+            "
             width="36"
             height="36"
             viewBox="0 0 36 36"
@@ -44,8 +49,56 @@
         ></div>
       </div>
     </div>
-    <div></div>
-    <div></div>
+
+    <div class="main-text-wrapper">
+      <div class="frontend-wrapper">
+        <div>
+          @for (letter of
+          langService.data['hero'].mainSingle.firstNormal[langService.lang];
+          track $index; let letterIndex = $index) {
+          <span
+            (mouseenter)="hoverLetterFirst = letterIndex"
+            (mouseleave)="hoverLetterFirst = null"
+            class="single-letter"
+            >{{
+              hoverLetterFirst === letterIndex
+                ? langService.data["hero"].mainSingle.firstHover[
+                    langService.lang
+                  ][letterIndex]
+                : letter
+            }}</span
+          >
+          }
+        </div>
+        <div (mouseenter)="profilHovered = true" (mouseleave)="profilHovered = false" class="pic-wrapper">
+          <img [ngClass]="{'show-image' : profilHovered === true}" src="images/hero-section/placeholder.jpg" alt="profil picture" />
+          <span>Joachim
+          @if (profilHovered === !true) {
+          <span>:-&#41;</span>
+          } @else {
+          <span>:-D</span>
+          }</span>
+        </div>
+      </div>
+      <div class="dev-wrapper">
+        @for (letter of
+        langService.data['hero'].mainSingle.secondNormal[langService.lang];
+        track $index; let letterIndex = $index) {
+        <span
+          (mouseenter)="hoverLetterSecond = letterIndex"
+          (mouseleave)="hoverLetterSecond = null"
+          class="single-letter"
+          >{{
+            hoverLetterSecond === letterIndex
+              ? langService.data["hero"].mainSingle.secondHover[
+                  langService.lang
+                ][letterIndex]
+              : letter
+          }}</span
+        >
+        }
+      </div>
+    </div>
     <div class="hero-button touch-button">
       {{ langService.data["hero"].touch[langService.lang] }}
     </div>
