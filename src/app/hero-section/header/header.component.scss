@@ -3,10 +3,9 @@
 @use "../../styles/colors.scss" as colors;
 
 section {
-  margin: 0 auto;
+  margin: 0 72px;
   color: white;
   height: 80px;
-  width: 90%;
   @include mixins.flex-spbtw-ctr-row();
 }
 

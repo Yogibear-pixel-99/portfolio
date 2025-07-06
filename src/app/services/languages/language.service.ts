@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LanguageService {
-  lang: string = 'de';
+  lang: string = 'en';
 
   data: { [key: string]: any } = {
     header: {

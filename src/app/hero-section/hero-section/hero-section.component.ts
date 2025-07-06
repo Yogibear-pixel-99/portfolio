@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { LanguageService } from '../../services/languages/language.service';
 import { CommonModule } from '@angular/common';
-
+import { CircleLinkComponent } from "../../links/circle-link/circle-link.component";
+import { CircleLink } from '../../model';
 @Component({
   standalone: true,
   selector: 'app-hero-section',
-  imports: [HeaderComponent, CommonModule],
+  imports: [HeaderComponent, CommonModule, CircleLinkComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
@@ -19,6 +20,12 @@ profilHovered:boolean = false;
 
 hoverLetterFirst: number | null = null;
 hoverLetterSecond: number | null = null;
+
+circleLinks: CircleLink[] = [
+  {linkImgSrc : "images/hero-section/linkedin.svg", linkHref : "https://www.linkedin.com/in/joachim-pürcher-92b249345/", imgAltText : "linkedin logo"},
+  {linkImgSrc : "images/hero-section/github.svg", linkHref : "https://github.com/Yogibear-pixel-99", imgAltText : "github logo"},
+  {linkImgSrc : "images/hero-section/mail.svg", linkHref : "mailto:joachim.puercher@gmail.com", imgAltText : "email logo"}
+]
 
 
 showName(){

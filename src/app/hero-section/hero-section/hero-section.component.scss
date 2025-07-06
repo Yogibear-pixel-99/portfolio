@@ -215,3 +215,14 @@ margin-left: auto;
 .show-image {
     filter: grayscale(0) !important;
 }
+
+.social-links {
+    @include mixins.flex-spbtw-ctr-row(center, center, column);
+    position: absolute;
+    left: 72px;
+    bottom: 260px;
+    gap: 8px;
+
+
+}
+

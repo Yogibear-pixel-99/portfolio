@@ -70,14 +70,23 @@
           >
           }
         </div>
-        <div (mouseenter)="profilHovered = true" (mouseleave)="profilHovered = false" class="pic-wrapper">
-          <img [ngClass]="{'show-image' : profilHovered === true}" src="images/hero-section/placeholder.jpg" alt="profil picture" />
-          <span>Joachim
-          @if (profilHovered === !true) {
-          <span>:-&#41;</span>
-          } @else {
-          <span>:-D</span>
-          }</span>
+        <div
+          (mouseenter)="profilHovered = true"
+          (mouseleave)="profilHovered = false"
+          class="pic-wrapper"
+        >
+          <img
+            [ngClass]="{ 'show-image': profilHovered === true }"
+            src="images/hero-section/placeholder.jpg"
+            alt="profil picture"
+          />
+          <span
+            >Joachim @if (profilHovered === !true) {
+            <span>:-&#41;</span>
+            } @else {
+            <span>:-D</span>
+            }</span
+          >
         </div>
       </div>
       <div class="dev-wrapper">
@@ -103,5 +112,13 @@
       {{ langService.data["hero"].touch[langService.lang] }}
     </div>
   </div>
-  <div></div>
+  <div class="social-links">
+      @for (link of circleLinks; track $index) {
+      <app-circle-link
+       [linkHref]="link.linkHref"
+       [linkImgSrc]="link.linkImgSrc"
+       [imgAltText]="link.imgAltText"
+    ></app-circle-link>
+    }
+  </div>
 </section>
