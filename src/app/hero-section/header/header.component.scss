@@ -39,6 +39,8 @@ section {
     height: 40px;
     clip-path: inset(0 110px 0 0);
   }
+
+
 }
 .link-wrapper:nth-of-type(2) {
   position: relative;
@@ -50,6 +52,17 @@ section {
     height: 40px;
     clip-path: inset(0 0 40px 0);
   }
+}
+
+.link-wrapper:nth-of-type(5) {
+  position: relative;
+  @include mixins.flex-spbtw-ctr-row(center, center);
+  
+> img {
+  transform: translate(-50%, -8px);
+  width: 140px;
+  clip-path: inset(0 140px 0 0);
+}
 }
 
 .de-underline {

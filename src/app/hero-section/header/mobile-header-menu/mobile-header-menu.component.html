@@ -45,48 +45,72 @@
   </div>
 
   <div class="middle-links">
-<div class="link-wrapper">
-    <div class="link"> {{langService.data['header'].aboutme[langService.lang]}} </div>
-    <img src="images/hero-section/1.png" />
-  </div>
-  <div class="link-wrapper">
-    <div class="link">{{langService.data['header'].skills[langService.lang]}}</div>
-    <img [ngClass]="langService.lang === 'de' ? 'de-underline' : 'en-underline' " src="images/hero-section/2.png" />
-  </div>
-  <div class="link-wrapper">
-    <div class="link">{{langService.data['header'].projects[langService.lang]}}</div>
-    <img src="images/hero-section/3.png" />
-  </div>
-  <div class="link-wrapper">
-    <div class="link">{{langService.data['header'].contact[langService.lang]}}</div>
-    <img src="images/hero-section/4.png" />
-  </div>
-  <div class="lang-wrapper">
-    <div class="lang-single-wrapper">
-      <span
-        (click)="langService.changeLang()"
-        [ngClass]="{ selected: langService.lang === 'en', 'not-selected': langService.lang === 'de' }"
-        >EN</span
-      ><img [ngClass]="{'select-hover': langService.lang === 'de'}" src="images/hero-section/Toggle.png" />
+    <div class="link-wrapper">
+      <div class="link">
+        {{ langService.data["header"].aboutme[langService.lang] }}
+      </div>
+      <img src="images/hero-section/1.png" />
     </div>
+    <div class="link-wrapper">
+      <div class="link">
+        {{ langService.data["header"].skills[langService.lang] }}
+      </div>
+      <img
+        [ngClass]="langService.lang === 'de' ? 'de-underline' : 'en-underline'"
+        src="images/hero-section/2.png"
+      />
+    </div>
+    <div class="link-wrapper">
+      <div class="link">
+        {{ langService.data["header"].projects[langService.lang] }}
+      </div>
+      <img src="images/hero-section/3.png" />
+    </div>
+    <div class="link-wrapper">
+      <div class="link">
+        {{ langService.data["header"].contact[langService.lang] }}
+      </div>
+      <img src="images/hero-section/4.png" />
+    </div>
+    <div class="lang-wrapper">
+      <div class="lang-single-wrapper">
+        <span
+          (click)="langService.changeLang()"
+          [ngClass]="{
+            selected: langService.lang === 'en',
+            'not-selected': langService.lang === 'de'
+          }"
+          >EN</span
+        ><img
+          [ngClass]="{ 'select-hover': langService.lang === 'de' }"
+          src="images/hero-section/Toggle.png"
+        />
+      </div>
 
-    <div class="lang-line">
-      <div
-        class="lang-dot"
-        [ngClass]="{ 'dot-de': langService.lang === 'de', 'dot-en': langService.lang === 'en' }"
-      ></div>
-    </div>
+      <div class="lang-line">
+        <div
+          class="lang-dot"
+          [ngClass]="{
+            'dot-de': langService.lang === 'de',
+            'dot-en': langService.lang === 'en'
+          }"
+        ></div>
+      </div>
 
-    <div class="lang-single-wrapper">
-      <span
-        (click)="langService.changeLang()"
-        [ngClass]="{ 'selected': langService.lang === 'de', 'not-selected': langService.lang === 'en' }"
-        >DE</span
-      ><img [ngClass]="{'select-hover' : langService.lang === 'en'}" src="images/hero-section/Toggle.png" />
+      <div class="lang-single-wrapper">
+        <span
+          (click)="langService.changeLang()"
+          [ngClass]="{
+            selected: langService.lang === 'de',
+            'not-selected': langService.lang === 'en'
+          }"
+          >DE</span
+        ><img
+          [ngClass]="{ 'select-hover': langService.lang === 'en' }"
+          src="images/hero-section/Toggle.png"
+        />
+      </div>
     </div>
   </div>
-  </div>
-  <div class="bottom-links">
-    asdfasdf
-  </div>
+  <div class="bottom-links">asdfasdf</div>
 </div>
