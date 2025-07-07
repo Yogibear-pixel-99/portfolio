@@ -57,11 +57,12 @@
           langService.data['hero'].mainSingle.firstNormal[langService.lang];
           track $index; let letterIndex = $index) {
           <span
-            (mouseenter)="hoverLetterFirst = letterIndex"
-            (mouseleave)="hoverLetterFirst = null"
+            (mousemove)="hoveredLetterFirst = letterIndex"
+            (mouseleave)="hoveredLetterFirst = null"
             class="single-letter"
+            [ngStyle]="{ 'z-Index': letterIndex }"
             >{{
-              hoverLetterFirst === letterIndex
+              hoveredLetterFirst === letterIndex
                 ? langService.data["hero"].mainSingle.firstHover[
                     langService.lang
                   ][letterIndex]
@@ -94,11 +95,12 @@
         langService.data['hero'].mainSingle.secondNormal[langService.lang];
         track $index; let letterIndex = $index) {
         <span
-          (mouseenter)="hoverLetterSecond = letterIndex"
-          (mouseleave)="hoverLetterSecond = null"
-          class="single-letter" [ngStyle]="{'z-index' : letterIndex}"
+          (mouseenter)="hoveredLetterSecond = letterIndex"
+          (mouseleave)="hoveredLetterSecond = null"
+          class="single-letter"
+          [ngStyle]="{ 'z-index': letterIndex }"
           >{{
-            hoverLetterSecond === letterIndex
+            hoveredLetterSecond === letterIndex
               ? langService.data["hero"].mainSingle.secondHover[
                   langService.lang
                 ][letterIndex]
@@ -113,11 +115,11 @@
     </div>
   </div>
   <div class="social-links">
-      @for (link of circleLinks; track $index) {
-      <app-circle-link
-       [linkHref]="link.linkHref"
-       [linkImgSrc]="link.linkImgSrc"
-       [imgAltText]="link.imgAltText"
+    @for (link of circleLinks; track $index) {
+    <app-circle-link
+      [linkHref]="link.linkHref"
+      [linkImgSrc]="link.linkImgSrc"
+      [imgAltText]="link.imgAltText"
     ></app-circle-link>
     }
   </div>

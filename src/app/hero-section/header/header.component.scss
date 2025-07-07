@@ -7,6 +7,10 @@ section {
   color: white;
   height: 80px;
   @include mixins.flex-spbtw-ctr-row();
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 }
 
 .logo {
@@ -167,3 +171,20 @@ section {
     transition: clip-path 0.2s ease-in-out;
 }
 
+.mobile-header {
+  display: none;
+  padding: 16px;
+
+  @media (max-width: 850px) {
+    display: flex;
+    @include mixins.flex-spbtw-ctr-row();
+  }
+
+  > div {
+    @include mixins.flex-spbtw-ctr-row(center, center);
+    width: 32px;
+    height: 32px;
+  }
+
+
+}

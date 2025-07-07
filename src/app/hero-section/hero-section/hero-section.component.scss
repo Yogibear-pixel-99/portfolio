@@ -3,6 +3,7 @@
 @use "../../styles/fonts.scss";
 
 section {
+  position: relative;
   background-color: colors.$main-white;
   background-image: url("../../../../public/images/hero-section/her-bg.png");
   background-repeat: no-repeat;
@@ -15,8 +16,17 @@ section {
 .main-wrapper {
   @include mixins.absolute-ctr();
   @include mixins.flex-spbtw-ctr-row(space-between, center, column);
-  width: 50%;
-  height: 50%;
+  width: 800px;
+  height: 600px;
+
+  @media (max-width: 850px) {
+    position: static;
+    transform: translate(0, 0);
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 40px 20px 20px;
+  }
 }
 
 .hero-button {
@@ -43,13 +53,13 @@ section {
 }
 
 .hand-wrapper {
-margin-left: auto;
+  margin-left: auto;
   width: 40px;
   height: 40px;
 }
 
 .hand-logo {
-     animation: animate-hand-logo-main-back forwards 0.6s ease;
+  animation: animate-hand-logo-main-back forwards 0.6s ease;
 }
 
 .hand-logo-animate {
@@ -122,11 +132,10 @@ margin-left: auto;
   100% {
     width: 275px;
   }
-
 }
 
 .hello-hover-back {
-    animation: hello-bounce-back 1s forwards;
+  animation: hello-bounce-back 1s forwards;
 }
 
 @keyframes hello-bounce-back {
@@ -167,10 +176,23 @@ margin-left: auto;
 }
 
 .single-letter {
-    color: colors.$main-white;
+  position: relative;
+  color: colors.$main-white;
   font-family: bricolage, sans-serif;
-  font-size: clamp(64px, 10vw, 128px);
+  font-size: 128px;
   font-weight: 700;
+
+  @media(max-width: 750px) {
+    font-size: 96px;
+  }
+
+  @media(max-width: 550px) {
+    font-size: 64px;
+  }
+
+  @media(max-width: 360px) {
+    font-size: 48px;
+  }
 
   &:hover {
     color: colors.$main-yellow;
@@ -179,50 +201,64 @@ margin-left: auto;
 }
 
 .main-text-wrapper {
-    width: 100%;
+  width: 100%;
 }
 
 .frontend-wrapper {
+  position: relative;
+  @include mixins.flex-spbtw-ctr-row();
+  margin-right: auto;
+
+  @media (max-width: 850px) {
+    position: static;
+  }
+
+  > span {
     position: relative;
-    @include mixins.flex-spbtw-ctr-row();
-    margin-right: auto;
+  }
 }
 
 .pic-wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    @include mixins.flex-spbtw-ctr-row(center, center, column);
-    padding: 10px 10px 4px;
-    background-color: colors.$main-white;
-    font-family: kalam-700, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    transform: rotate(8deg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include mixins.flex-spbtw-ctr-row(center, center, column);
+  padding: 10px 10px 4px;
+  background-color: colors.$main-white;
+  font-family: kalam-700, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  transform: rotate(8deg);
 
-    > img {
-        filter: grayscale(1);
-        width: 176px;
-        height: 176px;
-        margin-bottom: 6px;
-    }
+  @media (max-width: 850px) {
+    right: 50%;
+    transform: translate(50%, 300px) rotate(8deg);
+  }
+
+  > img {
+    filter: grayscale(1);
+    width: 176px;
+    height: 176px;
+    margin-bottom: 6px;
+  }
 }
 
 .dev-wrapper {
-    justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 .show-image {
-    filter: grayscale(0) !important;
+  filter: grayscale(0) !important;
 }
 
 .social-links {
-    @include mixins.flex-spbtw-ctr-row(center, center, column);
-    position: absolute;
-    left: 72px;
-    bottom: 100px;
-    gap: 8px;
+  @include mixins.flex-spbtw-ctr-row(center, center, column);
+  position: absolute;
+  left: 72px;
+  bottom: 100px;
+  gap: 8px;
 
-
+  @media (max-width: 850px) {
+    display: none;
+  }
 }
-

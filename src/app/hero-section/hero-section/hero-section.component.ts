@@ -18,8 +18,8 @@ helloEnterText:boolean = false;
 helloEnterAnimate:boolean = false;
 profilHovered:boolean = false;
 
-hoverLetterFirst: number | null = null;
-hoverLetterSecond: number | null = null;
+hoveredLetterFirst: number | null = null;
+hoveredLetterSecond: number | null = null;
 
 circleLinks: CircleLink[] = [
   {linkImgSrc : "images/hero-section/linkedin.svg", linkHref : "https://www.linkedin.com/in/joachim-pürcher-92b249345/", imgAltText : "linkedin logo"},
@@ -33,7 +33,6 @@ setTimeout(() => this.helloEnterText = true, 150);
 
 hideName(){
 setTimeout(() => this.helloEnterText = false, 150);
-
 }
 
 }
