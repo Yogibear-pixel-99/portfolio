@@ -1,0 +1,50 @@
+@use "../../styles/mixins.scss" as mixins;
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/fonts.scss";
+
+section {
+@include mixins.flex-spbtw-ctr-row(center, center, column);
+position:absolute;
+inset: 0;
+background-color: colors.$main-white;
+background-image: url("../../../../public/images/hero-section/her-bg.png");
+background-size: cover;
+background-position: bottom;
+color: colors.$main-red;
+display: none;
+font-family: bricolage, sans-serif;
+font-size: 32px;
+z-index: 1000;
+
+
+@media  (max-width: 950px) and (orientation: landscape) and (max-height: 550px) {
+    display: flex;
+}
+
+> .rotate-logo {
+    width: 60px;
+animation: animate-rotate-img ease 2s infinite;
+}
+
+> .my-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+    
+}
+
+@keyframes animate-rotate-img {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(-90deg);
+  }
+  90% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

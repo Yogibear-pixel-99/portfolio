@@ -5,7 +5,7 @@
 section {
   position: relative;
   background-color: colors.$main-white;
-  background-image: url("../../../../public/images/hero-section/her-bg.png");
+  background-image: url("../../../../public/images/hero-section/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -16,17 +16,39 @@ section {
 .main-wrapper {
   @include mixins.absolute-ctr();
   @include mixins.flex-spbtw-ctr-row(space-between, center, column);
-  width: 800px;
+  width: clamp(300px, 80vw, 800px);
   height: 600px;
 
   @media (max-width: 850px) {
+    transform: translate(-50%, -100%);
+    justify-content: center;
+    // width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  @media (min-width: 850px) and (max-height: 720px) {
+    height: 60%;
     position: static;
     transform: translate(0, 0);
-    justify-content: center;
-    width: auto;
-    height: auto;
-    margin: 40px 20px 20px;
+    margin: 40px auto;
   }
+
+    @media (min-width: 850px) and (max-height: 600px) {
+    // flex-direction: row;
+    max-width: 600px;
+    margin: 10px auto 20px;
+  }
+
+    @media (min-width: 850px) and (max-height: 400px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 850px) and (max-height: 900px) {
+    transform: translate(-50%, -100%);
+  }
+
+  
 }
 
 .hero-button {
@@ -179,19 +201,15 @@ section {
   position: relative;
   color: colors.$main-white;
   font-family: bricolage, sans-serif;
-  font-size: 128px;
+  font-size: clamp(48px, 15vw, 128px);
   font-weight: 700;
 
-  @media(max-width: 750px) {
-    font-size: 96px;
+  @media (min-width: 850px) and (max-height: 600px) {
+    font-size: 15vh;
   }
 
-  @media(max-width: 550px) {
-    font-size: 64px;
-  }
-
-  @media(max-width: 360px) {
-    font-size: 48px;
+    @media (max-width: 850px) and (max-height: 900px) {
+     font-size: clamp(48px, 8vh, 128px);
   }
 
   &:hover {
@@ -227,19 +245,44 @@ section {
   background-color: colors.$main-white;
   font-family: kalam-700, sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: clamp(16px, 4vh, 24px);
   transform: rotate(8deg);
 
   @media (max-width: 850px) {
     right: 50%;
-    transform: translate(50%, 300px) rotate(8deg);
+    transform: translate(50%, 280px) rotate(8deg);
   }
+
+  @media (max-height: 900px) and (max-width: 850px) {
+    transform: translate(50%, 240px) rotate(8deg);
+  }
+
+    @media (min-width: 850px) and (max-height: 600px) {
+    font-size: 5vh;
+  }
+
+
+
+
 
   > img {
     filter: grayscale(1);
     width: 176px;
     height: 176px;
     margin-bottom: 6px;
+
+    @media (min-width: 850px) and (max-height: 600px) {
+    width: 20vh;
+    height: 20vh;
+  }
+
+        @media (max-width: 850px) and (max-height: 900px) {
+         width: 20vh;
+    height: 20vh;
+  }
+
+  
+
   }
 }
 
@@ -260,5 +303,9 @@ section {
 
   @media (max-width: 850px) {
     display: none;
+  }
+
+  @media (min-width: 850px) and (max-height: 600px) {
+    flex-direction: row;
   }
 }
