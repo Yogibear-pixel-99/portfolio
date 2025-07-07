@@ -60,4 +60,9 @@ export class LanguageService {
   };
 
   constructor() {}
+
+changeLang(){
+  this.lang === "de" ? this.lang = "en" : this.lang = "de";
+}
+
 }

@@ -29,6 +29,8 @@
       </defs>
     </svg>
   </div>
+
+
   <div class="link-wrapper">
     <div class="link"> {{langService.data['header'].aboutme[langService.lang]}} </div>
     <img src="images/hero-section/1.png" />
@@ -48,7 +50,7 @@
   <div class="lang-wrapper">
     <div class="lang-single-wrapper">
       <span
-        (click)="changeLang()"
+        (click)="langService.changeLang()"
         [ngClass]="{ selected: langService.lang === 'en', 'not-selected': langService.lang === 'de' }"
         >EN</span
       ><img [ngClass]="{'select-hover': langService.lang === 'de'}" src="images/hero-section/Toggle.png" />
@@ -63,7 +65,7 @@
 
     <div class="lang-single-wrapper">
       <span
-        (click)="changeLang()"
+        (click)="langService.changeLang()"
         [ngClass]="{ 'selected': langService.lang === 'de', 'not-selected': langService.lang === 'en' }"
         >DE</span
       ><img [ngClass]="{'select-hover' : langService.lang === 'en'}" src="images/hero-section/Toggle.png" />

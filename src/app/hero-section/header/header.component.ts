@@ -13,7 +13,5 @@ import { MobileHeaderComponent } from "./mobile-header/mobile-header.component";
 export class HeaderComponent {
 langService = inject(LanguageService);
 
-changeLang(){
-  this.langService.lang === "de" ? this.langService.lang = "en" : this.langService.lang = "de";
-}
+
 }
