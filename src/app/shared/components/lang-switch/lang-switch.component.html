@@ -1,0 +1,24 @@
+<div class="lang-wrapper">
+    <div class="lang-single-wrapper">
+      <span
+        (click)="langService.changeLang()"
+        [ngClass]="{ selected: langService.lang === 'en', 'not-selected': langService.lang === 'de' }"
+        >EN</span
+      ><img [ngClass]="{'select-hover': langService.lang === 'de'}" src="images/hero-section/Toggle.png" />
+    </div>
+
+    <div class="lang-line">
+      <div
+        class="lang-dot"
+        [ngClass]="{ 'dot-de': langService.lang === 'de', 'dot-en': langService.lang === 'en' }"
+      ></div>
+    </div>
+
+    <div class="lang-single-wrapper">
+      <span
+        (click)="langService.changeLang()"
+        [ngClass]="{ 'selected': langService.lang === 'de', 'not-selected': langService.lang === 'en' }"
+        >DE</span
+      ><img [ngClass]="{'select-hover' : langService.lang === 'en'}" src="images/hero-section/Toggle.png" />
+    </div>
+  </div>

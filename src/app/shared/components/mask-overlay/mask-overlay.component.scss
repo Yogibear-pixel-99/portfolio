@@ -1,13 +1,13 @@
-@use "../../styles/mixins.scss" as mixins;
-@use "../../styles/colors.scss" as colors;
-@use "../../styles/fonts.scss";
+@use "../../../styles/mixins.scss" as mixins;
+@use "../../../styles/colors.scss" as colors;
+@use "../../../styles/fonts.scss";
 
 section {
 @include mixins.flex-spbtw-ctr-row(center, center, column);
 position:absolute;
 inset: 0;
 background-color: colors.$main-white;
-background-image: url("../../../../public/images/hero-section/hero-bg.png");
+background-image: url("../../../../../public/images/hero-section/hero-bg.png");
 background-size: cover;
 background-position: bottom;
 color: colors.$main-red;

@@ -1,0 +1,84 @@
+@use "../../../styles/mixins.scss" as mixins;
+@use "../../../styles/colors.scss" as colors;
+
+.lang-wrapper {
+  @include mixins.flex-spbtw-ctr-row();
+  height: 32px;
+  gap: 8px;
+
+  > div {
+    > span {
+      position: relative;
+      font-weight: 600;
+      font-family: bricolage, sans-serif;
+      font-size: 16px;
+      z-index: 10;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.lang-single-wrapper {
+  position: relative;
+
+  > img {
+    @include mixins.absolute-ctr();
+    width: 28px;
+    z-index: 5;
+    clip-path: inset(0 30px 30px 0);
+  }
+}
+
+.selected {
+  color: colors.$main-red;
+  pointer-events: none;
+}
+
+.not-selected {
+  color: white;
+}
+
+.lang-line {
+  position: relative;
+  width: 32px;
+  height: 8px;
+  border: solid colors.$main-white 1px;
+  border-radius: 4px;
+  background-color: colors.$main-red;
+}
+
+.lang-dot {
+  width: 16px;
+  height: 16px;
+  background-color: colors.$main-blue;
+  border: solid colors.$main-white 1px;
+  border-radius: 12px;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  top: 50%;
+  left: 50%;
+}
+
+.dot-en {
+  transform: translate(-20px, -50%);
+
+  &:hover + img {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.dot-de {
+  transform: translate(4px, -50%);
+}
+
+.not-selected:hover {
+  cursor: pointer;
+}
+
+.lang-single-wrapper:hover > span + img.select-hover {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.2s ease-in-out;
+}

@@ -1,0 +1,16 @@
+.link-wrapper {
+  @include mixins.flex-spbtw-ctr-row(center);
+  position: relative;
+
+  > div {
+    font-family: bricolage, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: colors.$main-white;
+  }
+
+  > img {
+    @include mixins.absolute-ctr();
+    width: 110px;
+  }
+}

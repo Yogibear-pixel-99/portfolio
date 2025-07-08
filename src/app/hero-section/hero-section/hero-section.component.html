@@ -114,7 +114,7 @@
     </div>
   </div>
   <div class="social-links">
-    @for (link of circleLinks; track $index) {
+    @for (link of linkService.circleLinks; track $index) {
     <app-circle-link
       [linkHref]="link.linkHref"
       [linkImgSrc]="link.linkImgSrc"

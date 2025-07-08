@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeroSectionComponent } from "./hero-section/hero-section/hero-section.component";
-import { MaskOverlayComponent } from "./shared/mask-overlay/mask-overlay.component";
+import { MaskOverlayComponent } from "./shared/components/mask-overlay/mask-overlay.component";
 
 @Component({
   selector: 'app-root',
