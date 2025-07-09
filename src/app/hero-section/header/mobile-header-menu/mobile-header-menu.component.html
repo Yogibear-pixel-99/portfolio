@@ -44,37 +44,18 @@
         </svg>
       </div>
     </div>
-    <div class="middle-links">
-      <div class="link-wrapper">
-        <div class="link">
-          {{ langService.data["header"].aboutme[langService.lang] }}
-        </div>
-        <img src="images/hero-section/1.png" />
-      </div>
-      <div class="link-wrapper">
-        <div class="link">
-          {{ langService.data["header"].skills[langService.lang] }}
-        </div>
-        <img
-          [ngClass]="
-            langService.lang === 'de' ? 'de-underline' : 'en-underline'
-          "
-          src="images/hero-section/2.png"
-        />
-      </div>
-
-
-      
-      <div class="link-wrapper">
-        <div class="link">
-          {{ langService.data["header"].contact[langService.lang] }}
-        </div>
-        <img src="images/hero-section/4.png" />
-      </div>
+    <div class="middle">
+      <app-header-links></app-header-links>
       <app-lang-switch></app-lang-switch>
     </div>
-    <div class="bottom-links">
-      
+    <div class="bottom">
+      @for (link of linkService.circleLinks; track $index) {
+      <app-circle-link
+        [linkHref]="link.linkHref"
+        [linkImgSrc]="link.linkImgSrc"
+        [imgAltText]="link.imgAltText">
+      </app-circle-link>
+      }
     </div>
   </div>
 </div>

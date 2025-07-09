@@ -1,0 +1,29 @@
+<div class="links-container">
+  <div class="link-wrapper">
+    <div class="link">
+      {{ langService.data["header"].aboutme[langService.lang] }}
+    </div>
+    <img src="images/hero-section/1.png" />
+  </div>
+  <div class="link-wrapper">
+    <div class="link">
+      {{ langService.data["header"].skills[langService.lang] }}
+    </div>
+    <img
+      [ngClass]="langService.lang === 'de' ? 'de-underline' : 'en-underline'"
+      src="images/hero-section/2.png"
+    />
+  </div>
+  <div class="link-wrapper">
+    <div class="link">
+      {{ langService.data["header"].projects[langService.lang] }}
+    </div>
+    <img src="images/hero-section/3.png" />
+  </div>
+  <div class="link-wrapper">
+    <div class="link">
+      {{ langService.data["header"].contact[langService.lang] }}
+    </div>
+    <img src="images/hero-section/4.png" />
+  </div>
+</div>

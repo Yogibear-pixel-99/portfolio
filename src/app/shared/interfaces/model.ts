@@ -4,8 +4,4 @@ export interface CircleLinks {
   imgAltText: string;
 }
 
-export interface HeaderLinks {
-  hoverImg: string;
-  linkHref: string;
-  objSrcName: string;
-}
+
