@@ -33,11 +33,17 @@
 }
 
 .middle {
-  @include mixins.flex-spbtw-ctr-row(center, center, column);
-  gap: 63px;
+  @include mixins.flex-spbtw-ctr-row(space-between, center, column);
+  height: 60%;
 }
 
 .bottom {
    @include mixins.flex-spbtw-ctr-row(center);
    gap: 24px;
+}
+
+app-header-links {
+  @include mixins.flex-spbtw-ctr-row();
+  flex-direction: column;
+  height: 80%;
 }

@@ -1,29 +1,34 @@
-<div class="links-container">
-  <div class="link-wrapper">
+
+  <a (click)="setLinkIndex(0)" class="link-wrapper" href="#">
     <div class="link">
       {{ langService.data["header"].aboutme[langService.lang] }}
     </div>
-    <img src="images/hero-section/1.png" />
-  </div>
-  <div class="link-wrapper">
+    <img [class.show-link-img]="clickedLinkIndex === 0" src="images/hero-section/1.png" />
+  </a>
+
+  <a (click)="setLinkIndex(1)"  class="link-wrapper" href="#">
     <div class="link">
       {{ langService.data["header"].skills[langService.lang] }}
     </div>
     <img
       [ngClass]="langService.lang === 'de' ? 'de-underline' : 'en-underline'"
+      [class.show-link-img]="clickedLinkIndex === 1"
       src="images/hero-section/2.png"
     />
-  </div>
-  <div class="link-wrapper">
+  </a>
+
+  <a (click)="setLinkIndex(2)"  class="link-wrapper" href="#">
     <div class="link">
       {{ langService.data["header"].projects[langService.lang] }}
     </div>
-    <img src="images/hero-section/3.png" />
-  </div>
-  <div class="link-wrapper">
+    <img [class.show-link-img]="clickedLinkIndex === 2" src="images/hero-section/3.png" />
+  </a>
+
+  <a (click)="setLinkIndex(3)"  class="link-wrapper" href="#">
     <div class="link">
       {{ langService.data["header"].contact[langService.lang] }}
     </div>
-    <img src="images/hero-section/4.png" />
-  </div>
-</div>
+    <img [class.show-link-img]="clickedLinkIndex === 3" src="images/hero-section/4.png" />
+  </a>
+
+

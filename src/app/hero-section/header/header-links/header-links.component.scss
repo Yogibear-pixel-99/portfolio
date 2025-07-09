@@ -2,10 +2,7 @@
 @use "../../../styles/fonts.scss";
 @use "../../../styles/colors.scss" as colors;
 
-.links-container {
-  @include mixins.flex-spbtw-ctr-row(center, center, column);
-  gap: 64px;
-}
+
 
 .link-wrapper {
   @include mixins.flex-spbtw-ctr-row(center);
@@ -21,10 +18,11 @@
   > img {
     @include mixins.absolute-ctr();
     width: 120px;
+    clip-path: inset(0 160px 0 0);
   }
 }
 
-.links-container > .link-wrapper:nth-of-type(4) > img {
+.link-wrapper:nth-of-type(4) > img {
   @include mixins.absolute-ctr();
   transform: translate(-50%, -20%);
   width: 125px;
@@ -34,12 +32,17 @@
     @include mixins.absolute-ctr();
     width: 160px !important;
     height: 40px;
-    // clip-path: inset(0 200px 0 0) !important;
+    clip-path: inset(0 180px 0 0);
 }
 
 .en-underline {
     @include mixins.absolute-ctr();
     width: 100px !important;
     height: 40px;
-    // clip-path: inset(0 100px 0 0) !important;
+    clip-path: inset(0 100px 0 0);
+}
+
+.show-link-img {
+  transition: clip-path 0.3s ease-in-out;
+  clip-path: inset(0 0 0 0) !important;
 }
