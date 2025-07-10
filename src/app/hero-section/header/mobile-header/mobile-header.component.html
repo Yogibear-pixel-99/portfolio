@@ -27,9 +27,11 @@
       </clipPath>
     </defs>
   </svg>
-  <div>
+  <div (click)="openOverlay()">
     <svg
-      width="24"S
+      [class.burger-icon-blue]="showMenu"
+      width="24"
+      S
       height="16"
       viewBox="0 0 24 16"
       fill="none"
@@ -40,6 +42,13 @@
         fill="#F8F9FA"
       />
     </svg>
+    @if (showMenu) {
+      <img class="burger-inactive-logo" src="images/Header/while pressing 1.svg">
+    }
   </div>
-  <app-mobile-header-menu></app-mobile-header-menu>
 </div>
+<app-mobile-header-menu
+  [openMenu]="openMenu"
+  [showMenu]="showMenu"
+  (closeMenuParent)="closeOverlay()"
+></app-mobile-header-menu>

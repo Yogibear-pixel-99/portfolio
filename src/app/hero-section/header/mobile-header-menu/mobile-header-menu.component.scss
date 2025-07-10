@@ -12,6 +12,20 @@
   background-position: bottom;
   background-size: cover;
   z-index: 100;
+  transform: translateY(-100dvh);
+  transition: transform ease-in-out 0.4s;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.open-menu {
+  transform: translateY(0);
 }
 
 .height-wrapper {
@@ -29,6 +43,7 @@
     width: 32px;
     height: 32px;
     @include mixins.flex-spbtw-ctr-row(center);
+    position: relative;
   }
 }
 
@@ -38,12 +53,20 @@
 }
 
 .bottom {
-   @include mixins.flex-spbtw-ctr-row(center);
-   gap: 24px;
+  @include mixins.flex-spbtw-ctr-row(center);
+  gap: 24px;
 }
 
 app-header-links {
   @include mixins.flex-spbtw-ctr-row();
   flex-direction: column;
   height: 80%;
+}
+
+.close-icon-blue path {
+  fill: colors.$main-blue;
+}
+
+.burger-inactive-logo {
+  @include mixins.absolute-ctr();
 }

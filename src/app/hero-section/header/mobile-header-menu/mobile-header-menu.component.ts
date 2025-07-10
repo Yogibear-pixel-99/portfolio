@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { LanguageService } from '../../../shared/services/languages/language.service';
 import { CommonModule } from '@angular/common';
 import { LangSwitchComponent } from '../../../shared/components/lang-switch/lang-switch.component';
@@ -15,5 +15,17 @@ export class MobileHeaderMenuComponent {
 
   langService = inject(LanguageService);
   linkService = inject(LinksService);
+
+  showFlexDisplay:boolean = false;
+  @Input() openMenu:boolean = false;
+  @Input() showMenu:boolean = false;
+
+  @Output() closeMenuParent = new EventEmitter();
+
+  closeMenu(){
+    this.openMenu = false;
+    setTimeout(() => this.showMenu = false, 500);
+    setTimeout(() => this.closeMenuParent.emit(), 510);
+  }
 
 }

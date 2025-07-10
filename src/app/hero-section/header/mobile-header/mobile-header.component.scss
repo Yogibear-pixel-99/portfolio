@@ -1,4 +1,5 @@
 @use "../../../styles/mixins.scss" as mixins;
+@use"../../../styles/colors.scss" as colors;
 
 .mobile-header {
   display: none;
@@ -13,7 +14,14 @@
     @include mixins.flex-spbtw-ctr-row(center, center);
     width: 32px;
     height: 32px;
+    position: relative;
   }
+}
 
+.burger-icon-blue path{
+  fill: colors.$main-blue;
+}
 
+.burger-inactive-logo {
+  @include mixins.absolute-ctr();
 }

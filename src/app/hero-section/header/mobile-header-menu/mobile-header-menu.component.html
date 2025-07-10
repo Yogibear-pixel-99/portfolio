@@ -1,4 +1,6 @@
-<div class="mobile-header-menu">
+<div class="mobile-header-menu"
+[class.open-menu]="openMenu">
+
   <div class="height-wrapper">
     <div class="top">
       <svg
@@ -29,8 +31,8 @@
           </clipPath>
         </defs>
       </svg>
-      <div class="close-wrapper">
-        <svg
+      <div (click)="closeMenu()">
+        <svg [class.close-icon-blue]="!openMenu"
           width="18"
           height="18"
           viewBox="0 0 18 18"
@@ -42,6 +44,9 @@
             fill="#F8F9FA"
           />
         </svg>
+        @if (!openMenu) {
+        <img src="images/Header/While pressing 2.svg">
+        }
       </div>
     </div>
     <div class="middle">
