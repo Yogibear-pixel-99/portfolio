@@ -1,10 +1,10 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { LanguageService } from '../../../shared/services/languages/language.service';
+import { LanguageService } from '../../../../services/languages/language.service';
 import { CommonModule } from '@angular/common';
-import { LangSwitchComponent } from '../../../shared/components/lang-switch/lang-switch.component';
+import { LangSwitchComponent } from '../../../ui/lang-switch/lang-switch.component';
 import { HeaderLinksComponent } from '../header-links/header-links.component';
-import { LinksService } from '../../../shared/services/links/links.service';
-import { CircleLinkComponent } from '../../../shared/components/circle-link/circle-link.component';
+import { LinksService } from '../../../../services/links/links.service';
+import { CircleLinkComponent } from '../../../ui/circle-link/circle-link.component';
 @Component({
   selector: 'app-mobile-header-menu',
   imports: [CommonModule, LangSwitchComponent, HeaderLinksComponent, CircleLinkComponent],

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../../shared/services/languages/language.service';
+import { LanguageService } from '../../../../services/languages/language.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

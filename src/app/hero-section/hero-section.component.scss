@@ -1,11 +1,11 @@
-@use "../../styles/colors.scss" as colors;
-@use "../../styles/mixins.scss" as mixins;
-@use "../../styles/fonts.scss";
+@use "../styles/colors.scss" as colors;
+@use "../styles/mixins.scss" as mixins;
+@use "../styles/fonts.scss";
 
 section {
   position: relative;
   background-color: colors.$main-white;
-  background-image: url("../../../../public/images/hero-section/hero-bg.png");
+  background-image: url("../../../public/images/hero-section/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;

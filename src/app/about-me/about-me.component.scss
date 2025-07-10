@@ -1,0 +1,7 @@
+@use "../../../styles/mixins.scss" as mixins;
+@use "../../../styles/colors.scss" as colors;
+@use "../../../styles/fonts.scss";
+
+section {
+    @include mixins.flex-spbtw-ctr-row();
+}

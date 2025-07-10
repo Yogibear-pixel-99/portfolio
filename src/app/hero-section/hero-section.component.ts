@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
-import { LanguageService } from '../../shared/services/languages/language.service';
+import { HeaderComponent } from "../shared/components/navigation/header/header/header.component";
+import { LanguageService } from '../shared/services/languages/language.service';
 import { CommonModule } from '@angular/common';
-import { CircleLinkComponent } from '../../shared/components/circle-link/circle-link.component';
-import { LinksService } from '../../shared/services/links/links.service';
+import { CircleLinkComponent } from '../shared/components/ui/circle-link/circle-link.component';
+import { LinksService } from '../shared/services/links/links.service';
 
 @Component({
   standalone: true,
