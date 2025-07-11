@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../../services/languages/language.service';
 import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-lang-switch',
@@ -9,5 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './lang-switch.component.scss'
 })
 export class LangSwitchComponent {
-langService = inject(LanguageService);
+translate = inject(TranslateService);
+
+changeLang(lang:string){
+  this.translate.use(lang);
+}
+
+checkLang(){
+  return this.translate.currentLang;
+}
 }

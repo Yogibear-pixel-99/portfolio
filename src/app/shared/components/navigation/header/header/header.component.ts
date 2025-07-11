@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../../../../services/languages/language.service';
 import { MobileHeaderComponent } from '../mobile-header/mobile-header.component';
 import { LangSwitchComponent } from '../../../ui/lang-switch/lang-switch.component';
 import { HeaderLinksComponent } from '../header-links/header-links.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   standalone: true,
@@ -13,7 +13,4 @@ import { HeaderLinksComponent } from '../header-links/header-links.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-langService = inject(LanguageService);
-
-
 }

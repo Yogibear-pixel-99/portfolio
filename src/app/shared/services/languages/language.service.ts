@@ -57,6 +57,16 @@ export class LanguageService {
         de: 'Kontakt aufnehmen',
       },
     },
+    aboutMe : {
+      basedIn : {
+        en: "Based in Wilhering/Linz",
+        de: "Wohnsitz in Wilhering/Linz"
+      },
+      relocate: {
+        en: "Open to relocate",
+        de: ""
+      }
+    }
   };
 
   constructor() {}

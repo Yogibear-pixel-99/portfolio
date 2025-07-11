@@ -1,0 +1,29 @@
+{
+  "header": {
+    "aboutme": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Hello World",
+    "helloHover": "I'M JOACHIM PÜRCHER",
+    "mainSingle": {
+      "firstNormal": ["F", "r", "o", "n", "t", "e", "n", "d"],
+      "firstHover": ["f", "R", "O", "N", "T", "E", "N", "D"],
+      "secondNormal": ["D", "E", "V", "E", "L", "O", "P", "E", "R"],
+      "secondHover": ["d", "e", "v", "e", "l", "o", "p", "e", "r"]
+    },
+    "touch": "Get in Touch"
+  },
+  "aboutMe": {
+    "basedIn": "Based in Wilhering/Linz",
+    "relocate": "Open to relocate",
+    "remote": "Open to work remote",
+    "who": "WHO'S JOACHIM",
+    "header": "About me",
+    "text": "Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla, Lorem ipsum bla bla bla",
+    "collaborate" : "Let's collaborate and build something remarkable together!",
+    "button" : "Let's talk"
+  }
+}
