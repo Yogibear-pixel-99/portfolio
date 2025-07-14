@@ -25,6 +25,7 @@
           </svg>
         </div>
       </div>
+      
       <div
         (mouseover)="showName(); helloEnterAnimate = true"
         (mouseout)="hideName(); helloEnterAnimate = false"
@@ -35,13 +36,13 @@
           class="hide-hello-name"
           [ngClass]="{ 'show-hello-name': helloEnterText === true }"
         >
-          {{ langService.data["hero"].helloHover[langService.lang] }}
+          {{ 'hero.helloHover' | translate }}
         </span>
         <span
           class="hide-hello-name"
           [ngClass]="{ 'show-hello-name': helloEnterText === false }"
         >
-          {{ langService.data["hero"].hello[langService.lang] }}
+          {{ 'hero.hello' | translate }}
         </span>
         <div
           class="hello-name-mask"
@@ -54,19 +55,15 @@
       <div class="frontend-wrapper">
         <div>
           @for (letter of
-          langService.data['hero'].mainSingle.firstNormal[langService.lang];
+          mainFirstText$;
           track $index; let letterIndex = $index) {
           <span
             (mousemove)="hoveredLetterFirst = letterIndex"
             (mouseleave)="hoveredLetterFirst = null"
             class="single-letter"
-            [ngStyle]="{ 'z-Index': letterIndex }"
             >{{
               hoveredLetterFirst === letterIndex
-                ? langService.data["hero"].mainSingle.firstHover[
-                    langService.lang
-                  ][letterIndex]
-                : letter
+                ? mainFirstHover$[letterIndex] : letter
             }}</span
           >
           }
@@ -91,27 +88,24 @@
       </div>
       <div class="dev-wrapper">
         @for (letter of
-        langService.data['hero'].mainSingle.secondNormal[langService.lang];
+        mainSecondText$;
         track $index; let letterIndex = $index) {
         <span
           (mouseenter)="hoveredLetterSecond = letterIndex"
           (mouseleave)="hoveredLetterSecond = null"
           class="single-letter"
-          [ngStyle]="{ 'z-index': letterIndex }"
           >{{
             hoveredLetterSecond === letterIndex
-              ? langService.data["hero"].mainSingle.secondHover[
-                  langService.lang
-                ][letterIndex]
-              : letter
+              ? mainSecondHover$[letterIndex] : letter
           }}</span
         >
         }
       </div>
     </div>
-    <div class="hero-button touch-button">
-      {{ langService.data["hero"].touch[langService.lang] }}
-    </div>
+    <app-get-in-contact-button [objSrcName]="'hero.touch'"></app-get-in-contact-button>
+    <!-- <div class="hero-button touch-button">
+      {{ 'hero.touch' | translate }}
+    </div> -->
   </div>
   <div class="social-links">
     @for (link of linkService.circleLinks; track $index) {

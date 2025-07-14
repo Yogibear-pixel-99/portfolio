@@ -136,19 +136,6 @@ section {
   }
 }
 
-.touch-button {
-  box-shadow: 2px 4px 0 0 colors.$main-white;
-  align-self: flex-end;
-  width: auto;
-  transition: all ease 0.3s;
-
-  &:hover {
-    transform: translate(2px, 4px);
-    background-color: colors.$main-red;
-    box-shadow: 0 0 0 0 colors.$main-white;
-  }
-}
-
 .hello-hover {
   @include mixins.bounce-animation();
 }
@@ -301,3 +288,6 @@ section {
   }
 }
 
+app-get-in-contact-button {
+  margin-left: auto;
+}

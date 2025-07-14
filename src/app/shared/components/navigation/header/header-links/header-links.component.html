@@ -11,7 +11,7 @@
       {{ 'header.skills' | translate }}
     </div>
     <img
-      [ngClass]="langService.lang === 'de' ? 'de-underline' : 'en-underline'"
+      [ngClass]="checkLang() === 'de' ? 'de-underline' : 'en-underline'"
       [class.show-link-img]="clickedLinkIndex === 1"
       src="images/hero-section/2.png"
     />
