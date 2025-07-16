@@ -2,13 +2,15 @@
 @use "../styles/colors.scss" as colors;
 
 section {
-  @include mixins.flex-spbtw-ctr-row();
+  @include mixins.flex-spbtw-ctr-row(space-around);
   padding: 144px 120px;
   background-color: colors.$main-white;
+  
 }
 
 .left {
   height: 400px;
+  width: 560px;
 }
 
 .wrapper {
@@ -56,6 +58,9 @@ section {
 }
 
 .right {
+  width: 560px;
+  @include mixins.flex-spbtw-ctr-row(space-between, stretch, column);
+
   > span {
     @include mixins.bricolage-font(20px, 500);
   }
@@ -68,7 +73,13 @@ section {
     }
 
     > img {
+        width: 300px;
       @include mixins.absolute-ctr();
+      transform: translate(-95%, 30px);
+      animation: header-line 4s ease-in;
+      animation-delay: 800ms;
+      animation-iteration-count: infinite;
+        clip-path: inset(0 300px 0 0);  
     }
   }
 
@@ -77,3 +88,20 @@ section {
   }
 }
 
+@keyframes header-line {
+ 0% {
+    clip-path: inset(0 300px 0 0);   
+} 5% {
+clip-path: inset(0 0 0 0);
+} 80% {
+    clip-path: inset(0 0 0 0);
+} 90% {
+    clip-path: inset(0 300px 0 0);
+} 100% {
+    clip-path: inset(0 300px 0 0);
+}
+}
+
+app-get-in-contact-button {
+    margin-left: auto;
+}

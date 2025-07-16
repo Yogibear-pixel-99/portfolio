@@ -3,7 +3,7 @@
     <div class="link">
       {{ 'header.aboutme' | translate }}
     </div>
-    <img [class.show-link-img]="clickedLinkIndex === 0" src="images/hero-section/1.png" />
+    <img [class.show-link-img]="clickedLinkIndex === 0" src="images/header/1.png" />
   </a>
 
   <a (click)="setLinkIndex(1)"  class="link-wrapper" href="#">
@@ -13,7 +13,7 @@
     <img
       [ngClass]="checkLang() === 'de' ? 'de-underline' : 'en-underline'"
       [class.show-link-img]="clickedLinkIndex === 1"
-      src="images/hero-section/2.png"
+      src="images/header/2.png"
     />
   </a>
 
@@ -21,12 +21,12 @@
     <div class="link">
       {{ 'header.projects' | translate }}
     </div>
-    <img [class.show-link-img]="clickedLinkIndex === 2" src="images/hero-section/3.png" />
+    <img [class.show-link-img]="clickedLinkIndex === 2" src="images/header/3.png" />
   </a>
 
   <a (click)="setLinkIndex(3)"  class="link-wrapper" href="#">
     <div class="link">
       {{ 'header.contact' | translate }}
     </div>
-    <img [class.show-link-img]="clickedLinkIndex === 3" src="images/hero-section/4.png" />
+    <img [class.show-link-img]="clickedLinkIndex === 3" src="images/header/4.png" />
   </a>

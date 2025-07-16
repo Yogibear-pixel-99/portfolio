@@ -2,7 +2,9 @@
 @use "../../../../../styles/fonts.scss";
 @use "../../../../../styles/colors.scss" as colors;
 
-
+a {
+  text-decoration: none;
+}
 
 .link-wrapper {
   @include mixins.flex-spbtw-ctr-row(center);
@@ -19,6 +21,7 @@
     @include mixins.absolute-ctr();
     width: 120px;
     clip-path: inset(0 160px 0 0);
+    transition: clip-path 0.3s ease-in-out;
   }
 }
 
@@ -40,9 +43,17 @@
     width: 100px !important;
     height: 40px;
     clip-path: inset(0 100px 0 0);
+
 }
 
 .show-link-img {
   transition: clip-path 0.3s ease-in-out;
   clip-path: inset(0 0 0 0) !important;
 }
+
+.link-wrapper:hover > img {
+    
+    @media (min-width: 850px) {
+        clip-path: inset(0 0 0 0) !important;
+      }
+    }
