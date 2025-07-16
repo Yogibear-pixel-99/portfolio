@@ -7,7 +7,7 @@
       />
       <div class="inner-wrapper">
         <img src="images/about-me/location-icon.svg" alt="loaction logo" />
-        <div>{{'aboutMe.basedIn' | translate }}</div>
+        <span>{{'aboutMe.basedIn' | translate }}</span>
       </div>
     </div>
 
@@ -17,8 +17,8 @@
         alt="blue paper background"
       />
       <div class="inner-wrapper">
-        <img src="" alt="" />
-        <div>{{'aboutMe.relocate' | translate }}</div>
+        <img src="images/about-me/relocate-icon.svg" alt="relocate logo" />
+        <span>{{'aboutMe.relocate' | translate }}</span>
       </div>
     </div>
 
@@ -28,8 +28,8 @@
         alt="orange paper background"
       />
       <div class="inner-wrapper">
-        <img src="" alt="" />
-        <div>{{'aboutMe.remote' | translate }}</div>
+        <img src="images/about-me/remote-icon.svg" alt="remote logo" />
+        <span>{{'aboutMe.remote' | translate }}</span>
       </div>
     </div>
   </div>
@@ -42,6 +42,6 @@
     </div>
     <p>{{'aboutMe.text' | translate }}</p>
     <p>{{'aboutMe.collaborate' | translate }}</p>
-    <app-get-in-contact-button [objSrcName]="'aboutMe.button'"></app-get-in-contact-button>
+    <app-get-in-contact-button [objSrcName]="'aboutMe.button'" [color]="'light-button'"></app-get-in-contact-button>
 </div>
 </section>

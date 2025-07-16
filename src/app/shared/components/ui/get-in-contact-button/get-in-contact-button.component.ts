@@ -1,16 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject, Input, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-get-in-contact-button',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './get-in-contact-button.component.html',
   styleUrl: './get-in-contact-button.component.scss'
 })
 export class GetInContactButtonComponent implements OnInit, OnDestroy {
 translate = inject(TranslateService);
 @Input() objSrcName: string = '';
+@Input() color: string = 'dark-button';
 
 
 text:string = '';

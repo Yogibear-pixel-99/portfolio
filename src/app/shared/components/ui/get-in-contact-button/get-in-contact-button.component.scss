@@ -3,27 +3,48 @@
 @use "../../../../styles/fonts.scss";
 
 button {
-  font-family: bricolage, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: colors.$main-white;
-  border: solid colors.$main-white 1px;
+  @include mixins.bricolage-font(18px, 500);
   @include mixins.flex-spbtw-ctr-row(center);
   padding: 12px 24px;
   border-radius: 100px;
   width: 145px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0);
 
-  box-shadow: 2px 4px 0 0 colors.$main-white;
-  align-self: flex-end;
+    &:hover {
+        cursor: pointer;
+         box-shadow: 0 0 0 0 colors.$main-white;
+    }
+
+
+
+ 
+//   align-self: flex-end;
   width: auto;
-  transition: all ease 0.3s;
-  
+  transition: all ease-in-out 0.2s;
+}
+
+.dark-button {
+ color: colors.$main-white;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid colors.$main-white 1px;
+   box-shadow: 2px 4px 0 0 colors.$main-white;
+
   &:hover {
     transform: translate(2px, 4px);
     background-color: colors.$main-red;
-    box-shadow: 0 0 0 0 colors.$main-white;
   }
 
+} 
+
+.light-button {
+ color: colors.$main-black;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid colors.$main-black 1px;
+   box-shadow: 2px 4px 0 0 colors.$main-black;
+
+    &:hover {
+    transform: translate(2px, 4px);
+    background-color: colors.$main-red;
+    color: colors.$main-white;
+  }
 }
