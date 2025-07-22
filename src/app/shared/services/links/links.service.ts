@@ -7,9 +7,9 @@ import { CircleLinks } from '../../interfaces/model';
 export class LinksService {
 
   circleLinks: CircleLinks[] = [
-  {linkImgSrc : "images/hero-section/linkedin.svg", linkHref : "https://www.linkedin.com/in/joachim-pürcher-92b249345/", imgAltText : "linkedin logo"},
-  {linkImgSrc : "images/hero-section/github.svg", linkHref : "https://github.com/Yogibear-pixel-99", imgAltText : "github logo"},
-  {linkImgSrc : "images/hero-section/mail.svg", linkHref : "mailto:joachim.puercher@gmail.com", imgAltText : "email logo"}
+  {imgPath : "images/hero-section/linkedin.svg", linkHref : "https://www.linkedin.com/in/joachim-pürcher-92b249345/", imgAltText : "linkedin logo"},
+  {imgPath : "images/hero-section/github.svg", linkHref : "https://github.com/Yogibear-pixel-99", imgAltText : "github logo"},
+  {imgPath : "images/hero-section/mail.svg", linkHref : "mailto:joachim.puercher@gmail.com", imgAltText : "email logo"}
 ];
 
   constructor() { }

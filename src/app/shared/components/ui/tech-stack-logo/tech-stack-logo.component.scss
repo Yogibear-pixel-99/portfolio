@@ -1,0 +1,29 @@
+@use "../../../../styles/colors.scss" as colors;
+@use "../../../../styles/mixins.scss" as mixins;
+@use "../../../../styles/fonts.scss";
+
+div {
+  @include mixins.flex-spbtw-ctr-row(center, center, column);
+  gap: 4px;
+
+  &:hover {
+    cursor: default;
+  }
+
+  &:hover > img {
+    filter: grayscale(0);
+    transform: scale(0.85);
+    transition: all ease-in 100ms;
+  }
+}
+
+span {
+  text-align: center;
+  @include mixins.bricolage-font(18px, 400);
+}
+
+img {
+  filter: grayscale(0.9);
+  width: 72px;
+  height: 72px;
+}

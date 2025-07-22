@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CircleLinkComponent {
 
-  @Input() linkImgSrc: string = '';
+  @Input() imgPath: string = '';
   @Input() linkHref: string = '';
   @Input() imgAltText: string = '';
 

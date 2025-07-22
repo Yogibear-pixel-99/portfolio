@@ -1,7 +1,11 @@
 export interface CircleLinks {
-  linkImgSrc: string;
+  imgPath: string;
   linkHref: string;
   imgAltText: string;
 }
 
-
+export interface TechLogos {
+  name: string;
+  imgPath: string;
+  imgAltText: string;
+}

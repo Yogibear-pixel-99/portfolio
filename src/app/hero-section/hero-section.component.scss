@@ -277,7 +277,7 @@ section {
   @include mixins.flex-spbtw-ctr-row(center, center, column);
   position: absolute;
   left: 72px;
-  bottom: 100px;
+  bottom: 12vh;
   gap: 8px;
 
   @media (max-width: 850px) {
