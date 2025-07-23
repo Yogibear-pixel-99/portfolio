@@ -16,13 +16,35 @@ section {
 
   @media (max-width: 1150px) {
     flex-direction: column-reverse;
-    padding: 88px 16px;
+    padding: 88px 120px;
   }
+
+  @media (max-width: 850px) {
+    padding: 88px 52px;
+  }
+
+  @media (max-width: 650px) {
+    padding: 88px 20px;
+  }
+
+  @media (max-width: 550px) {
+    padding: 88px 20px 40px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 20px 20px 0;
+  }
+
+  
 }
 
 .left {
   height: 400px;
   max-width: 560px;
+
+    @media (max-width: 450px) {
+     height: 340px;
+  }
 }
 
 .wrapper {
@@ -110,6 +132,11 @@ section {
 
   @media (max-width: 1150px) {
     margin: 0 0 40px;
+    max-width: none;
+  }
+
+    @media (max-width: 650px) {
+     max-width: 560px;
   }
 
   > span:nth-child(1) {
@@ -141,17 +168,20 @@ section {
       animation-iteration-count: infinite;
       clip-path: inset(0 310px 0 0);
 
+      @media (max-width: 1150px) {
+        left: -10px;
+        transform: translate(0, 16px);
+      }
+
       @media (max-width: 850px) {
         width: 250px;
-        left: 280px;
-        transform: translate(-290px, 10px);
         clip-path: inset(0 250px 0 0);
       }
     }
   }
 
   > span {
-    @include mixins.bricolage-font(20px, 400);
+    @include mixins.standard-text();
 
     @media (max-width: 850px) {
       font-size: 18px;
@@ -159,7 +189,7 @@ section {
   }
 
   > p {
-    @include mixins.bricolage-font(20px, 400);
+     @include mixins.standard-text();
     margin-bottom: 24px;
 
     @media (max-width: 850px) {
