@@ -17,7 +17,6 @@ export class HeaderLinksComponent {
 
   setLinkIndex(pos: number) {
     this.clickedLinkIndex = pos;
-    // setTimeout(() => navigate to site pos, 0.5);
     setTimeout(() => (this.clickedLinkIndex = null), 500);
   }
 

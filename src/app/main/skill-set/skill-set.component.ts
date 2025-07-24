@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { TechStackLogoComponent } from "../shared/components/ui/tech-stack-logo/tech-stack-logo.component";
-import { TechlogoService } from '../shared/services/techlogo/techlogo.service';
+import { TechStackLogoComponent } from "../../shared/components/ui/tech-stack-logo/tech-stack-logo.component";
+import { TechlogoService } from '../../shared/services/techlogo/techlogo.service';
 
 @Component({
   selector: 'app-skill-set',

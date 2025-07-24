@@ -1,11 +1,11 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { HeaderComponent } from "../shared/components/navigation/header/header/header.component";
+import { HeaderComponent } from "../../shared/components/header/header/header.component";
 import { CommonModule } from '@angular/common';
-import { CircleLinkComponent } from '../shared/components/ui/circle-link/circle-link.component';
-import { LinksService } from '../shared/services/links/links.service';
+import { CircleLinkComponent } from '../../shared/components/ui/circle-link/circle-link.component';
+import { LinksService } from '../../shared/services/links/links.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
-import { GetInContactButtonComponent } from "../shared/components/ui/get-in-contact-button/get-in-contact-button.component";
+import { GetInContactButtonComponent } from "../../shared/components/ui/get-in-contact-button/get-in-contact-button.component";
 
 @Component({
   standalone: true,

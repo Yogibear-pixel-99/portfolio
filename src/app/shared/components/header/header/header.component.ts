@@ -1,9 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MobileHeaderComponent } from '../mobile-header/mobile-header.component';
-import { LangSwitchComponent } from '../../../ui/lang-switch/lang-switch.component';
+import { LangSwitchComponent } from '../../ui/lang-switch/lang-switch.component';
 import { HeaderLinksComponent } from '../header-links/header-links.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   standalone: true,

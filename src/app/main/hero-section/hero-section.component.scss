@@ -5,12 +5,13 @@
 section {
   position: relative;
   background-color: colors.$main-white;
-  background-image: url("../../../public/images/hero-section/hero-bg.png");
+  background-image: url("../../../../public/images/hero-section/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   width: 100dvw;
   height: 100dvh;
+  max-height: 1500px;
 }
 
 .main-wrapper {
