@@ -1,6 +1,6 @@
-@use "../../../../styles/colors.scss" as colors;
-@use "../../../../styles/mixins.scss" as mixins;
-@use "../../../../styles/fonts.scss";
+@use "colors" as colors;
+@use "mixins" as mixins;
+@use "fonts";
 
 button {
   @include mixins.bricolage-font(18px, 500);

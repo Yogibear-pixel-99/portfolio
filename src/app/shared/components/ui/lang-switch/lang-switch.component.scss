@@ -1,5 +1,5 @@
-@use "../../../../styles/mixins.scss" as mixins;
-@use "../../../../styles/colors.scss" as colors;
+@use "colors" as colors;
+@use "mixins" as mixins;
 
 .lang-wrapper {
   @include mixins.flex-spbtw-ctr-row();

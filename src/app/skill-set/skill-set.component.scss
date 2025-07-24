@@ -1,6 +1,6 @@
-@use "../styles/colors.scss" as colors;
-@use "../styles/mixins.scss" as mixins;
-@use "../styles/fonts.scss";
+@use "colors" as colors;
+@use "mixins" as mixins;
+@use "fonts";
 
 section {
   position: relative;
@@ -142,6 +142,22 @@ section {
   position: relative;
   width: 656px;
 
+    > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include mixins.absolute-ctr();
+  }
+
+  > p {
+    position: relative;
+    color: colors.$main-black;
+    z-index: 1;
+    padding: 12px 24px 0;
+    text-align: center;
+    @include mixins.standard-text();
+  }
+
   @media (max-width: 1150px) {
     max-width: none;
     width: 100%;
@@ -153,28 +169,13 @@ section {
   }
 
   @media (max-width: 850px) {
-    // max-width: 368px;
 
     > img {
       height: 212px;
     }
   }
 
-  > img {
-    position: relative;
-    @include mixins.absolute-ctr();
-    width: 100%;
-    height: 100%;
-  }
 
-  > p {
-    position: relative;
-    @include mixins.standard-text();
-    color: colors.$main-black;
-    z-index: 1;
-    padding: 12px 24px 0;
-    text-align: center;
-  }
 }
 
 .bottom-wrapper {
