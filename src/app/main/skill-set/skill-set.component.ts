@@ -13,7 +13,7 @@ export class SkillSetComponent {
 translate = inject(TranslateService);
 techlogoService = inject(TechlogoService);
 
-
+stickerOpen: boolean = false;
 activeSticker: number = 0;
 stickerLogo: string[] = [
   'images/skills/sticker_close.png',
@@ -25,13 +25,24 @@ get getStickerPath() {
 }
 
 openSticker(){
+  if (!this.stickerOpen) {
+    
   this.activeSticker = 1;
-  setTimeout(() => this.activeSticker = 2, 200);
+  setTimeout(() => {
+    this.activeSticker = 2;
+    this.stickerOpen = true;
+   }, 200);
+}
 }
 
 closeSticker(){
-  setTimeout(() => this.activeSticker = 1, 1000);
-  setTimeout(() => this.activeSticker = 0, 1200);
+  if (this.stickerOpen) {
+  setTimeout(() => this.activeSticker = 1, 1500);
+  setTimeout(() => {
+    this.activeSticker = 0;
+    this.stickerOpen = false;
+  }, 1700);
+}
 }
 
 }

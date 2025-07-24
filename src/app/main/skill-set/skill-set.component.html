@@ -27,7 +27,7 @@
         }
       </div>
     <div class="outer">
-      <img (click)="openSticker()" [src]="getStickerPath" alt="peel of sticker">
+      <img (click)="openSticker()" (mouseleave)="closeSticker()" [src]="getStickerPath" alt="peel of sticker">
     </div>
 </div>
 

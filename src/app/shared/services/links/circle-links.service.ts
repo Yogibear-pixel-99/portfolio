@@ -4,7 +4,7 @@ import { CircleLinks } from '../../interfaces/model';
 @Injectable({
   providedIn: 'root'
 })
-export class LinksService {
+export class CircleLinksService {
 
   circleLinks: CircleLinks[] = [
   {imgPath : "images/hero-section/linkedin.svg", linkHref : "https://www.linkedin.com/in/joachim-pürcher-92b249345/", imgAltText : "linkedin logo"},
