@@ -1,9 +1,9 @@
 @use "colors" as colors;
 @use "mixins" as mixins;
-@use "fonts";
+@use "typography" as typo;
 
 button {
-  @include mixins.bricolage-font(18px, 500);
+  @include typo.bricolage-font(18px, 500);
   @include mixins.flex-spbtw-ctr-row(center);
   padding: 12px 24px;
   border-radius: 100px;

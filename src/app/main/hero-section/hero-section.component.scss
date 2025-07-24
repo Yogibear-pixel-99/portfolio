@@ -1,5 +1,6 @@
 @use "colors" as colors;
 @use "mixins" as mixins;
+@use "typography" as typo;
 @use "fonts";
 
 section {
@@ -46,17 +47,16 @@ section {
 }
 
 .hero-button {
-  font-family: bricolage, sans-serif;
-  font-weight: 500;
   color: colors.$main-white;
   border: solid colors.$main-white 1px;
-  @include mixins.flex-spbtw-ctr-row(center);
   align-self: flex-start;
   padding: 12px 24px;
   border-radius: 100px;
   width: 145px;
   height: 40px;
   text-wrap: nowrap;
+  @include typo.bricolage-font(18px, 500);
+  @include mixins.flex-spbtw-ctr-row(center);
 }
 
 .hello-wrapper {
@@ -165,7 +165,7 @@ section {
 }
 
 .single-letter {
-  @include mixins.bricolage-font(128px, 700);
+  @include typo.bricolage-font(128px, 700);
   position: relative;
   color: colors.$main-white;
 

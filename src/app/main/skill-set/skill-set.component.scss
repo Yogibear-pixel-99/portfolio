@@ -1,5 +1,6 @@
 @use "colors" as colors;
 @use "mixins" as mixins;
+@use "typography" as typo;
 @use "fonts";
 
 section {
@@ -58,15 +59,6 @@ section {
     width: auto;
   }
 
-  > h2 {
-    @include mixins.bricolage-font(64px, 700);
-    margin: 16px 0 36px;
-
-    @media (max-width: 850px) {
-      font-size: 48px;
-    }
-  }
-
   .left,
   .right {
     width: 261px;
@@ -86,22 +78,16 @@ section {
   gap: 8px;
 
   > span {
-    @include mixins.bricolage-font(20px, 500);
     margin-left: auto;
   }
 }
 
 .header-wrapper {
   > h2 {
-    @include mixins.bricolage-font(64px, 700);
     margin: 0;
     text-align: right;
     position: relative;
     z-index: 5;
-
-    @media (max-width: 850px) {
-      font-size: 48px;
-    }
   }
 
   > img {
@@ -155,7 +141,6 @@ section {
     z-index: 1;
     padding: 12px 24px 0;
     text-align: center;
-    @include mixins.standard-text();
   }
 
   @media (max-width: 1150px) {

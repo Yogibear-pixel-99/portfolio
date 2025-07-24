@@ -1,5 +1,6 @@
 @use "colors" as colors;
 @use "mixins" as mixins;
+@use "typography" as typo;
 @use "fonts";
 
 div {
@@ -19,7 +20,7 @@ div {
 
 span {
   text-align: center;
-  @include mixins.bricolage-font(18px, 400);
+  @include typo.bricolage-font(18px, 400);
 }
 
 img {

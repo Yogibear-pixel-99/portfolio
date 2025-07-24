@@ -1,5 +1,6 @@
 @use "colors" as colors;
 @use "mixins" as mixins;
+@use "typography" as typo;
 
 section {
   @include mixins.flex-spbtw-ctr-row(space-around);
@@ -136,20 +137,12 @@ section {
     @media (max-width: 650px) {
      max-width: 560px;
   }
-
-  > span:nth-child(1) {
-    @include mixins.bricolage-font(20px, 500);
-
-    @media (max-width: 850px) {
-      font-size: 18px;
-    }
-  }
+  
 
   > .header-wrapper {
     position: relative;
 
     > h2 {
-      @include mixins.bricolage-font(64px, 700);
       margin: 16px 0 36px;
 
       @media (max-width: 850px) {
@@ -178,21 +171,21 @@ section {
     }
   }
 
-  > span {
-    @include mixins.standard-text();
+  // > span {
+  //   @include mixins.standard-text();
 
-    @media (max-width: 850px) {
-      font-size: 18px;
-    }
-  }
+  //   @media (max-width: 850px) {
+  //     font-size: 18px;
+  //   }
+  // }
 
   > p {
     margin-bottom: 24px;
-    @include mixins.standard-text();
+    // @include mixins.standard-text();
 
-    @media (max-width: 850px) {
-      font-size: 18px;
-    }
+    // @media (max-width: 850px) {
+    //   font-size: 18px;
+    // }
   }
 }
 
