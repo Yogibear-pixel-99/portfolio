@@ -7,7 +7,7 @@
       />
       <div class="inner-wrapper">
         <img src="images/about-me/location-icon.svg" alt="loaction logo" />
-        <span>{{'aboutMe.basedIn' | translate }}</span>
+        <span>{{ "aboutMe.basedIn" | translate }}</span>
       </div>
     </div>
 
@@ -18,7 +18,7 @@
       />
       <div class="inner-wrapper">
         <img src="images/about-me/relocate-icon.svg" alt="relocate logo" />
-        <span>{{'aboutMe.relocate' | translate }}</span>
+        <span>{{ "aboutMe.relocate" | translate }}</span>
       </div>
     </div>
 
@@ -29,19 +29,24 @@
       />
       <div class="inner-wrapper">
         <img src="images/about-me/remote-icon.svg" alt="remote logo" />
-        <span>{{'aboutMe.remote' | translate }}</span>
+        <span>{{ "aboutMe.remote" | translate }}</span>
       </div>
     </div>
   </div>
 
   <div class="right">
-    <span class="section-header-small-text-typo">{{'aboutMe.who' | translate }}</span>
+    <span class="section-header-small-text-typo">{{
+      "aboutMe.who" | translate
+    }}</span>
     <div class="header-wrapper">
-      <h2 class="section-header-typo">{{'aboutMe.header' | translate }}</h2>
+      <h2 class="section-header-typo">{{ "aboutMe.header" | translate }}</h2>
       <img src="images/about-me/header-underline.svg" alt="underline" />
     </div>
-    <span class="section-text-typo">{{'aboutMe.text' | translate }}</span>
-    <p class="section-text-typo">{{'aboutMe.collaborate' | translate }}</p>
-    <app-get-in-contact-button [objSrcName]="'aboutMe.button'" [color]="'light-button'"></app-get-in-contact-button>
-</div>
+    <span class="section-text-typo">{{ "aboutMe.text" | translate }}</span>
+    <p class="section-text-typo">{{ "aboutMe.collaborate" | translate }}</p>
+    <app-get-in-contact-button
+      [objSrcName]="'aboutMe.button'"
+      [color]="'light-button'"
+    ></app-get-in-contact-button>
+  </div>
 </section>

@@ -25,5 +25,19 @@
     "text": "Ich bin kein Programmierer – nein. Ich bin Softwareentwickler. Ein neues Stück digitaler Kunst zu erschaffen bedeutet nicht einfach nur, in einer Computersprache zu schreiben und den neuesten Tech-Stack zu verwenden. Es geht um Problemlösung, Analyse, Strukturierung, Architektur. Darum, Dinge so umzusetzen, wie meine Kunden es sich vorstellen. Darin besteht die meiste Arbeit. Ich sammle die Ideen aus einer Vision und erwecke diese zum Leben – genau so, wie sie es sich vorgestellt haben. Es ist meine Leidenschaft, Software zu erschaffen, die klar, funktional, intuitiv zu bedienen und auch nach vielen Jahren noch wartbar ist.",
     "collaborate": "Herzlich willkommen auf meiner Seite und lassen Sie uns gemeinsam etwas großartiges schaffen!",
     "button": "Kontakt aufnehmen"
+  },
+  "projects": {
+    "craft": "MEIN SCHAFFEN",
+    "header": "Projekte",
+    "projects": {
+      "join": {
+        "header": "Join",
+        "text": "Eine professionelle Task Management App, inspiriert vom bekannten Kanban Konzept. Zum erstellen und organisieren von Arbeitsaubläufen, zuteilen von Mitgliedern und verwalten per drag and drop."
+      },
+      "elpolloloco": {
+        "header": "El Pollo Loco",
+        "text": "Ein Objektorientiertes Browser Jump and Run spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board."
+      }
+    }
   }
 }

@@ -12,7 +12,6 @@ section {
   background-position: bottom;
   width: 100dvw;
   padding: 144px 122px 188px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75);
   color: colors.$main-white;
 
   @media (max-width: 1550px) {
@@ -88,6 +87,7 @@ section {
     text-align: right;
     position: relative;
     z-index: 5;
+      color: colors.$main-white;
   }
 
   > img {

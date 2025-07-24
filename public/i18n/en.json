@@ -30,5 +30,19 @@
     "myStack" : "MY STACK",
     "header" : "Skill set",
     "introduction" : "In the past, i worked at least on 14 projects to learning the following skill set. These skills are constantly being expanded to keep up with the times."
+  },
+  "projects" : {
+    "craft" : "MY CRAFT",
+    "header" : "Projects",
+    "projects" : {
+      "join" : {
+        "header" : "Join",
+        "text" : "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "elpolloloco" : {
+        "header" : "El Pollo Loco",
+        "text" : "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, a endless chickenrush mode and a top 30 Highscore board."
+      }
+    }
   }
 }
