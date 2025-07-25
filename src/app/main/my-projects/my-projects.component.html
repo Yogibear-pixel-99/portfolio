@@ -18,7 +18,12 @@
     [translateHeaderPath]="'projects.singleProjects.join.header'"
     [translateTextPath]="'projects.singleProjects.join.text'"
     [animate]="true"
-  >
+    >
+    <app-main-button
+    [translateText]="'projects.buttonText'"
+    [color]="'light-button'"
+    [linkPath]="'#'"
+    ></app-main-button>
   </app-project>
 
   <app-project
@@ -28,5 +33,10 @@
     [translateTextPath]="'projects.singleProjects.elpolloloco.text'"
     [animate]="false"
   >
+      <app-main-button
+    [translateText]="'projects.buttonText'"
+    [color]="'light-button'"
+    [linkPath]="'#'"
+    ></app-main-button>
   </app-project>
 </section>

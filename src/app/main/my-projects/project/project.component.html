@@ -1,7 +1,16 @@
 <div>
-<div class="img-wrapper">
-  <img [ngClass]="{'animate-img' : animate}" [src]="imgPath" [alt]="imgAltText" />
+  <div class="img-wrapper">
+    <img
+      [ngClass]="{ 'animate-img': animate }"
+      [src]="imgPath"
+      [alt]="imgAltText"
+    />
+    <div class="content-wrapper">
+      <ng-content select="app-main-button"></ng-content>
+    </div>
   </div>
-  <h4 class="h4-header-typo">{{ translateHeaderPath | translate }}</h4>
-  <span class="h4-text-typo">{{ translateTextPath | translate }}</span>
+
+    <h4 class="h4-header-typo project-header-text">{{ translateHeaderPath | translate }}</h4>
+    <span class="h4-text-typo">{{ translateTextPath | translate }}</span>
+
 </div>
