@@ -1,0 +1,55 @@
+@use "colors" as colors;
+@use "mixins" as mixins;
+@use "typography" as typo;
+@use "layout";
+
+section {
+    background-color: colors.$main-white;
+}
+
+h2 {
+    margin: 16px 0 0 0;
+    color: colors.$main-black;
+    text-wrap: nowrap;
+    @include mixins.flex-spbtw-ctr-row(flex-end);
+}
+
+.header-wrapper {
+    text-align: right;
+}
+
+
+
+
+.img-wrapper {
+  position: relative;
+
+  > img {
+    width: 100px;
+    transform: translateY(20px);
+    animation: header-line 4s ease-in;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+    clip-path: inset(0 0 0 100px);
+    margin-right: 16px;
+  }
+}
+
+@keyframes header-line {
+  0% {
+    clip-path: inset(0 0 0 100px);
+  }
+  3% {
+    clip-path: inset(0 0 0 0);
+  }
+  84% {
+    clip-path: inset(0 0 0 0);
+  }
+  90% {
+    clip-path: inset(0 0 0 100px);
+  }
+  100% {
+    clip-path: inset(0 0 0 100px);
+  }
+}
+

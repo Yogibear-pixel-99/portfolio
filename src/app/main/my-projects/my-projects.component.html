@@ -7,24 +7,29 @@
       <h2 class="section-header-typo">{{ "projects.header" | translate }}</h2>
       <img src="images/projects/header_line.svg" alt="underline" />
     </div>
-    <span class="section-text-typo header-text">{{"projects.text" | translate }}</span>
+    <span class="section-text-typo header-text">{{
+      "projects.text" | translate
+    }}</span>
   </div>
 
   <div class="placeholder"></div>
 
-  <app-project
-    [imgPath]="'images/projects/Laptop.png'"
-    [imgAltText]="'join laptop'"
-    [translateHeaderPath]="'projects.singleProjects.join.header'"
-    [translateTextPath]="'projects.singleProjects.join.text'"
-    [animate]="true"
+  <div class="project-wrapper">
+    <app-project
+      [imgPath]="'images/projects/Laptop.png'"
+      [imgAltText]="'join laptop'"
+      [translateHeaderPath]="'projects.singleProjects.join.header'"
+      [translateTextPath]="'projects.singleProjects.join.text'"
+      [animate]="true"
     >
-    <app-main-button
-    [translateText]="'projects.buttonText'"
-    [color]="'light-button'"
-    [linkPath]="'#'"
-    ></app-main-button>
-  </app-project>
+      <app-main-button
+        [translateText]="'projects.buttonText'"
+        [color]="'light-button'"
+        [linkPath]="'#'"
+      ></app-main-button>
+    </app-project>
+    <img src="images/projects/Sticker.png" alt="featured project sticker" />
+  </div>
 
   <app-project
     [imgPath]="'images/projects/Pollo.png'"
@@ -33,10 +38,10 @@
     [translateTextPath]="'projects.singleProjects.elpolloloco.text'"
     [animate]="false"
   >
-      <app-main-button
-    [translateText]="'projects.buttonText'"
-    [color]="'light-button'"
-    [linkPath]="'#'"
+    <app-main-button
+      [translateText]="'projects.buttonText'"
+      [color]="'light-button'"
+      [linkPath]="'#'"
     ></app-main-button>
   </app-project>
 </section>

@@ -6,9 +6,10 @@ import { AboutMeComponent } from "./main/about-me/about-me.component";
 import { TranslateService } from '@ngx-translate/core';
 import { SkillSetComponent } from "./main/skill-set/skill-set.component";
 import { MyProjectsComponent } from "./main/my-projects/my-projects.component";
+import { ColleaguesThoughtsComponent } from "./main/colleagues-thoughts/colleagues-thoughts.component";
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeroSectionComponent, MaskOverlayComponent, AboutMeComponent, SkillSetComponent, MyProjectsComponent],
+  imports: [RouterOutlet, HeroSectionComponent, MaskOverlayComponent, AboutMeComponent, SkillSetComponent, MyProjectsComponent, ColleaguesThoughtsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

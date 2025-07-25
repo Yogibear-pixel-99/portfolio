@@ -46,5 +46,16 @@
         "text" : "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, a endless chickenrush mode and a top 30 Highscore board."
       }
     }
+  },
+  "thoughts" : {
+    "words" : "IN THEIR WORDS:",
+    "header" : "Colleagues' Thoughts",
+    "colleagues" : [
+      "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
+      "DD He oh my god adfäslögjdalöfkgnöadlfknadölkfvnöadflkadlöfkfv",
+      "DD asdlökjjdvfjldvfjdfaköbiosdfbijiogogkböj asdfasdf bkl"
+    ],
+    "developer" : "Frontend Developer",
+    "profile" : "Profile"
   }
 }
