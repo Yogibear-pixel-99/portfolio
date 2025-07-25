@@ -1,4 +1,4 @@
-<section>
+<section class="section-padding inner-section-two-col">
   <div class="header-wrapper">
     <span class="section-header-small-text-typo">{{
       "projects.craft" | translate
@@ -9,24 +9,23 @@
     </div>
   </div>
 
-  <div class="project-wrapper">
-
-
-    <app-project
-    [imgPath]="'images/projects/el_pollo_loco.png'"
-    [imgAltText]="'el pollo loco pepe'"
-    [translateHeaderPath]="'projects.projects.elpolloloco.header'"
-    [translateTextPath]="'projects.projects.elpolloloco.text'">
-  </app-project>
-
+ 
+  <div></div>
+    
     <app-project
     [imgPath]="'images/projects/Laptop.png'"
     [imgAltText]="'join laptop'"
     [translateHeaderPath]="'projects.projects.join.header'"
     [translateTextPath]="'projects.projects.join.text'">
   </app-project>
+  
+  <app-project
+  [imgPath]="'images/projects/el_pollo_loco.png'"
+  [imgAltText]="'el pollo loco pepe'"
+  [translateHeaderPath]="'projects.projects.elpolloloco.header'"
+  [translateTextPath]="'projects.projects.elpolloloco.text'">
+</app-project>
 
 
 
-  </div>
 </section>

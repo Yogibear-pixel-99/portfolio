@@ -2,6 +2,7 @@
 @use "mixins" as mixins;
 @use "typography" as typo;
 @use "fonts";
+@use "layout";
 
 section {
   position: relative;
@@ -10,52 +11,27 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  width: 100dvw;
-  padding: 144px 122px 188px;
   color: colors.$main-white;
-
-  @media (max-width: 1550px) {
-    padding: 100px 52px 140px;
-  }
-
-  @media (max-width: 1150px) {
-    padding: 88px 120px 180px;
-  }
-
-  @media (max-width: 850px) {
-    padding: 88px 52px 100px;
-  }
-
-  @media (max-width: 650px) {
-    padding: 88px 20px 120px;
-  }
-
-  @media (max-width: 550px) {
-    padding: 88px 20px 120px;
-  }
-
-  @media (max-width: 450px) {
-    padding: 20px 20px 60px;
-  }
 }
 
 .top-wrapper {
+  position: relative;
   @include mixins.flex-spbtw-ctr-row();
   gap: 48px;
 
-  @media (max-width: 1150px) {
+  @media (max-width: 1250px) {
     flex-direction: column;
-    width: 100%;
+    width: 560px;
     margin: 0 auto;
 
     > .left {
       width: 100%;
       margin: 0 0 0 auto;
     }
-  }
 
-  @media (max-width: 850px) {
-    width: auto;
+    @media (max-width: 600px) {
+      width: auto;
+    }
   }
 
   .left,
@@ -82,23 +58,32 @@ section {
 }
 
 .header-wrapper {
+    overflow: hidden;
+    height: 77px;
+    position: relative;
+
+    @media (max-width: 850px) {
+      height: 57px;
+    }
+
   > h2 {
-    margin: 0;
+    margin: 0 8px 0 0;
     text-align: right;
     position: relative;
     z-index: 5;
-      color: colors.$main-white;
+    color: colors.$main-white;
   }
 
   > img {
     width: 260px;
     position: absolute;
-    right: -10px;
+    right: 0;
     bottom: 0;
     animation: header-line 4s ease-in;
     animation-delay: 800ms;
     animation-iteration-count: infinite;
-    clip-path: inset(0 310px 0 0);
+    transform-origin: right bottom;
+    // clip-path: inset(0 300px 0 0);
 
     @media (max-width: 850px) {
       width: 200px;
@@ -108,25 +93,31 @@ section {
 
 @keyframes header-line {
   0% {
-    clip-path: inset(0 300px 0 0);
+    // clip-path: inset(0 300px 0 0);
+    transform: rotate(-110deg);
   }
-  5% {
-    clip-path: inset(0 0 0 0);
+  3% {
+    // clip-path: inset(0 0 0 0);
+    transform: rotate(0deg);
   }
   80% {
-    clip-path: inset(0 0 0 0);
+    // clip-path: inset(0 0 0 0);
+    transform: rotate(0deg);
   }
-  90% {
-    clip-path: inset(0 300px 0 0);
+  84% {
+    // clip-path: inset(0 300px 0 0);
+    transform: rotate(-110deg);
   }
   100% {
-    clip-path: inset(0 300px 0 0);
+    // clip-path: inset(0 300px 0 0);
+    transform: rotate(-110deg);
   }
+
 }
 
 .middle {
   position: relative;
-  width: 656px;
+  width: 560px;
 
   > img {
     position: relative;
@@ -152,9 +143,6 @@ section {
   @media (max-width: 970px) {
     height: fit-content;
   }
-
-  @media (max-width: 850px) {
-  }
 }
 
 .bottom-wrapper {
@@ -162,13 +150,8 @@ section {
   gap: 48px;
 
   @media (max-width: 1250px) {
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    margin-top: 36px;
-  }
-
-  @media (max-width: 1150px) {
     flex-direction: column;
+    margin-top: 36px;
   }
 
   > .outer:nth-child(1) {
@@ -190,7 +173,8 @@ section {
 
   @media (max-width: 1250px) {
     margin: 48px 0;
-    width: 100%;
+    width: 560px;
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
   }
 
   @media (max-width: 1150px) {
@@ -200,12 +184,12 @@ section {
 
   @media (max-width: 850px) {
     grid-template-columns: repeat(3, 96px);
-    margin: 48px auto 0;
   }
 
-  @media (max-width: 400px) {
-    column-gap: 20px;
-    justify-content: center;
+  @media (max-width: 540px) {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    column-gap: 0;
   }
 }
 
@@ -216,6 +200,7 @@ section {
 
   @media (max-width: 1250px) {
     margin-left: 40px;
+    transform: translate(120px, -160px) rotate(8deg);
   }
 
   @media (max-width: 850px) {

@@ -1,48 +1,24 @@
 @use "colors" as colors;
 @use "mixins" as mixins;
 @use "typography" as typo;
+@use "layout";
 
 section {
-  @include mixins.flex-spbtw-ctr-row(space-around);
-  padding: 144px 120px;
   background-color: colors.$main-white;
 
-  @media (max-width: 1550px) {
-    padding: 80px 52px;
-  }
-
-  @media (max-width: 1300px) {
-    padding: 40px 8px;
-  }
-
-  @media (max-width: 1150px) {
-    flex-direction: column-reverse;
-    padding: 88px 120px;
-  }
-
-  @media (max-width: 850px) {
-    padding: 88px 52px;
-  }
-
-  @media (max-width: 650px) {
-    padding: 88px 20px;
-  }
-
-  @media (max-width: 550px) {
-    padding: 88px 20px 40px;
-  }
-
-  @media (max-width: 450px) {
-    padding: 20px 20px 0;
-  }
+       @media (max-width: 1250px) {
+        display: flex !important;
+        flex-direction: column-reverse;
+        align-items: center;
+       }
 }
 
 .left {
   height: 400px;
   max-width: 560px;
 
-    @media (max-width: 450px) {
-     height: 340px;
+  @media (max-width: 450px) {
+    height: 340px;
   }
 }
 
@@ -128,16 +104,9 @@ section {
 .right {
   max-width: 560px;
   @include mixins.flex-spbtw-ctr-row(space-between, stretch, column);
-
-  @media (max-width: 1150px) {
-    margin: 0 0 40px;
-    max-width: none;
+  @media (max-width: 650px) {
+    max-width: 560px;
   }
-
-    @media (max-width: 650px) {
-     max-width: 560px;
-  }
-  
 
   > .header-wrapper {
     position: relative;
@@ -172,21 +141,8 @@ section {
     }
   }
 
-  // > span {
-  //   @include mixins.standard-text();
-
-  //   @media (max-width: 850px) {
-  //     font-size: 18px;
-  //   }
-  // }
-
   > p {
     margin-bottom: 24px;
-    // @include mixins.standard-text();
-
-    // @media (max-width: 850px) {
-    //   font-size: 18px;
-    // }
   }
 }
 
