@@ -5,12 +5,12 @@ import { CircleLinkComponent } from '../../shared/components/ui/circle-link/circ
 import { CircleLinksService } from '../../shared/services/links/circle-links.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
-import { GetInContactButtonComponent } from "../../shared/components/ui/get-in-contact-button/get-in-contact-button.component";
+import { MainButtonComponent } from "../../shared/components/ui/main-button/main-button.component";
 
 @Component({
   standalone: true,
   selector: 'app-hero-section',
-  imports: [HeaderComponent, CommonModule, CircleLinkComponent, TranslateModule, GetInContactButtonComponent],
+  imports: [HeaderComponent, CommonModule, CircleLinkComponent, TranslateModule, MainButtonComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })

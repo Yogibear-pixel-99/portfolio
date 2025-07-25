@@ -26,8 +26,13 @@
     "collaborate": "Herzlich willkommen auf meiner Seite und lassen Sie uns gemeinsam etwas großartiges schaffen!",
     "button": "Kontakt aufnehmen"
   },
+    "skills" : {
+    "myStack" : "MEIN STACK",
+    "header" : "Skill set",
+    "introduction" : "In der Vergangenheit habe ich an mindestens 14 Projekten gearbeitet, um mir die folgenden Fähigkeiten anzueignen. Diese Fähigkeiten werden kontinuierlich erweitert, um mit der Zeit Schritt zu halten."
+  },
   "projects": {
-    "craft": "MEIN SCHAFFEN",
+    "craft": "MEINE",
     "header": "Projekte",
     "text" : "Hier finden sie einen Auszug meiner vergangenen Arbeit.",
     "singleProjects": {

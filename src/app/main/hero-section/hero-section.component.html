@@ -34,13 +34,13 @@
           class="hide-hello-name"
           [ngClass]="{ 'show-hello-name': helloEnterText === true }"
         >
-          {{ 'hero.helloHover' | translate }}
+          {{ "hero.helloHover" | translate }}
         </span>
         <span
           class="hide-hello-name"
           [ngClass]="{ 'show-hello-name': helloEnterText === false }"
         >
-          {{ 'hero.hello' | translate }}
+          {{ "hero.hello" | translate }}
         </span>
         <div
           class="hello-name-mask"
@@ -51,16 +51,16 @@
     <div class="main-text-wrapper">
       <div class="frontend-wrapper">
         <div>
-          @for (letter of
-          mainFirstText$;
-          track $index; let letterIndex = $index) {
+          @for (letter of mainFirstText$; track $index; let letterIndex =
+          $index) {
           <span
             (mousemove)="hoveredLetterFirst = letterIndex"
             (mouseleave)="hoveredLetterFirst = null"
             class="single-letter"
             >{{
               hoveredLetterFirst === letterIndex
-                ? mainFirstHover$[letterIndex] : letter
+                ? mainFirstHover$[letterIndex]
+                : letter
             }}</span
           >
           }
@@ -70,10 +70,7 @@
           (mouseleave)="profilHovered = false"
           class="pic-wrapper"
         >
-          <img
-            src="images/hero-section/placeholder.jpg"
-            alt="profil picture"
-          />
+          <img src="images/hero-section/placeholder.jpg" alt="profil picture" />
           <span
             >Joachim @if (profilHovered === !true) {
             <span>:&#41;</span>
@@ -84,22 +81,26 @@
         </div>
       </div>
       <div class="dev-wrapper">
-        @for (letter of
-        mainSecondText$;
-        track $index; let letterIndex = $index) {
+        @for (letter of mainSecondText$; track $index; let letterIndex = $index)
+        {
         <span
           (mouseenter)="hoveredLetterSecond = letterIndex"
           (mouseleave)="hoveredLetterSecond = null"
           class="single-letter"
           >{{
             hoveredLetterSecond === letterIndex
-              ? mainSecondHover$[letterIndex] : letter
+              ? mainSecondHover$[letterIndex]
+              : letter
           }}</span
         >
         }
       </div>
     </div>
-    <app-get-in-contact-button [objSrcName]="'hero.touch'"></app-get-in-contact-button>
+    <app-main-button
+      [translateText]="'hero.touch'"
+      [color]="'light-button'"
+      [linkPath]="'#'"
+    ></app-main-button>
   </div>
   <div class="social-links">
     @for (link of linkService.circleLinks; track $index) {

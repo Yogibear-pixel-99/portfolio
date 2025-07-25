@@ -44,9 +44,10 @@
     </div>
     <span class="section-text-typo">{{ "aboutMe.text" | translate }}</span>
     <p class="section-text-typo">{{ "aboutMe.collaborate" | translate }}</p>
-    <app-get-in-contact-button
-      [objSrcName]="'aboutMe.button'"
-      [color]="'light-button'"
-    ></app-get-in-contact-button>
+    <app-main-button
+      [translateText]="'aboutMe.button'"
+      [color]="'dark-button'"
+      [linkPath]="'#'"
+    ></app-main-button>
   </div>
 </section>

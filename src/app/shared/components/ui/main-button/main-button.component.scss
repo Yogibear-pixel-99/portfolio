@@ -2,6 +2,10 @@
 @use "mixins" as mixins;
 @use "typography" as typo;
 
+a {
+  text-decoration: none;
+}
+
 button {
   @include typo.bricolage-font(18px, 500);
   @include mixins.flex-spbtw-ctr-row(center);
@@ -10,39 +14,34 @@ button {
   width: 145px;
   height: 40px;
 
-    &:hover {
-        cursor: pointer;
-         box-shadow: 0 0 0 0 colors.$main-white;
-    }
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 0 colors.$main-white;
+  }
 
-
-
- 
-//   align-self: flex-end;
   width: auto;
   transition: all ease-in-out 0.2s;
 }
 
-.dark-button {
- color: colors.$main-white;
+.light-button {
+  color: colors.$main-white;
   background-color: rgba(0, 0, 0, 0);
   border: solid colors.$main-white 1px;
-   box-shadow: 2px 4px 0 0 colors.$main-white;
+  box-shadow: 2px 4px 0 0 colors.$main-white;
 
   &:hover {
     transform: translate(2px, 4px);
     background-color: colors.$main-red;
   }
+}
 
-} 
-
-.light-button {
- color: colors.$main-black;
+.dark-button {
+  color: colors.$main-black;
   background-color: rgba(0, 0, 0, 0);
   border: solid colors.$main-black 1px;
-   box-shadow: 2px 4px 0 0 colors.$main-black;
+  box-shadow: 2px 4px 0 0 colors.$main-black;
 
-    &:hover {
+  &:hover {
     transform: translate(2px, 4px);
     background-color: colors.$main-red;
     color: colors.$main-white;
