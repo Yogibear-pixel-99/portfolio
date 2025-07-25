@@ -8,12 +8,53 @@ section {
 }
 
 h2 {
-    margin: 0;
-      color: colors.$main-black;
+  margin: 0;
+  color: colors.$main-black;
 }
 
 .header-wrapper {
-@include mixins.flex-spbtw-ctr-row(center, flex-start, column);
-gap: 16px;
+  @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
+  gap: 16px;
 }
 
+.header-text {
+  margin: 32px 0 48px;
+}
+
+.placeholder {
+  @media (max-width: 1250px) {
+    display: none;
+  }
+}
+
+.header-inner-wrapper {
+  position: relative;
+
+  > img {
+    width: 280px;
+    @include mixins.absolute-ctr();
+    transform: translate(-50%, 26px);
+    animation: header-line 4s ease-in;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+    clip-path: inset(0 300px 0 0);
+  }
+}
+
+@keyframes header-line {
+  0% {
+    clip-path: inset(0 300px 0 0);
+  }
+  5% {
+    clip-path: inset(0 0 0 0);
+  }
+  80% {
+    clip-path: inset(0 0 0 0);
+  }
+  90% {
+    clip-path: inset(0 300px 0 0);
+  }
+  100% {
+    clip-path: inset(0 300px 0 0);
+  }
+}

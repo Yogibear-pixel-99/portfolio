@@ -25,6 +25,20 @@
   }
 }
 
+.h4-header-typo {
+  margin: 0;
+  @include bricolage-font(24px, 700);
+
+  @media (max-width: 850px) {
+    @include bricolage-font(20px, 700);
+  }
+}
+
+.h4-text-typo {
+  margin: 0;
+  @include bricolage-font(18px, 400);
+}
+
 
 .section-text-typo {
     @include bricolage-font(20px, 400);

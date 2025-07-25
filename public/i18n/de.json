@@ -29,7 +29,8 @@
   "projects": {
     "craft": "MEIN SCHAFFEN",
     "header": "Projekte",
-    "projects": {
+    "text" : "Hier finden sie einen Auszug meiner vergangenen Arbeit.",
+    "singleProjects": {
       "join": {
         "header": "Join",
         "text": "Eine professionelle Task Management App, inspiriert vom bekannten Kanban Konzept. Zum erstellen und organisieren von Arbeitsaubläufen, zuteilen von Mitgliedern und verwalten per drag and drop."

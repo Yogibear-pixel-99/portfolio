@@ -1,5 +1,7 @@
 <div>
-  <img [src]="imgPath" [alt]="imgAltText" />
-      <h3>{{ translateHeaderPath | translate }}</h3>
-  <span>{{ translateTextPath | translate }}</span>
+<div class="img-wrapper">
+  <img [ngClass]="{'animate-img' : animate}" [src]="imgPath" [alt]="imgAltText" />
+  </div>
+  <h4 class="h4-header-typo">{{ translateHeaderPath | translate }}</h4>
+  <span class="h4-text-typo">{{ translateTextPath | translate }}</span>
 </div>

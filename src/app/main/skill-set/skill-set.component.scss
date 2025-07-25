@@ -58,13 +58,13 @@ section {
 }
 
 .header-wrapper {
-    overflow: hidden;
-    height: 77px;
-    position: relative;
+  overflow: hidden;
+  height: 77px;
+  position: relative;
 
-    @media (max-width: 850px) {
-      height: 57px;
-    }
+  @media (max-width: 850px) {
+    height: 57px;
+  }
 
   > h2 {
     margin: 0 8px 0 0;
@@ -83,7 +83,6 @@ section {
     animation-delay: 800ms;
     animation-iteration-count: infinite;
     transform-origin: right bottom;
-    // clip-path: inset(0 300px 0 0);
 
     @media (max-width: 850px) {
       width: 200px;
@@ -93,26 +92,20 @@ section {
 
 @keyframes header-line {
   0% {
-    // clip-path: inset(0 300px 0 0);
     transform: rotate(-110deg);
   }
   3% {
-    // clip-path: inset(0 0 0 0);
     transform: rotate(0deg);
   }
   80% {
-    // clip-path: inset(0 0 0 0);
     transform: rotate(0deg);
   }
   84% {
-    // clip-path: inset(0 300px 0 0);
     transform: rotate(-110deg);
   }
   100% {
-    // clip-path: inset(0 300px 0 0);
     transform: rotate(-110deg);
   }
-
 }
 
 .middle {

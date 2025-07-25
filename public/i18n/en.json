@@ -34,7 +34,8 @@
   "projects" : {
     "craft" : "MY CRAFT",
     "header" : "Projects",
-    "projects" : {
+    "text" : "The following projects are an excerpt from my past work.",
+    "singleProjects" : {
       "join" : {
         "header" : "Join",
         "text" : "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
