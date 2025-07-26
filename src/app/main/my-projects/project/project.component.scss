@@ -7,8 +7,6 @@ div {
   color: colors.$main-black;
 }
 
-
-
 .img-wrapper {
   height: 400px;
   border-radius: 20px;
@@ -17,12 +15,26 @@ div {
   z-index: 1;
   margin-bottom: 32px;
 
+  @media (max-width: 620px) {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+  }
+
+  > img {
+    width: 100%;
+  }
+
+  > .img-hover-effect-animate {
+    animation: animate-hover-effect 400ms forwards;
+  }
+
   &::before {
     content: "";
     background: linear-gradient(
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.8)
     );
     position: absolute;
     inset: 0;
@@ -36,10 +48,10 @@ div {
     opacity: 1;
   }
 
-  &:hover > img {
+  &:hover > .img-hover-effect-not-animate {
     animation: none;
-    transition: transform ease-in-out 700ms;
-    transform: scale(1.1) translate(-50%, -50%);
+    transition: transform ease-in-out 400ms;
+    transform: scale(1.1) translate(0, 0);
   }
 
   &:hover > .content-wrapper {
@@ -50,16 +62,12 @@ div {
     position: absolute;
     right: 20px;
     bottom: 80px;
-    width: fit-content;
-    height: fit-content;
     height: 0;
     z-index: 10;
     opacity: 0;
-}
+  }
 
   > img {
-    @include mixins.absolute-ctr();
-    position: relative;
     z-index: 2;
     transition: transform ease-in-out 700ms;
   }
@@ -71,25 +79,34 @@ div {
 
 @keyframes animate-img-project {
   0% {
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, 0);
   }
   20% {
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, 5%);
   }
   45% {
-    transform: translate(-50%, -40%);
+    transform: translate(-10%, 11%);
   }
   60% {
-    transform: translate(-50%, -60%);
+    transform: translate(-10%, 10%);
   }
   80% {
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, 12%);
   }
   100% {
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, 0);
+  }
+}
+
+@keyframes animate-hover-effect {
+  0% {
+    transform: scale(1) translate(-10%, 0);
+  }
+  100% {
+    transform: scale(1.1) translate(-10%, 10%);
   }
 }
 
 .project-header-text {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

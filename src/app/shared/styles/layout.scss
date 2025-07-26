@@ -35,6 +35,10 @@
         gap: 80px;
     }
 
+        @media (max-width: 850px) {
+        gap: 40px;
+    }
+
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }

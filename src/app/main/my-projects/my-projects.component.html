@@ -23,25 +23,43 @@
       [animate]="true"
     >
       <app-main-button
+        class="display-none-touch-device display-hide-768px-width"
         [translateText]="'projects.buttonText'"
         [color]="'light-button'"
         [linkPath]="'#'"
       ></app-main-button>
     </app-project>
+    <div class="display-block-touch-device display-block-768px-width touch-button">
+      <app-main-button
+        [translateText]="'projects.buttonText'"
+        [color]="'dark-button'"
+        [linkPath]="'#'"
+      ></app-main-button>
+    </div>
     <img src="images/projects/Sticker.png" alt="featured project sticker" />
   </div>
 
-  <app-project
-    [imgPath]="'images/projects/Pollo.png'"
-    [imgAltText]="'el pollo loco pepe'"
-    [translateHeaderPath]="'projects.singleProjects.elpolloloco.header'"
-    [translateTextPath]="'projects.singleProjects.elpolloloco.text'"
-    [animate]="false"
-  >
-    <app-main-button
-      [translateText]="'projects.buttonText'"
-      [color]="'light-button'"
-      [linkPath]="'#'"
-    ></app-main-button>
-  </app-project>
+  <div class="project-wrapper">
+    <app-project
+      [imgPath]="'images/projects/Pollo.png'"
+      [imgAltText]="'el pollo loco pepe'"
+      [translateHeaderPath]="'projects.singleProjects.elpolloloco.header'"
+      [translateTextPath]="'projects.singleProjects.elpolloloco.text'"
+      [animate]="false"
+    >
+      <app-main-button
+        class="display-none-touch-device display-hide-768px-width"
+        [translateText]="'projects.buttonText'"
+        [color]="'light-button'"
+        [linkPath]="'#'"
+      ></app-main-button>
+    </app-project>
+    <div class="display-block-touch-device display-block-768px-width touch-button">
+      <app-main-button
+        [translateText]="'projects.buttonText'"
+        [color]="'dark-button'"
+        [linkPath]="'#'"
+      ></app-main-button>
+    </div>
+  </div>
 </section>

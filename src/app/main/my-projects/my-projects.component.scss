@@ -2,6 +2,7 @@
 @use "mixins" as mixins;
 @use "typography" as typo;
 @use "layout";
+@use "_visibility";
 
 section {
   background-color: colors.$main-white;
@@ -80,5 +81,16 @@ h2 {
       width: 120px;
       height: 120px;
     }
+
+    @media (max-width: 400px) {
+      top: 45%;
+      width: 100px;
+      height: 100px;
+    }
   }
+}
+
+.touch-button {
+  width: fit-content;
+  margin: 32px 0 0 auto;
 }

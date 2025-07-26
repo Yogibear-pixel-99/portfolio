@@ -10,6 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class ProjectComponent {
   translate = inject(TranslateService);
+  hoverProject:boolean = false;
 
   @Input() imgPath: string = '';
   @Input() imgAltText: string = '';

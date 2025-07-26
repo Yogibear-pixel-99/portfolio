@@ -1,0 +1,34 @@
+.display-none-touch-device {
+  @media (pointer: coarse) {
+    display: none;
+  }
+}
+
+.display-block-touch-device {
+  display: none;
+
+  @media (pointer: coarse) {
+    display: block;
+  }
+}
+
+.display-flex-touch-device {
+  display: flex;
+
+  @media (pointer: coarse) {
+    display: flex;
+  }
+}
+
+.display-hide-768px-width {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.display-block-768px-width {
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

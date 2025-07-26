@@ -3,8 +3,9 @@
 @use "typography" as typo;
 
 a {
+  @include mixins.flex-spbtw-ctr-row(center, center);
   text-decoration: none;
-  width: 145px;
+  width: fit-content;
 }
 
 button {
