@@ -18,30 +18,30 @@ export class ProjectDetailsService {
     'join', 'elpolloloco'
   ];
 
-  constructor() {}
-
-  nextProject(){
-  if (this.projectPos === this.projectArr.length - 1) {
-    this.projectPos = 0;
-  } else {
-    this.projectPos++;
-  }
-  this.getProjectInfos();
-  }
-
-  prevProject(){
-    if (this.projectPos === 0) {
-      this.projectPos = this.projectArr.length - 1
-    } else {
-      this.projectPos--;
-    }
+  constructor() {
     this.getProjectInfos();
   }
 
+  nextProject(){
+    this.projectPos = (this.projectPos + 1) % this.projectArr.length;
+    this.getProjectInfos();
+  }
 
+  prevProject(){
+    this.projectPos = (this.projectPos - 1 + this.projectArr.length) % this.projectArr.length;
+    this.getProjectInfos();
+  }
 
   getProjectInfos (){
     this.headerTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.header`;
     this.descHeaderPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.descHeader`;
+    this.descTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.descText`;
+    this.implHeaderPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.implementHeader`;
+    this.implTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.implementText`;
+    this.durHeaderPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.durHeader`;
+    this.durTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.durTime`;
   }
+
+
+
 }

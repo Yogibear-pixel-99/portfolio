@@ -36,33 +36,25 @@
     "header": "Projekte",
     "text": "Hier finden sie einen Auszug meiner vergangenen Arbeit.",
     "buttonText": "Projekt Details",
-    "singleProjects": {
-      "join": {
-        "header": "Join",
-        "text": "Eine professionelle Task Management App, inspiriert vom bekannten Kanban Konzept. Zum erstellen und organisieren von Arbeitsaubläufen, zuteilen von Mitgliedern und verwalten per drag and drop."
-      },
-      "elpolloloco": {
-        "header": "El Pollo Loco",
-        "text": "Ein Objektorientiertes Browser Jump and Run spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board."
-      }
-    },
     "projectDetails": {
       "backButton": "Zurück",
       "nextButton": "Nächstes Projekt",
       "join": {
         "header": "Join",
         "descHeader": "Beschreibung",
+        "descText" : "Eine professionelle Task Management App, inspiriert vom bekannten Kanban Konzept. Zum erstellen und organisieren von Arbeitsaubläufen, zuteilen von Mitgliedern und verwalten per drag and drop.",
         "implementHeader": "Implementierung",
         "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
-        "durText": "Dauer",
+        "durHeader": "Dauer",
         "durTime": "6 Wochen"
       },
       "elpolloloco": {
         "header": "El Pollo Loco",
         "descHeader": "Beschreibung",
+        "descText" : "Ein Objektorientiertes Browser Jump and Run spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board.",
         "implementHeader": "Implementierung",
         "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
-        "durText": "Dauer",
+        "durHeader": "Dauer",
         "durTime": "6 Wochen"
       }
     }

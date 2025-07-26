@@ -36,33 +36,25 @@
     "header": "Projects",
     "text": "The following projects are an excerpt from my past work.",
     "buttonText": "Project details",
-    "singleProjects": {
-      "join": {
-        "header": "Join",
-        "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
-      },
-      "elpolloloco": {
-        "header": "El Pollo Loco",
-        "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, a endless chickenrush mode and a top 30 Highscore board."
-      }
-    },
     "projectDetails": {
       "backButton": "Go Back",
       "nextButton": "Next Project",
       "join": {
         "header": "Join",
         "descHeader": "Description",
+        "descText" : "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         "implementHeader": "Implementation Details",
         "implementText": "Here i write down how i worked with all the zeug.",
-        "durText": "Duration",
+        "durHeader": "Duration",
         "durTime": "6 Weeks"
       },
       "elpolloloco": {
         "header": "El Pollo Loco",
         "descHeader": "Description",
+        "descText" : "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, a endless chickenrush mode and a top 30 Highscore board.",
         "implementHeader": "Implementation Details",
         "implementText": "Here i write down how i worked with all the zeug.",
-        "durText": "Duration",
+        "durHeader": "Duration",
         "durTime": "5 Weeks"
       }
     }
