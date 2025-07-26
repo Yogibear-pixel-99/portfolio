@@ -33,5 +33,13 @@
         projectService.durTextPath | translate
       }}</span>
     </div>
+    <div class="tech-stack-wrapper">
+        @for (logo of projectService.usedTechs; track $index) {
+            <div class="tech-wrapper">
+                <img [src]="logo.imgPath" [alt]="logo.imgAltText">
+                <span>{{logo.name}}</span>
+            </div>
+        }
+    </div>
   </div>
 </div>

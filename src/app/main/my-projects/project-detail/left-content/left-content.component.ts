@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { ProjectDetailsService } from '../../../../shared/services/project-details.service';
+import { ProjectDetailsService } from '../../../../shared/services/project-details/project-details.service';
 
 @Component({
   selector: 'app-left-content',

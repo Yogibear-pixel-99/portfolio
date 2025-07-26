@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { ProjectInfos, TechLogos } from '../../interfaces/model';
+import { TechlogoService } from '../techlogo/techlogo.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectDetailsService {
+
+  techLogoService = inject(TechlogoService);
+
   headerTextPath: string = '';
   descHeaderPath: string = '';
   descTextPath: string = '';
@@ -11,25 +16,53 @@ export class ProjectDetailsService {
   implTextPath: string = '';
   durHeaderPath: string = '';
   durTextPath: string = '';
-  usedTechs: object[] = [];
+  usedTechs: TechLogos[] = [{
+    name : '',
+    imgPath : '',
+    imgAltText : ''
+  }];
 
   projectPos:number = 0;
+
+
   projectArr:string[] = [
     'join', 'elpolloloco'
   ];
 
+
+
+  projectInfos: ProjectInfos = {
+    join : {
+      img : "",
+      sticker : "",
+      usedTechs : [
+        'html', 'css', 'javascript', 'firebase'
+      ]
+    },
+    elpolloloco : {
+      img : "",
+      sticker : "",
+      usedTechs : [
+        'html', 'css', 'javascript'
+      ]
+    }
+  }
+
   constructor() {
     this.getProjectInfos();
+    this.getTechLogos();
   }
 
   nextProject(){
     this.projectPos = (this.projectPos + 1) % this.projectArr.length;
     this.getProjectInfos();
+    this.getTechLogos();
   }
 
   prevProject(){
     this.projectPos = (this.projectPos - 1 + this.projectArr.length) % this.projectArr.length;
     this.getProjectInfos();
+    this.getTechLogos();
   }
 
   getProjectInfos (){
@@ -42,6 +75,16 @@ export class ProjectDetailsService {
     this.durTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.durTime`;
   }
 
-
+  getTechLogos(){
+   let techArray = this.projectInfos[this.projectArr[this.projectPos]].usedTechs;
+         this.techLogoService.logos.forEach((element) => {
+    techArray.forEach((techlogo) => {
+      if (techlogo.toLowerCase() === element.name.toLowerCase()) {
+        this.usedTechs.push(element);
+      };
+    })
+   })
+   console.log(this.usedTechs);
+  }
 
 }
