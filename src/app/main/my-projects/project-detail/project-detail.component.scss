@@ -12,8 +12,15 @@ section {
   background-position: left;
 }
 
+.main {
+    @include mixins.flex-spbtw-ctr-row(flex-start);
+    flex-direction: column;
+    height: calc(100% - 80px);
+    padding: 120px;
+}
+
 .back-wrapper {
-  margin: 48px auto 48px 72px;
+  margin: 0 auto 48px 0;
   color: colors.$main-black;
 
   &:hover {
@@ -23,9 +30,11 @@ section {
 }
 
 .next-wrapper {
-  margin: 48px 72px 0 auto;
+  margin: auto 0 0 auto;
   text-align: right;
   color: colors.$main-white;
+  text-align: bottom;
+  justify-self:end;
 
   &:hover {
     color: colors.$main-yellow;
@@ -40,36 +49,15 @@ section {
   width: fit-content;
 }
 
-.header-wrapper {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 60px;
+.middle {
+    @include mixins.flex-spbtw-ctr-row(space-around);
+    width: 100%;
+    
+    > .left-content{
+            width: 488px;
+        }
 
-  > img {
-    position: absolute;
-    width: 110%;
-    height: 24px;
-    left: 50%;
-    bottom: -16px;
-    transform: translateX(-50%);
-    margin-top: 4px;
-    display: block;
-    object-fit: fill;
-  }
-}
-
-.main-text-wrapper {
-  @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
-  gap: 32px;
-}
-
-.inner-text-wrapper {
-  @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
-  gap: 16px;
-}
-
-.dur-wrapper {
-  > span:nth-child(1) {
-    margin-right: 16px;
-  }
+    >  .right-content {
+            width: 560px;
+        }
 }

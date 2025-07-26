@@ -1,8 +1,7 @@
 <section>
   <app-header [linkColor]="['black', 'black', 'white', 'white']"></app-header>
   <div class="main">
-    <div 
-    (click)="projectService.prevProject()" class="back-wrapper">
+    <div (click)="projectService.prevProject()" class="back-wrapper">
       <img
         src="images/projects/project-details/back-arrow.svg"
         alt="back arrow"
@@ -10,34 +9,16 @@
         "projects.projectDetails.backButton" | translate
       }}</span>
     </div>
-    <div class="middle inner-section-two-col">
-      <div class="left-content">
-        <div class="header-wrapper">
-        <h2 class="section-header-typo">{{ projectService.headerTextPath | translate }}</h2>
-        <img
-          src="images/projects/project-details/header-underline.svg"
-          alt="project underline"
-        />
+    <div class="middle">
+        <div class="left-content">
+        <app-left-content></app-left-content>
         </div>
-        <div class="main-text-wrapper">
-            <div class="inner-text-wrapper">
-        <h4 class="h4-header-typo">{{projectService.descHeaderPath | translate}}</h4>
-        <span class="h4-text-typo">{{projectService.descTextPath | translate}}</span>
-        </div>
-         <div class="inner-text-wrapper">
-        <h4 class="h4-header-typo">{{projectService.implHeaderPath | translate}}</h4>
-        <span class="h4-text-typo">{{projectService.implTextPath | translate}}</span>
-        </div>
-         <div class="dur-wrapper">
-        <span >{{projectService.durHeaderPath | translate}}</span><span>{{projectService.durTextPath | translate}}</span>
+      <div class="right-content">
+        <app-right-content></app-right-content>
       </div>
-      </div>
-</div>
-      <div class="right-content"></div>
     </div>
 
-    <div 
-    (click)="projectService.nextProject()" class="next-wrapper">
+    <div (click)="projectService.nextProject()" class="next-wrapper">
       <span class="project-detail-button">{{
         "projects.projectDetails.nextButton" | translate
       }}</span>

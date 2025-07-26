@@ -1,0 +1,36 @@
+@use "typography";
+@use "mixins" as mixins;
+
+.header-wrapper {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 60px;
+
+  > img {
+    position: absolute;
+    width: 110%;
+    height: 24px;
+    left: 50%;
+    bottom: -16px;
+    transform: translateX(-50%);
+    margin-top: 4px;
+    display: block;
+    object-fit: fill;
+  }
+}
+
+.main-text-wrapper {
+  @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
+  gap: 32px;
+}
+
+.inner-text-wrapper {
+  @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
+  gap: 16px;
+}
+
+.dur-wrapper {
+  > span:nth-child(1) {
+    margin-right: 16px;
+  }
+}

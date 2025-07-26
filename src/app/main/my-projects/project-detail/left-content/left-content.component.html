@@ -1,0 +1,37 @@
+<div class="left-content">
+  <div class="header-wrapper">
+    <h2 class="section-header-typo">
+      {{ projectService.headerTextPath | translate }}
+    </h2>
+    <img
+      src="images/projects/project-details/header-underline.svg"
+      alt="project underline"
+    />
+  </div>
+  <div class="main-text-wrapper">
+    <div class="inner-text-wrapper">
+      <h4 class="h4-header-typo">
+        {{ projectService.descHeaderPath | translate }}
+      </h4>
+      <span class="h4-text-typo">{{
+        projectService.descTextPath | translate
+      }}</span>
+    </div>
+    <div class="inner-text-wrapper">
+      <h4 class="h4-header-typo">
+        {{ projectService.implHeaderPath | translate }}
+      </h4>
+      <span class="h4-text-typo">{{
+        projectService.implTextPath | translate
+      }}</span>
+    </div>
+    <div class="dur-wrapper">
+      <span class="project-detail-button">{{
+        projectService.durHeaderPath | translate
+      }}</span
+      ><span class="h4-text-typo">{{
+        projectService.durTextPath | translate
+      }}</span>
+    </div>
+  </div>
+</div>
