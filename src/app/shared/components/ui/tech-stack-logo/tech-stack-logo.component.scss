@@ -27,4 +27,8 @@ img {
   filter: grayscale(0.9);
   width: 72px;
   height: 72px;
+
+  @media (pointer: coarse) {
+    filter: grayscale(0);
+  }
 }

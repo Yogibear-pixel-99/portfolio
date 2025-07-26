@@ -45,6 +45,18 @@
         "header" : "El Pollo Loco",
         "text" : "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, a endless chickenrush mode and a top 30 Highscore board."
       }
+    },
+        "projectDetails": {
+      "backButton" : "Zurück",
+      "nextButton" : "Nächstes Projekt",
+      "join": {
+        "header": "Join",
+        "descHeader": "Beschreibung",
+        "implementHeader": "Implementierung",
+        "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
+        "durText" : "Dauer",
+        "durTime" : "6 Wochen"
+      }
     }
   },
   "thoughts" : {

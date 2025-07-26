@@ -26,16 +26,16 @@
     "collaborate": "Herzlich willkommen auf meiner Seite und lassen Sie uns gemeinsam etwas großartiges schaffen!",
     "button": "Kontakt aufnehmen"
   },
-    "skills" : {
-    "myStack" : "MEIN STACK",
-    "header" : "Skill set",
-    "introduction" : "In der Vergangenheit habe ich an mindestens 14 Projekten gearbeitet, um mir die folgenden Fähigkeiten anzueignen. Diese Fähigkeiten werden kontinuierlich erweitert, um mit der Zeit Schritt zu halten."
+  "skills": {
+    "myStack": "MEIN STACK",
+    "header": "Skill set",
+    "introduction": "In der Vergangenheit habe ich an mindestens 14 Projekten gearbeitet, um mir die folgenden Fähigkeiten anzueignen. Diese Fähigkeiten werden kontinuierlich erweitert, um mit der Zeit Schritt zu halten."
   },
   "projects": {
     "craft": "MEINE",
     "header": "Projekte",
-    "text" : "Hier finden sie einen Auszug meiner vergangenen Arbeit.",
-    "buttonText" : "Projekt Details",
+    "text": "Hier finden sie einen Auszug meiner vergangenen Arbeit.",
+    "buttonText": "Projekt Details",
     "singleProjects": {
       "join": {
         "header": "Join",
@@ -45,17 +45,29 @@
         "header": "El Pollo Loco",
         "text": "Ein Objektorientiertes Browser Jump and Run spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board."
       }
+    },
+    "projectDetails": {
+      "backButton" : "Go Back",
+      "nextButton" : "Next Project",
+      "join": {
+        "header": "Join",
+        "descHeader": "Description",
+        "implementHeader": "Implementation Details",
+        "implementText": "Short text that describes your role",
+        "durText" : "Duration",
+        "durTime" : "6 weeks"
+      }
     }
   },
-    "thoughts" : {
-    "words" : "ANDERE GEDANKEN:",
-    "header" : "Meine Kollegen",
-    "colleagues" : [
+  "thoughts": {
+    "words": "ANDERE GEDANKEN:",
+    "header": "Meine Kollegen",
+    "colleagues": [
       "he is blab labla the best person in the world iiiisadifasdfvgafdgv",
       "He oh my god adfäslögjdalöfkgnöadlfknadölkfvnöadflkadlöfkfv",
       "asdlökjjdvfjldvfjdfaköbiosdfbijiogogkböjbk asdfsda asddfasdf  asdfl"
     ],
-    "developer" : "Frontend Entwickler",
-    "profile" : "Profil"
+    "developer": "Frontend Entwickler",
+    "profile": "Profil"
   }
 }
