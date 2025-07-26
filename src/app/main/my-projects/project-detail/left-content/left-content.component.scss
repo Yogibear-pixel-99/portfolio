@@ -30,7 +30,25 @@
 }
 
 .dur-wrapper {
+    
   > span:nth-child(1) {
     margin-right: 16px;
   }
 }
+
+.tech-stack-wrapper {
+@include mixins.flex-spbtw-ctr-row();
+gap: 8px;
+
+> div {
+    @include mixins.flex-spbtw-ctr-row();
+    gap: 4px;
+
+    > img {
+        width: 24px;
+        height: 24px;
+    }
+}
+}
+
+

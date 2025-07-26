@@ -1,9 +1,18 @@
 <div>
-    <div class="img-wrapper">
-        <img src="" alt="">
-        <img src="" alt="">
-    </div>
-    <div class="button-wrapper">
-        
-    </div>
+  <div class="img-wrapper">
+    <img [src]="projectService.imgPath" />
+    <img [src]="projectService.stickerPath" />
+  </div>
+  <div class="button-wrapper">
+    <app-main-button
+      [translateText]="'Git Hub'"
+      [linkPath]="'#test'"
+      [color]="'light-button'"
+    ></app-main-button>
+    <app-main-button
+      [translateText]="'Live Test'"
+      [linkPath]="'#test2'"
+       [color]="'light-button'"
+    ></app-main-button>
+  </div>
 </div>

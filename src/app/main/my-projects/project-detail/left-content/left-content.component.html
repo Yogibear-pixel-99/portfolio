@@ -35,9 +35,9 @@
     </div>
     <div class="tech-stack-wrapper">
         @for (logo of projectService.usedTechs; track $index) {
-            <div class="tech-wrapper">
+            <div>
                 <img [src]="logo.imgPath" [alt]="logo.imgAltText">
-                <span>{{logo.name}}</span>
+                <span class="project-techlogo-font">{{logo.name}}</span>
             </div>
         }
     </div>

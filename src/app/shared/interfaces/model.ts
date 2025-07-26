@@ -4,8 +4,6 @@ export interface CircleLinks {
   imgAltText: string;
 }
 
-
-
 export interface TechLogos {
   name: string;
   imgPath: string;
@@ -19,4 +17,6 @@ export interface ProjectInfo {
   img: string;
   sticker: string;
   usedTechs: string[];
+  gitButtonLink: string;
+  liveTestLink: string;
 }

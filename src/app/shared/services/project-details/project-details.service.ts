@@ -6,7 +6,6 @@ import { TechlogoService } from '../techlogo/techlogo.service';
   providedIn: 'root',
 })
 export class ProjectDetailsService {
-
   techLogoService = inject(TechlogoService);
 
   headerTextPath: string = '';
@@ -16,75 +15,89 @@ export class ProjectDetailsService {
   implTextPath: string = '';
   durHeaderPath: string = '';
   durTextPath: string = '';
-  usedTechs: TechLogos[] = [{
-    name : '',
-    imgPath : '',
-    imgAltText : ''
-  }];
-
-  projectPos:number = 0;
-
-
-  projectArr:string[] = [
-    'join', 'elpolloloco'
-  ];
-
-
-
-  projectInfos: ProjectInfos = {
-    join : {
-      img : "",
-      sticker : "",
-      usedTechs : [
-        'html', 'css', 'javascript', 'firebase'
-      ]
+  usedTechs: TechLogos[] = [
+    {
+      name: '',
+      imgPath: '',
+      imgAltText: '',
     },
-    elpolloloco : {
-      img : "",
-      sticker : "",
-      usedTechs : [
-        'html', 'css', 'javascript'
-      ]
-    }
-  }
+  ];
+  imgPath: string = '';
+  stickerPath: string = '';
+  gitLink: string = '';
+  liveLink: string = '';
+
+  projectPos: number = 0;
+  projectArr: string[] = ['join', 'elpolloloco'];
+  projectInfos: ProjectInfos = {
+    join: {
+      img: 'images/projects/project-details/join/join-screen-0.png',
+      sticker: 'images/projects/project-details/Sticker.png',
+      usedTechs: ['html', 'css', 'javascript', 'firebase'],
+      gitButtonLink: '#',
+      liveTestLink: '#',
+    },
+    elpolloloco: {
+      img: 'images/projects/project-details/elpolloloco/loco-screen-0.png',
+      sticker: 'images/projects/project-details/Sticker.png',
+      usedTechs: ['html', 'css', 'javascript'],
+      gitButtonLink: '#',
+      liveTestLink: '#',
+    },
+  };
 
   constructor() {
     this.getProjectInfos();
     this.getTechLogos();
   }
 
-  nextProject(){
+  nextProject() {
     this.projectPos = (this.projectPos + 1) % this.projectArr.length;
     this.getProjectInfos();
     this.getTechLogos();
   }
 
-  prevProject(){
-    this.projectPos = (this.projectPos - 1 + this.projectArr.length) % this.projectArr.length;
+  prevProject() {
+    this.projectPos =
+      (this.projectPos - 1 + this.projectArr.length) % this.projectArr.length;
     this.getProjectInfos();
     this.getTechLogos();
   }
 
-  getProjectInfos (){
-    this.headerTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.header`;
-    this.descHeaderPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.descHeader`;
-    this.descTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.descText`;
-    this.implHeaderPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.implementHeader`;
-    this.implTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.implementText`;
-    this.durHeaderPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.durHeader`;
-    this.durTextPath = `projects.projectDetails.${this.projectArr[this.projectPos]}.durTime`;
+  getProjectInfos() {
+    this.headerTextPath = `projects.projectDetails.${
+      this.projectArr[this.projectPos]
+    }.header`;
+    this.descHeaderPath = `projects.projectDetails.${
+      this.projectArr[this.projectPos]
+    }.descHeader`;
+    this.descTextPath = `projects.projectDetails.${
+      this.projectArr[this.projectPos]
+    }.descText`;
+    this.implHeaderPath = `projects.projectDetails.${
+      this.projectArr[this.projectPos]
+    }.implementHeader`;
+    this.implTextPath = `projects.projectDetails.${
+      this.projectArr[this.projectPos]
+    }.implementText`;
+    this.durHeaderPath = `projects.projectDetails.${
+      this.projectArr[this.projectPos]
+    }.durHeader`;
+    this.durTextPath = `projects.projectDetails.${
+      this.projectArr[this.projectPos]
+    }.durTime`;
+    this.imgPath = this.projectInfos[this.projectArr[this.projectPos]].img;
+    this.stickerPath = this.projectInfos[this.projectArr[this.projectPos]].sticker;
+    this.gitLink = this.projectInfos[this.projectArr[this.projectPos]].gitButtonLink;
+    this.liveLink = this.projectInfos[this.projectArr[this.projectPos]].liveTestLink;
   }
 
-  getTechLogos(){
-   let techArray = this.projectInfos[this.projectArr[this.projectPos]].usedTechs;
-         this.techLogoService.logos.forEach((element) => {
-    techArray.forEach((techlogo) => {
-      if (techlogo.toLowerCase() === element.name.toLowerCase()) {
-        this.usedTechs.push(element);
-      };
-    })
-   })
-   console.log(this.usedTechs);
+  getTechLogos() {
+    this.usedTechs = [];
+    let techArray =
+      this.projectInfos[this.projectArr[this.projectPos]].usedTechs;
+    this.usedTechs = this.techLogoService.logos.filter((element) => {
+      return techArray.includes(element.name.toLocaleLowerCase());
+    });
   }
-
 }
