@@ -23,51 +23,59 @@
     "who": "WHO'S JOACHIM",
     "header": "About me",
     "text": "Hello, I am not a programmer. I am a Front-End Web Developer. Software development is not only about writing in a special language or knowing the newest tech stack. It is about problem-solving, about getting things done the way my customers want. It is about analysis, structuring, architecture. I collect the ideas of your vision and bring them to life — just the way you imagined! It is my passion to create software that is clear, functional, intuitive to use, and maintainable even after many years.",
-    "collaborate" : "Let's collaborate and build something remarkable together!",
-    "button" : "Let's talk"
+    "collaborate": "Let's collaborate and build something remarkable together!",
+    "button": "Let's talk"
   },
-  "skills" : {
-    "myStack" : "MY STACK",
-    "header" : "Skill set",
-    "introduction" : "In the past, i worked at least on 14 projects to learning the following skill set. These skills are constantly being expanded to keep up with the times."
+  "skills": {
+    "myStack": "MY STACK",
+    "header": "Skill set",
+    "introduction": "In the past, i worked at least on 14 projects to learning the following skill set. These skills are constantly being expanded to keep up with the times."
   },
-  "projects" : {
-    "craft" : "MY CRAFT",
-    "header" : "Projects",
-    "text" : "The following projects are an excerpt from my past work.",
-    "buttonText" : "Project details",
-    "singleProjects" : {
-      "join" : {
-        "header" : "Join",
-        "text" : "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
-      },
-      "elpolloloco" : {
-        "header" : "El Pollo Loco",
-        "text" : "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, a endless chickenrush mode and a top 30 Highscore board."
-      }
-    },
-        "projectDetails": {
-      "backButton" : "Zurück",
-      "nextButton" : "Nächstes Projekt",
+  "projects": {
+    "craft": "MY CRAFT",
+    "header": "Projects",
+    "text": "The following projects are an excerpt from my past work.",
+    "buttonText": "Project details",
+    "singleProjects": {
       "join": {
         "header": "Join",
-        "descHeader": "Beschreibung",
-        "implementHeader": "Implementierung",
-        "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
-        "durText" : "Dauer",
-        "durTime" : "6 Wochen"
+        "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "elpolloloco": {
+        "header": "El Pollo Loco",
+        "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, a endless chickenrush mode and a top 30 Highscore board."
+      }
+    },
+    "projectDetails": {
+      "backButton": "Go Back",
+      "nextButton": "Next Project",
+      "join": {
+        "header": "Join",
+        "descHeader": "Description",
+        "implementHeader": "Implementation Details",
+        "implementText": "Here i write down how i worked with all the zeug.",
+        "durText": "Duration",
+        "durTime": "6 Weeks"
+      },
+      "elpolloloco": {
+        "header": "El Pollo Loco",
+        "descHeader": "Description",
+        "implementHeader": "Implementation Details",
+        "implementText": "Here i write down how i worked with all the zeug.",
+        "durText": "Duration",
+        "durTime": "5 Weeks"
       }
     }
   },
-  "thoughts" : {
-    "words" : "IN THEIR WORDS:",
-    "header" : "Colleagues' Thoughts",
-    "colleagues" : [
+  "thoughts": {
+    "words": "IN THEIR WORDS:",
+    "header": "Colleagues' Thoughts",
+    "colleagues": [
       "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
       "DD He oh my god adfäslögjdalöfkgnöadlfknadölkfvnöadflkadlöfkfv",
       "DD asdlökjjdvfjldvfjdfaköbiosdfbijiogogkböj asdfasdf bkl"
     ],
-    "developer" : "Frontend Developer",
-    "profile" : "Profile"
+    "developer": "Frontend Developer",
+    "profile": "Profile"
   }
 }

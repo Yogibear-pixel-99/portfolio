@@ -1,13 +1,15 @@
 
   <a (click)="setLinkIndex(0)" class="link-wrapper" href="#">
-    <div class="link">
+    <div class="link"
+    [ngStyle]="{color : getLinkColor(0)}">
       {{ 'header.aboutme' | translate }}
     </div>
     <img [class.show-link-img]="clickedLinkIndex === 0" src="images/header/1.png" />
   </a>
 
   <a (click)="setLinkIndex(1)"  class="link-wrapper" href="#">
-    <div class="link">
+    <div class="link"
+    [ngStyle]="{color : getLinkColor(1)}">
       {{ 'header.skills' | translate }}
     </div>
     <img
@@ -18,14 +20,17 @@
   </a>
 
   <a (click)="setLinkIndex(2)"  class="link-wrapper" href="#">
-    <div class="link">
+    <div class="link"
+    [ngStyle]="{color : getLinkColor(2)}">
       {{ 'header.projects' | translate }}
     </div>
     <img [class.show-link-img]="clickedLinkIndex === 2" src="images/header/3.png" />
   </a>
 
   <a (click)="setLinkIndex(3)"  class="link-wrapper" href="#">
-    <div class="link">
+    <div class="link"
+    [ngStyle]="{color : getLinkColor(3)}">
+      
       {{ 'header.contact' | translate }}
     </div>
     <img [class.show-link-img]="clickedLinkIndex === 3" src="images/header/4.png" />

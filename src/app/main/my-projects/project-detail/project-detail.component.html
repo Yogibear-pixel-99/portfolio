@@ -1,5 +1,42 @@
 <section>
-<app-header></app-header>
+  <app-header [linkColor]="['black', 'black', 'white', 'white']"></app-header>
+  <div class="main">
+    <div 
+    (click)="projectService.prevProject()" class="back-wrapper">
+      <img
+        src="images/projects/project-details/back-arrow.svg"
+        alt="back arrow"
+      /><span class="project-detail-button">{{
+        "projects.projectDetails.backButton" | translate
+      }}</span>
+    </div>
+    <section class="middle inner-section-two-col">
+      <div class="left-content">
+        <h2 class="section-header-typo">{{ projectService.headerTextPath | translate }}</h2>
+        <img
+          src="images/projects/project-details/header-underline.svg"
+          alt="project underline"
+        />
+        <h4 class="h4-header-typo"></h4>
+        <span class="h4-text-typo">asdölkfjsaddlfkj</span>
+        <h4 class="h4-header-typo">Description</h4>
+        <span class="h4-text-typo">asdölkfjsaddlfkj</span>
 
+        <span>Dur</span><span>4 Weeks</span>
+      </div>
 
+      <div class="right-content"></div>
+    </section>
+
+    <div 
+    (click)="projectService.nextProject()" class="next-wrapper">
+      <span class="project-detail-button">{{
+        "projects.projectDetails.nextButton" | translate
+      }}</span>
+      <img
+        src="images/projects/project-details/next-arrow.svg"
+        alt="nex arrow"
+      />
+    </div>
+  </div>
 </section>

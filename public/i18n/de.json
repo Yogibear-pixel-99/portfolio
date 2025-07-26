@@ -47,15 +47,23 @@
       }
     },
     "projectDetails": {
-      "backButton" : "Go Back",
-      "nextButton" : "Next Project",
+      "backButton": "Zurück",
+      "nextButton": "Nächstes Projekt",
       "join": {
         "header": "Join",
-        "descHeader": "Description",
-        "implementHeader": "Implementation Details",
-        "implementText": "Short text that describes your role",
-        "durText" : "Duration",
-        "durTime" : "6 weeks"
+        "descHeader": "Beschreibung",
+        "implementHeader": "Implementierung",
+        "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
+        "durText": "Dauer",
+        "durTime": "6 Wochen"
+      },
+      "elpolloloco": {
+        "header": "El Pollo Loco",
+        "descHeader": "Beschreibung",
+        "implementHeader": "Implementierung",
+        "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
+        "durText": "Dauer",
+        "durTime": "6 Wochen"
       }
     }
   },

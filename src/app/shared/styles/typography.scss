@@ -19,6 +19,7 @@
 
 .section-header-typo {
   @include  bricolage-font(64px, 700);
+  margin: 0;
 
   @media (max-width: 850px) {
     @include bricolage-font(48px, 700);
@@ -48,3 +49,6 @@
     }
 }
 
+.project-detail-button {
+  @include bricolage-font(18px, 700);
+}

@@ -1,12 +1,45 @@
-
-
-
+@use "layout";
+@use "mixins" as mixins;
+@use "typography";
+@use "colors" as colors;
 
 section {
-    background-color: #1D1D1D;
-    height: 100dvh;
+  background-color: #1d1d1d;
+  height: 100dvh;
   background-image: url("../../../../../public/images/projects/project-details/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
+}
+
+.back-wrapper {
+    margin: 48px auto 48px 72px;
+    color: colors.$main-black;
+
+    &:hover {
+        color: colors.$main-red;
+        cursor: pointer;
+    }
+}
+
+.next-wrapper {
+    margin: 48px 72px 0 auto;
+    text-align: right;
+    color: colors.$main-white;
+
+        &:hover {
+        color: colors.$main-yellow;
+        cursor: pointer;
+    }
+}
+
+.back-wrapper,
+.next-wrapper {
+    @include mixins.flex-spbtw-ctr-row(center, center);
+    gap: 8px;
+    width: fit-content;
+}
+
+.middle {
+    height: fit-content;
 }

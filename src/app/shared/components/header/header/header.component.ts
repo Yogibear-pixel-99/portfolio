@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MobileHeaderComponent } from '../mobile-header/mobile-header.component';
 import { LangSwitchComponent } from '../../ui/lang-switch/lang-switch.component';
@@ -12,4 +12,6 @@ import { HeaderLinksComponent } from '../header-links/header-links.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  @Input() linkColor:string[] = [];
 }
