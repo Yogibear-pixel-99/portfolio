@@ -1,0 +1,77 @@
+@use "mixins" as mixins;
+@use "typography";
+@use "colors" as colors;
+
+
+section {
+position: relative;
+z-index: 5;
+width: 480px;
+height: 320px;
+padding: 48px 0 0 40px;
+@include mixins.flex-spbtw-ctr-row();
+flex-direction: column;
+
+    &:hover > .hover-one{
+        opacity: 1;
+    }
+
+    &:hover > .bottom-wrapper > .name-wrapper > span {
+        color: colors.$main-white;
+    }
+
+> img {
+    @include mixins.absolute-fullsize();
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+> span,
+    .bottom-wrapper {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.bottom-wrapper {
+    @include mixins.flex-spbtw-ctr-row();
+    width: 100%;
+
+    > div:nth-child(1) {
+        @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
+    }
+    > div:nth-child(2) {
+        @include mixins.flex-spbtw-ctr-row(center, flex-start, row);
+        margin-top: auto;
+    }
+}
+
+.profile-wrapper {
+    @include mixins.flex-spbtw-ctr-row(center, center);
+    gap: 4px;
+    padding: 48px 40px;
+    text-decoration: none;
+    color: colors.$main-black;
+
+    &:hover {
+        color: colors.$main-white;
+        cursor: pointer;
+    }
+
+    &:hover > svg > path {
+        fill: colors.$main-white;
+    }
+}
+
+.sticker-one {
+    @include mixins.absolute-fullsize();
+    z-index: 4;
+}
+
+.hover-one {
+    opacity: 0;
+    transition: opacity ease-in-out 100ms;
+}
+
+

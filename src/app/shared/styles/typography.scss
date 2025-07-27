@@ -55,3 +55,19 @@
 .project-techlogo-font {
   @include bricolage-font(16px, 400);
 }
+
+.sticker-name {
+  @include bricolage-font(20px, 700);
+
+  @media (max-width: 850px) {
+    @include bricolage-font(18px, 700);
+  }
+}
+
+.sticker-name-job-text {
+  @include bricolage-font(16px, 500);
+}
+
+.sticker-profile-link-text {
+  @include bricolage-font(18px, 500);
+}
