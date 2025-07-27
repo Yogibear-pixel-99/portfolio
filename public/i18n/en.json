@@ -62,11 +62,23 @@
   "thoughts": {
     "words": "IN THEIR WORDS:",
     "header": "Colleagues' Thoughts",
-    "colleagues": [
-      "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-      "DD He oh my god adfäslögjdalöfkgnöadlfknadölkfvnöadflkadlöfkfv",
-      "DD asdlökjjdvfjldvfjdfaköbiosdfbijiogogkböj asdfasdf bkl"
-    ],
+    "colleagues": {
+      "first": {
+        "name": "Test Name1",
+        "comment": "EE he is blab labla the best person in the world iiiisadifasdfvgafdgv",
+        "link" : "#"
+      },
+      "second": {
+        "name": "Test Name 2",
+        "comment": "EE he is blab labla the best person in the world iiiisadifasdfvgafdgv",
+         "link" : "#"
+      },
+      "third": {
+        "name": "Test Name 3",
+        "comment": "EE he is blab labla the best person in the world iiiisadifasdfvgafdgv",
+         "link" : "#"
+      }
+    },
     "developer": "Frontend Developer",
     "profile": "Profile"
   }

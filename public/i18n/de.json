@@ -42,7 +42,7 @@
       "join": {
         "header": "Join",
         "descHeader": "Beschreibung",
-        "descText" : "Eine professionelle Task Management App, inspiriert vom bekannten Kanban Konzept. Zum erstellen und organisieren von Arbeitsaubläufen, zuteilen von Mitgliedern und verwalten per drag and drop.",
+        "descText": "Eine professionelle Task Management App, inspiriert vom bekannten Kanban Konzept. Zum erstellen und organisieren von Arbeitsaubläufen, zuteilen von Mitgliedern und verwalten per drag and drop.",
         "implementHeader": "Implementierung",
         "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
         "durHeader": "Dauer",
@@ -51,7 +51,7 @@
       "elpolloloco": {
         "header": "El Pollo Loco",
         "descHeader": "Beschreibung",
-        "descText" : "Ein Objektorientiertes Browser Jump and Run spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board.",
+        "descText": "Ein Objektorientiertes Browser Jump and Run spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board.",
         "implementHeader": "Implementierung",
         "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
         "durHeader": "Dauer",
@@ -60,13 +60,25 @@
     }
   },
   "thoughts": {
-    "words": "ANDERE GEDANKEN:",
-    "header": "Meine Kollegen",
-    "colleagues": [
-      "he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-      "He oh my god adfäslögjdalöfkgnöadlfknadölkfvnöadflkadlöfkfv",
-      "asdlökjjdvfjldvfjdfaköbiosdfbijiogogkböjbk asdfsda asddfasdf  asdfl"
-    ],
+    "words": "GEDANKEN ANDERER:",
+    "header": "Kollegen Meinungen",
+    "colleagues": {
+      "first": {
+        "name": "Test Name1",
+        "comment": "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
+        "link": "#"
+      },
+      "second": {
+        "name": "Test Name2",
+        "comment": "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
+        "link": "#"
+      },
+      "third": {
+        "name": "Test Name3",
+        "comment": "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
+        "link": "#"
+      }
+    },
     "developer": "Frontend Entwickler",
     "profile": "Profil"
   }
