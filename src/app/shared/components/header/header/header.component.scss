@@ -2,10 +2,11 @@
 @use "mixins" as mixins;
 @use "fonts";
 section {
-  margin: 0 72px;
+  padding: 0 72px;
   color: white;
   height: 80px;
   @include mixins.flex-spbtw-ctr-row();
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0));
 
   @media (max-width: 850px) {
     display: none;

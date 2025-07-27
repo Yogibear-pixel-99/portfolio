@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject,Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -9,6 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './lang-switch.component.scss'
 })
 export class LangSwitchComponent {
+
+@Input() langSwitchTxtColor: string = '#F8F9FA';
 translate = inject(TranslateService);
 
 changeLang(lang:string){

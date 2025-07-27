@@ -5,10 +5,14 @@
 .mobile-header {
   display: none;
   padding: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 
   @media (max-width: 850px) {
     display: flex;
     @include mixins.flex-spbtw-ctr-row();
+  }
+  @media (max-width: 420px) {
+    padding: 8px;
   }
 
   > div {
@@ -19,7 +23,7 @@
   }
 }
 
-.burger-icon-blue path{
+.burger-icon-blue path {
   fill: colors.$main-blue;
 }
 

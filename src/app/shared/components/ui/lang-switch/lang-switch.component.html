@@ -3,6 +3,7 @@
       <span
         (click)="changeLang('en')"
         [ngClass]="{ selected: checkLang() === 'en', 'not-selected': checkLang() === 'de' }"
+        [ngStyle]="{color: langSwitchTxtColor}"
         >EN</span
       ><img [ngClass]="{'select-hover': checkLang() === 'de'}" src="images/header/Toggle.png" />
     </div>
@@ -18,6 +19,7 @@
       <span
         (click)="changeLang('de')"
         [ngClass]="{ 'selected': checkLang() === 'de', 'not-selected': checkLang() === 'en' }"
+        [ngStyle]="{color: langSwitchTxtColor}"
         >DE</span
       ><img [ngClass]="{'select-hover' : checkLang() === 'en'}" src="images/header/Toggle.png" />
     </div>

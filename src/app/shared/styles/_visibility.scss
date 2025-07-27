@@ -27,8 +27,27 @@
 }
 
 .display-block-768px-width {
-
+  
   @media (max-width: 768px) {
     display: block;
+  }
+}
+
+.display-hide-1250px-width {
+  @media (max-width: 1250px) {
+    display: none !important;
+  }
+}
+
+.display-block-768px-width {
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.display-hide-over-1250px-width {
+  @media (min-width: 1251px) {
+    display: none !important;
   }
 }

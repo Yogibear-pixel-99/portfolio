@@ -14,4 +14,5 @@ import { HeaderLinksComponent } from '../header-links/header-links.component';
 export class HeaderComponent {
 
   @Input() linkColor:string[] = [];
+  @Input() langSwitchTxtColor:string = '';
 }

@@ -2,6 +2,7 @@
 @use "mixins" as mixins;
 @use "typography";
 @use "colors" as colors;
+@use "_visibility";
 
 section {
   background-color: #1d1d1d;
@@ -10,34 +11,51 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
+  min-height: fit-content;
+
+  @media (max-width: 1250px) {
+    background-image: url("../../../../../public/images/projects/project-details/background-rotate.png");
+    background-position: 50% -40px;
+  }
+
+    @media (max-width: 650px) {
+    background-position: 50% 0;
+  }
 }
 
+
+
 .main {
-    @include mixins.flex-spbtw-ctr-row(flex-start);
-    flex-direction: column;
-    height: calc(100% - 80px);
-    padding: 120px;
+  @include mixins.flex-spbtw-ctr-row(flex-start);
+  flex-direction: column;
+  height: calc(100% - 80px);
+  max-height: 1500px;
+  padding: 120px;
+
+  @media (max-width: 1300px) {
+    padding: 80px;
+  }
+
+  @media (max-width: 1250px) {
+    padding: 40px 0;
+    height: auto;
+  }
+
+  @media (max-width: 650px) {
+    padding: 0;
+  }
 }
 
 .back-wrapper {
   margin: 0 auto 48px 0;
   color: colors.$main-black;
 
+    @media (max-width: 1250px) {
+    margin: 0;
+  }
+
   &:hover {
     color: colors.$main-red;
-    cursor: pointer;
-  }
-}
-
-.next-wrapper {
-  margin: auto 0 0 auto;
-  text-align: right;
-  color: colors.$main-white;
-  text-align: bottom;
-  justify-self:end;
-
-  &:hover {
-    color: colors.$main-yellow;
     cursor: pointer;
   }
 }
@@ -49,15 +67,78 @@ section {
   width: fit-content;
 }
 
-.middle {
-    @include mixins.flex-spbtw-ctr-row(space-around);
-    width: 100%;
-    
-    > .left-content{
-            width: 488px;
-        }
+.mobile-back-next-wrapper {
+    margin: auto 0 0 auto;
 
-    >  .right-content {
-            width: 560px;
-        }
+  @media (max-width: 1250px) {
+         @include mixins.flex-spbtw-ctr-row();
+     padding: 24px 0;
+     margin-top: 24px;
+    width: 560px;
+    margin: 0;
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+    padding: 24px;
+    margin: 0;
+  }
+
+  > div > span {
+    color: colors.$main-white;
+  }
+
+  &:hover {
+    color: colors.$main-yellow;
+    cursor: pointer;
+  }
+
 }
+
+.middle {
+  @include mixins.flex-spbtw-ctr-row(space-around);
+  width: 100%;
+  margin-top: 40px;
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    gap: 48px;
+    width: 560px;
+    margin: 0;
+  }
+
+  @media (max-width: 650px) {
+    width: auto;
+    padding: 16px;
+  }
+
+  @media (max-width: 420px) {
+    width: auto;
+    padding: 8px;
+  }
+
+  > .left-content {
+    min-width: 488px;
+    max-width: 488px;
+
+    @media (max-width: 1250px) {
+      min-width: 0;
+      max-width: none;
+    }
+  }
+
+  > .right-content {
+    min-width: 560px;
+    max-width: 560px;
+
+    @media (max-width: 1250px) {
+      min-width: 0;
+      max-width: none;
+    }
+  }
+}
+
+.right-content {
+  align-self: flex-end;
+}
+

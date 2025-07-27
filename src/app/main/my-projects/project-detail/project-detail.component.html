@@ -1,7 +1,17 @@
 <section>
-  <app-header [linkColor]="['black', 'black', 'white', 'white']"></app-header>
+  <div class="desktop-header-wrapper display-hide-1250px-width">
+    <app-header [linkColor]="['black', 'black', 'white', 'white']"></app-header>
+  </div>
+  <div
+    class="mobile-header-wrapper display-block-1250px-width display-hide-over-1250px-width"
+  >
+    <app-header [linkColor]="['black', 'black', 'black', 'black']" [langSwitchTxtColor]="'#0E1013'"></app-header>
+  </div>
   <div class="main">
-    <div (click)="projectService.prevProject()" class="back-wrapper">
+    <div
+      (click)="projectService.prevProject()"
+      class="back-wrapper display-hide-1250px-width"
+    >
       <img
         src="images/projects/project-details/back-arrow.svg"
         alt="back arrow"
@@ -10,22 +20,36 @@
       }}</span>
     </div>
     <div class="middle">
-        <div class="left-content">
+      <div class="left-content">
         <app-left-content></app-left-content>
-        </div>
+      </div>
       <div class="right-content">
         <app-right-content></app-right-content>
       </div>
     </div>
 
-    <div (click)="projectService.nextProject()" class="next-wrapper">
-      <span class="project-detail-button">{{
-        "projects.projectDetails.nextButton" | translate
-      }}</span>
-      <img
-        src="images/projects/project-details/next-arrow.svg"
-        alt="nex arrow"
-      />
+    <div class="mobile-back-next-wrapper">
+      <div
+        (click)="projectService.prevProject()"
+        class="back-wrapper display-hide-over-1250px-width"
+      >
+        <img
+          src="images/projects/project-details/back-arrow.svg"
+          alt="back arrow"
+        /><span class="project-detail-button">{{
+          "projects.projectDetails.backButton" | translate
+        }}</span>
+      </div>
+
+      <div (click)="projectService.nextProject()" class="next-wrapper">
+        <span class="project-detail-button">{{
+          "projects.projectDetails.nextButton" | translate
+        }}</span>
+        <img
+          src="images/projects/project-details/next-arrow.svg"
+          alt="nex arrow"
+        />
+      </div>
     </div>
   </div>
 </section>
