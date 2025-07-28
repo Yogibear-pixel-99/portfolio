@@ -51,14 +51,36 @@ section {
   }
 }
 
-.sticker-section {
-  width: fit-content;
-  height: fit-content;
-}
-
 .whole-sticker-container {
   position: relative;
   padding-top: 0;
+
+  // @media (pointer: coarse) {
+    // @include mixins.flex-spbtw-ctr-row(center, center, column);
+
+    @media (max-width: 1200px) {
+      @include mixins.flex-spbtw-ctr-row(center, center, column);
+      gap: 0px;
+
+      @media(max-width: 510px) {
+
+      }
+
+      > div {
+        position: static !important;
+      }
+
+      > div:nth-child(1) {
+        transform: rotate(-4deg) translate(0, 0) !important;
+      }
+      > div:nth-child(2) {
+transform: translate(0, 0) !important;
+      }
+      > div:nth-child(3) {
+transform: rotate(4deg) translate(0, 0) !important;
+      }
+    }
+  // }
 
   > div {
     position: relative;
