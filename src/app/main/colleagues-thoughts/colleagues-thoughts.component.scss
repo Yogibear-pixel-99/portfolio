@@ -12,6 +12,7 @@ section {
     color: colors.$main-black;
     text-wrap: nowrap;
     @include mixins.flex-spbtw-ctr-row(flex-end);
+    text-wrap: wrap;
 }
 
 .header-wrapper {
@@ -55,11 +56,13 @@ section {
   position: relative;
   padding-top: 0;
 
-  // @media (pointer: coarse) {
-    // @include mixins.flex-spbtw-ctr-row(center, center, column);
+  
+
+  @media (pointer: coarse) or (max-width: 520px) {
+    @include mixins.flex-spbtw-ctr-row(center, center, column);
 
     @media (max-width: 1200px) {
-      @include mixins.flex-spbtw-ctr-row(center, center, column);
+      // @include mixins.flex-spbtw-ctr-row(center, center, column);
       gap: 0px;
 
       @media(max-width: 510px) {
@@ -80,7 +83,7 @@ transform: translate(0, 0) !important;
 transform: rotate(4deg) translate(0, 0) !important;
       }
     }
-  // }
+  }
 
   > div {
     position: relative;
