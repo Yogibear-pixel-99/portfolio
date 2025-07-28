@@ -8,9 +8,10 @@ import { SkillSetComponent } from "./main/skill-set/skill-set.component";
 import { MyProjectsComponent } from "./main/my-projects/my-projects.component";
 import { ColleaguesThoughtsComponent } from "./main/colleagues-thoughts/colleagues-thoughts.component";
 import { ProjectDetailComponent } from "./main/my-projects/project-detail/project-detail.component";
+import { ContactMeComponent } from "./main/contact-me/contact-me.component";
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeroSectionComponent, MaskOverlayComponent, AboutMeComponent, SkillSetComponent, MyProjectsComponent, ColleaguesThoughtsComponent, ProjectDetailComponent],
+  imports: [RouterOutlet, HeroSectionComponent, MaskOverlayComponent, AboutMeComponent, SkillSetComponent, MyProjectsComponent, ColleaguesThoughtsComponent, ProjectDetailComponent, ContactMeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

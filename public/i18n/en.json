@@ -81,5 +81,34 @@
     },
     "developer": "Frontend Developer",
     "profile": "Profile"
+  },
+  "contactMe" : {
+    "headerWords" : "CONTACT ME",
+    "header" : "Ready to work together?",
+    "mainTextFirst" : "Here is written something about me, Here is written something about me,Here is written something about me,Here is written something about me,Here is written something about me.",
+    "mainTextSecond" : "Here is more written about me, Here is more written about me, Here is more written about me.",
+    "form" : {
+      "yourName" : {
+        "header" : "What's your name?",
+        "placeholder" : "Your name goes here"
+      },
+      "yourEmail" : {
+        "header" : "What's your email?",
+        "placeholder" : "youremail@email.com"
+      },
+      "helpYou" : {
+        "header" : "How can i help your?",
+        "placeholder" : "Hello Lukas, i am interesetd in..."
+      },
+      "privacy" : {
+        "firstPart" : "I've read the",
+        "privacyPart" : "privacy policy",
+        "lastPart" : "and agree to the proccesing of my data as outlined."
+      }
+    }
+  },
+  "footer" : {
+    "legal" : "Legal Notice",
+    "imprint" : "Imprint"
   }
 }

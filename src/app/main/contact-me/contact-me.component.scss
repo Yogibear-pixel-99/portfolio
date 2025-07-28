@@ -1,0 +1,44 @@
+@use "typography";
+@use "layout";
+@use "colors" as colors;
+
+section {
+    background-image: url("../../../../public/images/contact-me/contact-bg.png");
+    background-size: cover;
+    color: colors.$main-white;
+}
+
+// adjust padding of the whole contact container - responive inkluded.
+
+.contact-arrow {
+    display: block;
+    margin: 0 0 0 auto;
+}
+
+
+ .contact-arrow {
+    width: 280px;
+    animation: header-line 4s ease-in;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+    clip-path: inset(0 300px 0 0);
+  }
+
+
+@keyframes header-line {
+  0% {
+    clip-path: inset(0 300px 0 0);
+  }
+  5% {
+    clip-path: inset(0 0 0 0);
+  }
+  80% {
+    clip-path: inset(0 0 0 0);
+  }
+  90% {
+    clip-path: inset(0 300px 0 0);
+  }
+  100% {
+    clip-path: inset(0 300px 0 0);
+  }
+}
