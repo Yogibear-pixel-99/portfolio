@@ -102,7 +102,7 @@
       },
       "privacy" : {
         "firstPart" : "I've read the",
-        "privacyPart" : "privacy policy",
+        "privacyPart" : " privacy policy ",
         "lastPart" : "and agree to the proccesing of my data as outlined."
       }
     }

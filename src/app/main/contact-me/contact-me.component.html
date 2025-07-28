@@ -25,26 +25,53 @@
   </div>
 
   <div class="right">
-    <img src="images/contact-me/contact_sticker.png" alt="logo sticker">
+    <img src="images/contact-me/contact_sticker.png" alt="logo sticker" />
     <form action="#">
-
       <div class="input-wrapper">
-        <label for="name"></label>
-        <input id="name" type="text" />
+        <label for="name" class="input-label-typo"
+          >{{ "contactMe.form.yourName.header" | translate }}
+          <input
+            id="name"
+            type="text"
+            [placeholder]="'contactMe.form.yourName.placeholder' | translate"
+        /></label>
       </div>
 
       <div class="input-wrapper">
-        <label for="email"></label>
-        <input id="email" type="email" />
+        <label for="email" class="input-label-typo"
+          >{{ "contactMe.form.yourEmail.header" | translate }}
+          <input
+            id="email"
+            type="email"
+            [placeholder]="'contactMe.form.yourEmail.placeholder' | translate"
+        /></label>
       </div>
 
       <div class="input-wrapper">
-        <label for="message"></label>
-        <input id="message" type="text" />
+        <label for="message" class="input-label-typo"
+          >{{ "contactMe.form.helpYou.header" | translate }}
+          <input
+            id="message"
+            type="text"
+            [placeholder]="'contactMe.form.helpYou.placeholder' | translate"
+        /></label>
       </div>
 
-      <label for="privacy"></label>
-      <input id="privacy" type="checkbox">
+      <div class="input-checkbox-wrapper">
+        <label for="privacy"></label>
+        <input id="privacy" type="checkbox" class="privacy-checkbox" name="privacy-check" [(ngModel)]="testCheck" (change)="debuggTest()" />
+        <div>
+          <span class="privacy-checkbox-font">{{
+            "contactMe.form.privacy.firstPart" | translate
+          }}</span>
+          <a href="#" class="privacy-checkbox-font privacy-link" href="">{{
+            "contactMe.form.privacy.privacyPart" | translate
+          }}</a>
+          <span class="privacy-checkbox-font">{{
+            "contactMe.form.privacy.lastPart" | translate
+          }}</span>
+        </div>
+      </div>
     </form>
   </div>
 </section>

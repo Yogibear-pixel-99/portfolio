@@ -71,3 +71,11 @@
 .sticker-profile-link-text {
   @include bricolage-font(18px, 500);
 }
+
+.input-label-typo {
+  @include bricolage-font(24px, 500);
+}
+
+.privacy-checkbox-font {
+  @include bricolage-font(15px, 400);
+}
