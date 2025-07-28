@@ -3,27 +3,25 @@
 @use "colors" as colors;
 
 section {
-    background-image: url("../../../../public/images/contact-me/contact-bg.png");
-    background-size: cover;
-    color: colors.$main-white;
+  background-image: url("../../../../public/images/contact-me/contact_bg.png");
+  background-size: cover;
+  color: colors.$main-white;
 }
 
 // adjust padding of the whole contact container - responive inkluded.
 
 .contact-arrow {
-    display: block;
-    margin: 0 0 0 auto;
+  display: block;
+  margin: 0 0 0 auto;
 }
 
-
- .contact-arrow {
-    width: 280px;
-    animation: header-line 4s ease-in;
-    animation-delay: 800ms;
-    animation-iteration-count: infinite;
-    clip-path: inset(0 300px 0 0);
-  }
-
+.contact-arrow {
+  width: 280px;
+  animation: header-line 4s ease-in;
+  animation-delay: 800ms;
+  animation-iteration-count: infinite;
+  clip-path: inset(0 300px 0 0);
+}
 
 @keyframes header-line {
   0% {
@@ -40,5 +38,67 @@ section {
   }
   100% {
     clip-path: inset(0 300px 0 0);
+  }
+}
+
+.right {
+  > img {
+    width: 168px;
+    height: 168px;
+    margin: 0 0 0 auto;
+    display: block;
+  }
+}
+
+form {
+  > .input-wrapper {
+    padding: 16px 24px;
+    transition: all ease-in-out 150ms;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    > input {
+      outline: none;
+      border: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  > .input-wrapper:nth-child(1) {
+    border-top: 1px solid #f7c51800;
+
+    &:hover {
+      border-top: 1px solid #3355ff;
+
+      ~ .input-wrapper:nth-child(2) {
+        border-top: 1px solid #3355ff;
+      }
+    }
+  }
+
+  > .input-wrapper:nth-child(2) {
+    border-top: 1px solid #f7c518;
+
+    &:hover {
+      border-top: 1px solid #3355ff;
+
+      ~ .input-wrapper:nth-child(3) {
+        border-top: 1px solid #3355ff;
+      }
+    }
+  }
+
+  > .input-wrapper:nth-child(3) {
+    border-top: 1px solid #f7c518;
+    border-bottom: 1px solid #f7c51800;
+
+    &:hover {
+      border-top: 1px solid #3355ff;
+      border-bottom: 1px solid #3355ff;
+    }
   }
 }

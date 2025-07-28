@@ -1,32 +1,50 @@
 <section class="section-padding inner-section-two-col">
-
-
   <div class="left">
     <div class="header-wrapper">
       <span class="section-header-small-text-typo">{{
         "contactMe.headerWords" | translate
       }}</span>
       <div class="header-inner-wrapper">
-        <h2 class="section-header-typo">{{ "contactMe.header" | translate }}</h2>
+        <h2 class="section-header-typo">
+          {{ "contactMe.header" | translate }}
+        </h2>
         <img src="images/projects/header_line.svg" alt="underline" />
       </div>
-      <p class="section-text-typo">{{
-        "contactMe.mainTextFirst" | translate
-      }}</p>
-      <p class="section-text-typo">{{
-        "contactMe.mainTextSecond" | translate
-      }}</p>
+      <p class="section-text-typo">
+        {{ "contactMe.mainTextFirst" | translate }}
+      </p>
+      <p class="section-text-typo">
+        {{ "contactMe.mainTextSecond" | translate }}
+      </p>
     </div>
-    <img class="contact-arrow" src="images/contact-me/contact-arrow.png" alt="contact arrow">
+    <img
+      class="contact-arrow"
+      src="images/contact-me/contact_arrow.png"
+      alt="contact arrow"
+    />
   </div>
-
 
   <div class="right">
+    <img src="images/contact-me/contact_sticker.png" alt="logo sticker">
     <form action="#">
-        
-        <input type="text">
+
+      <div class="input-wrapper">
+        <label for="name"></label>
+        <input id="name" type="text" />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="email"></label>
+        <input id="email" type="email" />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="message"></label>
+        <input id="message" type="text" />
+      </div>
+
+      <label for="privacy"></label>
+      <input id="privacy" type="checkbox">
     </form>
   </div>
-
-
 </section>
