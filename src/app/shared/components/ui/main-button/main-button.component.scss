@@ -13,7 +13,6 @@ button {
   @include mixins.flex-spbtw-ctr-row(center);
   padding: 12px 24px;
   border-radius: 100px;
-  width: 145px;
   height: 40px;
 
   &:hover {

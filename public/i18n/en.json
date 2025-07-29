@@ -106,7 +106,8 @@
         "lastPart" : "and agree to the proccesing of my data as outlined."
       }
     },
-    "privacyAccept" : "Please accept the privacy policy"
+    "privacyAccept" : "Please accept the privacy policy",
+    "sendButton" : "Send"
   },
   "footer" : {
     "legal" : "Legal Notice",

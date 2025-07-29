@@ -12,7 +12,7 @@ export class MainButtonComponent {
 
 translate = inject(TranslateService);
 
-@Input() color: string = 'dark-button';
-@Input() translateText:string = '';
-@Input() linkPath: string = '';
+@Input({required : true}) color: string = 'dark-button';
+@Input({required : true}) translateText:string = '';
+@Input({required : true}) linkPath: string = '';
 }

@@ -1,83 +1,114 @@
 <div class="section-wrapper">
-<section class="section-padding inner-section-two-col">
-  <div class="left">
-       <img class="name-sticker-small display-hide-over-1250px-width" src="images/contact-me/contact_sticker.png" alt="logo sticker" />
-    <div class="header-wrapper">
-      <span class="section-header-small-text-typo">{{
-        "contactMe.headerWords" | translate
-      }}</span>
-      <div class="header-inner-wrapper">
-        <h2 class="section-header-typo">
-          {{ "contactMe.header" | translate }}
-        </h2>
-        <img src="images/projects/header_line.svg" alt="underline" />
-      </div>
-      <p class="section-text-typo">
-        {{ "contactMe.mainTextFirst" | translate }}
-      </p>
-      <p class="section-text-typo">
-        {{ "contactMe.mainTextSecond" | translate }}
-      </p>
-    </div>
-    <img
-      class="contact-arrow"
-      src="images/contact-me/contact_arrow.png"
-      alt="contact arrow"
-    />
-  </div>
-
-  <div class="right">
-    <img src="images/contact-me/contact_sticker.png" alt="logo sticker" />
-    <form action="#">
-      <div class="input-wrapper">
-        <label for="name" class="input-label-typo"
-          >{{ "contactMe.form.yourName.header" | translate }}
-          <input
-            id="name"
-            type="text"
-            [placeholder]="'contactMe.form.yourName.placeholder' | translate"
-        /></label>
-      </div>
-
-      <div class="input-wrapper">
-        <label for="email" class="input-label-typo"
-          >{{ "contactMe.form.yourEmail.header" | translate }}
-          <input
-            id="email"
-            type="email"
-            [placeholder]="'contactMe.form.yourEmail.placeholder' | translate"
-        /></label>
-      </div>
-
-      <div class="input-wrapper">
-        <label for="message" class="input-label-typo"
-          >{{ "contactMe.form.helpYou.header" | translate }}
-          <input
-            id="message"
-            type="text"
-            [placeholder]="'contactMe.form.helpYou.placeholder' | translate"
-        /></label>
-      </div>
-
-      <div class="input-checkbox-wrapper">
-        <label for="privacy"></label>
-        <input id="privacy" type="checkbox" class="privacy-checkbox" name="privacy-check" [(ngModel)]="testCheck" (change)="debuggTest()" />
+  <section class="section-padding inner-section-two-col">
+    <div class="left">
+      <img
+        class="name-sticker-small display-hide-over-1250px-width"
+        src="images/contact-me/contact_sticker.png"
+        alt="logo sticker"
+      />
+      <div class="header-wrapper">
         <div>
-          <span class="privacy-checkbox-font">{{
-            "contactMe.form.privacy.firstPart" | translate
+          <span class="section-header-small-text-typo">{{
+            "contactMe.headerWords" | translate
           }}</span>
-          <a href="#" class="privacy-checkbox-font privacy-link" href="">{{
-            "contactMe.form.privacy.privacyPart" | translate
-          }}</a>
-          <span class="privacy-checkbox-font">{{
-            "contactMe.form.privacy.lastPart" | translate
-          }}</span>
+          <div class="header-inner-wrapper">
+            <h2 class="section-header-typo">
+              {{ "contactMe.header" | translate }}
+            </h2>
+          </div>
         </div>
+
+        <div>
+          <p class="section-text-typo">
+            {{ "contactMe.mainTextFirst" | translate }}
+          </p>
+          <p class="section-text-typo">
+            {{ "contactMe.mainTextSecond" | translate }}
+          </p>
+        </div>
+
+        <img
+          class="contact-arrow display-hide-1250px-width"
+          src="images/contact-me/contact_arrow.png"
+          alt="contact arrow"
+        />
       </div>
-    </form>
+    </div>
+    <div class="right">
+      <img src="images/contact-me/contact_sticker.png" alt="logo sticker" />
+      <form action="#">
+        <div class="input-wrapper">
+          <label for="name" class="input-label-typo"
+            >{{ "contactMe.form.yourName.header" | translate }}
+            <input
+              id="name"
+              type="text"
+              [placeholder]="'contactMe.form.yourName.placeholder' | translate"
+          /></label>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="email" class="input-label-typo"
+            >{{ "contactMe.form.yourEmail.header" | translate }}
+            <input
+              id="email"
+              type="email"
+              [placeholder]="
+                'contactMe.form.yourEmail.placeholder' | translate
+              "
+          /></label>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="message" class="input-label-typo"
+            >{{ "contactMe.form.helpYou.header" | translate }}
+            <input
+              id="message"
+              type="text"
+              [placeholder]="'contactMe.form.helpYou.placeholder' | translate"
+          /></label>
+        </div>
+
+        <div class="input-checkbox-wrapper">
+          <label for="privacy"></label>
+          <input
+            id="privacy"
+            type="checkbox"
+            class="privacy-checkbox"
+            name="privacy-check"
+            [(ngModel)]="testCheck"
+            (change)="debuggTest()"
+          />
+          <div>
+            <span class="privacy-checkbox-font">{{
+              "contactMe.form.privacy.firstPart" | translate
+            }}</span>
+            <a href="#" class="privacy-checkbox-font privacy-link" href="">{{
+              "contactMe.form.privacy.privacyPart" | translate
+            }}</a>
+            <span class="privacy-checkbox-font">{{
+              "contactMe.form.privacy.lastPart" | translate
+            }}</span>
+          </div>
+        </div>
+        <div class="error-message">
+          {{ "contactMe.privacyAccept" | translate }}
+        </div>
+
+        <div class="send-button-wrapper">
+          <img
+          class="contact-arrow display-hide-over-1250px-width"
+          src="images/contact-me/contact_arrow.png"
+          alt="contact arrow"
+          />
+          <button class="send-button">
+            {{ "contactMe.sendButton" | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <div class="footer-wrapper">
+    <app-footer></app-footer>
   </div>
-</section>
-<div class="footer-wrapper">
-<app-footer></app-footer>
-</div>
 </div>
