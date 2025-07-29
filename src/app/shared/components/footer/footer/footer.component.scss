@@ -1,0 +1,68 @@
+@use "colors" as colors;
+@use "mixins" as mixins;
+@use "typography";
+@use "visibility";
+
+section {
+  background-color: #000000;
+  width: 100%;
+  color: colors.$main-white;
+  padding: 20px 0 8px 0;
+  @include mixins.flex-spbtw-ctr-row(space-between, flex-end);
+
+  @media (max-width: 768px) {
+    @include mixins.flex-spbtw-ctr-row(center, center, column);
+  }
+}
+
+a {
+  text-decoration: none;
+
+  > span {
+    color: colors.$main-white;
+  }
+}
+
+.name-wrapper {
+  @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
+  gap: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+
+    @media (max-width: 768px) {
+     margin-bottom: 24px;
+  }
+}
+
+.top-wrapper {
+    @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
+    gap: 12px;
+
+      @media (max-width: 768px) {
+    @include mixins.flex-spbtw-ctr-row();
+    width: 100%;
+  }
+}
+
+.legal-link-wrapper {
+  position: relative;
+
+    @media (max-width: 768px) {
+align-self: flex-end;
+    }
+
+  > img {
+    @include mixins.absolute-ctr();
+    transform: translate(-50%, -50%);
+    width: 110px;
+  }
+
+}
+
+.mobile-wrapper {
+
+    @media (max-width: 768px) {
+        width: 100%;
+        @include mixins.flex-spbtw-ctr-row();
+    }
+}

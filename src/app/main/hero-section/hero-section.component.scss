@@ -1,7 +1,8 @@
-@use "_colors" as colors;
-@use "_mixins" as mixins;
-@use "_typography" as typo;
-@use "_fonts";
+@use "colors" as colors;
+@use "mixins" as mixins;
+@use "typography" as typo;
+@use "fonts";
+@use "animations" as animations;
 
 section {
   position: relative;
@@ -140,19 +141,19 @@ section {
   }
 
   &:hover > img {
-    @include mixins.grey-to-color();
+    @include animations.grey-to-color();
   }
 
   &:not(:hover) > img {
-    @include mixins.color-to-grey();
+    @include animations.color-to-grey();
   }
 
   &:hover > span {
-    @include mixins.text-bouncing();
+    @include animations.text-bouncing();
   }
 
   &:not(:hover) > span {
-    @include mixins.text-bouncing-back();
+    @include animations.text-bouncing-back();
   }
 
   > img {

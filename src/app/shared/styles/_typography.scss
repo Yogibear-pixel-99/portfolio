@@ -79,3 +79,7 @@
 .privacy-checkbox-font {
   @include bricolage-font(15px, 400);
 }
+
+.footer-font-bold {
+  @include bricolage-font(18px, 700);
+}

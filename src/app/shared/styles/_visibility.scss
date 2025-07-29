@@ -1,3 +1,7 @@
+.display-none {
+  display: none !important;
+}
+
 .display-none-touch-device {
   @media (pointer: coarse) {
     display: none;
@@ -49,5 +53,12 @@
 .display-hide-over-1250px-width {
   @media (min-width: 1251px) {
     display: none !important;
+  }
+}
+
+.display-flex-mobile768-width {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
   }
 }

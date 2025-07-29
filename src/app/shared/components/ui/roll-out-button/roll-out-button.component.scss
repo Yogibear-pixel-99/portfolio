@@ -1,79 +1,90 @@
-@use "_mixins" as mixins;
-@use "_colors" as colors;
-@use "_typography" as typo;
+@use "mixins" as mixins;
+@use "colors" as colors;
+@use "typography" as typo;
+@use "visibility";
+@use "animations" as animations;
 
-.hero-button {
+.standard-button {
   color: colors.$main-white;
-  border: solid colors.$main-white 1px;
-  align-self: flex-start;
   padding: 12px 24px;
   border-radius: 100px;
-  width: 145px;
   height: 40px;
   text-wrap: nowrap;
   @include typo.bricolage-font(18px, 500);
   @include mixins.flex-spbtw-ctr-row(center);
   overflow: hidden;
-}
+  position: relative;
 
-.hello-hover {
-  @include mixins.bounce-animation();
-}
 
-.hello-hover-back {
-  @include mixins.bounce-back-animation();
-}
-
-.hand-logo {
-  animation: animate-hand-logo-main-back forwards 1s ease;
-}
-
-.hand-logo-animate {
-  animation: animate-hand-logo-main forwards 1s ease;
-}
-
-@keyframes animate-hand-logo-main {
-  0% {
-    filter: opacity(0);
-    transform: rotate(0deg);
-  }
-  55% {
-    filter: opacity(1);
-    transform: rotate(365deg);
-  }
-  85% {
-    filter: opacity(1);
-    transform: rotate(355deg);
-  }
-  100% {
-    filter: opacity(1);
-    transform: rotate(360deg);
+  > span {
+    @include mixins.absolute-ctr();
   }
 }
 
-@keyframes animate-hand-logo-main-back {
-  0% {
-    filter: opacity(1);
-    transform: rotate(360deg);
-  }
-  55% {
-    filter: opacity(0);
-    transform: rotate(-5deg);
-  }
-  85% {
-    filter: opacity(0);
-    transform: rotate(5deg);
-  }
-  100% {
-    filter: opacity(0);
-    transform: rotate(0deg);
+.hero-button {
+  border: solid colors.$main-white 1px;
+}
+
+.link-button {
+  border: none;
+
+      &:hover {
+    cursor: pointer !important;
   }
 }
 
-.hand-wrapper {
+.hero-hover {
+  @include animations.bounce-animation();
+}
+
+.hero-hover-back {
+  @include animations.bounce-back-animation();
+}
+
+.link-hover {
+  @include animations.bounce-animation-footer-link();
+}
+
+.link-hover-back {
+  @include animations.bounce-back-animation-footer-link();
+}
+
+.hero-logo {
+  animation: animate-hero-logo-main-back forwards 1s ease;
+}
+
+.hero-logo-animate {
+  animation: animate-hero-logo-main forwards 1s ease;
+}
+
+.link-logo {
+
+  animation: animate-link-logo-main-back forwards 1s ease;
+}
+
+.link-logo-animate {
+  animation: animate-link-logo-main forwards 1s ease;
+}
+
+.hero-wrapper {
   margin-left: auto;
   width: 40px;
   height: 40px;
+}
+
+.link-wrapper {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0 0 4px 0;
+  width: 125px;
+
+  > img {
+    width: 32px;
+    position: absolute;
+    object-fit: fill;
+    margin-left: 46.5px;
+  }
 }
 
 .hello-button {
@@ -101,7 +112,7 @@
 }
 
 .hello-button-hover {
-  width: 275px;
+  width: 100%;
 }
 
 .hide-hello-name {

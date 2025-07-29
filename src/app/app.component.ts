@@ -9,9 +9,10 @@ import { MyProjectsComponent } from "./main/my-projects/my-projects.component";
 import { ColleaguesThoughtsComponent } from "./main/colleagues-thoughts/colleagues-thoughts.component";
 import { ProjectDetailComponent } from "./main/my-projects/project-detail/project-detail.component";
 import { ContactMeComponent } from "./main/contact-me/contact-me.component";
+import { FooterComponent } from "./shared/components/footer/footer/footer.component";
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeroSectionComponent, MaskOverlayComponent, AboutMeComponent, SkillSetComponent, MyProjectsComponent, ColleaguesThoughtsComponent, ProjectDetailComponent, ContactMeComponent],
+  imports: [RouterOutlet, HeroSectionComponent, MaskOverlayComponent, AboutMeComponent, SkillSetComponent, MyProjectsComponent, ColleaguesThoughtsComponent, ProjectDetailComponent, ContactMeComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

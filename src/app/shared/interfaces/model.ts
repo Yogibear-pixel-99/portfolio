@@ -20,3 +20,8 @@ export interface ProjectInfo {
   gitButtonLink: string;
   liveTestLink: string;
 }
+
+export interface FooterLinkData {
+  text: string;
+  imgPath: string;
+}

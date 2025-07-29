@@ -1,8 +1,8 @@
-@use "_colors" as colors;
-@use "_mixins" as mixins;
-@use "_typography" as typo;
-@use "_layout";
-@use "_visibility";
+@use "colors" as colors;
+@use "mixins" as mixins;
+@use "typography" as typo;
+@use "layout";
+@use "visibility";
 
 section {
   background-color: colors.$main-white;

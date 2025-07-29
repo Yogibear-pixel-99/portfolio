@@ -1,8 +1,8 @@
-@use "_layout";
-@use "_mixins" as mixins;
-@use "_typography";
-@use "_colors" as colors;
-@use "_visibility";
+@use "layout";
+@use "mixins" as mixins;
+@use "typography";
+@use "colors" as colors;
+@use "visibility";
 
 section {
   background-color: #1d1d1d;
