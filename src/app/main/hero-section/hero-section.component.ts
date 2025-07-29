@@ -6,11 +6,12 @@ import { CircleLinksService } from '../../shared/services/links/circle-links.ser
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { MainButtonComponent } from "../../shared/components/ui/main-button/main-button.component";
+import { RollOutButtonComponent } from "../../shared/components/ui/roll-out-button/roll-out-button.component";
 
 @Component({
   standalone: true,
   selector: 'app-hero-section',
-  imports: [HeaderComponent, CommonModule, CircleLinkComponent, TranslateModule, MainButtonComponent],
+  imports: [HeaderComponent, CommonModule, CircleLinkComponent, TranslateModule, MainButtonComponent, RollOutButtonComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
@@ -18,8 +19,8 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
 translate = inject(TranslateService);
 linkService = inject(CircleLinksService);
 
-helloEnterText:boolean = false;
-helloEnterAnimate:boolean = false;
+
+
 profilHovered:boolean = false;
 
 hoveredLetterFirst: number | null = null;
@@ -32,13 +33,7 @@ mainSecondHover$: string[] = [];
 subscriptions: Subscription[] = [];
 
 
-showName(){
-setTimeout(() => this.helloEnterText = true, 150);
-}
 
-hideName(): void{
-setTimeout(() => this.helloEnterText = false, 150);
-}
 
 ngOnInit(){
 const sub1 = this.translate.stream('hero.mainSingle.firstNormal').subscribe((data) => {

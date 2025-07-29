@@ -1,8 +1,8 @@
-@use "colors" as colors;
-@use "mixins" as mixins;
-@use "typography" as typo;
-@use "fonts";
-@use "layout";
+@use "_colors" as colors;
+@use "_mixins" as mixins;
+@use "_typography" as typo;
+@use "_fonts";
+@use "_layout";
 
 section {
   position: relative;

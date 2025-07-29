@@ -105,7 +105,8 @@
         "privacyPart" : " privacy policy ",
         "lastPart" : "and agree to the proccesing of my data as outlined."
       }
-    }
+    },
+    "privacyAccept" : "Please accept the privacy policy"
   },
   "footer" : {
     "legal" : "Legal Notice",

@@ -1,5 +1,5 @@
-@use "typography";
-@use "mixins" as mixins;
+@use "_typography";
+@use "_mixins" as mixins;
 
 .header-wrapper {
   display: inline-block;

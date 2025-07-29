@@ -1,0 +1,35 @@
+<div [ngClass]="helloEnterAnimate ? 'hello-hover' : 'hello-hover-back'">
+  <div
+    class="hand-wrapper"
+    [ngClass]="{ 'hand-wrapper-animate': helloEnterAnimate === true }"
+  >
+    <img
+      [ngClass]="helloEnterAnimate === true ? 'hand-logo-animate' : 'hand-logo'"
+      src="images/hero-section/waving_hand.svg"
+      alt="waving hand logo"
+    />
+  </div>
+</div>
+<div
+  (mouseover)="showName(); helloEnterAnimate = true"
+  (mouseout)="hideName(); helloEnterAnimate = false"
+  class="hero-button hello-button"
+  [ngClass]="helloEnterAnimate ? 'hello-hover' : 'hello-hover-back'"
+>
+  <span
+    class="hide-hello-name"
+    [ngClass]="{ 'show-hello-name': helloEnterText === true }"
+  >
+    {{ translatePathHover | translate }}
+  </span>
+  <span
+    class="hide-hello-name"
+    [ngClass]="{ 'show-hello-name': helloEnterText === false }"
+  >
+    {{ translatePathNormal | translate }}
+  </span>
+  <div
+    class="hello-name-mask"
+    [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
+  ></div>
+</div>

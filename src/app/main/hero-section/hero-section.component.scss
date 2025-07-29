@@ -1,7 +1,7 @@
-@use "colors" as colors;
-@use "mixins" as mixins;
-@use "typography" as typo;
-@use "fonts";
+@use "_colors" as colors;
+@use "_mixins" as mixins;
+@use "_typography" as typo;
+@use "_fonts";
 
 section {
   position: relative;
@@ -46,20 +46,8 @@ section {
   }
 }
 
-.hero-button {
-  color: colors.$main-white;
-  border: solid colors.$main-white 1px;
-  align-self: flex-start;
-  padding: 12px 24px;
-  border-radius: 100px;
-  width: 145px;
-  height: 40px;
-  text-wrap: nowrap;
-  @include typo.bricolage-font(18px, 500);
-  @include mixins.flex-spbtw-ctr-row(center);
-}
-
-.hello-wrapper {
+.roll-out-wrapper {
+  
   align-self: flex-start;
 
   > div {
@@ -68,101 +56,6 @@ section {
   }
 }
 
-.hand-wrapper {
-  margin-left: auto;
-  width: 40px;
-  height: 40px;
-}
-
-.hand-logo {
-  animation: animate-hand-logo-main-back forwards 1s ease;
-}
-
-.hand-logo-animate {
-  animation: animate-hand-logo-main forwards 1s ease;
-}
-
-@keyframes animate-hand-logo-main {
-  0% {
-    filter: opacity(0);
-    transform: rotate(0deg);
-  }
-  55% {
-    filter: opacity(1);
-    transform: rotate(365deg);
-  }
-  85% {
-    filter: opacity(1);
-    transform: rotate(355deg);
-  }
-  100% {
-    filter: opacity(1);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-hand-logo-main-back {
-  0% {
-    filter: opacity(1);
-    transform: rotate(360deg);
-  }
-  55% {
-    filter: opacity(0);
-    transform: rotate(-5deg);
-  }
-  85% {
-    filter: opacity(0);
-    transform: rotate(5deg);
-  }
-  100% {
-    filter: opacity(0);
-    transform: rotate(0deg);
-  }
-}
-
-.hello-button {
-  transition: all 0.3s ease-in-out;
-  position: relative;
-
-  > span {
-    @include mixins.absolute-ctr();
-    z-index: 10;
-
-    &:hover {
-      cursor: default;
-    }
-  }
-}
-
-.hello-hover {
-  @include mixins.bounce-animation();
-}
-
-.hello-hover-back {
-  @include mixins.bounce-back-animation();
-}
-
-.hello-name-mask {
-  @include mixins.absolute-ctr();
-  width: 0;
-  height: 40px;
-  background-color: colors.$main-blue;
-  z-index: 5;
-  transition: width ease-in-out 0.4s;
-}
-
-.hello-button-hover {
-  width: 275px;
-}
-
-.hide-hello-name {
-  transition: filter 0.3s ease-in-out;
-  filter: opacity(0);
-}
-
-.show-hello-name {
-  filter: opacity(1);
-}
 
 .single-letter {
   @include typo.bricolage-font(128px, 700);
