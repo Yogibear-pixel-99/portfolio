@@ -4,7 +4,7 @@
 @use "mixins" as mixins;
 @use "visibility";
 
-section {
+.section-wrapper {
   background-image: url("../../../../public/images/contact-me/contact_bg.png");
   background-size: cover;
   color: colors.$main-white;

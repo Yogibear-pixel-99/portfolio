@@ -6,26 +6,23 @@ import { FooterLinkData } from '../../../interfaces/model';
   selector: 'app-footer',
   imports: [TranslateModule, RollOutButtonComponent],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-
-  translate = inject(TranslateService)
+  translate = inject(TranslateService);
 
   linkInfos: FooterLinkData[] = [
     {
-      text : "Github",
-      imgPath : "images/footer/footer_mail_logo.svg",
+      text: 'Github',
+      imgPath: 'images/footer/footer_git_logo.svg',
     },
     {
-      text : "LinkedIn",
-      imgPath : "images/footer/footer_git_logo.svg",
+      text: 'LinkedIn',
+      imgPath: 'images/footer/footer_linkedin_logo.svg',
     },
     {
-      text : "Email",
-      imgPath : "images/footer/footer_linkedin_logo.svg",
+      text: 'Email',
+      imgPath: 'images/footer/footer_mail_logo.svg',
     },
-
-  ]
-
+  ];
 }

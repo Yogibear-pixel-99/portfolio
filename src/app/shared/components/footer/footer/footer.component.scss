@@ -4,14 +4,21 @@
 @use "visibility";
 
 section {
-  background-color: #000000;
   width: 100%;
   color: colors.$main-white;
-  padding: 20px 0 8px 0;
+  padding: 0 72px 56px;
   @include mixins.flex-spbtw-ctr-row(space-between, flex-end);
+
+  @media (max-width: 850px) {
+    padding: 16px;
+  }
 
   @media (max-width: 768px) {
     @include mixins.flex-spbtw-ctr-row(center, center, column);
+  }
+
+    @media (max-width: 420px) {
+    padding: 8px;
   }
 }
 
@@ -27,10 +34,11 @@ a {
   @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
   gap: 12px;
   margin-bottom: 12px;
-  width: 100%;
+  
 
     @media (max-width: 768px) {
      margin-bottom: 24px;
+     width: 100%;
   }
 }
 
