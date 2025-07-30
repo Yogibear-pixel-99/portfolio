@@ -54,7 +54,7 @@
       <app-lang-switch></app-lang-switch>
     </div>
     <div class="bottom">
-      @for (link of linkService.circleLinks; track $index) {
+      @for (link of socialLinkService.socialLinks; track $index) {
       <app-circle-link
         [linkHref]="link.linkHref"
         [imgPath]="link.imgPath"

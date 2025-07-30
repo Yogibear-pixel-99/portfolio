@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RollOutButtonComponent } from '../../ui/roll-out-button/roll-out-button.component';
-import { FooterLinkData } from '../../../interfaces/model';
+import { SocialLinksService } from '../../../services/links/circle-links.service';
 @Component({
   selector: 'app-footer',
   imports: [TranslateModule, RollOutButtonComponent],
@@ -10,19 +10,7 @@ import { FooterLinkData } from '../../../interfaces/model';
 })
 export class FooterComponent {
   translate = inject(TranslateService);
+  socialLinks = inject(SocialLinksService);
 
-  linkInfos: FooterLinkData[] = [
-    {
-      text: 'Github',
-      imgPath: 'images/footer/footer_git_logo.svg',
-    },
-    {
-      text: 'LinkedIn',
-      imgPath: 'images/footer/footer_linkedin_logo.svg',
-    },
-    {
-      text: 'Email',
-      imgPath: 'images/footer/footer_mail_logo.svg',
-    },
-  ];
+  
 }

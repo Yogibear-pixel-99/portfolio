@@ -1,6 +1,7 @@
 <section>
   <div class="name-wrapper">
     <div class="top-wrapper">
+      <a href="#hero-section">
       <svg
         class="logo"
         width="39"
@@ -29,7 +30,7 @@
           </clipPath>
         </defs>
       </svg>
-
+</a>
       <span class="footer-font-bold">&#64; Joachim Pürcher 2025</span>
     </div>
     <div class="legal-link-wrapper" href="#">
@@ -45,27 +46,29 @@
     </div>
   </div>
 
-  @for (link of linkInfos; track $index) {
+  @for (link of socialLinks.socialLinks; track $index) {
   <div class="display-hide-768px-width">
     <app-roll-out-button
-      [translatePathNormal]="link.text"
-      [translatePathHover]="link.text"
+      [translatePathNormal]="link.name"
+      [translatePathHover]="link.name"
       [imgPath]="link.imgPath"
       [buttonType]="'link'"
       [animateType]="'link'"
+      [linkHref]="link.linkHref"
     >
     </app-roll-out-button>
   </div>
   }
 
   <div class="mobile-wrapper display-flex-mobile768-width">
-    @for (link of linkInfos; track $index) {
+    @for (link of socialLinks.socialLinks; track $index) {
     <app-roll-out-button
-      [translatePathNormal]="link.text"
-      [translatePathHover]="link.text"
+      [translatePathNormal]="link.name"
+      [translatePathHover]="link.name"
       [imgPath]="link.imgPath"
       [buttonType]="'link'"
       [animateType]="'link'"
+      [linkHref]="link.linkHref"
     >
     </app-roll-out-button>
     }

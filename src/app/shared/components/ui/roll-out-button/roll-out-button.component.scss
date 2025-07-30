@@ -23,7 +23,12 @@
 
 .hero-button {
   border: solid colors.$main-white 1px;
+
+    &:hover {
+    cursor: pointer;
+  }
 }
+
 
 .link-button {
   border: none;
@@ -95,9 +100,7 @@
     @include mixins.absolute-ctr();
     z-index: 10;
 
-    &:hover {
-      cursor: default;
-    }
+
   }
 }
 

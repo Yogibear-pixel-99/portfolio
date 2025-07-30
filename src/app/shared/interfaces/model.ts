@@ -1,4 +1,5 @@
-export interface CircleLinks {
+export interface SocialLinks {
+  name: string;
   imgPath: string;
   linkHref: string;
   imgAltText: string;
@@ -19,9 +20,4 @@ export interface ProjectInfo {
   usedTechs: string[];
   gitButtonLink: string;
   liveTestLink: string;
-}
-
-export interface FooterLinkData {
-  text: string;
-  imgPath: string;
 }

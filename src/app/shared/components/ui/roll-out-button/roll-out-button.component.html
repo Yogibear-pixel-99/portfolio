@@ -9,12 +9,15 @@
     />
   </div>
 </div>
+
+<a [href]="linkHref">
 <div
   (mouseover)="showName(); helloEnterAnimate = true"
   (mouseout)="hideName(); helloEnterAnimate = false"
   class=""
   [ngClass]="['standard-button', buttonType + '-button', 'hello-button', helloEnterAnimate ? animateType + '-hover' : animateType +'-hover-back']"
 >
+
   <span
     class="hide-hello-name"
     [ngClass]="{ 'show-hello-name': helloEnterText === true }"
@@ -32,3 +35,4 @@
     [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
   ></div>
 </div>
+</a>

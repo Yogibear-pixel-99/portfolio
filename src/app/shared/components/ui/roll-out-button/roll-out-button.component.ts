@@ -11,6 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class RollOutButtonComponent {
   translate = inject(TranslateService);
 
+  @Input({required: true}) linkHref: string = '';
   @Input({required: true}) imgPath: string = '';
   @Input({required: true}) translatePathNormal: string = '';
   @Input({required: true}) translatePathHover: string = '';

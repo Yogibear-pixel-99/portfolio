@@ -6,6 +6,7 @@
         [translatePathNormal]="'hero.hello'"
         [translatePathHover]="'hero.helloHover'"
         [imgPath]="'images/hero-section/waving_hand.svg'"
+        [linkHref]="'#about-me-section'"
         [buttonType]="'hero'"
         [animateType]="'hero'"
       >
@@ -59,11 +60,13 @@
         }
       </div>
     </div>
+  
     <app-main-button
       [translateText]="'hero.touch'"
       [color]="'light-button'"
-      [linkPath]="'#'"
+      [linkHref]="'#contact-me-section'"
     ></app-main-button>
+  
   </div>
           <div
           (mouseenter)="profilHovered = true"
@@ -80,7 +83,7 @@
           >
         </div>
   <div class="social-links">
-    @for (link of linkService.circleLinks; track $index) {
+    @for (link of socialLinkService.socialLinks; track $index) {
     <app-circle-link
       [linkHref]="link.linkHref"
       [imgPath]="link.imgPath"

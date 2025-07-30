@@ -14,5 +14,5 @@ translate = inject(TranslateService);
 
 @Input({required : true}) color: string = 'dark-button';
 @Input({required : true}) translateText:string = '';
-@Input({required : true}) linkPath: string = '';
+@Input({required : true}) linkHref: string = '';
 }
