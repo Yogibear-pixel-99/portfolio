@@ -1,5 +1,5 @@
 <section>
-    <app-header></app-header>
+  <app-header></app-header>
   <div class="main-wrapper">
     <div class="roll-out-wrapper">
       <app-roll-out-button
@@ -15,6 +15,20 @@
     <div class="main-text-wrapper">
       <div class="frontend-wrapper">
         <div>
+        <span class="single-letter upper-lower-letter">{{'hero.mainSingle.frontendFirst' | translate }}</span>
+        @for (letter of 'hero.mainSingle.frontendLast' | translate; track $index) {
+        <span class="single-letter lower-upper-letter">{{letter}}</span>
+        }
+
+
+
+        <!-- <span (mouseenter)="letterHovered($index)" (mouseleave)="letterNotHovered($index)" class="single-letter lower-upper-letter">{{letter}}</span>
+        } -->
+
+
+
+</div>
+        <!-- <div>
           @for (letter of mainFirstText$; track $index; let letterIndex =
           $index) {
           <span
@@ -28,7 +42,7 @@
             }}</span
           >
           }
-        </div>
+        </div> -->
         <div
           (mouseenter)="profilHovered = true"
           (mouseleave)="profilHovered = false"
@@ -45,7 +59,15 @@
         </div>
       </div>
       <div class="dev-wrapper">
-        @for (letter of mainSecondText$; track $index; let letterIndex = $index)
+
+
+        @for (letter of 'hero.mainSingle.developer' | translate; track $index) {
+          <span class="single-letter upper-lower-letter">{{letter}}</span>
+        }
+
+
+
+        <!-- @for (letter of mainSecondText$; track $index; let letterIndex = $index)
         {
         <span
           (mouseenter)="hoveredLetterSecond = letterIndex"
@@ -57,31 +79,30 @@
               : letter
           }}</span
         >
-        }
+        } -->
       </div>
     </div>
-  
+
     <app-main-button
       [translateText]="'hero.touch'"
       [color]="'light-button'"
       [linkHref]="'#contact-me-section'"
     ></app-main-button>
-  
   </div>
-          <div
-          (mouseenter)="profilHovered = true"
-          (mouseleave)="profilHovered = false"
-          class="pic-wrapper display-flex-mobile550-width"
-        >
-          <img src="images/hero-section/placeholder.jpg" alt="profil picture" />
-          <span
-            >Joachim @if (profilHovered === !true) {
-            <span>:&#41;</span>
-            } @else {
-            <span>:D</span>
-            }</span
-          >
-        </div>
+  <div
+    (mouseenter)="profilHovered = true"
+    (mouseleave)="profilHovered = false"
+    class="pic-wrapper display-flex-mobile550-width"
+  >
+    <img src="images/hero-section/placeholder.jpg" alt="profil picture" />
+    <span
+      >Joachim @if (profilHovered === !true) {
+      <span>:&#41;</span>
+      } @else {
+      <span>:D</span>
+      }</span
+    >
+  </div>
   <div class="social-links">
     @for (link of socialLinkService.socialLinks; track $index) {
     <app-circle-link

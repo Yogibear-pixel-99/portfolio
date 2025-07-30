@@ -9,10 +9,9 @@
     "hello": "Hallo Welt",
     "helloHover": "ICH HEIßE JOACHIM PÜRCHER",
     "mainSingle": {
-      "firstNormal": ["F", "r", "o", "n", "t", "e", "n", "d"],
-      "firstHover": ["f", "R", "O", "N", "T", "E", "N", "D"],
-      "secondNormal": ["E", "N", "T", "W", "I", "C", "K", "L", "E", "R"],
-      "secondHover": ["e", "n", "t", "w", "i", "c", "k", "l", "e", "r"]
+      "frontendFirst": "F",
+      "frontendLast": ["r", "o", "n", "t", "e", "n", "d"],
+      "developer": ["E", "N", "T", "W", "I", "C", "K", "L", "E", "R"]
     },
     "touch": "Kontaktiere mich"
   },
@@ -64,9 +63,9 @@
     "header": "Kollegen Meinungen",
     "colleagues": {
       "first": {
-        "name": "Test Name1",
-        "comment": "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-        "link": "#"
+        "name": "Bernadette Pöltl",
+        "comment": "Joachim ist nicht nur fachlich stark, sondern auch menschlich eine echte Bereicherung. Der Austausch mit ihm ist immer offen, ehrlich und inspirierend – als hilfsbereiter Kollege und reflektierter Frontend Developer ist er für mich eine große Unterstützung im Ausbildungsalltag.",
+        "link": "."
       },
       "second": {
         "name": "Test Name2",

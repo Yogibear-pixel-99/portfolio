@@ -15,7 +15,7 @@ import { HeaderComponent } from '../../shared/components/header/header/header.co
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
-export class HeroSectionComponent implements OnInit, OnDestroy {
+export class HeroSectionComponent {
 translate = inject(TranslateService);
 socialLinkService = inject(SocialLinksService);
 
@@ -23,37 +23,39 @@ socialLinkService = inject(SocialLinksService);
 
 profilHovered:boolean = false;
 
-hoveredLetterFirst: number | null = null;
-hoveredLetterSecond: number | null = null;
-
-mainFirstText$: string[] = [];
-mainFirstHover$: string[] = [];
-mainSecondText$: string[] = [];
-mainSecondHover$: string[] = [];
-subscriptions: Subscription[] = [];
 
 
+// hoveredLetterFirst: number | null = null;
+// hoveredLetterSecond: number | null = null;
+
+// mainFirstText$: string[] = [];
+// mainFirstHover$: string[] = [];
+// mainSecondText$: string[] = [];
+// mainSecondHover$: string[] = [];
+// subscriptions: Subscription[] = [];
 
 
-ngOnInit(){
-const sub1 = this.translate.stream('hero.mainSingle.firstNormal').subscribe((data) => {
-this.mainFirstText$ = data;
-});
-const sub2 = this.translate.stream('hero.mainSingle.firstHover').subscribe((data) => {
-  this.mainFirstHover$ = data
-});
-const sub3 = this.translate.stream('hero.mainSingle.secondNormal').subscribe((data) => {
-  this.mainSecondText$ = data;
-});
-const sub4 = this.translate.stream('hero.mainSingle.secondHover').subscribe((data) => {
-  this.mainSecondHover$ = data;
-});
 
-this.subscriptions.push(sub1, sub2, sub3, sub4);
-}
 
-ngOnDestroy(): void {
-  this.subscriptions.forEach((element) => element.unsubscribe());
-}
+// ngOnInit(){
+// const sub1 = this.translate.stream('hero.mainSingle.firstNormal').subscribe((data) => {
+// this.mainFirstText$ = data;
+// });
+// const sub2 = this.translate.stream('hero.mainSingle.firstHover').subscribe((data) => {
+//   this.mainFirstHover$ = data
+// });
+// const sub3 = this.translate.stream('hero.mainSingle.secondNormal').subscribe((data) => {
+//   this.mainSecondText$ = data;
+// });
+// const sub4 = this.translate.stream('hero.mainSingle.secondHover').subscribe((data) => {
+//   this.mainSecondHover$ = data;
+// });
+
+// this.subscriptions.push(sub1, sub2, sub3, sub4);
+// }
+
+// ngOnDestroy(): void {
+//   this.subscriptions.forEach((element) => element.unsubscribe());
+// }
 
 }

@@ -9,6 +9,16 @@
     "hello": "Hello World",
     "helloHover": "I'M JOACHIM PÜRCHER",
     "mainSingle": {
+      "frontendFirst": "F",
+      "frontendLast": ["r", "o", "n", "t", "e", "n", "d"],
+      "developer": ["D", "E", "V", "E", "L", "O", "P", "E", "R"]
+    },
+    "touch": "Get in Touch"
+  },
+  "hero2": {
+    "hello": "Hello World",
+    "helloHover": "I'M JOACHIM PÜRCHER",
+    "mainSingle": {
       "firstNormal": ["F", "r", "o", "n", "t", "e", "n", "d"],
       "firstHover": ["f", "R", "O", "N", "T", "E", "N", "D"],
       "secondNormal": ["D", "E", "V", "E", "L", "O", "P", "E", "R"],
@@ -64,9 +74,9 @@
     "header": "Colleagues' Thoughts",
     "colleagues": {
       "first": {
-        "name": "Test Name1",
-        "comment": "EE he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-        "link" : "#"
+        "name": "Bernadette Pöltl",
+        "comment": "Joachim is not only strong in his professional expertise, but also a true asset on a personal level. Interacting with him is always open, honest, and inspiring – as a helpful colleague and a thoughtful front-end developer, he is a great support to me in my everyday life as a trainee.",
+        "link" : "."
       },
       "second": {
         "name": "Test Name 2",
