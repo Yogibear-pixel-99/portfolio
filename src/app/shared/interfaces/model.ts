@@ -21,3 +21,9 @@ export interface ProjectInfo {
   gitButtonLink: string;
   liveTestLink: string;
 }
+
+export interface UserContactInfo {
+  name: string;
+  phoneNumber: string;
+  message: string;
+}

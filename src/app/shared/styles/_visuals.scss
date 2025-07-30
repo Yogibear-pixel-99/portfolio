@@ -1,0 +1,17 @@
+.contact-arrow {
+  display: block;
+  margin: 0 0 0 auto;
+  width: 280px;
+  animation: header-line 4s ease-in;
+  animation-delay: 800ms;
+  animation-iteration-count: infinite;
+  clip-path: inset(0 300px 0 0);
+
+  @media (max-width: 1250px) {
+    margin: 0;
+  }
+
+  @media (max-width: 480px) {
+    width: 45vw;
+  }
+}

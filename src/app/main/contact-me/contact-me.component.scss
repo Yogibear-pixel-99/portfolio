@@ -3,6 +3,7 @@
 @use "colors" as colors;
 @use "mixins" as mixins;
 @use "visibility";
+@use "visuals";
 
 .section-wrapper {
   background-image: url("../../../../public/images/contact-me/contact_bg.png");
@@ -15,26 +16,8 @@
   gap: 48px;
 }
 
-.contact-arrow {
-  display: block;
-  margin: 0 0 0 auto;
 
-  @media (max-width: 1250px) {
-    margin: 0;
-  }
-}
 
-.contact-arrow {
-  width: 280px;
-  animation: header-line 4s ease-in;
-  animation-delay: 800ms;
-  animation-iteration-count: infinite;
-  clip-path: inset(0 300px 0 0);
-
-  @media (max-width: 480px) {
-    width: 45vw;
-  }
-}
 
 @keyframes header-line {
   0% {
@@ -81,124 +64,6 @@
   }
 }
 
-form {
-  > .input-wrapper {
-    padding: 16px 24px;
-    transition: all ease-in-out 200ms;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    > label {
-      cursor: pointer !important;
-      @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
-      gap: 8px;
-
-      &:hover {
-        color: colors.$main-red;
-      }
-
-      > input {
-        outline: none;
-        border: 0;
-        cursor: pointer;
-        background-color: #00000000;
-        @include typo.bricolage-font(18px, 400);
-        color: colors.$main-white;
-      }
-
-      > input::placeholder {
-        @include typo.bricolage-font(18px, 400);
-        color: colors.$main-white;
-      }
-    }
-  }
-
-  > .input-wrapper:nth-child(1) {
-    border-top: 1px solid #f7c51800;
-
-    &:hover {
-      border-top: 1px solid #3355ff;
-
-      ~ .input-wrapper:nth-child(2) {
-        border-top: 1px solid #3355ff;
-      }
-    }
-  }
-
-  > .input-wrapper:nth-child(2) {
-    border-top: 1px solid #f7c518;
-
-    &:hover {
-      border-top: 1px solid #3355ff;
-
-      ~ .input-wrapper:nth-child(3) {
-        border-top: 1px solid #3355ff;
-      }
-    }
-  }
-
-  > .input-wrapper:nth-child(3) {
-    border-top: 1px solid #f7c518;
-    border-bottom: 1px solid #f7c51800;
-
-    &:hover {
-      border-top: 1px solid #3355ff;
-      border-bottom: 1px solid #3355ff;
-    }
-  }
-}
-
-.input-checkbox-wrapper {
-  @include mixins.flex-spbtw-ctr-row(center, flex-start);
-  gap: 8px;
-}
-
-.privacy-link {
-  text-decoration: none;
-  color: colors.$main-blue;
-
-  &:hover {
-    color: colors.$main-yellow;
-  }
-}
-
-.input-checkbox-wrapper {
-  margin: 16px 0 0 0;
-  position: relative;
-
-  > input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
-    min-width: 18px;
-    min-height: 18px;
-    max-width: 18px;
-    max-height: 18px;
-    border: solid 2px #3355ff;
-    border-radius: 2px;
-    margin: 2px;
-
-    &:hover {
-      background-color: #3355ff6c;
-    }
-  }
-
-  > input[type="checkbox"]:checked::after {
-    content: "✔";
-    position: absolute;
-    top: -4px;
-    min-width: 18px;
-    min-height: 18px;
-    max-width: 18px;
-    max-height: 18px;
-    color: colors.$main-yellow;
-    font-size: 20px;
-  }
-}
-
 .inner-section-two-col {
   padding-top: 192px;
 
@@ -216,43 +81,5 @@ form {
 
   @media (max-width: 600px) {
     padding-top: 170px;
-  }
-}
-
-.error-message {
-  @include typo.bricolage-font(14px, 400);
-  color: colors.$main-red;
-  margin: 8px 0 16px;
-}
-
-.send-button-wrapper {
-  @include mixins.flex-spbtw-ctr-row();
-}
-
-.send-button {
-  @include typo.bricolage-font(18px, 500);
-  @include mixins.flex-spbtw-ctr-row(center);
-  padding: 12px 24px;
-  border-radius: 100px;
-  width: 145px;
-  height: 40px;
-  transition: all ease-in-out 0.2s;
-  color: #ffffff71;
-  background-color: rgba(0, 0, 0, 0);
-  border: solid #ffffff71 1px;
-  box-shadow: 2px 4px 0 0 #ffffff71;
-  margin: 0 0 0 auto;
-}
-
-.active-button {
-  border: solid colors.$main-white 1px;
-  box-shadow: 2px 4px 0 0 colors.$main-white;
-  color: colors.$main-white;
-
-  &:hover {
-    transform: translate(2px, 4px);
-    background-color: colors.$main-red;
-    cursor: pointer;
-    box-shadow: 0 0 0 0 colors.$main-white;
   }
 }
