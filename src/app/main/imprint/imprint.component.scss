@@ -5,7 +5,7 @@
 section {
   position: relative;
   background-color: colors.$main-white;
-  background-image: url("../../../../../public/images/imprint/imprint-wallpaper.png");
+  background-image: url("../../../../public/images/imprint/imprint-wallpaper.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -15,10 +15,6 @@ section {
   @media (max-width: 850px) {
     @include typo.bricolage-font(18px, 400);
   }
-}
-
-.section-padding {
-   
 }
 
 a {
@@ -36,7 +32,17 @@ a {
 
 h3 {
     color: colors.$main-red;
-    word-wrap: break-word;
+
+    @media (max-width: 800px) {
+        font-size: 36px !important;
+        font-weight: 600 !important;
+        word-wrap: break-word;
+    }
+    @media (max-width: 380px) {
+        font-size: 30px !important;
+        font-weight: 600 !important;
+        word-wrap: break-word;
+    }
 }
 
 .wrapper {

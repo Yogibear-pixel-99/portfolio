@@ -125,7 +125,7 @@
       "textOne" : "If you contact us either via our contact form on our website or by email, the data you provide to us will be stored by us for six months for the purpose of processing your inquiry or in case of follow-up questions. Your data will not be passed on without your consent."
     },
     "cookies" : {
-      "header" : "",
+      "header" : "Cookies",
       "textOne" : "Our website uses so-called cookies. These are small text files that are stored on your device with the help of the browser. They do no harm. We use cookies to make our offer user-friendly. Some cookies remain stored on your device until you delete them. They allow us to recognize your browser the next time you visit. If you do not wish this, you can set up your browser so that it informs you about the setting of cookies and you only allow this in individual cases. If cookies are deactivated, the functionality of our website may be limited."
     },
     "serverLog" : {
