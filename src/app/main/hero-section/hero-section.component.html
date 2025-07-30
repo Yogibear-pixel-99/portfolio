@@ -31,7 +31,7 @@
         <div
           (mouseenter)="profilHovered = true"
           (mouseleave)="profilHovered = false"
-          class="pic-wrapper"
+          class="pic-wrapper display-hide-550-width"
         >
           <img src="images/hero-section/placeholder.jpg" alt="profil picture" />
           <span
@@ -65,6 +65,20 @@
       [linkPath]="'#'"
     ></app-main-button>
   </div>
+          <div
+          (mouseenter)="profilHovered = true"
+          (mouseleave)="profilHovered = false"
+          class="pic-wrapper display-flex-mobile550-width"
+        >
+          <img src="images/hero-section/placeholder.jpg" alt="profil picture" />
+          <span
+            >Joachim @if (profilHovered === !true) {
+            <span>:&#41;</span>
+            } @else {
+            <span>:D</span>
+            }</span
+          >
+        </div>
   <div class="social-links">
     @for (link of linkService.circleLinks; track $index) {
     <app-circle-link

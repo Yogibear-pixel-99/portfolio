@@ -57,8 +57,21 @@
 }
 
 .display-flex-mobile768-width {
-  display: none;
+  display: none !important;
   @media (max-width: 768px) {
-    display: flex;
+    display: flex !important;
+  }
+}
+
+.display-hide-550-width {
+  @media (max-width: 550px) {
+    display: none !important;
+  }
+}
+
+.display-flex-mobile550-width {
+  display: none !important;
+  @media (max-width: 550px) {
+    display: flex !important;
   }
 }

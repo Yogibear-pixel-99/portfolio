@@ -3,6 +3,7 @@
 @use "typography" as typo;
 @use "fonts";
 @use "animations" as animations;
+@use "visibility";
 
 section {
   position: relative;
@@ -20,35 +21,54 @@ section {
   @include mixins.flex-spbtw-ctr-row(space-between, center, column);
   width: 80vw;
   max-width: 800px;
-  height: 600px;
-  margin: 150px auto;
+  height: 50dvh;
+  margin: 10dvh auto;
+  max-height: 1200px;
+
+  @media (min-height: 2000px) {
+    margin: auto;
+  }
 
   @media (max-width: 850px) {
-    justify-content: center;
-    height: auto;
-    margin: 80px auto 0;
+    margin: 5dvh auto;
   }
 
   @media (min-width: 850px) and (max-height: 800px) {
     height: 60%;
     margin: 40px auto;
   }
-  
-  @media (max-height: 950px) {
-    margin: 4vh auto 0;
-  }
-  
-  @media (max-width: 430px) {
-    width: 95dvw;
+
+  @media (min-width: 850px) and (max-height: 800px) {
+    height: 60%;
+    margin: 0 auto;
   }
 
   @media (min-width: 720px) and (max-width: 850px) and (max-height: 900px) {
     margin: 0 auto 0;
   }
+
+  @media (max-width: 850px) and (max-height: 600px) {
+    margin: 10dvh auto;
+  }
+
+  @media (max-width: 550px) and (max-height: 650px) {
+    margin: 2dvh auto;
+  }
+
+  @media (max-width: 550px) {
+    height: 45dvh;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
+  }
+
+  @media (max-width: 430px) {
+    width: 95dvw;
+  }
 }
 
 .roll-out-wrapper {
-  
   align-self: flex-start;
 
   > div {
@@ -56,7 +76,6 @@ section {
     overflow: hidden;
   }
 }
-
 
 .single-letter {
   @include typo.bricolage-font(128px, 700);
@@ -66,12 +85,12 @@ section {
   @media (max-width: 900px) {
     font-size: 112px;
   }
-  
+
   @media (max-width: 720px) {
     font-size: 64px;
   }
 
-  @media (max-width: 370px) {
+  @media (max-width: 420px) {
     font-size: 48px;
   }
 
@@ -79,7 +98,7 @@ section {
     font-size: 15vh;
   }
 
-    @media (min-width: 720px) and (max-width: 850px) and (max-height: 900px) {
+  @media (min-width: 720px) and (max-width: 850px) and (max-height: 900px) {
     font-size: 64px;
   }
 
@@ -98,12 +117,20 @@ section {
 }
 
 .frontend-wrapper {
-  position: relative;
   @include mixins.flex-spbtw-ctr-row();
   margin-right: auto;
+  height: 154px;
 
   @media (max-width: 850px) {
-    position: static;
+    height: 77px;
+  }
+
+  @media (max-width: 420px) {
+    height: 58px;
+  }
+
+  @media (max-height: 550px) {
+    height: 58px;
   }
 
   > span {
@@ -112,9 +139,6 @@ section {
 }
 
 .pic-wrapper {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   width: 200px;
   height: 240px;
   @include mixins.flex-spbtw-ctr-row(center, center, column);
@@ -123,21 +147,28 @@ section {
   font-family: kalam-700, sans-serif;
   font-weight: 600;
   font-size: clamp(16px, 4vh, 24px);
-  transform: rotate(8deg);
+  transform: rotate(8deg) translateY(-60px);
 
   @media (max-width: 850px) {
-    left: 50%;
-    top: 600px;
-    transform: translateX(-50%) rotate(8deg);
+    transform: rotate(8deg) translateY(-60px) scale(0.8);
   }
 
   @media (max-height: 900px) and (max-width: 850px) {
-    top: 350px;
-    transform: translateX(-50%) rotate(8deg);
   }
 
   @media (min-width: 850px) and (max-height: 600px) {
-    font-size: 5vh;
+  }
+
+  @media (max-height: 750px) {
+    transform: rotate(8deg) translateY(-60px) scale(0.8);
+  }
+
+  @media (max-height: 550px) {
+    transform: rotate(8deg) translateY(-60px) scale(0.6);
+  }
+
+  @media (max-height: 400px) {
+    transform: rotate(8deg) translateY(-40px) scale(0.5);
   }
 
   &:hover > img {
@@ -166,6 +197,14 @@ section {
 
 .dev-wrapper {
   justify-self: flex-end;
+
+  @media (max-width: 850px) {
+    height: 77px;
+  }
+
+  @media (max-width: 370px) {
+    height: 58px;
+  }
 }
 
 .social-links {
@@ -174,6 +213,10 @@ section {
   left: 72px;
   bottom: 12vh;
   gap: 8px;
+
+      @media (min-width: 2000px) {
+        left: 20dvw;
+    }
 
   @media (max-width: 850px) {
     display: none;

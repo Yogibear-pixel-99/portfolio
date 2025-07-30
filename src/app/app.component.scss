@@ -1,3 +1,9 @@
+@use "colors" as colors;
+
 a {
 text-decoration: none;
+}
+
+app-my-projects {
+    background-color: colors.$main-white;
 }
