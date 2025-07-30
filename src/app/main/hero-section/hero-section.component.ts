@@ -1,5 +1,4 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { HeaderComponent } from "../../shared/components/header/header/header.component";
 import { CommonModule } from '@angular/common';
 import { CircleLinkComponent } from '../../shared/components/ui/circle-link/circle-link.component';
 import { SocialLinksService } from '../../shared/services/links/circle-links.service';
@@ -11,7 +10,7 @@ import { RollOutButtonComponent } from "../../shared/components/ui/roll-out-butt
 @Component({
   standalone: true,
   selector: 'app-hero-section',
-  imports: [HeaderComponent, CommonModule, CircleLinkComponent, TranslateModule, MainButtonComponent, RollOutButtonComponent],
+  imports: [CommonModule, CircleLinkComponent, TranslateModule, MainButtonComponent, RollOutButtonComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })

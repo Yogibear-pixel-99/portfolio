@@ -221,13 +221,13 @@ form {
 
 .error-message {
   @include typo.bricolage-font(14px, 400);
-    color: colors.$main-red;
-    margin: 8px 0 16px;
-  }
+  color: colors.$main-red;
+  margin: 8px 0 16px;
+}
 
-  .send-button-wrapper {
-     @include mixins.flex-spbtw-ctr-row();
-  }
+.send-button-wrapper {
+  @include mixins.flex-spbtw-ctr-row();
+}
 
 .send-button {
   @include typo.bricolage-font(18px, 500);
@@ -250,10 +250,9 @@ form {
   color: colors.$main-white;
 
   &:hover {
-        transform: translate(2px, 4px);
+    transform: translate(2px, 4px);
     background-color: colors.$main-red;
     cursor: pointer;
     box-shadow: 0 0 0 0 colors.$main-white;
   }
 }
-

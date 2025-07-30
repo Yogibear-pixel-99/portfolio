@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaskOverlayComponent } from "./shared/components/mask-overlay/mask-overlay.component";
 import { TranslateService } from '@ngx-translate/core';
-import { MainComponent } from "./main/main/main.component";
+import { HeaderComponent } from './shared/components/header/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer/footer.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MaskOverlayComponent, MainComponent],
+  imports: [RouterOutlet, MaskOverlayComponent, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
