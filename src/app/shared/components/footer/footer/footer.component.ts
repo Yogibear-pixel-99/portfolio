@@ -12,5 +12,8 @@ export class FooterComponent {
   translate = inject(TranslateService);
   socialLinks = inject(SocialLinksService);
 
+ getImprint (): string {
+    return "imprint-" + this.translate.currentLang;
+  }
   
 }

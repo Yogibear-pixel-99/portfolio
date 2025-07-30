@@ -1,4 +1,5 @@
 @use "colors" as colors;
+@use "mixins" as mixins;
 
 a {
 text-decoration: none;
@@ -7,3 +8,4 @@ text-decoration: none;
 app-my-projects {
     background-color: colors.$main-white;
 }
+

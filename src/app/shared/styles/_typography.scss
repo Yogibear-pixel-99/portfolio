@@ -26,6 +26,15 @@
   }
 }
 
+.h3-header-typo-imprint {
+    margin: 0;
+  @include bricolage-font(28px, 700);
+
+  @media (max-width: 850px) {
+    @include bricolage-font(24px, 700);
+  }
+}
+
 .h4-header-typo {
   margin: 0;
   @include bricolage-font(24px, 700);
