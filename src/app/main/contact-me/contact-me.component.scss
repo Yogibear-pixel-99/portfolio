@@ -30,6 +30,10 @@
   animation-delay: 800ms;
   animation-iteration-count: infinite;
   clip-path: inset(0 300px 0 0);
+
+  @media (max-width: 480px) {
+    width: 45vw;
+  }
 }
 
 @keyframes header-line {

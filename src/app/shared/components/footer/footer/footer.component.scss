@@ -76,4 +76,8 @@ a {
     width: 100%;
     @include mixins.flex-spbtw-ctr-row();
   }
+
+  @media (max-width: 390px) {
+    flex-direction: column;
+  }
 }
