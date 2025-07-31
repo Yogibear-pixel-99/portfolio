@@ -59,8 +59,8 @@
     }
   },
   "thoughts": {
-    "words": "GEDANKEN ANDERER:",
-    "header": "Kollegen Meinungen",
+    "words": "GEDANKENGUT:",
+    "header": "Meinungen von Kolleg:innen",
     "colleagues": {
       "first": {
         "name": "Bernadette Pöltl",
@@ -81,74 +81,90 @@
     "developer": "Frontend Entwickler",
     "profile": "Profil"
   },
-  "contactMe" : {
-    "headerWords" : "CONTACT ME",
-    "header" : "Ready to work together?",
-    "mainTextFirst" : "Here is written something about me, Here is written something about me,Here is written something about me,Here is written something about me,Here is written something about me.",
-    "mainTextSecond" : "Here is more written about me, Here is more written about me, Here is more written about me.",
-    "form" : {
-      "yourName" : {
-        "header" : "What's your name?",
-        "placeholder" : "Your name goes here"
+  "contactMe": {
+    "headerWords": "CONTACT ME",
+    "header": "Bereit zusammen zuarbeiten?",
+    "mainTextFirst": "Here is written something about me, Here is written something about me,Here is written something about me,Here is written something about me,Here is written something about me.",
+    "mainTextSecond": "Here is more written about me, Here is more written about me, Here is more written about me.",
+    "form": {
+      "name": {
+        "header": "Wie heißt du?",
+        "placeholder": "Deinen Namen eingeben",
+        "error": "Oops! bitte deinen Namen eingeben",
+         "errorMessage" : "Keine Sonderzeichen, nur ein Leerzeichen"
       },
-      "yourEmail" : {
-        "header" : "What's your email?",
-        "placeholder" : "youremail@email.com"
+      "email": {
+        "header": "Wie lautet deine EMail?",
+        "placeholder": "deineemail@email.com",
+        "error": "Hoppla! deine EMail Adresse fehlt",
+        "errorMessage": "Keine gültige Email Adresse"
       },
-      "helpYou" : {
-        "header" : "How can i help your?",
-        "placeholder" : "Hello Lukas, i am interesetd in..."
+      "message": {
+        "header": "Wie kann ich dir helfen?",
+        "placeholder": "Hallo Joachim, ich interessiere mich für...",
+        "error": "Was wollen wir entwickeln?"
       },
-      "privacy" : {
-        "firstPart" : "I've read the",
-        "privacyPart" : " privacy policy ",
-        "lastPart" : "and agree to the proccesing of my data as outlined."
+      "privacy": {
+        "firstPart": "Ich habe die",
+        "privacyPart": " privacy policy ",
+        "lastPart": "gelesen und akzeptiere die Verarbeitung meiner Daten wie beschrieben.",
+        "error": "Bitte die privacy policy akzeptieren"
       }
     },
-    "privacyAccept" : "Please accept the privacy policy",
-    "sendButton" : "Send"
+    "sendButton": "Senden"
   },
-  "footer" : {
-    "legal" : "Legal Notice",
-    "imprint" : "Imprint"
+  "footer": {
+    "legal": "Impressum",
+    "imprint": "Impressum"
   },
-    "imprint" : {
-    "header" : "Erklärung zur Informationspflicht",
-    "privacy" : {
-      "header" : "Datenschutzerklärung",
-      "textOne" : "   In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).",
-      "textTwo" : "Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO."
+  "imprint": {
+    "header": "Erklärung zur Informationspflicht",
+    "privacy": {
+      "header": "Datenschutzerklärung",
+      "textOne": "   In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).",
+      "textTwo": "Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO."
     },
-    "contactUs" : {
-      "header" : "Kontakt mit uns",
-      "textOne" : "  Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten."
+    "contactUs": {
+      "header": "Kontakt mit uns",
+      "textOne": "  Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten."
     },
-    "cookies" : {
-      "header" : "Cookies",
-      "textOne" : " Unsere Website verwendet so genannte Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein."
+    "cookies": {
+      "header": "Cookies",
+      "textOne": " Unsere Website verwendet so genannte Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein."
     },
-    "serverLog" : {
-      "header" : "Server Log Files",
-      "textOne" : "Diese Webseite und der damit verbundene Provider erhebt im Zuge der Webseitennutzung automatisch Informationen im Rahmen sogenannter „Server-Log Files“. Dies betrifft insbesondere:",
-      "list" : [
-        "IP-Adresse oder Hostname", "den verwendeten Browser", "Aufenthaltsdauer auf der Webseite sowie Datum und Uhrzeit", "aufgerufene Seiten der Webseite", "Spracheinstellungen und Betriebssystem", "'Leaving page' (auf welcher URL hat der Benutzer die Webseite verlassen)", "ISP (Internet Service Provider)"
+    "serverLog": {
+      "header": "Server Log Files",
+      "textOne": "Diese Webseite und der damit verbundene Provider erhebt im Zuge der Webseitennutzung automatisch Informationen im Rahmen sogenannter „Server-Log Files“. Dies betrifft insbesondere:",
+      "list": [
+        "IP-Adresse oder Hostname",
+        "den verwendeten Browser",
+        "Aufenthaltsdauer auf der Webseite sowie Datum und Uhrzeit",
+        "aufgerufene Seiten der Webseite",
+        "Spracheinstellungen und Betriebssystem",
+        "'Leaving page' (auf welcher URL hat der Benutzer die Webseite verlassen)",
+        "ISP (Internet Service Provider)"
       ],
-      "textTwo" : "Diese erhobenen Informationen werden nicht personenbezogen verarbeitet oder mit personenbezogenen Daten in Verbindung gebracht.",
-      "textThree" : "   Der Webseitenbetreiber behält es sich vor, im Falle von Bekanntwerden rechtswidriger Tätigkeiten, diese Daten auszuwerten oder zu überprüfen."
+      "textTwo": "Diese erhobenen Informationen werden nicht personenbezogen verarbeitet oder mit personenbezogenen Daten in Verbindung gebracht.",
+      "textThree": "   Der Webseitenbetreiber behält es sich vor, im Falle von Bekanntwerden rechtswidriger Tätigkeiten, diese Daten auszuwerten oder zu überprüfen."
     },
-    "rights" : {
-      "header" : "Ihre Rechte als Betroffener",
-      "textOne" : "Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein Recht auf:",
-      "list" : [
-        "Auskunft", "Löschung der Daten", "Berichtigung der Daten", "Übertragbarkeit der Daten", "Wiederruf und Widerspruch zur Datenverarbeitung", "Einschränkung"
+    "rights": {
+      "header": "Ihre Rechte als Betroffener",
+      "textOne": "Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein Recht auf:",
+      "list": [
+        "Auskunft",
+        "Löschung der Daten",
+        "Berichtigung der Daten",
+        "Übertragbarkeit der Daten",
+        "Wiederruf und Widerspruch zur Datenverarbeitung",
+        "Einschränkung"
       ],
-      "textTwo" : "Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns (contact&#64;PuercherJoachim.com) oder der Datenschutzbehörde zu beschweren."
+      "textTwo": "Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns (contact&#64;PuercherJoachim.com) oder der Datenschutzbehörde zu beschweren."
     },
-    "reach" : {
-      "header" : "Sie erreichen uns unter folgenden Kontaktdaten:",
-      "operator" : "Webseitenbetreiber:",
-      "phoneText" : "Telefonnummer:",
-      "source" : "Quelle"
+    "reach": {
+      "header": "Sie erreichen uns unter folgenden Kontaktdaten:",
+      "operator": "Webseitenbetreiber:",
+      "phoneText": "Telefonnummer:",
+      "source": "Quelle"
     }
   }
 }

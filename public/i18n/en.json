@@ -98,25 +98,31 @@
     "mainTextFirst" : "Here is written something about me, Here is written something about me,Here is written something about me,Here is written something about me,Here is written something about me.",
     "mainTextSecond" : "Here is more written about me, Here is more written about me, Here is more written about me.",
     "form" : {
-      "yourName" : {
+      "name" : {
         "header" : "What's your name?",
-        "placeholder" : "Your name goes here"
+        "placeholder" : "Your name goes here",
+        "error" : "Oops! it seems your name is missing",
+         "errorMessage" : "Enter a valid name"
       },
-      "yourEmail" : {
+      "email" : {
         "header" : "What's your email?",
-        "placeholder" : "youremail@email.com"
+        "placeholder" : "youremail@email.com",
+        "error" : "Hoppla! your email is required",
+        "errorMessage" : "Enter a valid email address"
       },
-      "helpYou" : {
+      "message" : {
         "header" : "How can i help your?",
-        "placeholder" : "Hello Lukas, i am interesetd in..."
+        "placeholder" : "Hello Lukas, i am interesetd in...",
+        "error" : "What do you need to develop?"
       },
       "privacy" : {
         "firstPart" : "I've read the",
         "privacyPart" : " privacy policy ",
-        "lastPart" : "and agree to the proccesing of my data as outlined."
+        "lastPart" : "and agree to the proccesing of my data as outlined.",
+        "placeholder" : "Please accept the privacy policy",
+        "error" : "Please accept the privacy policy"
       }
     },
-    "privacyAccept" : "Please accept the privacy policy",
     "sendButton" : "Send"
   },
   "footer" : {

@@ -1,73 +1,100 @@
+<form (ngSubmit)="onSubmit(contactMeForm)" #contactMeForm="ngForm" autocomplete="off">
+  <div class="input-wrapper">
+    <label for="name" class="input-label-typo"
+      >{{ "contactMe.form.name.header" | translate }}
+      <input
+        [class.error-red]="nameError"
+        #name="ngModel"
+        id="name"
+        type="text"
+        name="name"
+        maxlength="25"
+        required
+        pattern="^[A-Za-zÄÖÜäöüß\-']+( [A-Za-zÄÖÜäöüß\-']+)*\s*$"
+        [(ngModel)]="contactData.name"
+        [placeholder]="placeholderName | translate"
+    /></label>
+    @if (!name.valid && name.touched) {
+    <span class="text-error">{{
+      "contactMe.form.name.errorMessage" | translate
+    }}</span>
+    }
+  </div>
 
-      <form (ngSubmit)="onSubmit()">
-        <div class="input-wrapper">
-          <label for="name" class="input-label-typo"
-            >{{ "contactMe.form.yourName.header" | translate }}
-            <input
-              id="name"
-              type="text"
-              name="name"
-              [(ngModel)]="contactData.name"
-              [placeholder]="'contactMe.form.yourName.placeholder' | translate"
-          /></label>
-        </div>
+  <div class="input-wrapper">
+    <label for="email" class="input-label-typo"
+      >{{ "contactMe.form.email.header" | translate }}
+      <input
+        [class.error-red]="emailError"
+        #email="ngModel"
+        id="email"
+        type="email"
+        name="email"
+        required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        [(ngModel)]="contactData.email"
+        [placeholder]="placeholderEmail | translate"
+    /></label>
+    @if (!email.valid && email.touched) {
+    <span class="text-error">{{
+      "contactMe.form.email.errorMessage" | translate
+    }}</span>
+    }
+  </div>
 
-        <div class="input-wrapper">
-          <label for="email" class="input-label-typo"
-            >{{ "contactMe.form.yourEmail.header" | translate }}
-            <input
-              id="email"
-              type="email"
-              name="email"
-              [placeholder]="
-                'contactMe.form.yourEmail.placeholder' | translate
-              "
-          /></label>
-        </div>
+  <div class="input-wrapper">
+    <label for="message" class="input-label-typo"
+      >{{ "contactMe.form.message.header" | translate }}
+      <input
+        [class.error-red]="messageError"
+        id="message"
+        type="text"
+        name="message"
+        required
+        pattern="^[A-Za-zÄÖÜäöüß\-']+( [A-Za-zÄÖÜäöüß\-']+)*\s*$"
+        [(ngModel)]="contactData.message"
+        [placeholder]="placeholderMessage | translate"
+    /></label>
+  </div>
 
-        <div class="input-wrapper">
-          <label for="message" class="input-label-typo"
-            >{{ "contactMe.form.helpYou.header" | translate }}
-            <input
-              id="message"
-              type="text"
-              name="message"
-              [placeholder]="'contactMe.form.helpYou.placeholder' | translate"
-          /></label>
-        </div>
+  <div class="input-checkbox-wrapper">
+    <label for="privacy"></label>
+    <input
+      id="privacy"
+      type="checkbox"
+      class="privacy-checkbox"
+      name="privacy-check"
+      required
+      [(ngModel)]="contactData.privacy"
+    />
+    <div>
+      <span class="privacy-checkbox-font">{{
+        "contactMe.form.privacy.firstPart" | translate
+      }}</span>
+      <a href="#" class="privacy-checkbox-font privacy-link" href="">{{
+        "contactMe.form.privacy.privacyPart" | translate
+      }}</a>
+      <span class="privacy-checkbox-font">{{
+        "contactMe.form.privacy.lastPart" | translate
+      }}</span>
+    </div>
+  </div>
 
-        <div class="input-checkbox-wrapper">
-          <label for="privacy"></label>
-          <input
-            id="privacy"
-            type="checkbox"
-            class="privacy-checkbox"
-            name="privacy-check"
-          />
-          <div>
-            <span class="privacy-checkbox-font">{{
-              "contactMe.form.privacy.firstPart" | translate
-            }}</span>
-            <a href="#" class="privacy-checkbox-font privacy-link" href="">{{
-              "contactMe.form.privacy.privacyPart" | translate
-            }}</a>
-            <span class="privacy-checkbox-font">{{
-              "contactMe.form.privacy.lastPart" | translate
-            }}</span>
-          </div>
-        </div>
-        <div class="error-message">
-          {{ "contactMe.privacyAccept" | translate }}
-        </div>
+  <div [ngClass]="[privacyError ? 'error-message' : 'no-error-message']">
+    {{ placeholderPrivacy | translate }}
+  </div>
 
-        <div class="send-button-wrapper">
-          <img
-            class="contact-arrow display-hide-over-1250px-width"
-            src="images/contact-me/contact_arrow.png"
-            alt="contact arrow"
-          />
-          <button class="send-button">
-            {{ "contactMe.sendButton" | translate }}
-          </button>
-        </div>
-      </form>
+  <div class="send-button-wrapper">
+    <img
+      class="contact-arrow display-hide-over-1250px-width"
+      src="images/contact-me/contact_arrow.png"
+      alt="contact arrow"
+    />
+    <button
+      type="submit"
+      [ngClass]="['send-button', checkButton() === true ? 'active-button' : '']"
+    >
+      {{ "contactMe.sendButton" | translate }}
+    </button>
+  </div>
+</form>

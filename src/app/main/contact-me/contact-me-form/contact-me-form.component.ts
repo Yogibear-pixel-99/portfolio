@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { UserContactInfo } from '../../../shared/interfaces/model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-me-form',
-  imports: [TranslateModule, FormsModule],
+  imports: [TranslateModule, FormsModule, CommonModule],
   templateUrl: './contact-me-form.component.html',
   styleUrl: './contact-me-form.component.scss',
 })
@@ -13,14 +14,80 @@ export class ContactMeFormComponent {
   translate = inject(TranslateService);
 
   contactData: UserContactInfo = {
-    name : "",
-    phoneNumber: "",
-    message : ""
+    name: '',
+    email: '',
+    message: '',
+    privacy: false,
+  };
+
+  placeholderName: string = 'contactMe.form.name.placeholder';
+  placeholderEmail: string = 'contactMe.form.email.placeholder';
+  placeholderMessage: string = 'contactMe.form.message.placeholder';
+  placeholderPrivacy: string = 'contactMe.form.privacy.placeholder';
+
+  nameError = false;
+  emailError = false;
+  messageError = false;
+  privacyError = false;
+
+  onSubmit(ngForm: NgForm) {
+    this.trimInput();
+    this.checkErrors();
+    this.checkPrivacy();
+    if (ngForm.valid && ngForm.submitted) {
+    }
   }
 
-  onSubmit(){
-    console.log(this.contactData);
-    
+  trimInput() {
+    this.contactData = {
+      name: this.contactData.name.trim(),
+      email: this.contactData.email.trim(),
+      message: this.contactData.message.trim(),
+      privacy: this.contactData.privacy,
+    };
   }
 
+  checkButton() {
+    if (
+      this.contactData.name &&
+      this.contactData.email &&
+      this.contactData.message &&
+      this.contactData.privacy === true
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  checkErrors() {
+    const config = ['name', 'email', 'message'];
+
+    config.forEach((element) => {
+      const value = this.contactData[element as keyof UserContactInfo];
+      const placeholderVar = `placeholder${
+        element.charAt(0).toUpperCase() + element.slice(1)
+      }`;
+      const errorVar = `${element}Error`;
+      if (value === '') {
+        (this as any)[placeholderVar] = `contactMe.form.${element}.error`;
+        (this as any)[errorVar] = true;
+      } else {
+        (this as any)[placeholderVar] = `contactMe.form.${element}.placeholder`;
+        (this as any)[errorVar] = false;
+      }
+    });
+  }
+
+  checkPrivacy() {
+    if (this.contactData.privacy === false) {
+      this.privacyError = true;
+    } else {
+      this.privacyError = false;
+    }
+  }
+
+  getPlaceholder(typeName: string) {
+    return `contactMe.form.${typeName}.placeholder`;
+  }
 }

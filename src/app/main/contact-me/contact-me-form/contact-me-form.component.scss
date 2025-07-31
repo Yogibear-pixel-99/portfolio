@@ -5,6 +5,7 @@
 
 form {
   > .input-wrapper {
+    position: relative;
     padding: 16px 24px;
     transition: all ease-in-out 200ms;
 
@@ -22,6 +23,7 @@ form {
       }
 
       > input {
+        width: 100%;
         outline: none;
         border: 0;
         cursor: pointer;
@@ -121,10 +123,27 @@ form {
   }
 }
 
+.text-error {
+    @include typo.bricolage-font(14px, 400);
+    position: absolute;
+    bottom: 0;
+    color: red;
+}
+
 .error-message {
   @include typo.bricolage-font(14px, 400);
   color: colors.$main-red;
   margin: 8px 0 16px;
+}
+
+.no-error-message {
+      @include typo.bricolage-font(14px, 400);
+  color: rgba(0, 0, 0, 0);
+  margin: 8px 0 16px;
+}
+
+.error-red::placeholder {
+    color: red !important;
 }
 
 .send-button-wrapper {
@@ -144,12 +163,14 @@ form {
   border: solid #ffffff71 1px;
   box-shadow: 2px 4px 0 0 #ffffff71;
   margin: 0 0 0 auto;
+//   pointer-events: none;
 }
 
 .active-button {
   border: solid colors.$main-white 1px;
   box-shadow: 2px 4px 0 0 colors.$main-white;
   color: colors.$main-white;
+//   pointer-events: all;
 
   &:hover {
     transform: translate(2px, 4px);

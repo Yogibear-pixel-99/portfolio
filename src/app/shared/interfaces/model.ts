@@ -24,6 +24,7 @@ export interface ProjectInfo {
 
 export interface UserContactInfo {
   name: string;
-  phoneNumber: string;
+  email: string;
   message: string;
+  privacy: boolean;
 }
