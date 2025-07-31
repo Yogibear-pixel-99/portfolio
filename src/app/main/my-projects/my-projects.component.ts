@@ -12,4 +12,9 @@ import { MainButtonComponent } from "../../shared/components/ui/main-button/main
 export class MyProjectsComponent {
 
   translate = inject(TranslateService);
+
+  setPosition(nr: string){
+    sessionStorage.setItem('projectPos', nr);
+  }
+
 }

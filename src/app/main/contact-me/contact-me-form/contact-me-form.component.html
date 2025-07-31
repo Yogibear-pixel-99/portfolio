@@ -46,6 +46,7 @@
     <label for="message" class="input-label-typo"
       >{{ "contactMe.form.message.header" | translate }}
       <input
+      #message="ngModel"
         [class.error-red]="messageError"
         id="message"
         type="text"

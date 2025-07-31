@@ -108,8 +108,10 @@ section {
   }
 }
 
+
+
 .lower-upper-letter {
-  transition: all 500ms ease-in-out;
+  transition: all 50ms ease-in-out;
 
   &:hover {
   text-transform: uppercase;
@@ -117,6 +119,8 @@ section {
 }
 
 .upper-lower-letter {
+  transition: all 500ms ease-in-out;
+  
 
   &:hover {
   text-transform: lowercase;

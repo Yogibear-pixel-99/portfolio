@@ -23,22 +23,25 @@
       [animate]="true"
     >
       <app-main-button
+        (click)="setPosition('0')"
         class="display-none-touch-device display-hide-768px-width"
         [translateText]="'projects.buttonText'"
         [color]="'light-button'"
-        [linkHref]="'#'"
+        [linkHref]="'project-details'"
       ></app-main-button>
     </app-project>
-    <div class="display-block-touch-device display-block-768px-width touch-button">
+    <div
+      class="display-block-touch-device display-block-768px-width touch-button"
+    >
       <app-main-button
+        (click)="setPosition('0')"
         [translateText]="'projects.buttonText'"
         [color]="'dark-button'"
-        [linkHref]="'#'"
+        [linkHref]="'project-details'"
       ></app-main-button>
     </div>
     <img src="images/projects/Sticker.png" alt="featured project sticker" />
   </div>
-
   <div class="project-wrapper">
     <app-project
       [imgPath]="'images/projects/Pollo.png'"
@@ -48,17 +51,21 @@
       [animate]="false"
     >
       <app-main-button
+        (click)="setPosition('1')"
         class="display-none-touch-device display-hide-768px-width"
         [translateText]="'projects.buttonText'"
         [color]="'light-button'"
-        [linkHref]="'#'"
+        [linkHref]="'project-details'"
       ></app-main-button>
     </app-project>
-    <div class="display-block-touch-device display-block-768px-width touch-button">
+    <div
+      class="display-block-touch-device display-block-768px-width touch-button"
+    >
       <app-main-button
+        (click)="setPosition('1')"
         [translateText]="'projects.buttonText'"
         [color]="'dark-button'"
-        [linkHref]="'#'"
+        [linkHref]="'project-details'"
       ></app-main-button>
     </div>
   </div>

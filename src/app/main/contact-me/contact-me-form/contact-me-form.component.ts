@@ -3,6 +3,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { UserContactInfo } from '../../../shared/interfaces/model';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-me-form',
@@ -12,6 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactMeFormComponent {
   translate = inject(TranslateService);
+  http = inject(HttpClient);
 
   contactData: UserContactInfo = {
     name: '',
@@ -30,11 +32,41 @@ export class ContactMeFormComponent {
   messageError = false;
   privacyError = false;
 
+  mailTest = false;
+
+  post = {
+    endPoint: 'https://PuercherJoachim.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   onSubmit(ngForm: NgForm) {
+    // console.log(ngForm);
     this.trimInput();
     this.checkErrors();
     this.checkPrivacy();
-    if (ngForm.valid && ngForm.submitted) {
+    
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      console.log(ngForm);
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
     }
   }
 

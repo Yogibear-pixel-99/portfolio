@@ -51,6 +51,13 @@ export class ProjectDetailsService {
     this.getTechLogos();
   }
 
+  setProject(nr: string){
+    let newPos = parseInt(nr);
+    this.projectPos = newPos;
+    this.getProjectInfos();
+    this.getTechLogos();
+  }
+
   nextProject() {
     this.projectPos = (this.projectPos + 1) % this.projectArr.length;
     this.getProjectInfos();

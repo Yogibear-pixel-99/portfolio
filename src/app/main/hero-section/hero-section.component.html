@@ -14,41 +14,21 @@
     </div>
     <div class="main-text-wrapper">
       <div class="frontend-wrapper">
-        <div>
-        <span class="single-letter upper-lower-letter">{{'hero.mainSingle.frontendFirst' | translate }}</span>
-        @for (letter of 'hero.mainSingle.frontendLast' | translate; track $index) {
-        <span class="single-letter lower-upper-letter">{{letter}}</span>
-        }
-
-
-
-        <!-- <span (mouseenter)="letterHovered($index)" (mouseleave)="letterNotHovered($index)" class="single-letter lower-upper-letter">{{letter}}</span>
-        } -->
-
-
-
-</div>
-        <!-- <div>
-          @for (letter of mainFirstText$; track $index; let letterIndex =
+        
+          <span class="single-letter upper-lower-letter">
+            {{ "hero.mainSingle.frontendFirst" | translate }}
+          </span>
+          @for (letter of 'hero.mainSingle.frontendLast' | translate; track
           $index) {
-          <span
-            (mousemove)="hoveredLetterFirst = letterIndex"
-            (mouseleave)="hoveredLetterFirst = null"
-            class="single-letter"
-            >{{
-              hoveredLetterFirst === letterIndex
-                ? mainFirstHover$[letterIndex]
-                : letter
-            }}</span
-          >
+          <span class="single-letter lower-upper-letter">{{ letter }}</span>
           }
-        </div> -->
+       
         <div
           (mouseenter)="profilHovered = true"
           (mouseleave)="profilHovered = false"
           class="pic-wrapper display-hide-550-width"
         >
-          <img src="images/hero-section/placeholder.jpg" alt="profil picture" />
+          <img src="images/hero-section/pic-hero.png" alt="profil picture" />
           <span
             >Joachim @if (profilHovered === !true) {
             <span>:&#41;</span>
@@ -59,27 +39,9 @@
         </div>
       </div>
       <div class="dev-wrapper">
-
-
         @for (letter of 'hero.mainSingle.developer' | translate; track $index) {
-          <span class="single-letter upper-lower-letter">{{letter}}</span>
+        <span class="single-letter upper-lower-letter">{{ letter }}</span>
         }
-
-
-
-        <!-- @for (letter of mainSecondText$; track $index; let letterIndex = $index)
-        {
-        <span
-          (mouseenter)="hoveredLetterSecond = letterIndex"
-          (mouseleave)="hoveredLetterSecond = null"
-          class="single-letter"
-          >{{
-            hoveredLetterSecond === letterIndex
-              ? mainSecondHover$[letterIndex]
-              : letter
-          }}</span
-        >
-        } -->
       </div>
     </div>
 
@@ -94,7 +56,7 @@
     (mouseleave)="profilHovered = false"
     class="pic-wrapper display-flex-mobile550-width"
   >
-    <img src="images/hero-section/placeholder.jpg" alt="profil picture" />
+    <img src="images/hero-section/pic-hero.png" alt="profil picture" />
     <span
       >Joachim @if (profilHovered === !true) {
       <span>:&#41;</span>

@@ -24,6 +24,10 @@ h2 {
 
 .header-text {
   margin: 32px 0 48px;
+
+  @media (max-width: 1250px) {
+    margin: 26px 0 0;
+  }
 }
 
 .placeholder {

@@ -26,6 +26,7 @@ profilHovered:boolean = false;
 
 
 // hoveredLetterFirst: number | null = null;
+
 // hoveredLetterSecond: number | null = null;
 
 // mainFirstText$: string[] = [];
@@ -33,8 +34,6 @@ profilHovered:boolean = false;
 // mainSecondText$: string[] = [];
 // mainSecondHover$: string[] = [];
 // subscriptions: Subscription[] = [];
-
-
 
 
 // ngOnInit(){
