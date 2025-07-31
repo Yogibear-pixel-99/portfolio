@@ -20,6 +20,10 @@ h2 {
 .header-wrapper {
   @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
   gap: 16px;
+
+  > span {
+    color: colors.$main-black;
+  }
 }
 
 .header-text {

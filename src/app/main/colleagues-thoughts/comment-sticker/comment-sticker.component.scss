@@ -12,6 +12,10 @@ padding: 48px 0 0 40px;
 @include mixins.flex-spbtw-ctr-row();
 flex-direction: column;
 
+> span {
+    color: colors.$main-black;
+}
+
 @media (max-width: 520px) {
     padding: 20px 0 0 20px;
     width: 95%;
@@ -31,7 +35,7 @@ flex-direction: column;
     }
 
     &:hover > .bottom-wrapper > .name-wrapper > span {
-        color: colors.$main-white;
+        color: colors.$main-white !important;
     }
 
 > img {
@@ -46,6 +50,10 @@ flex-direction: column;
         position: relative;
         z-index: 10;
     }
+}
+
+.name-wrapper > span {
+    color: colors.$main-black;
 }
 
 .bottom-wrapper {

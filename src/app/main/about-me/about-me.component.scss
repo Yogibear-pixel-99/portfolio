@@ -104,6 +104,11 @@ section {
 .right {
   max-width: 560px;
   @include mixins.flex-spbtw-ctr-row(space-between, stretch, column);
+
+> span {
+  color: colors.$main-black;
+}
+
   @media (max-width: 650px) {
     max-width: 560px;
   }

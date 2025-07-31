@@ -32,6 +32,10 @@ section {
     clip-path: inset(0 0 0 100px);
     margin-right: 16px;
   }
+
+  > span {
+    color: colors.$main-black;
+  }
 }
 
 @keyframes header-line {
