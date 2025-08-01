@@ -3,8 +3,9 @@
 @use "typography" as typo;
 @use "layout";
 
-section {
-    background-color: colors.$main-white;
+.background {
+  background: linear-gradient(colors.$main-white, white);
+    // background-color: ;
 }
 
 .section-header-typo {

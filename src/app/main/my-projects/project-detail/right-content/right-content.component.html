@@ -1,22 +1,33 @@
 <div>
   <div class="img-wrapper">
     <img [src]="projectService.imgPath" />
+    @if(projectService.projectPos === 0) {
     <img [src]="projectService.stickerPath" />
+    } @else {
+
+    <div class="sticker-wrapper">
+      <app-my-logo-sticker
+        [stickerImgPath]="
+          'images/projects/project-details/elpolloloco/gold_sticker.png'
+        "
+        [logoImgPath]="'images/contact-me/meinlogo_black.svg'"
+      ></app-my-logo-sticker>
+    </div>
+    }
   </div>
   <div class="button-wrapper">
-
     <app-main-button
       [translateText]="'Git Hub'"
       [color]="'light-button'"
       [hrefPath]="projectService.gitLink"
       [target]="'_blank'"
     ></app-main-button>
-    
+
     <app-main-button
       [translateText]="'Live Test'"
-       [color]="'light-button'"
-       [hrefPath]="projectService.liveLink"
-       [target]="'_blank'"
+      [color]="'light-button'"
+      [hrefPath]="projectService.liveLink"
+      [target]="'_blank'"
     ></app-main-button>
   </div>
 </div>

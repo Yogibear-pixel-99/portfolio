@@ -3,9 +3,7 @@
 .img-wrapper {
   position: relative;
 
-  //   @media(max-width: 650px) {
-  //   object-fit: contain;
-  // }
+
 
   > img:nth-child(1) {
     width: 100%;
@@ -17,7 +15,8 @@
     }
   }
 
-  > img:nth-child(2) {
+  > img:nth-child(2),
+  .sticker-wrapper {
     position: absolute;
     right: 0;
     top: 50%;
@@ -28,15 +27,37 @@
     @media (max-width: 650px) {
       width: 80px;
       height: 80px;
-      transform: translate(20px, 20px);
+      transform: translate(14px, 20px);
     }
 
-    @media (max-width: 400px) {
-      width: 60px;
-      height: 60px;
-      transform: translate(20px, 0);
+    @media (max-width: 420px) {
+      width: 70px;
+      height: 70px;
+      transform: translate(8px, 0);
     }
   }
+
+  .sticker-wrapper {
+    left: 0;
+    right: auto;
+    transform: translate(-30%, -50%);
+
+        @media (max-width: 650px) {
+      // width: 80px;
+      // height: 80px;
+      transform: translate(-14px, 20px);
+    }
+
+        @media (max-width: 420px) {
+      transform: translate(-8px, 0);
+    }
+  }
+
+}
+
+.sticker-wrapper {
+  width: 168px;
+  height: 168px;
 }
 
 .button-wrapper {
