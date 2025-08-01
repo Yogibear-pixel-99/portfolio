@@ -20,4 +20,11 @@ socialLinkService = inject(SocialLinksService);
 
 profilHovered:boolean = false;
 
+devLetterHovered: number|null = null;
+
+
+setDevLetterHovered(letterNr: number|null){
+  this.devLetterHovered = letterNr;
+}
+
 }

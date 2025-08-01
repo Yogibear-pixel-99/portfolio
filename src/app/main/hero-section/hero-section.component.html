@@ -38,9 +38,15 @@
           >
         </div>
       </div>
-      <div class="dev-wrapper">
+      <div class="dev-wrapper"  (mouseleave)="setDevLetterHovered(null)">
         @for (letter of 'hero.mainSingle.developer' | translate; track $index) {
-        <span class="single-letter upper-lower-letter">{{ letter }}</span>
+          <span class="letter-hover-wrapper">
+        <span class="single-letter hover-letter-first">{{ letter }}</span>
+        <span [ngClass]="['single-letter', 'hover-letter-second', devLetterHovered === $index ? 'yellow-letter' : '']">{{ letter }}</span>
+        <span [ngClass]="['single-letter', 'hover-letter-third', devLetterHovered === $index ? 'hover-letter-third-animate' : '']"
+        (mouseenter)="setDevLetterHovered($index)"
+        >{{ letter }}</span>
+        </span>
         }
       </div>
     </div>
