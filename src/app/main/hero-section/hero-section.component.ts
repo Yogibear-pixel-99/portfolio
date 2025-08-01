@@ -20,11 +20,15 @@ socialLinkService = inject(SocialLinksService);
 
 profilHovered:boolean = false;
 
+fLetterHovered: boolean = false;
+frontLetterHovered: number|null = null;
 devLetterHovered: number|null = null;
 
 
 setDevLetterHovered(letterNr: number|null){
   this.devLetterHovered = letterNr;
 }
-
+setFrontLetterHovered(letterNr: number|null){
+  this.frontLetterHovered = letterNr;
+}
 }

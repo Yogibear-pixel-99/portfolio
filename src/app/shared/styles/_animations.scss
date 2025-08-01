@@ -1,3 +1,5 @@
+@use "colors" as colors;
+
 @mixin bounce-animation() {
   animation: bounce-animation ease 1s forwards;
 }
@@ -224,5 +226,88 @@
   }
   100% {
     filter: grayscale(1) brightness(1);
+  }
+}
+
+
+@keyframes single-letter-upper-to-lower-main {
+  0%{
+    color: colors.$main-blue;
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0.5;
+    text-transform: lowercase;
+  }
+  30%{
+    color: colors.$main-blue;
+    transform: scale(0.7) translate(-30%, -40%);
+    opacity: 1;
+    text-transform: lowercase;
+  }
+  40%{
+    color: colors.$main-blue;
+    transform: scale(0.7) translate(-30%, -40%);
+    opacity: 1;
+    text-transform: lowercase;
+  }
+  99% {
+    color: colors.$main-blue;
+    transform: scale(2) translate(-25%, -25%);
+    opacity: 0;
+     text-transform: lowercase;
+  }
+  100% {
+    color: colors.$main-blue;
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes single-letter-lower-to-upper-main {
+  0%{
+    color: colors.$main-blue;
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+  30%{
+    color: colors.$main-blue;
+    transform: scale(0.7) translate(-30%, -40%);
+    opacity: 1;
+    text-transform: uppercase;
+  }
+  40%{
+    color: colors.$main-blue;
+    transform: scale(0.7) translate(-30%, -40%);
+    opacity: 1;
+    text-transform: uppercase;
+  }
+  99% {
+    color: colors.$main-blue;
+    transform: scale(2) translate(-25%, -25%);
+    opacity: 0;
+     text-transform: uppercase;
+  }
+  100% {
+    color: colors.$main-blue;
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes single-letter-back {
+  0%{
+    color: colors.$main-blue;
+   transform: scale(1) translate(-50%, -50%);
+    opacity: 0;
+  }
+  1%{
+    color: colors.$main-blue;
+   transform: scale(2) translate(-25%, -25%);
+    opacity: 0;
+  }
+  100% {
+    color: colors.$main-yellow;
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
   }
 }

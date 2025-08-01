@@ -134,91 +134,20 @@ section {
 
 .hover-letter-second {
       @include mixins.absolute-ctr();
-    color: colors.$main-white;
+    color: colors.$main-yellow;
     transform: translate(5px, 5px);
-    animation: scale-single-letter-down ease 700ms forwards;
+    animation: single-letter-back ease 700ms forwards;
+}
 
-    &:hover {
+.upper-hover-letter-third-animate {
       color: colors.$main-yellow;
-      
+      animation: single-letter-upper-to-lower-main ease 1000ms forwards;
     }
-}
-
-.hover-letter-third-animate {
+.lower-hover-letter-third-animate {
       color: colors.$main-yellow;
-      animation: scale-single-letter-up ease 800ms forwards;
+      animation: single-letter-lower-to-upper-main ease 1000ms forwards;
     }
 
-    .yellow-letter {
-      color: colors.$main-yellow !important;
-    }
-
-@keyframes scale-single-letter-up {
-  0%{
-    color: colors.$main-blue;
-    transform: scale(1) translate(-50%, -50%);
-    opacity: 1;
-    text-transform: lowercase;
-  }
-  30%{
-    color: colors.$main-blue;
-    transform: scale(0.7) translate(-30%, -40%);
-    opacity: 1;
-    text-transform: lowercase;
-  }
-  40%{
-    color: colors.$main-blue;
-    transform: scale(0.7) translate(-30%, -40%);
-    opacity: 1;
-    text-transform: lowercase;
-  }
-  99% {
-    color: colors.$main-blue;
-    transform: scale(2) translate(-25%, -25%);
-    opacity: 0;
-     text-transform: lowercase;
-  }
-  100% {
-    color: colors.$main-blue;
-    transform: scale(1) translate(-50%, -50%);
-    opacity: 0;
-  }
-}
-
-@keyframes scale-single-letter-down {
-  0%{
-    color: colors.$main-blue;
-   transform: scale(1) translate(-50%, -50%);
-    opacity: 0;
-  }
-  1%{
-    color: colors.$main-blue;
-   transform: scale(2) translate(-25%, -25%);
-    opacity: 0;
-  }
-  100% {
-    color: colors.$main-white;
-    transform: scale(1) translate(-50%, -50%);
-    opacity: 1;
-  }
-}
-
-// .lower-upper-letter {
-//   transition: all 50ms ease-in-out;
-
-//   &:hover {
-//   text-transform: uppercase;
-//   }
-// }
-
-// .upper-lower-letter {
-//   transition: all 500ms ease-in-out;
-  
-
-//   &:hover {
-//   text-transform: lowercase;
-//   }
-// }
 
 .main-text-wrapper {
   width: 100%;
