@@ -23,17 +23,35 @@ section {
   }
 }
 
+.section-padding {
+padding: 0;
 
+// @media (max-width: 1250px) {
+//   padding-top: 40px;
+//   padding-bottom: 40px;
+// }
+
+// @media (max-height: 900px) {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+// }
+// @media (max-height: 750px) {
+//   padding-top: 8px;
+//   padding-bottom: 8px;
+// }
+}
 
 .main {
   @include mixins.flex-spbtw-ctr-row(flex-start);
   flex-direction: column;
   height: calc(100% - 80px);
   max-height: 1500px;
+  padding: 80px 60px;
 
-  @media (max-width: 1300px) {
-    padding: 80px;
-  }
+
+  // @media (max-width: 1300px) {
+  //   padding: 80px;
+  // }
 
   @media (max-width: 1250px) {
     padding: 40px 0;
@@ -46,11 +64,15 @@ section {
 }
 
 .back-wrapper {
-  margin: 0 auto 48px 0;
+  margin: 0 auto 40px 0;
   color: colors.$main-black;
 
     @media (max-width: 1250px) {
     margin: 0;
+  }
+
+  @media (max-height: 750px) {
+    margin: 0 auto auto 0;
   }
 
   &:hover {
@@ -97,13 +119,17 @@ section {
 .middle {
   @include mixins.flex-spbtw-ctr-row(space-around);
   width: 100%;
-  margin-top: 40px;
+  // margin-top: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
+   padding: 0 40px;
 
   @media (max-width: 1250px) {
     flex-direction: column;
     gap: 48px;
-    width: 560px;
+    width: 640px;
     margin: 0;
+     
   }
 
   @media (max-width: 650px) {
@@ -127,8 +153,10 @@ section {
   }
 
   > .right-content {
+    position: relative;
     min-width: 560px;
     max-width: 560px;
+    z-index: 100;
 
     @media (max-width: 1250px) {
       min-width: 0;

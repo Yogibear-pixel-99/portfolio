@@ -20,6 +20,9 @@ z-index: 1000;
 @media  (max-width: 950px) and (orientation: landscape) and (max-height: 550px) {
     display: flex;
 }
+@media (max-height: 680px) and (orientation: landscape) {
+  display: flex;
+}
 
 > .rotate-logo {
     width: 60px;
@@ -30,6 +33,8 @@ animation: animate-rotate-img ease 2s infinite;
     position: absolute;
     left: 20px;
     top: 20px;
+    width: 80px;
+    transform: rotate(7deg);
 }
     
 }

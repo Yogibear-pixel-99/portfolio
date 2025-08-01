@@ -116,7 +116,7 @@ section {
     &:hover {
       cursor: default;
     }
-  }  
+  }
 }
 
 .hover-letter-first {
@@ -124,30 +124,29 @@ section {
 }
 
 .hover-letter-third {
-      @include mixins.absolute-ctr();
-    color: colors.$main-white;
+  @include mixins.absolute-ctr();
+  color: colors.$main-white;
 
-    &:hover {
-      color: colors.$main-yellow;
-    }
+  &:hover {
+    color: colors.$main-yellow;
+  }
 }
 
 .hover-letter-second {
-      @include mixins.absolute-ctr();
-    color: colors.$main-yellow;
-    transform: translate(5px, 5px);
-    animation: single-letter-back ease 700ms forwards;
+  @include mixins.absolute-ctr();
+  color: colors.$main-yellow;
+  transform: translate(5px, 5px);
+  animation: single-letter-back ease 50ms forwards;
 }
 
 .upper-hover-letter-third-animate {
-      color: colors.$main-yellow;
-      animation: single-letter-upper-to-lower-main ease 1000ms forwards;
-    }
+  color: colors.$main-yellow;
+  animation: single-letter-upper-to-lower-main ease 700ms forwards;
+}
 .lower-hover-letter-third-animate {
-      color: colors.$main-yellow;
-      animation: single-letter-lower-to-upper-main ease 1000ms forwards;
-    }
-
+  color: colors.$main-yellow;
+  animation: single-letter-lower-to-upper-main ease 700ms forwards;
+}
 
 .main-text-wrapper {
   width: 100%;
@@ -255,9 +254,9 @@ section {
   bottom: 12vh;
   gap: 8px;
 
-      @media (min-width: 2000px) {
-        left: 20dvw;
-    }
+  @media (min-width: 2000px) {
+    left: 20dvw;
+  }
 
   @media (max-width: 850px) {
     display: none;
