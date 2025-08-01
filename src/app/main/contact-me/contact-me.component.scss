@@ -11,6 +11,12 @@
   color: colors.$main-white;
 }
 
+.section-padding {
+  @media (max-width: 1250px) {
+    padding-top: 140px;
+  }
+}
+
 .header-wrapper {
   @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
   gap: 48px;
@@ -36,90 +42,27 @@
 
 .left {
   position: relative;
-
-  > .sticker-wrapper-small {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 168px;
-    height: 168px;
-    transform: translateY(-96px);
-
-    @media (max-width: 850px) {
-      width: 120px;
-      height: 120px;
-      position: relative;
-       transform: translate(-60px, -50px);
-       margin-left: auto;
-    }
-
-    > img,
-    > svg {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-    }
-
-    > .name-sticker-small {
-      @media (max-width: 850px) {
-        width: 120px;
-      }
-    }
-
-    .my-logo-small {
-      width: 80px;
-      transform: rotate(15deg) translate(70%, 30%);
-
-      @media (max-width: 850px) {
-        width: 60px;
-         transform: rotate(15deg) translate(65%, 25%);
-      }
-    }
-
-    > svg {
-      transform: translate(6px, 4px);
-
-            @media (max-width: 850px) {
-        width: 120px;
-        transform: translate(1px, -20px);
-      }
-    }
-  }
 }
 
-.right {
-  // > .sticker-wrapper {
-  //   position: relative;
-  //   width: 168px;
-  //   height: 168px;
-  //   margin: 0 0 0 auto;
-  //   display: block;
-  //   transform: translate(0, -40px);
+.sticker-wrapper {
+  position: relative;
+  width: 168px;
+  height: 168px;
+  margin-left: auto;
+  transform: translateY(50px);
+  z-index: 2;
+}
 
-  //   @media (max-width: 1500px) {
-  //     transform: translate(-80px, -40px);
-  //   }
+.sticker-wrapper-small {
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  transform: translateY(20px);
 
-  //   @media (max-width: 1250px) {
-  //     display: none;
-  //   }
-
-  //   > img,
-  //   > svg {
-  //     position: absolute;
-  //     left: 50%;
-  //     top: 50%;
-  //   }
-
-  //   > svg {
-  //     transform: translate(6px, 4px);
-  //   }
-
-  //   > .my-logo {
-  //     width: 80px;
-  //     transform: rotate(15deg) translate(70%, 30%);
-  //   }
-  // }
+      @media (max-width: 850px) {
+      width: 100px;
+      height: 100px;
+    }
 }
 
 .inner-section-two-col {
@@ -134,10 +77,6 @@
   }
 
   @media (max-width: 1250px) {
-    padding-top: 190px;
-  }
-
-  @media (max-width: 600px) {
-    padding-top: 170px;
+    padding-top: 120px;
   }
 }

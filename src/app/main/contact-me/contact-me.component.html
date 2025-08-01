@@ -1,8 +1,12 @@
 <div class="section-wrapper">
   <section class="section-padding inner-section-two-col">
     <div class="left">
+      
       <div class="sticker-wrapper-small display-hide-over-1250px-width">
-      <img
+        <app-my-logo-sticker
+        [stickerImgPath]="'images/contact-me/contact_sticker.png'"
+        [logoImgPath]="'images/contact-me/meinlogo_black.svg'"></app-my-logo-sticker>
+      <!-- <img
         class="name-sticker-small "
         src="images/contact-me/contact_sticker.png"
         alt="logo sticker"
@@ -22,7 +26,7 @@
       Frontend Developer - Joachim - Frontend Developer - Joachim -
     </textPath>
   </text>
-</svg>
+</svg> -->
 
 
 
@@ -57,8 +61,11 @@
       </div>
     </div>
     <div class="right">
-      <div class="sticker-wrapper">
-      <img src="images/contact-me/contact_sticker.png" alt="logo sticker" />
+      <div class="sticker-wrapper display-hide-1250px-width">
+        <app-my-logo-sticker
+        [stickerImgPath]="'images/contact-me/contact_sticker.png'"
+        [logoImgPath]="'images/contact-me/meinlogo_black.svg'"></app-my-logo-sticker>
+      <!-- <img src="images/contact-me/contact_sticker.png" alt="logo sticker" />
       <img class="my-logo" src="images/contact-me/meinlogo_black.svg" alt="my logo">
 <svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -74,7 +81,7 @@
       Joachim - Frontend Developer - Joachim - Frontend Developer -
     </textPath>
   </text>
-</svg>
+</svg> -->
 </div>
 <app-contact-me-form></app-contact-me-form>
     </div>
