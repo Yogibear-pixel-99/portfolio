@@ -1,0 +1,32 @@
+.sticker-wrapper {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    margin: 0 0 0 auto;
+    display: block;
+    transform: translate(0, -40px);
+
+    @media (max-width: 1500px) {
+      transform: translate(-80px, -40px);
+    }
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
+
+    > img,
+    > svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+
+    > svg {
+      transform: translate(6px, 4px);
+    }
+
+    > .my-logo {
+      width: 80px;
+      transform: rotate(15deg) translate(70%, 30%);
+    }
+  }
