@@ -44,10 +44,12 @@
     </div>
     <span class="section-text-typo">{{ "aboutMe.text" | translate }}</span>
     <p class="section-text-typo">{{ "aboutMe.collaborate" | translate }}</p>
+   
     <app-main-button
       [translateText]="'aboutMe.button'"
       [color]="'dark-button'"
-      [linkHref]="'#contact-me-section'"
+      [hrefPath]="'#contact-me-section'"
     ></app-main-button>
+
   </div>
 </section>

@@ -1,0 +1,50 @@
+@use "colors" as colors;
+@use "mixins" as mixins;
+@use "typography" as typo;
+
+a {
+  @include mixins.flex-spbtw-ctr-row(center, center);
+  text-decoration: none;
+  width: fit-content;
+}
+
+button {
+  @include typo.bricolage-font(18px, 500);
+  @include mixins.flex-spbtw-ctr-row(center);
+  padding: 12px 24px;
+  border-radius: 100px;
+  height: 40px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 0 colors.$main-white;
+  }
+
+  width: auto;
+  transition: all ease-in-out 0.2s;
+}
+
+.light-button {
+  color: colors.$main-white;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid colors.$main-white 1px;
+  box-shadow: 2px 4px 0 0 colors.$main-white;
+
+  &:hover {
+    transform: translate(2px, 4px);
+    background-color: colors.$main-red;
+  }
+}
+
+.dark-button {
+  color: colors.$main-black;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid colors.$main-black 1px;
+  box-shadow: 2px 4px 0 0 colors.$main-black;
+
+  &:hover {
+    transform: translate(2px, 4px);
+    background-color: colors.$main-red;
+    color: colors.$main-white;
+  }
+}

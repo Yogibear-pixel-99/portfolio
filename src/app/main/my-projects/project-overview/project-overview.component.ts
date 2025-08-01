@@ -4,12 +4,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ProjectDetailsService } from '../../../shared/services/project-details/project-details.service';
 
 @Component({
-  selector: 'app-project',
+  selector: 'app-project-overview',
   imports: [TranslateModule, CommonModule],
-  templateUrl: './project.component.html',
-  styleUrl: './project.component.scss',
+  templateUrl: './project-overview.component.html',
+  styleUrl: './project-overview.component.scss',
 })
-export class ProjectComponent {
+export class ProjectOverviewComponent {
   translate = inject(TranslateService);
   projectService = inject(ProjectDetailsService);
   hoverProject:boolean = false;

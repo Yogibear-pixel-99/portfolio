@@ -21,14 +21,14 @@
     "remote": "Offen für Homeoffice",
     "who": "WER IST JOACHIM",
     "header": "Über mich",
-    "text": "Ich bin kein Programmierer – nein, ich bin Softwareentwickler. Ein neues Stück digitaler Kunst zu erschaffen bedeutet nicht einfach nur, in einer Computersprache zu schreiben und den neuesten Technologie-Stack zu verwenden. Es geht um Problemlösung, Analyse, Strukturierung, Architektur. Es geht darum, Dinge so umzusetzen, wie meine Kunden es sich wünschen. Darin besteht die meiste Arbeit. Ich sammle die Ideen aus einer Vision und erwecke diese zum Leben – genauso, wie sie es sich vorgestellt haben. Es ist meine Leidenschaft, Software zu erschaffen, die klar, funktional, intuitiv zu bedienen und auch nach vielen Jahren noch wartbar ist.",
+    "text": "Ich bin kein Programmierer – nein, ich bin ein Web - Softwareentwickler. Ein neues Stück digitaler Kunst zu erschaffen bedeutet nicht einfach nur, in einer Computersprache zu schreiben und den neuesten Technologie-Stack zu verwenden. Es geht um Problemlösung, Analyse, Strukturierung, Architektur. Es geht darum, Dinge so umzusetzen, wie meine Kunden es sich wünschen. Darin besteht die meiste Arbeit. Ich sammle die Ideen aus einer Vision und erwecke diese zum Leben – genauso, wie sie es sich vorgestellt haben. Es ist meine Leidenschaft, Software zu erschaffen, die klar, funktional, intuitiv zu bedienen und auch nach vielen Jahren noch wartbar ist.",
     "collaborate": "Herzlich willkommen auf meiner Seite. Lassen Sie uns gemeinsam etwas Großartiges schaffen!",
     "button": "Kontakt aufnehmen"
   },
   "skills": {
     "myStack": "MEIN STACK",
     "header": "Skill set",
-    "introduction": "In der Vergangenheit habe ich an mindestens 14 Projekten gearbeitet, um mir die folgenden Fähigkeiten anzueignen. Diese Fähigkeiten werden kontinuierlich erweitert, um mit der Zeit Schritt zu halten."
+    "introduction": "In der Vergangenheit habe ich viele Projekte fertiggestellt, um mir die folgenden Fähigkeiten anzueignen. Diese Fähigkeiten werden kontinuierlich erweitert, um mit der Zeit Schritt zu halten."
   },
   "projects": {
     "craft": "MEINE",
@@ -41,7 +41,7 @@
       "join": {
         "header": "Join",
         "descHeader": "Beschreibung",
-        "descText": "Eine professionelle Task Management App, inspiriert vom bekannten Kanban Konzept. Zum erstellen und organisieren von Arbeitsaubläufen, zuteilen von Mitgliedern und verwalten per drag and drop.",
+        "descText": "Eine professionelle Task-Management-App, inspiriert vom bekannten Kanban-Konzept. Zum Erstellen und Organisieren von Arbeitsaubläufen, Zuteilen von Mitgliedern und Verwalten per drag and drop.",
         "implementHeader": "Implementierung",
         "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
         "durHeader": "Dauer",
@@ -50,9 +50,9 @@
       "elpolloloco": {
         "header": "El Pollo Loco",
         "descHeader": "Beschreibung",
-        "descText": "Ein Objektorientiertes Browser Jump and Run spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board.",
+        "descText": "Ein objektorientiertes Browser Jump-and-Run Spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board.",
         "implementHeader": "Implementierung",
-        "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
+        "implementText": "Objektorientierte Programmierung in Vanilla JS. Highscoreboard über REST-API.",
         "durHeader": "Dauer",
         "durTime": "6 Wochen"
       }
@@ -91,7 +91,7 @@
         "header": "Wie heißt du?",
         "placeholder": "Deinen Namen eingeben",
         "error": "Oops! bitte deinen Namen eingeben",
-         "errorMessage" : "Keine Sonderzeichen, nur ein Leerzeichen"
+        "errorMessage": "Keine Sonderzeichen, nur ein Leerzeichen"
       },
       "email": {
         "header": "Wie lautet deine EMail?",
