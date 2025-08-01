@@ -34,15 +34,15 @@ export class ProjectDetailsService {
       img: 'images/projects/project-details/join/join-screen-0.png',
       sticker: 'images/projects/project-details/Sticker.png',
       usedTechs: ['html', 'css', 'javascript', 'firebase'],
-      gitButtonLink: '#',
-      liveTestLink: '#',
+      gitButtonLink: 'https://github.com/Yogibear-pixel-99/join',
+      liveTestLink: 'https://www.puercherjoachim.com/join/html',
     },
     elpolloloco: {
       img: 'images/projects/project-details/elpolloloco/loco-screen-0.png',
       sticker: 'images/projects/project-details/Sticker.png',
       usedTechs: ['html', 'css', 'javascript'],
-      gitButtonLink: '#',
-      liveTestLink: '#',
+      gitButtonLink: 'https://github.com/Yogibear-pixel-99/el_pollo_loco',
+      liveTestLink: 'https://www.puercherjoachim.com/elpolloloco',
     },
   };
 

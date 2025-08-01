@@ -4,15 +4,19 @@
     <img [src]="projectService.stickerPath" />
   </div>
   <div class="button-wrapper">
-<a href="#">
+
     <app-main-button
       [translateText]="'Git Hub'"
       [color]="'light-button'"
-    ></app-main-button></a>
-    <a href="#">
+      [hrefPath]="projectService.gitLink"
+      [target]="'_blank'"
+    ></app-main-button>
+    
     <app-main-button
       [translateText]="'Live Test'"
        [color]="'light-button'"
-    ></app-main-button></a>
+       [hrefPath]="projectService.liveLink"
+       [target]="'_blank'"
+    ></app-main-button>
   </div>
 </div>
