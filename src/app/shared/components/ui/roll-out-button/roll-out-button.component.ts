@@ -28,4 +28,8 @@ export class RollOutButtonComponent {
   hideName() {
     setTimeout(() => (this.helloEnterText = false), 150);
   }
+  
+  visitExternLink(link: string){
+    setTimeout(() => open(link), 1000);
+  }
 }

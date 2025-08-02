@@ -11,12 +11,6 @@
   color: colors.$main-white;
 }
 
-.section-padding {
-  @media (max-width: 1250px) {
-    padding-top: 140px;
-  }
-}
-
 .header-wrapper {
   @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
   gap: 48px;
@@ -57,12 +51,13 @@
   width: 120px;
   height: 120px;
   margin-left: auto;
-  transform: translateY(20px);
+  transform: translateY(50px);
 
-      @media (max-width: 850px) {
-      width: 100px;
-      height: 100px;
-    }
+  @media (max-width: 850px) {
+    width: 100px;
+    height: 100px;
+    transform: translateY(25px);
+  }
 }
 
 .inner-section-two-col {
@@ -77,6 +72,6 @@
   }
 
   @media (max-width: 1250px) {
-    padding-top: 120px;
+    padding-top: 60px;
   }
 }

@@ -1,7 +1,7 @@
 <section>
   <div>
     <a routerLink="/">
-    <div class="logo-wrapper" (mouseenter)="yellowLogo=true" (mouseleave)="yellowLogo=false">
+    <div class="logo-wrapper" (click)="logoYellow()" (mouseenter)="yellowLogo=true" (mouseleave)="yellowLogo=false">
       @if (yellowLogo) {
       <img
         class="my-logo"

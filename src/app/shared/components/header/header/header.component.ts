@@ -18,4 +18,9 @@ export class HeaderComponent {
   @Input() langSwitchTxtColor:string = '';
 
   yellowLogo:boolean = false;
+
+    logoYellow(){
+    this.yellowLogo = true;
+    setTimeout(() => this.yellowLogo = false, 1000);
+  }
 }

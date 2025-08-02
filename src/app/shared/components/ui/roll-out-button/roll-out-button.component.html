@@ -10,10 +10,35 @@
   </div>
 </div>
 
-<a [href]="linkHref">
+<a [href]="linkHref" target="_blank" class="display-none-touch-device">
 <div
   (mouseover)="showName(); helloEnterAnimate = true"
   (mouseout)="hideName(); helloEnterAnimate = false"
+  class=""
+  [ngClass]="['standard-button', buttonType + '-button', 'hello-button', helloEnterAnimate ? animateType + '-hover' : animateType +'-hover-back']"
+>
+  <span
+    class="hide-hello-name"
+    [ngClass]="{ 'show-hello-name': helloEnterText === true }"
+  >
+    {{ translatePathHover | translate }}
+  </span>
+  <span
+    class="hide-hello-name"
+    [ngClass]="{ 'show-hello-name': helloEnterText === false }"
+  >
+    {{ translatePathNormal | translate }}
+  </span>
+  <div
+    class="hello-name-mask"
+    [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
+  ></div>
+</div>
+</a>
+
+<div (click)="visitExternLink(linkHref)" class="display-block-touch-device">
+<div
+  (mouseover)="showName(); helloEnterAnimate = true"
   class=""
   [ngClass]="['standard-button', buttonType + '-button', 'hello-button', helloEnterAnimate ? animateType + '-hover' : animateType +'-hover-back']"
 >
@@ -35,4 +60,4 @@
     [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
   ></div>
 </div>
-</a>
+</div>

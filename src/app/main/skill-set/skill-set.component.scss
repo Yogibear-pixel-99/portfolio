@@ -16,6 +16,10 @@ section {
 
 .section-padding {
   padding-bottom: 160px;
+
+    @media (max-width: 1250px) {
+ padding-bottom: 40px;
+    }
 }
 
 .top-wrapper {
