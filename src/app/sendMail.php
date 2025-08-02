@@ -17,10 +17,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
+            $privacy = $params->privacy;
     
-            $recipient = 'contact@PuercherJoachim.com';  
+            $recipient = 'contact@puercherjoachim.com';  
             $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
+            $message = "From:" . $name . "<br>" . $message . "<br>" . $privacy;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';

@@ -22,6 +22,8 @@ export class ContactMeFormComponent {
     privacy: false,
   };
 
+  privacyCheck: boolean = false;
+
   placeholderName: string = 'contactMe.form.name.placeholder';
   placeholderEmail: string = 'contactMe.form.email.placeholder';
   placeholderMessage: string = 'contactMe.form.message.placeholder';
@@ -35,7 +37,7 @@ export class ContactMeFormComponent {
   // mailTest = false;
 
   post = {
-    endPoint: 'https://PuercherJoachim.com/sendMail.php',
+    endPoint: 'https://www.puercherjoachim.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -46,17 +48,18 @@ export class ContactMeFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    debugger;
     this.trimInput();
     this.checkErrors();
     this.checkPrivacy();
-    
+
     // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
     if (ngForm.submitted && ngForm.form.valid) {
       // console.log(ngForm);
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {
@@ -65,7 +68,6 @@ export class ContactMeFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid) {
-
       ngForm.resetForm();
     }
   }
