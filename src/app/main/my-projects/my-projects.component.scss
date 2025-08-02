@@ -4,7 +4,7 @@
 @use "layout";
 @use "visibility";
 
-section {
+.background {
   background-color: colors.$main-white;
 
   @media (max-width: 620px) {

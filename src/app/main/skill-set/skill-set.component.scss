@@ -4,14 +4,24 @@
 @use "fonts";
 @use "layout";
 
-section {
-  position: relative;
+.background {
   background-color: colors.$main-white;
   background-image: url("../../../../public/images/skills/skills-wallpaper.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   color: colors.$main-white;
+  
+  @media (min-width: 2000px) {
+    min-height: 800px;
+    height: 26dvw;
+    max-height: 1000px;
+  }
+}
+
+section {
+  position: relative;
+
 }
 
 .section-padding {

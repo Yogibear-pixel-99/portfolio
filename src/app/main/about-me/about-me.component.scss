@@ -3,8 +3,12 @@
 @use "typography" as typo;
 @use "layout";
 
+.background {
+   background-color: colors.$main-white;
+}
+
 section {
-  background-color: colors.$main-white;
+ 
 
   @media (max-width: 1250px) {
     display: flex !important;
@@ -25,7 +29,6 @@ section {
 
 .left {
   @include mixins.flex-spbtw-ctr-row(center, flex-end, column);
-  // height: 400px;
   max-width: 560px;
 
   @media (max-width: 1250px) {
@@ -43,14 +46,6 @@ section {
     height: 40dvw;
     margin-top: 6dvw;
   }
-
-  // @media (max-width: 600px) {
-  //   display: block;
-  // }
-
-  // @media (max-width: 450px) {
-  //   height: 340px;
-  // }
 }
 
 .wrapper {
@@ -118,13 +113,6 @@ section {
   transform: translateY(-25%);
   z-index: 5;
   align-self: flex-end;
-
-  // @media (max-width: 500px) {
-  //   transform: translateY(-90px);
-  // }
-  // @media (max-width: 390px) {
-  //   transform: translateY(-70px);
-  // }
 
   > .inner-wrapper {
     transform: rotate(4deg) translate(-50%, -50%);

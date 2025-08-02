@@ -2,20 +2,24 @@
 @use "mixins" as mixins;
 @use "typography" as typo;
 @use "fonts";
+@use "layout";
 @use "animations" as animations;
 @use "visibility";
 @use "components/hero-section/single-letters-effect";
 
-section {
-  position: relative;
+.background {
   background-color: colors.$main-white;
   background-image: url("../../../../public/images/hero-section/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+}
+
+section {
+  position: relative;
+
   width: 100dvw;
   height: 100dvh;
-  max-height: 1500px;
 }
 
 .main-wrapper {
@@ -23,12 +27,8 @@ section {
   width: 90vw;
   max-width: 1200px;
   height: 50dvh;
-  margin: 10dvh auto;
+  margin: 15dvh auto 0;
   max-height: 1200px;
-
-  @media (min-height: 2000px) {
-    margin: auto;
-  }
 
   @media (max-width: 850px) {
     margin: 5dvh auto;
@@ -173,22 +173,21 @@ section {
 }
 
 .social-links {
-  @include mixins.flex-spbtw-ctr-row(center, center, column);
-  position: absolute;
-  left: 72px;
-  bottom: 12vh;
+  @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
+  width: 100%;
+  margin: 0 auto 0 0;
+  padding: 0 160px;
   gap: 8px;
 
-  @media (min-width: 2000px) {
-    left: 20dvw;
+  @media (max-width: 1350px) {
+    padding: 0 50px;
   }
 
+  @media (max-width: 1250px) {
+    padding: 0 30px;
+  }
   @media (max-width: 850px) {
     display: none;
-  }
-
-  @media (min-width: 850px) and (max-height: 600px) {
-    flex-direction: row;
   }
 }
 
