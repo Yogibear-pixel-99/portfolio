@@ -48,10 +48,10 @@ export class ContactMeFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    debugger;
     this.trimInput();
-    this.checkErrors();
     this.checkPrivacy();
+    this.checkErrors();
+  
 
     // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
     if (ngForm.submitted && ngForm.form.valid) {

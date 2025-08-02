@@ -75,7 +75,7 @@ form {
 }
 
 .input-checkbox-wrapper {
-  @include mixins.flex-spbtw-ctr-row(center, flex-start);
+  @include mixins.flex-spbtw-ctr-row(flex-start, center);
   gap: 8px;
 }
 

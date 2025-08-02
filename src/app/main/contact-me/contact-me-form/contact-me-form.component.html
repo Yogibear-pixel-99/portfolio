@@ -8,9 +8,9 @@
         id="name"
         type="text"
         name="name"
-        maxlength="25"
+        maxlength="50"
         required
-        pattern="^[A-Za-zÄÖÜäöüß\-']+( [A-Za-zÄÖÜäöüß\-']+)*\s*$"
+        patter="[a-zA-ZäöüÄÖÜß0-9\-'\s]"
         [(ngModel)]="contactData.name"
         [placeholder]="placeholderName | translate"
     /></label>
@@ -51,8 +51,9 @@
         id="message"
         type="text"
         name="message"
+        maxlength="300"
         required
-        pattern="^[A-Za-zÄÖÜäöüß\-']+( [A-Za-zÄÖÜäöüß\-']+)*\s*$"
+        pattern="[a-zA-ZäöüÄÖÜß0-9\-'\s]"
         [(ngModel)]="contactData.message"
         [placeholder]="placeholderMessage | translate"
     /></label>
@@ -64,7 +65,7 @@
       id="privacy"
       type="checkbox"
       class="privacy-checkbox"
-      name="privacy-check"
+      name="privacy"
       required
       [(ngModel)]="contactData.privacy"
     />
