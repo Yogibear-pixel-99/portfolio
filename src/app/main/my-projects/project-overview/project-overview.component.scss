@@ -14,6 +14,13 @@ div {
   position: relative;
   z-index: 1;
   margin-bottom: 32px;
+  object-fit: contain;
+
+  @media (max-width: 1250px) {
+    width: 560px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
 
   @media (max-width: 620px) {
     width: 100%;
@@ -22,10 +29,17 @@ div {
   }
 
   > img {
-    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    @media (max-width: 620px) {
+      width: 100%;
+    }
   }
 
   > .img-hover-effect-animate {
+    object-fit: contain;
     animation: animate-hover-effect 400ms forwards;
   }
 
@@ -79,31 +93,31 @@ div {
 
 @keyframes animate-img-project {
   0% {
-    transform: translate(-10%, 0);
+    transform: translate(-10%, 0) scale(0.9);
   }
   20% {
-    transform: translate(-10%, 5%);
+    transform: translate(-10%, 5%) scale(0.9);
   }
   45% {
-    transform: translate(-10%, 11%);
+    transform: translate(-10%, 11%) scale(0.9);
   }
   60% {
-    transform: translate(-10%, 10%);
+    transform: translate(-10%, 10%) scale(0.9);
   }
   80% {
-    transform: translate(-10%, 12%);
+    transform: translate(-10%, 12%) scale(0.9);
   }
   100% {
-    transform: translate(-10%, 0);
+    transform: translate(-10%, 0) scale(0.9);
   }
 }
 
 @keyframes animate-hover-effect {
   0% {
-    transform: scale(1) translate(-10%, 0);
+    transform: scale(0.9) translate(-10%, 0);
   }
   100% {
-    transform: scale(1.1) translate(-10%, 10%);
+    transform: scale(1) translate(-15%, 5%);
   }
 }
 

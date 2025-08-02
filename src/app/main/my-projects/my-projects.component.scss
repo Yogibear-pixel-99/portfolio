@@ -14,7 +14,6 @@ section {
 
 .section-padding {
   @media (max-width: 1250px) {
-    padding-top: 20px;
     padding-bottom: 0;
   }
 }
@@ -95,10 +94,16 @@ h2 {
     @media (max-width: 850px) {
       width: 120px;
       height: 120px;
+         top: 35%;
+    }
+
+    @media (max-width: 500px) {
+      width: 100px;
+      height: 100px;
     }
 
     @media (max-width: 400px) {
-      top: 45%;
+      top: 25%;
       width: 100px;
       height: 100px;
     }
