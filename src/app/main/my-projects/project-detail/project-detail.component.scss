@@ -18,27 +18,27 @@ section {
     background-position: 50% -40px;
   }
 
-    @media (max-width: 650px) {
+  @media (max-width: 650px) {
     background-position: 50% 0;
   }
 }
 
 .section-padding {
-padding: 0;
+  padding: 60px 40px;
 
-// @media (max-width: 1250px) {
-//   padding-top: 40px;
-//   padding-bottom: 40px;
-// }
+  @media (max-width: 1250px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
-// @media (max-height: 900px) {
-//   padding-top: 20px;
-//   padding-bottom: 20px;
-// }
-// @media (max-height: 750px) {
-//   padding-top: 8px;
-//   padding-bottom: 8px;
-// }
+  @media (max-height: 900px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media (max-height: 750px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 .main {
@@ -46,20 +46,9 @@ padding: 0;
   flex-direction: column;
   height: calc(100% - 80px);
   max-height: 1500px;
-  padding: 80px 60px;
-
-
-  // @media (max-width: 1300px) {
-  //   padding: 80px;
-  // }
 
   @media (max-width: 1250px) {
-    padding: 40px 0;
     height: auto;
-  }
-
-  @media (max-width: 650px) {
-    padding: 0;
   }
 }
 
@@ -67,7 +56,7 @@ padding: 0;
   margin: 0 auto 40px 0;
   color: colors.$main-black;
 
-    @media (max-width: 1250px) {
+  @media (max-width: 1250px) {
     margin: 0;
   }
 
@@ -89,12 +78,12 @@ padding: 0;
 }
 
 .mobile-back-next-wrapper {
-    margin: auto 0 0 auto;
+  margin: auto 0 0 auto;
 
   @media (max-width: 1250px) {
-         @include mixins.flex-spbtw-ctr-row();
-     padding: 24px 0;
-     margin-top: 24px;
+    @include mixins.flex-spbtw-ctr-row();
+    padding: 24px 0;
+    margin-top: 24px;
     width: 560px;
     margin: 0;
   }
@@ -113,23 +102,20 @@ padding: 0;
     color: colors.$main-yellow;
     cursor: pointer;
   }
-
 }
 
 .middle {
   @include mixins.flex-spbtw-ctr-row(space-around);
   width: 100%;
   // margin-top: 40px;
-    overflow-y: auto;
-    overflow-x: hidden;
-   padding: 0 40px;
+
+  padding: 0 40px;
 
   @media (max-width: 1250px) {
     flex-direction: column;
     gap: 48px;
     width: 640px;
     margin: 0;
-     
   }
 
   @media (max-width: 650px) {
@@ -168,4 +154,3 @@ padding: 0;
 .right-content {
   align-self: flex-end;
 }
-

@@ -4,6 +4,7 @@
 @use "fonts";
 @use "animations" as animations;
 @use "visibility";
+@use "components/hero-section/single-letters-effect";
 
 section {
   position: relative;
@@ -35,16 +36,11 @@ section {
 
   @media (min-width: 850px) and (max-height: 800px) {
     height: 60%;
-    margin: 40px auto;
-  }
-
-  @media (min-width: 850px) and (max-height: 800px) {
-    height: 60%;
     margin: 0 auto;
   }
 
   @media (min-width: 720px) and (max-width: 850px) and (max-height: 900px) {
-    margin: 0 auto 0;
+    margin: 0 auto;
   }
 
   @media (max-width: 850px) and (max-height: 600px) {
@@ -75,77 +71,6 @@ section {
     position: relative;
     overflow: hidden;
   }
-}
-
-.single-letter {
-  @include typo.bricolage-font(128px, 700);
-  position: relative;
-  color: colors.$main-white;
-
-  @media (max-width: 900px) {
-    font-size: 112px;
-  }
-
-  @media (max-width: 720px) {
-    font-size: 64px;
-  }
-
-  @media (max-width: 420px) {
-    font-size: 48px;
-  }
-
-  @media (min-width: 850px) and (max-height: 600px) {
-    font-size: 15vh;
-  }
-
-  @media (min-width: 720px) and (max-width: 850px) and (max-height: 900px) {
-    font-size: 64px;
-  }
-
-  &:hover {
-    color: colors.$main-yellow;
-    cursor: default;
-  }
-}
-
-.letter-hover-wrapper {
-  position: relative;
-  display: inline-block;
-
-  > span {
-    &:hover {
-      cursor: default;
-    }
-  }
-}
-
-.hover-letter-first {
-  color: #00000000;
-}
-
-.hover-letter-third {
-  @include mixins.absolute-ctr();
-  color: colors.$main-white;
-
-  &:hover {
-    color: colors.$main-yellow;
-  }
-}
-
-.hover-letter-second {
-  @include mixins.absolute-ctr();
-  color: colors.$main-yellow;
-  transform: translate(5px, 5px);
-  animation: single-letter-back ease 50ms forwards;
-}
-
-.upper-hover-letter-third-animate {
-  color: colors.$main-yellow;
-  animation: single-letter-upper-to-lower-main ease 700ms forwards;
-}
-.lower-hover-letter-third-animate {
-  color: colors.$main-yellow;
-  animation: single-letter-lower-to-upper-main ease 700ms forwards;
 }
 
 .main-text-wrapper {
