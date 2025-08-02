@@ -10,7 +10,7 @@
         name="name"
         maxlength="50"
         required
-        patter="[a-zA-ZäöüÄÖÜß0-9\-'\s]"
+        pattern="^[a-zA-ZäöüÄÖÜß0-9\-'\s]+$"
         [(ngModel)]="contactData.name"
         [placeholder]="placeholderName | translate"
     /></label>
@@ -53,7 +53,7 @@
         name="message"
         maxlength="300"
         required
-        pattern="[a-zA-ZäöüÄÖÜß0-9\-'\s]"
+        pattern="^[a-zA-ZäöüÄÖÜß0-9\-'\s.,!?;:]+$"
         [(ngModel)]="contactData.message"
         [placeholder]="placeholderMessage | translate"
     /></label>
