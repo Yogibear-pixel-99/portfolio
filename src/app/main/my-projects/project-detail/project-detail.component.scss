@@ -6,12 +6,11 @@
 
 section {
   background-color: #1d1d1d;
-  height: 100dvh;
+  min-height: 100dvh;
   background-image: url("../../../../../public/images/projects/project-details/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  min-height: fit-content;
 
   @media (max-width: 1250px) {
     background-image: url("../../../../../public/images/projects/project-details/background-rotate.png");
@@ -27,25 +26,17 @@ section {
   padding: 60px 40px;
 
   @media (max-width: 1250px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
   }
 
-  @media (max-height: 900px) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  @media (max-height: 750px) {
-    padding-top: 8px;
-    padding-bottom: 8px;
+  @media (max-width: 850px) {
+    padding: 16px;
   }
 }
 
 .main {
   @include mixins.flex-spbtw-ctr-row(flex-start);
   flex-direction: column;
-  height: calc(100% - 80px);
-  max-height: 1500px;
 
   @media (max-width: 1250px) {
     height: auto;
@@ -53,7 +44,7 @@ section {
 }
 
 .back-wrapper {
-  margin: 0 auto 40px 0;
+  margin: 0 auto 0 0;
   color: colors.$main-black;
 
   @media (max-width: 1250px) {
@@ -82,15 +73,18 @@ section {
 
   @media (max-width: 1250px) {
     @include mixins.flex-spbtw-ctr-row();
-    padding: 24px 0;
-    margin-top: 24px;
-    width: 560px;
+    padding: 24px 32px;
+    width: 100%;
     margin: 0;
+  }
+
+  @media (max-width: 850px) {
+    padding: 24px 0;
   }
 
   @media (max-width: 650px) {
     width: 100%;
-    padding: 24px;
+
     margin: 0;
   }
 
@@ -107,25 +101,17 @@ section {
 .middle {
   @include mixins.flex-spbtw-ctr-row(space-around);
   width: 100%;
-  // margin-top: 40px;
-
-  padding: 0 40px;
+  padding: 40px 40px 60px;
 
   @media (max-width: 1250px) {
     flex-direction: column;
     gap: 48px;
-    width: 640px;
     margin: 0;
+    padding: 40px 32px 60px;
   }
 
-  @media (max-width: 650px) {
-    width: auto;
-    padding: 16px;
-  }
-
-  @media (max-width: 420px) {
-    width: auto;
-    padding: 8px;
+  @media (max-width: 850px) {
+    padding: 16px 0;
   }
 
   > .left-content {

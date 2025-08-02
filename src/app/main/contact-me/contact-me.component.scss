@@ -11,6 +11,10 @@
   color: colors.$main-white;
 }
 
+.section-padding {
+  padding-bottom: 60px;
+}
+
 .header-wrapper {
   @include mixins.flex-spbtw-ctr-row(center, flex-start, column);
   gap: 48px;

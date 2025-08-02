@@ -8,6 +8,14 @@
     // background-color: ;
 }
 
+.section-padding {
+  padding-top: 20px;
+
+  @media (max-width: 850px) {
+    padding-top: 60px;
+  }
+}
+
 .section-header-typo {
     margin: 16px 0 0 0;
     color: colors.$main-black;
