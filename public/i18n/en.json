@@ -43,7 +43,7 @@
         "descHeader": "Description",
         "descText": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         "implementHeader": "Implementation Details",
-        "implementText": "Here i write down how i worked with all the zeug.",
+        "implementText": "Creating the individual Kanban tasks for the team. Assigning them to the respective team members. Designing all sections based on the design template (Figma). Creating the database structure in Firebase. Implementing data processing from the API. Integrating the data into the individual sections. Testing. Consistent, responsive design according to the design template (Figma).",
         "durHeader": "Duration",
         "durTime": "6 Weeks"
       },
@@ -52,7 +52,7 @@
         "descHeader": "Description",
         "descText": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. Two difficult levels, an endless chickenrush mode and a top 30 Highscore board.",
         "implementHeader": "Implementation Details",
-        "implementText": "Object orientated programming with a. Included a highscoreboard with REST-API. ",
+        "implementText": "Creation of the basic framework. Step-by-step implementation of the individual graphics. Creating the object or an inherited object (basic framework) → insert graphic → create animations → integrate logic → add sound effects → testing. Implementation of the dynamic scoreboard to be able to change the scoring at any time (REST-API). Implementation of a sound object with volume control. Creation of the two other game modes.",
         "durHeader": "Duration",
         "durTime": "5 Weeks"
       }
@@ -86,8 +86,8 @@
   "contactMe": {
     "headerWords": "CONTACT ME",
     "header": "Ready to work together?",
-    "mainTextFirst": "Here is written something about me, Here is written something about me,Here is written something about me,Here is written something about me,Here is written something about me.",
-    "mainTextSecond": "Here is more written about me, Here is more written about me, Here is more written about me.",
+    "mainTextFirst": "I'm looking forward to getting to know you and finding the perfect solution to your problem together. You can use this form to send me a message. Just enter your name, your email address, and a brief description of your request. Hit send – and you're done!",
+    "mainTextSecond": "Modern times call for modern solutions and timeless design. Let's get started!",
     "form": {
       "name": {
         "header": "What's your name?",

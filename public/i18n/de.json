@@ -43,7 +43,7 @@
         "descHeader": "Beschreibung",
         "descText": "Eine professionelle Task-Management-App, inspiriert vom bekannten Kanban-Konzept. Zum Erstellen und Organisieren von Arbeitsaubläufen, Zuteilen von Mitgliedern und Verwalten per drag and drop.",
         "implementHeader": "Implementierung",
-        "implementText": "Da schreib ich hin, wie ich vorgegangen bin",
+        "implementText": "Erstellen der einzelnen Kanban-Tasks für das Team. Zuweisung an die einzelnen Personen. Erstellung des Designs aller Sektionen per Designvorlage (Figma). Erstellung der Datenbankstruktur in Firebase. Implementierung der Datenaufbereitung von der API. Einbindung der Daten in die einzelnen Sektionen. Testing. Einheitliches, responsives Design laut Designvorlage (Figma).",
         "durHeader": "Dauer",
         "durTime": "6 Wochen"
       },
@@ -52,7 +52,7 @@
         "descHeader": "Beschreibung",
         "descText": "Ein objektorientiertes Browser Jump-and-Run Spiel. Hilf Pepe um Münzen und Tabasco Flaschen zu sammeln um am Ende das verrückte Oberhuhn zu bekämpfen. Zwei Schwierigkeitsgrade und ein endloser Hühnerrush Level erwarten dich. Inklusive einem Top 30 Highscore Board.",
         "implementHeader": "Implementierung",
-        "implementText": "Objektorientierte Programmierung in Vanilla JS. Highscoreboard über REST-API.",
+        "implementText": "Erstellung des Grundgerüsts. Schrittweise Implementierung der einzelnen Grafiken. Erstellen des Objekts oder eines vererbten Objekts (Grundgerüst) → Grafik einfügen → Animationen erstellen → Logik einbauen → Soundeffekte einfügen → Testen. Implementierung des Punkteboards (dynamisch), um jederzeit die Punktevergabe ändern zu können (REST-API). Implementierung eines Soundobjekts mit Lautstärkeregelung. Erstellung der beiden anderen Spielmodi.",
         "durHeader": "Dauer",
         "durTime": "6 Wochen"
       }
@@ -85,9 +85,9 @@
   },
   "contactMe": {
     "headerWords": "CONTACT ME",
-    "header": "Bereit zusammen zuarbeiten?",
-    "mainTextFirst": "Here is written something about me, Here is written something about me,Here is written something about me,Here is written something about me,Here is written something about me.",
-    "mainTextSecond": "Here is more written about me, Here is more written about me, Here is more written about me.",
+    "header": "Bereit, gemeinsam loszulegen?",
+    "mainTextFirst": "Ich freue mich darauf, dich kennenzulernen und gemeinsam mit dir eine perfekte Lösung für dein Problem zu finden. Über dieses Formular kannst du mir eine Nachricht zukommen lassen. Bitte trage deinen Namen, deine E-Mail-Adresse und kurz dein Anliegen ein. Abschicken – und fertig!",
+    "mainTextSecond": "Moderne Zeiten brauchen moderne Lösungen und zeitloses Design. Lass uns loslegen!",
     "form": {
       "name": {
         "header": "Wie heißt du?",

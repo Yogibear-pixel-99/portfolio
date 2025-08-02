@@ -20,8 +20,8 @@ section {
 
 .main-wrapper {
   @include mixins.flex-spbtw-ctr-row(space-between, center, column);
-  width: 80vw;
-  max-width: 800px;
+  width: 90vw;
+  max-width: 1200px;
   height: 50dvh;
   margin: 10dvh auto;
   max-height: 1200px;
