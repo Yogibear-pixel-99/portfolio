@@ -65,20 +65,22 @@
       "first": {
         "name": "Bernadette Pöltl",
         "comment": "Joachim ist nicht nur fachlich stark, sondern auch menschlich eine echte Bereicherung. Der Austausch mit ihm ist immer offen, ehrlich und inspirierend – als hilfsbereiter Kollege und reflektierter Frontend Developer ist er für mich eine große Unterstützung im Ausbildungsalltag.",
-        "link": "."
+        "link": ".",
+        "role" : "Frontend Entwickler"
       },
       "second": {
-        "name": "Test Name2",
-        "comment": "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-        "link": "#"
+        "name": "Dominic Duchaczek",
+        "comment": "Joachim hatte stets ein offenes Ohr für meine Anliegen, Wünsche und Fragen. Selbst in stressigen Situationen behielt er den Überblick und verlor dabei nie das große Ganze aus den Augen. Seine ruhige und lösungsorientierte Art machte ihn zu einem verlässlichen Kollegen, auf den man sich jederzeit verlassen konnte.",
+        "link": "https://www.linkedin.com/in/dominic-duchaczek-397b641b6/",
+        "role" : "Projectmanager"
       },
       "third": {
-        "name": "Test Name3",
-        "comment": "DD he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-        "link": "#"
+        "name": "Eduard Fray",
+        "comment": "Die Zusammenarbeit mit Eduard war durchweg positiv. Er verstand es, das Team zu motivieren und gleichzeitig den Fokus auf unsere Ziele nicht aus den Augen zu verlieren. Durch seine offene und hilfsbereite Art war er ein echter Gewinn für das Team.",
+        "link": "https://www.linkedin.com/in/eduard-fray-696ba81a9/",
+        "role" : "Frontend Entwickler"
       }
     },
-    "developer": "Frontend Entwickler",
     "profile": "Profil"
   },
   "contactMe": {

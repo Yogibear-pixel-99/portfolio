@@ -65,20 +65,22 @@
       "first": {
         "name": "Bernadette Pöltl",
         "comment": "Joachim is not only strong in his professional expertise, but also a true asset on a personal level. Interacting with him is always open, honest, and inspiring – as a helpful colleague and a thoughtful front-end developer, he is a great support to me in my everyday life as a trainee.",
-        "link": "."
+        "link": ".",
+        "role" : "Frontend Entwickler"
       },
       "second": {
-        "name": "Test Name 2",
-        "comment": "EE he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-        "link": "#"
+        "name": "Dominic Duchaczek",
+        "comment": "Joachim was always receptive to my concerns, requests, and questions. Even in high-pressure situations, he maintained a clear overview and never lost sight of the bigger picture. His calm and solution-oriented approach made him a reliable colleague one could always count on.",
+        "link": "https://www.linkedin.com/in/dominic-duchaczek-397b641b6/",
+        "role" : "Projektmanager"
       },
       "third": {
-        "name": "Test Name 3",
-        "comment": "EE he is blab labla the best person in the world iiiisadifasdfvgafdgv",
-        "link": "#"
+        "name": "Eduard Fray",
+        "comment": "Collaborating with Joachim was truly enjoyable. He consistently encouraged the team and ensured we stayed focused while maintaining a positive and cohesive atmosphere. His friendly and supportive attitude made him an excellent colleague.",
+        "link": "https://www.linkedin.com/in/eduard-fray-696ba81a9/",
+        "role" : "Frontend Entwickler"
       }
     },
-    "developer": "Frontend Developer",
     "profile": "Profile"
   },
   "contactMe": {

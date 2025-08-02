@@ -10,12 +10,16 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class CommentStickerComponent {
 
+
   translate = inject(TranslateService);
 
   @Input({required: true}) commentPath: string = '';
   @Input({required: true}) namePath: string = '';
-  @Input({required: true}) profileLink: string = '';
+  @Input({required: true}) profileLink: string | boolean = '';
   @Input({required : true}) bgImgPath: string = '';
   @Input({required : true}) hoverImgPath: string = '';
+  @Input({required : true}) role: string = '';
+
+
 }
 

@@ -6,10 +6,10 @@
     <div class="name-wrapper">
       <span class="sticker-name">{{ namePath | translate }}</span>
       <span class="sticker-name-job-text">{{
-        "thoughts.developer" | translate
+        role | translate
       }}</span>
     </div>
-    <a [href]="profileLink" class="profile-wrapper">
+    <a [href]="profileLink" [ngClass]="['profile-wrapper', profileLink === false ? 'pointer-none' : '']">
       <svg
         width="18"
         height="19"
@@ -24,7 +24,7 @@
       </svg>
 
       <span class="sticker-profile-link-text">{{
-        "thoughts.profile" | translate
+        'thoughts.profile' | translate
       }}</span>
     </a>
   </div>

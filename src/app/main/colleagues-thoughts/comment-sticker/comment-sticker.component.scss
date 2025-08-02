@@ -109,4 +109,12 @@ flex-direction: column;
     transition: opacity ease-in-out 100ms;
 }
 
+.pointer-none {
+    pointer-events: none;
+    display: none;
 
+    &:hover {
+        color: colors.$main-yellow;
+        fill: colors.$main-blue;
+    }
+}
