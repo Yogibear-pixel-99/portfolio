@@ -18,12 +18,8 @@
   background-size: cover;
   background-position: left;
   background-color: #1d1d1d;
-}
 
-section {
-  min-height: 100dvh;
-
-  @media (max-width: 1250px) {
+   @media (max-width: 1250px) {
     background-image: url("../../../../../public/images/projects/project-details/background-rotate.png");
     background-position: 50% -40px;
   }
@@ -31,6 +27,12 @@ section {
   @media (max-width: 650px) {
     background-position: 50% 0;
   }
+}
+
+section {
+  min-height: 100dvh;
+
+ 
 }
 
 .section-padding {
