@@ -32,7 +32,7 @@ export class ContactMeFormComponent {
   messageError = false;
   privacyError = false;
 
-  mailTest = false;
+  // mailTest = false;
 
   post = {
     endPoint: 'https://PuercherJoachim.com/sendMail.php',
@@ -46,13 +46,13 @@ export class ContactMeFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    // console.log(ngForm);
     this.trimInput();
     this.checkErrors();
     this.checkPrivacy();
     
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      console.log(ngForm);
+    // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      // console.log(ngForm);
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -64,7 +64,7 @@ export class ContactMeFormComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid) {
 
       ngForm.resetForm();
     }

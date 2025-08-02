@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, Input } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-button',
-  imports: [CommonModule, TranslateModule, RouterLink],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './main-button.component.html',
   styleUrl: './main-button.component.scss'
 })
