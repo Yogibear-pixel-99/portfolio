@@ -2,14 +2,9 @@
 @use "mixins" as mixins;
 
 a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 app-my-projects {
-    background-color: colors.$main-white;
+  background-color: colors.$main-white;
 }
-
-// app-mask-overlay {
-//     position: absolute;
-//     inset: 0;
-// }

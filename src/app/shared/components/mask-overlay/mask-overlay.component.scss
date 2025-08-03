@@ -3,39 +3,38 @@
 @use "_fonts";
 
 section {
-@include mixins.flex-spbtw-ctr-row(center, center, column);
-position:fixed;
-inset: 0;
-background-color: colors.$main-white;
-background-image: url("../../../../../public/images/hero-section/hero-bg.png");
-background-size: cover;
-background-position: bottom;
-color: colors.$main-red;
-display: none;
-font-family: bricolage, sans-serif;
-font-size: 32px;
-z-index: 1000;
+  @include mixins.flex-spbtw-ctr-row(center, center, column);
+  position: fixed;
+  inset: 0;
+  background-color: colors.$main-white;
+  background-image: url("../../../../../public/images/hero-section/hero-bg.png");
+  background-size: cover;
+  background-position: bottom;
+  color: colors.$main-red;
+  display: none;
+  font-family: bricolage, sans-serif;
+  font-size: 32px;
+  z-index: 1000;
 
-@media  (max-width: 950px) and (orientation: landscape) and (max-height: 550px) {
+  @media (max-width: 950px) and (orientation: landscape) and (max-height: 550px) {
     display: flex;
-}
-@media (max-height: 680px) and (orientation: landscape) {
-  display: flex;
-}
+  }
+  @media (max-height: 680px) and (orientation: landscape) {
+    display: flex;
+  }
 
-> .rotate-logo {
+  > .rotate-logo {
     width: 60px;
-animation: animate-rotate-img ease 2s infinite;
-}
+    animation: animate-rotate-img ease 2s infinite;
+  }
 
-> .my-logo {
+  > .my-logo {
     position: absolute;
     left: 20px;
     top: 20px;
     width: 80px;
     transform: rotate(7deg);
-}
-    
+  }
 }
 
 @keyframes animate-rotate-img {

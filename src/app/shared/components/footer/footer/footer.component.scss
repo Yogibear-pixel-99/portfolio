@@ -10,22 +10,21 @@ section {
   padding: 0 160px 56px;
   @include mixins.flex-spbtw-ctr-row(space-between, flex-end);
 
-      @media (max-width: 1350px) {
-        padding: 0 30px 56px;
-    }
+  @media (max-width: 1350px) {
+    padding: 0 30px 56px;
+  }
 
-      @media (max-width: 1250px) {
-        width: 95dvw;
-    }
-
+  @media (max-width: 1250px) {
+    width: 95dvw;
+  }
 
   @media (max-width: 768px) {
     @include mixins.flex-spbtw-ctr-row(center, center, column);
   }
 
-      @media (max-width: 600px) {
-        padding: 0 0 56px;
-    }
+  @media (max-width: 600px) {
+    padding: 0 0 56px;
+  }
 
   @media (max-width: 420px) {
     padding: 8px;

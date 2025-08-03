@@ -5,7 +5,6 @@
 
 .background {
   background: linear-gradient(colors.$main-white, white);
-    // background-color: ;
 }
 
 .section-padding {
@@ -17,17 +16,16 @@
 }
 
 .section-header-typo {
-    margin: 16px 0 0 0;
-    color: colors.$main-black;
-    text-wrap: nowrap;
-    @include mixins.flex-spbtw-ctr-row(flex-end);
-    text-wrap: wrap;
+  margin: 16px 0 0 0;
+  color: colors.$main-black;
+  text-wrap: nowrap;
+  @include mixins.flex-spbtw-ctr-row(flex-end);
+  text-wrap: wrap;
 }
 
 .header-wrapper {
-    text-align: right;
+  text-align: right;
 }
-
 
 .img-wrapper {
   position: relative;
@@ -69,17 +67,13 @@
   position: relative;
   padding-top: 0;
 
-  
-
   @media (pointer: coarse) or (max-width: 520px) {
     @include mixins.flex-spbtw-ctr-row(center, center, column);
 
     @media (max-width: 1200px) {
-      // @include mixins.flex-spbtw-ctr-row(center, center, column);
       gap: 0px;
 
-      @media(max-width: 510px) {
-
+      @media (max-width: 510px) {
       }
 
       > div {
@@ -90,10 +84,10 @@
         transform: rotate(-4deg) translate(0, 0) !important;
       }
       > div:nth-child(2) {
-transform: translate(0, 0) !important;
+        transform: translate(0, 0) !important;
       }
       > div:nth-child(3) {
-transform: rotate(4deg) translate(0, 0) !important;
+        transform: rotate(4deg) translate(0, 0) !important;
       }
     }
   }
@@ -103,32 +97,31 @@ transform: rotate(4deg) translate(0, 0) !important;
     filter: brightness(0.95);
   }
 
-
-  > div:nth-child(1){
+  > div:nth-child(1) {
     transform: rotate(-4deg);
     z-index: 3;
 
-            &:hover {
+    &:hover {
       z-index: 4;
       filter: brightness(1.05);
     }
   }
-  > div:nth-child(2){
+  > div:nth-child(2) {
     @include mixins.absolute-ctr();
     z-index: 2;
 
-        &:hover {
+    &:hover {
       z-index: 4;
       filter: brightness(1.05);
     }
   }
 
-  > div:nth-child(3){
-        transform: rotate(4deg);
+  > div:nth-child(3) {
+    transform: rotate(4deg);
     justify-self: flex-end;
     z-index: 1;
 
-        &:hover {
+    &:hover {
       z-index: 4;
       filter: brightness(1.05);
     }

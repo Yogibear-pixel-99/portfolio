@@ -19,7 +19,7 @@
   background-position: left;
   background-color: #1d1d1d;
 
-   @media (max-width: 1250px) {
+  @media (max-width: 1250px) {
     background-image: url("../../../../../public/images/projects/project-details/background-rotate.png");
     background-position: 50% -40px;
   }
@@ -31,8 +31,6 @@
 
 section {
   min-height: 100dvh;
-
- 
 }
 
 .section-padding {

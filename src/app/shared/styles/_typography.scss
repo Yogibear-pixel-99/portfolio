@@ -1,24 +1,21 @@
 @use "fonts";
 
-
-@mixin bricolage-font($size: 20px, $weight: 400){
-    font-family: bricolage, sans-serif;
-    font-size: $size;
-    font-weight: $weight;
-  }
-
+@mixin bricolage-font($size: 20px, $weight: 400) {
+  font-family: bricolage, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
 
 .section-header-small-text-typo {
-  @include  bricolage-font(20px, 500);
+  @include bricolage-font(20px, 500);
 
   @media (max-width: 850px) {
     @include bricolage-font(18px, 500);
   }
 }
 
-
 .section-header-typo {
-  @include  bricolage-font(64px, 700);
+  @include bricolage-font(64px, 700);
   margin: 0;
 
   @media (max-width: 850px) {
@@ -27,7 +24,7 @@
 }
 
 .h3-header-typo-imprint {
-    margin: 0;
+  margin: 0;
   @include bricolage-font(28px, 700);
 
   @media (max-width: 850px) {
@@ -50,11 +47,11 @@
 }
 
 .section-text-typo {
-    @include bricolage-font(20px, 400);
+  @include bricolage-font(20px, 400);
 
-    @media (max-width: 850px) {
-        @include bricolage-font(18px, 400);
-    }
+  @media (max-width: 850px) {
+    @include bricolage-font(18px, 400);
+  }
 }
 
 .project-detail-button {

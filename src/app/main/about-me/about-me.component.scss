@@ -4,12 +4,10 @@
 @use "layout";
 
 .background {
-   background-color: colors.$main-white;
+  background-color: colors.$main-white;
 }
 
 section {
- 
-
   @media (max-width: 1250px) {
     display: flex !important;
     flex-direction: column-reverse;

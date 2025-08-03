@@ -18,38 +18,38 @@ section {
 }
 
 a {
-    color: colors.$main-blue;
-    text-decoration: none;
+  color: colors.$main-blue;
+  text-decoration: none;
 
-    &:hover {
-        color: colors.$main-yellow;
-    }
+  &:hover {
+    color: colors.$main-yellow;
+  }
 
-    &:active {
-        color: colors.$main-red;
-    }
+  &:active {
+    color: colors.$main-red;
+  }
 }
 
 h3 {
-    color: colors.$main-red;
+  color: colors.$main-red;
 
-    @media (max-width: 800px) {
-        font-size: 36px !important;
-        font-weight: 600 !important;
-        word-wrap: break-word;
-    }
-    @media (max-width: 380px) {
-        font-size: 30px !important;
-        font-weight: 600 !important;
-        word-wrap: break-word;
-    }
+  @media (max-width: 800px) {
+    font-size: 36px !important;
+    font-weight: 600 !important;
+    word-wrap: break-word;
+  }
+  @media (max-width: 380px) {
+    font-size: 30px !important;
+    font-weight: 600 !important;
+    word-wrap: break-word;
+  }
 }
 
 .wrapper {
-    display: block;
+  display: block;
 
-    > img {
-        object-fit: fill;
-        width: 200px;
-    }
+  > img {
+    object-fit: fill;
+    width: 200px;
+  }
 }

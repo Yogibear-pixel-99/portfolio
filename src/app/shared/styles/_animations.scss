@@ -229,21 +229,20 @@
   }
 }
 
-
 @keyframes single-letter-upper-to-lower-main {
-  0%{
+  0% {
     color: colors.$main-blue;
     transform: scale(1) translate(-50%, -50%);
     opacity: 0.5;
     text-transform: lowercase;
   }
-  20%{
+  20% {
     color: colors.$main-blue;
     transform: scale(0.7) translate(-100%, -40%);
     opacity: 1;
     text-transform: lowercase;
   }
-  22%{
+  22% {
     color: colors.$main-blue;
     transform: scale(0.7) translate(-100%, -40%);
     opacity: 1;
@@ -253,7 +252,7 @@
     color: colors.$main-blue;
     transform: scale(1.8) translate(-25%, -25%);
     opacity: 0;
-     text-transform: lowercase;
+    text-transform: lowercase;
   }
   100% {
     color: colors.$main-blue;
@@ -263,19 +262,19 @@
 }
 
 @keyframes single-letter-lower-to-upper-main {
-  0%{
+  0% {
     color: colors.$main-blue;
     transform: scale(1) translate(-50%, -50%);
     opacity: 0.5;
     text-transform: uppercase;
   }
-  20%{
+  20% {
     color: colors.$main-blue;
     transform: scale(0.7) translate(-100%, -40%);
     opacity: 1;
     text-transform: uppercase;
   }
-  22%{
+  22% {
     color: colors.$main-blue;
     transform: scale(0.7) translate(-100%, -40%);
     opacity: 1;
@@ -285,7 +284,7 @@
     color: colors.$main-blue;
     transform: scale(1.8) translate(-25%, -25%);
     opacity: 0;
-     text-transform: uppercase;
+    text-transform: uppercase;
   }
   100% {
     color: colors.$main-blue;
@@ -295,14 +294,14 @@
 }
 
 @keyframes single-letter-back {
-  0%{
+  0% {
     color: colors.$main-blue;
-   transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
     opacity: 0;
   }
-  1%{
+  1% {
     color: colors.$main-blue;
-   transform: scale(2) translate(-25%, -25%);
+    transform: scale(2) translate(-25%, -25%);
     opacity: 0;
   }
   100% {
