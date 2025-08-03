@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../../shared/components/header/header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ProjectDetailsService } from '../../../shared/services/project-details/project-details.service';
@@ -16,7 +16,7 @@ import { RightContentComponent } from './right-content/right-content.component';
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
 })
-export class ProjectDetailComponent implements OnInit {
+export class ProjectDetailComponent implements OnInit, AfterViewInit {
   translate = inject(TranslateService);
   projectService = inject(ProjectDetailsService);
 
@@ -28,5 +28,9 @@ export class ProjectDetailComponent implements OnInit {
       return
     }
 
+  }
+
+  ngAfterViewInit(): void {
+    scrollTo({top: 0, behavior: 'smooth'});
   }
 }
