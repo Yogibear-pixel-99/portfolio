@@ -1,7 +1,7 @@
 <div class="left-content">
   <div class="header-wrapper">
     <h2 class="section-header-typo">
-      {{ projectService.headerTextPath | translate }}
+      {{ `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.header` | translate }}
     </h2>
     <img
       src="images/projects/project-details/blue_line.png"
@@ -11,26 +11,26 @@
   <div class="main-text-wrapper">
     <div class="inner-text-wrapper">
       <h4 class="h4-header-typo">
-        {{ projectService.descHeaderPath | translate }}
+        {{ `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.descHeader` | translate }}
       </h4>
       <span class="h4-text-typo">{{
-        projectService.descTextPath | translate
+        `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.descText` | translate
       }}</span>
     </div>
     <div class="inner-text-wrapper">
       <h4 class="h4-header-typo">
-        {{ projectService.implHeaderPath | translate }}
+        {{ `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.implementHeader` | translate }}
       </h4>
       <span class="h4-text-typo">{{
-        projectService.implTextPath | translate
+        `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.implementText` | translate
       }}</span>
     </div>
     <div class="dur-wrapper">
       <span class="project-detail-button">{{
-        projectService.durHeaderPath | translate
+        `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.durHeader` | translate
       }}</span
       ><span class="h4-text-typo">{{
-        projectService.durTextPath | translate
+        `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.durTime` | translate
       }}</span>
     </div>
     <div class="tech-stack-wrapper">

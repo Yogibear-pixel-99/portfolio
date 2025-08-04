@@ -1,8 +1,8 @@
 <div>
   <div class="img-wrapper">
-    <img [src]="projectService.imgPath" />
+    <img [src]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].img" />
     @if(projectService.projectPos === 0) {
-    <img [src]="projectService.stickerPath" />
+    <img [src]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].sticker" />
     } @else {
 
     <div class="sticker-wrapper">
@@ -19,14 +19,14 @@
     <app-main-button
       [translateText]="'Git Hub'"
       [color]="'light-button'"
-      [hrefPath]="projectService.gitLink"
+      [hrefPath]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].gitButtonLink"
       [target]="'_blank'"
     ></app-main-button>
 
     <app-main-button
       [translateText]="'Live Test'"
       [color]="'light-button'"
-      [hrefPath]="projectService.liveLink"
+      [hrefPath]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].liveTestLink"
       [target]="'_blank'"
     ></app-main-button>
   </div>

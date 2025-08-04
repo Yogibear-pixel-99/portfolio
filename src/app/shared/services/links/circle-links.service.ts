@@ -5,7 +5,7 @@ import { SocialLinks } from '../../interfaces/model';
   providedIn: 'root',
 })
 export class SocialLinksService {
-  socialLinks: SocialLinks[] = [
+  public socialLinks: SocialLinks[] = [
     {
       name: "LinkedIn",
       imgPath: 'images/hero-section/linkedin.svg',

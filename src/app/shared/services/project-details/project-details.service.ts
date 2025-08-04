@@ -6,30 +6,19 @@ import { TechlogoService } from '../techlogo/techlogo.service';
   providedIn: 'root',
 })
 export class ProjectDetailsService {
-  techLogoService = inject(TechlogoService);
+  public techLogoService = inject(TechlogoService);
 
-  headerTextPath: string = '';
-  descHeaderPath: string = '';
-  descTextPath: string = '';
-  implHeaderPath: string = '';
-  implTextPath: string = '';
-  durHeaderPath: string = '';
-  durTextPath: string = '';
-  usedTechs: TechLogos[] = [
+  public usedTechs: TechLogos[] = [
     {
       name: '',
       imgPath: '',
       imgAltText: '',
     },
   ];
-  imgPath: string = '';
-  stickerPath: string = '';
-  gitLink: string = '';
-  liveLink: string = '';
 
-  projectPos: number = 0;
-  projectArr: string[] = ['join', 'elpolloloco'];
-  projectInfos: ProjectInfos = {
+  public projectPos: number = 0;
+  public projectArr: string[] = ['join', 'elpolloloco'];
+  public projectInfos: ProjectInfos = {
     join: {
       img: 'images/projects/project-details/join/join-screen-0.png',
       sticker: 'images/projects/project-details/Sticker.png',
@@ -47,59 +36,41 @@ export class ProjectDetailsService {
   };
 
   constructor() {
-    this.getProjectInfos();
     this.getTechLogos();
   }
 
-    setProject(nr: string){
+  /**
+   * Parses the nr string to a number, sets the project position and gets the used tech logos.
+   *
+   * @param nr The project position in the array.
+   */
+  public setProject(nr: string) {
     let newPos = parseInt(nr);
     this.projectPos = newPos;
-    this.getProjectInfos();
     this.getTechLogos();
   }
 
-  nextProject() {
+  /**
+   * Changes the project data to the next project by imcrementing the projectPos number. Gets the used tech logos.
+   */
+  public nextProject() {
     this.projectPos = (this.projectPos + 1) % this.projectArr.length;
-    this.getProjectInfos();
     this.getTechLogos();
   }
 
-  prevProject() {
+  /**
+   * Changes the project data to the next project by decrementing the projectPos number. Gets the used tech logos.
+   */
+  public prevProject() {
     this.projectPos =
       (this.projectPos - 1 + this.projectArr.length) % this.projectArr.length;
-    this.getProjectInfos();
     this.getTechLogos();
   }
 
-  getProjectInfos() {
-    this.headerTextPath = `projects.projectDetails.${
-      this.projectArr[this.projectPos]
-    }.header`;
-    this.descHeaderPath = `projects.projectDetails.${
-      this.projectArr[this.projectPos]
-    }.descHeader`;
-    this.descTextPath = `projects.projectDetails.${
-      this.projectArr[this.projectPos]
-    }.descText`;
-    this.implHeaderPath = `projects.projectDetails.${
-      this.projectArr[this.projectPos]
-    }.implementHeader`;
-    this.implTextPath = `projects.projectDetails.${
-      this.projectArr[this.projectPos]
-    }.implementText`;
-    this.durHeaderPath = `projects.projectDetails.${
-      this.projectArr[this.projectPos]
-    }.durHeader`;
-    this.durTextPath = `projects.projectDetails.${
-      this.projectArr[this.projectPos]
-    }.durTime`;
-    this.imgPath = this.projectInfos[this.projectArr[this.projectPos]].img;
-    this.stickerPath = this.projectInfos[this.projectArr[this.projectPos]].sticker;
-    this.gitLink = this.projectInfos[this.projectArr[this.projectPos]].gitButtonLink;
-    this.liveLink = this.projectInfos[this.projectArr[this.projectPos]].liveTestLink;
-  }
-
-  getTechLogos() {
+  /**
+   * Filters the tech logos in the tech service and collecting all infos from the used once in the active project.
+   */
+  public getTechLogos() {
     this.usedTechs = [];
     let techArray =
       this.projectInfos[this.projectArr[this.projectPos]].usedTechs;

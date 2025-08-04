@@ -6,7 +6,7 @@ import { TechLogos } from '../../interfaces/model';
 })
 export class TechlogoService {
 
-    logos: TechLogos[] = [
+    public logos: TechLogos[] = [
     {name : "HTML", imgPath : "images/skills/techlogos/html.png", imgAltText: "HTML Logo"},
     {name : "CSS", imgPath : "images/skills/techlogos/css.png", imgAltText: "CSS Logo"},
     {name : "JavaScript", imgPath : "images/skills/techlogos/javascript.png", imgAltText: "JS Logo"},
