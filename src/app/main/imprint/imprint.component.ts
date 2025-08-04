@@ -7,10 +7,8 @@ import { FooterComponent } from '../../shared/components/footer/footer/footer.co
   selector: 'app-imprint',
   imports: [TranslateModule, HeaderComponent, FooterComponent],
   templateUrl: './imprint.component.html',
-  styleUrl: './imprint.component.scss'
+  styleUrl: './imprint.component.scss',
 })
 export class ImprintComponent {
-
-translate = inject(TranslateService);
-
+ public translate = inject(TranslateService);
 }

@@ -1,5 +1,10 @@
 <nav>
-  <a (click)="setLinkIndex(0)" class="link-wrapper" routerLink="/" fragment="about-me-section">
+  <a
+    (click)="setLinkIndex(0)"
+    class="link-wrapper"
+    routerLink="/"
+    fragment="about-me-section"
+  >
     <div class="link" [ngStyle]="{ color: getLinkColor(0) }">
       {{ "header.aboutme" | translate }}
     </div>
@@ -10,7 +15,12 @@
   </a>
 </nav>
 <nav>
-  <a (click)="setLinkIndex(1)" class="link-wrapper" routerLink="/" fragment="skills-section">
+  <a
+    (click)="setLinkIndex(1)"
+    class="link-wrapper"
+    routerLink="/"
+    fragment="skills-section"
+  >
     <div class="link" [ngStyle]="{ color: getLinkColor(1) }">
       {{ "header.skills" | translate }}
     </div>
@@ -22,7 +32,12 @@
   </a>
 </nav>
 <nav>
-  <a (click)="setLinkIndex(2)" class="link-wrapper" routerLink="/" fragment="projects-section">
+  <a
+    (click)="setLinkIndex(2)"
+    class="link-wrapper"
+    routerLink="/"
+    fragment="projects-section"
+  >
     <div class="link" [ngStyle]="{ color: getLinkColor(2) }">
       {{ "header.projects" | translate }}
     </div>
@@ -33,7 +48,12 @@
   </a>
 </nav>
 <nav>
-  <a (click)="setLinkIndex(3)" class="link-wrapper" routerLink="/" fragment="contact-me-section">
+  <a
+    (click)="setLinkIndex(3)"
+    class="link-wrapper"
+    routerLink="/"
+    fragment="contact-me-section"
+  >
     <div class="link" [ngStyle]="{ color: getLinkColor(3) }">
       {{ "header.contact" | translate }}
     </div>

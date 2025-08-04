@@ -1,26 +1,41 @@
 <div class="lang-wrapper">
-    <div class="lang-single-wrapper">
-      <span
-        (click)="changeLang('en')"
-        [ngClass]="{ selected: checkLang() === 'en', 'not-selected': checkLang() === 'de' }"
-        [ngStyle]="{color: langSwitchTxtColor}"
-        >EN</span
-      ><img [ngClass]="{'select-hover': checkLang() === 'de'}" src="images/header/Toggle.png" />
-    </div>
-
-    <div class="lang-line">
-      <div
-        class="lang-dot"
-        [ngClass]="{ 'dot-de': checkLang() === 'de', 'dot-en': checkLang() === 'en' }"
-      ></div>
-    </div>
-
-    <div class="lang-single-wrapper">
-      <span
-        (click)="changeLang('de')"
-        [ngClass]="{ 'selected': checkLang() === 'de', 'not-selected': checkLang() === 'en' }"
-        [ngStyle]="{color: langSwitchTxtColor}"
-        >DE</span
-      ><img [ngClass]="{'select-hover' : checkLang() === 'en'}" src="images/header/Toggle.png" />
-    </div>
+  <div class="lang-single-wrapper">
+    <span
+      (click)="changeLang('en')"
+      [ngClass]="{
+        selected: checkLang() === 'en',
+        'not-selected': checkLang() === 'de'
+      }"
+      [ngStyle]="{ color: langSwitchTxtColor }"
+      >EN</span
+    ><img
+      [ngClass]="{ 'select-hover': checkLang() === 'de' }"
+      src="images/header/Toggle.png"
+    />
   </div>
+
+  <div class="lang-line">
+    <div
+      class="lang-dot"
+      [ngClass]="{
+        'dot-de': checkLang() === 'de',
+        'dot-en': checkLang() === 'en'
+      }"
+    ></div>
+  </div>
+
+  <div class="lang-single-wrapper">
+    <span
+      (click)="changeLang('de')"
+      [ngClass]="{
+        selected: checkLang() === 'de',
+        'not-selected': checkLang() === 'en'
+      }"
+      [ngStyle]="{ color: langSwitchTxtColor }"
+      >DE</span
+    ><img
+      [ngClass]="{ 'select-hover': checkLang() === 'en' }"
+      src="images/header/Toggle.png"
+    />
+  </div>
+</div>

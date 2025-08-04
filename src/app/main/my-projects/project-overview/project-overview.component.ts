@@ -10,15 +10,13 @@ import { ProjectDetailsService } from '../../../shared/services/project-details/
   styleUrl: './project-overview.component.scss',
 })
 export class ProjectOverviewComponent {
-  translate = inject(TranslateService);
-  projectService = inject(ProjectDetailsService);
-  hoverProject:boolean = false;
+  public translate = inject(TranslateService);
+  public projectService = inject(ProjectDetailsService);
+  public hoverProject: boolean = false;
 
-  @Input() imgPath: string = '';
-  @Input() imgAltText: string = '';
-  @Input() translateHeaderPath: string = '';
-  @Input() translateTextPath: string = '';
-  @Input() animate: boolean = false;
-
+  @Input() public imgPath: string = '';
+  @Input() public imgAltText: string = '';
+  @Input() public translateHeaderPath: string = '';
+  @Input() public translateTextPath: string = '';
+  @Input() public animate: boolean = false;
 }
-

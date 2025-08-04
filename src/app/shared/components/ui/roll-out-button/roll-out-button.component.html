@@ -1,9 +1,20 @@
-<div [ngClass]="helloEnterAnimate ? animateType +'-hover' : animateType + '-hover-back'">
+<div
+  [ngClass]="
+    helloEnterAnimate ? animateType + '-hover' : animateType + '-hover-back'
+  "
+>
   <div
-    [ngClass]="[animateType + '-wrapper',  helloEnterAnimate === true ? 'hand-wrapper-animate': '']"
+    [ngClass]="[
+      animateType + '-wrapper',
+      helloEnterAnimate === true ? 'hand-wrapper-animate' : ''
+    ]"
   >
     <img
-      [ngClass]="helloEnterAnimate === true ? animateType +'-logo-animate' : animateType + '-logo'"
+      [ngClass]="
+        helloEnterAnimate === true
+          ? animateType + '-logo-animate'
+          : animateType + '-logo'
+      "
       [src]="imgPath"
       alt="waving hand logo"
     />
@@ -11,53 +22,62 @@
 </div>
 
 <a [href]="linkHref" target="_blank" class="display-none-touch-device">
-<div
-  (mouseover)="showName(); helloEnterAnimate = true"
-  (mouseout)="hideName(); helloEnterAnimate = false"
-  class=""
-  [ngClass]="['standard-button', buttonType + '-button', 'hello-button', helloEnterAnimate ? animateType + '-hover' : animateType +'-hover-back']"
->
-  <span
-    class="hide-hello-name"
-    [ngClass]="{ 'show-hello-name': helloEnterText === true }"
-  >
-    {{ translatePathHover | translate }}
-  </span>
-  <span
-    class="hide-hello-name"
-    [ngClass]="{ 'show-hello-name': helloEnterText === false }"
-  >
-    {{ translatePathNormal | translate }}
-  </span>
   <div
-    class="hello-name-mask"
-    [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
-  ></div>
-</div>
+    (mouseover)="showName(); helloEnterAnimate = true"
+    (mouseout)="hideName(); helloEnterAnimate = false"
+    class=""
+    [ngClass]="[
+      'standard-button',
+      buttonType + '-button',
+      'hello-button',
+      helloEnterAnimate ? animateType + '-hover' : animateType + '-hover-back'
+    ]"
+  >
+    <span
+      class="hide-hello-name"
+      [ngClass]="{ 'show-hello-name': helloEnterText === true }"
+    >
+      {{ translatePathHover | translate }}
+    </span>
+    <span
+      class="hide-hello-name"
+      [ngClass]="{ 'show-hello-name': helloEnterText === false }"
+    >
+      {{ translatePathNormal | translate }}
+    </span>
+    <div
+      class="hello-name-mask"
+      [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
+    ></div>
+  </div>
 </a>
 
 <div (click)="visitExternLink(linkHref)" class="display-block-touch-device">
-<div
-  (mouseover)="showName(); helloEnterAnimate = true"
-  class=""
-  [ngClass]="['standard-button', buttonType + '-button', 'hello-button', helloEnterAnimate ? animateType + '-hover' : animateType +'-hover-back']"
->
-
-  <span
-    class="hide-hello-name"
-    [ngClass]="{ 'show-hello-name': helloEnterText === true }"
-  >
-    {{ translatePathHover | translate }}
-  </span>
-  <span
-    class="hide-hello-name"
-    [ngClass]="{ 'show-hello-name': helloEnterText === false }"
-  >
-    {{ translatePathNormal | translate }}
-  </span>
   <div
-    class="hello-name-mask"
-    [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
-  ></div>
-</div>
+    (mouseover)="showName(); helloEnterAnimate = true"
+    class=""
+    [ngClass]="[
+      'standard-button',
+      buttonType + '-button',
+      'hello-button',
+      helloEnterAnimate ? animateType + '-hover' : animateType + '-hover-back'
+    ]"
+  >
+    <span
+      class="hide-hello-name"
+      [ngClass]="{ 'show-hello-name': helloEnterText === true }"
+    >
+      {{ translatePathHover | translate }}
+    </span>
+    <span
+      class="hide-hello-name"
+      [ngClass]="{ 'show-hello-name': helloEnterText === false }"
+    >
+      {{ translatePathNormal | translate }}
+    </span>
+    <div
+      class="hello-name-mask"
+      [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
+    ></div>
+  </div>
 </div>

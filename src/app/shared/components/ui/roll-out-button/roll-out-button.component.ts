@@ -9,27 +9,38 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './roll-out-button.component.scss',
 })
 export class RollOutButtonComponent {
-  translate = inject(TranslateService);
+  public translate = inject(TranslateService);
 
-  @Input({required: true}) linkHref: string = '';
-  @Input({required: true}) imgPath: string = '';
-  @Input({required: true}) translatePathNormal: string = '';
-  @Input({required: true}) translatePathHover: string = '';
-  @Input({required: true}) buttonType: string = '';
-  @Input({required: true}) animateType: string = '';
+  @Input({ required: true }) public  linkHref: string = '';
+  @Input({ required: true }) public  imgPath: string = '';
+  @Input({ required: true }) public  translatePathNormal: string = '';
+  @Input({ required: true }) public  translatePathHover: string = '';
+  @Input({ required: true }) public  buttonType: string = '';
+  @Input({ required: true }) public  animateType: string = '';
 
-  helloEnterAnimate: boolean = false;
-  helloEnterText: boolean = false;
+  public helloEnterAnimate: boolean = false;
+  public helloEnterText: boolean = false;
 
-  showName() {
+  /**
+   * Shows the hello text by setting helloEnterText variable to true.
+   */
+  public showName() {
     setTimeout(() => (this.helloEnterText = true), 150);
   }
 
-  hideName() {
+  /**
+   * Hides the hello text by setting helloEnterText variable to false.
+   */
+  public hideName() {
     setTimeout(() => (this.helloEnterText = false), 150);
   }
-  
-  visitExternLink(link: string){
+
+  /**
+   * Sets a timeout to open an extern link. Special for mobile touch clicks.
+   * 
+   * @param link 
+   */
+ public visitExternLink(link: string) {
     setTimeout(() => open(link), 1000);
   }
 }

@@ -1,21 +1,32 @@
 <section class="max-content-width">
   <div class="name-wrapper">
     <div class="top-wrapper">
-      <a href="#hero-normal-link" (mouseenter)="yellowLogo=true" (mouseleave)="yellowLogo=false">
-      @if (yellowLogo) {
-        <img class="my-logo" src="images/hero-section/meinlogo_yellow.svg" alt="my logo">
-      } @else {
-        <img class="my-logo" src="images/hero-section/meinlogo.svg" alt="my logo">
-      }
-</a>
+      <a
+        href="#hero-normal-link"
+        (mouseenter)="yellowLogo = true"
+        (mouseleave)="yellowLogo = false"
+      >
+        @if (yellowLogo) {
+        <img
+          class="my-logo"
+          src="images/hero-section/meinlogo_yellow.svg"
+          alt="my logo"
+        />
+        } @else {
+        <img
+          class="my-logo"
+          src="images/hero-section/meinlogo.svg"
+          alt="my logo"
+        />
+        }
+      </a>
       <span class="footer-font-bold">&#64; Joachim Pürcher 2025</span>
     </div>
     <a class="legal-link-wrapper" routerLink="imprint">
-      
-        <span class="footer-font-bold">
-          {{ "footer.legal" | translate }}
-        </span>
-      
+      <span class="footer-font-bold">
+        {{ "footer.legal" | translate }}
+      </span>
+
       <img
         src="images/footer/footer_legal_underline.svg"
         alt="link underline"

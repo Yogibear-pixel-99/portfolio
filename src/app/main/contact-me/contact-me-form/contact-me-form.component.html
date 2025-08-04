@@ -1,4 +1,8 @@
-<form (ngSubmit)="onSubmit(contactMeForm)" #contactMeForm="ngForm" autocomplete="off">
+<form
+  (ngSubmit)="onSubmit(contactMeForm)"
+  #contactMeForm="ngForm"
+  autocomplete="off"
+>
   <div class="input-wrapper">
     <label for="name" class="input-label-typo"
       >{{ "contactMe.form.name.header" | translate }}
@@ -46,7 +50,7 @@
     <label for="message" class="input-label-typo"
       >{{ "contactMe.form.message.header" | translate }}
       <input
-      #message="ngModel"
+        #message="ngModel"
         [class.error-red]="messageError"
         id="message"
         type="text"

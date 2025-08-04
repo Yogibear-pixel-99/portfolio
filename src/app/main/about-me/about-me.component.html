@@ -1,57 +1,56 @@
 <div class="background">
-<section class="section-padding inner-section-two-col max-content-width">
-  <div class="left">
-    <div class="wrapper">
-      <img
-        src="images/about-me/Ripped-paper-yellow.svg"
-        alt="yellow paper background"
-      />
-      <div class="inner-wrapper">
-        <img src="images/about-me/location-icon.svg" alt="loaction logo" />
-        <span>{{ "aboutMe.basedIn" | translate }}</span>
+  <section class="section-padding inner-section-two-col max-content-width">
+    <div class="left">
+      <div class="wrapper">
+        <img
+          src="images/about-me/Ripped-paper-yellow.svg"
+          alt="yellow paper background"
+        />
+        <div class="inner-wrapper">
+          <img src="images/about-me/location-icon.svg" alt="loaction logo" />
+          <span>{{ "aboutMe.basedIn" | translate }}</span>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <img
+          src="images/about-me/Ripped-paper-blue.svg"
+          alt="blue paper background"
+        />
+        <div class="inner-wrapper">
+          <img src="images/about-me/relocate-icon.svg" alt="relocate logo" />
+          <span>{{ "aboutMe.relocate" | translate }}</span>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <img
+          src="images/about-me/Ripped-paper-orange.svg"
+          alt="orange paper background"
+        />
+        <div class="inner-wrapper">
+          <img src="images/about-me/remote-icon.svg" alt="remote logo" />
+          <span>{{ "aboutMe.remote" | translate }}</span>
+        </div>
       </div>
     </div>
 
-    <div class="wrapper">
-      <img
-        src="images/about-me/Ripped-paper-blue.svg"
-        alt="blue paper background"
-      />
-      <div class="inner-wrapper">
-        <img src="images/about-me/relocate-icon.svg" alt="relocate logo" />
-        <span>{{ "aboutMe.relocate" | translate }}</span>
+    <div class="right">
+      <span class="section-header-small-text-typo">{{
+        "aboutMe.who" | translate
+      }}</span>
+      <div class="header-wrapper">
+        <h2 class="section-header-typo">{{ "aboutMe.header" | translate }}</h2>
+        <img src="images/about-me/header-underline.svg" alt="underline" />
       </div>
-    </div>
+      <span class="section-text-typo">{{ "aboutMe.text" | translate }}</span>
+      <p class="section-text-typo">{{ "aboutMe.collaborate" | translate }}</p>
 
-    <div class="wrapper">
-      <img
-        src="images/about-me/Ripped-paper-orange.svg"
-        alt="orange paper background"
-      />
-      <div class="inner-wrapper">
-        <img src="images/about-me/remote-icon.svg" alt="remote logo" />
-        <span>{{ "aboutMe.remote" | translate }}</span>
-      </div>
+      <app-main-button
+        [translateText]="'aboutMe.button'"
+        [color]="'dark-button'"
+        [hrefPath]="'#contact-me-section'"
+      ></app-main-button>
     </div>
-  </div>
-
-  <div class="right">
-    <span class="section-header-small-text-typo">{{
-      "aboutMe.who" | translate
-    }}</span>
-    <div class="header-wrapper">
-      <h2 class="section-header-typo">{{ "aboutMe.header" | translate }}</h2>
-      <img src="images/about-me/header-underline.svg" alt="underline" />
-    </div>
-    <span class="section-text-typo">{{ "aboutMe.text" | translate }}</span>
-    <p class="section-text-typo">{{ "aboutMe.collaborate" | translate }}</p>
-   
-    <app-main-button
-      [translateText]="'aboutMe.button'"
-      [color]="'dark-button'"
-      [hrefPath]="'#contact-me-section'"
-    ></app-main-button>
-
-  </div>
-</section>
+  </section>
 </div>

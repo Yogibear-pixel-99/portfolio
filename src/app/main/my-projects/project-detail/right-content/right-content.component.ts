@@ -7,10 +7,8 @@ import { MyLogoStickerComponent } from '../../../../shared/components/ui/my-logo
   selector: 'app-right-content',
   imports: [MainButtonComponent, MyLogoStickerComponent],
   templateUrl: './right-content.component.html',
-  styleUrl: './right-content.component.scss'
+  styleUrl: './right-content.component.scss',
 })
 export class RightContentComponent {
-
-  projectService = inject(ProjectDetailsService);
-
+  public projectService = inject(ProjectDetailsService);
 }

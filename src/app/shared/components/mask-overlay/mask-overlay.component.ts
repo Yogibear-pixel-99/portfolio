@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-mask-overlay',
   imports: [],
   templateUrl: './mask-overlay.component.html',
-  styleUrl: './mask-overlay.component.scss'
+  styleUrl: './mask-overlay.component.scss',
 })
-export class MaskOverlayComponent {
-
-}
+export class MaskOverlayComponent {}

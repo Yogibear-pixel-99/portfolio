@@ -1,43 +1,43 @@
 <div class="background">
-<section class="section-padding max-content-width">
-  <div class="top-wrapper">
-    <div class="left">
-      <span class="section-header-small-text-typo">{{
-        "skills.myStack" | translate
-      }}</span>
-      <div class="header-wrapper">
-        <h2 class="section-header-typo">{{ "skills.header" | translate }}</h2>
-        <img src="images/skills/header-animation.svg" />
+  <section class="section-padding max-content-width">
+    <div class="top-wrapper">
+      <div class="left">
+        <span class="section-header-small-text-typo">{{
+          "skills.myStack" | translate
+        }}</span>
+        <div class="header-wrapper">
+          <h2 class="section-header-typo">{{ "skills.header" | translate }}</h2>
+          <img src="images/skills/header-animation.svg" />
+        </div>
+      </div>
+
+      <div class="middle">
+        <p class="section-text-typo">{{ "skills.introduction" | translate }}</p>
+        <img src="images/skills/skill-hole.png" />
+      </div>
+
+      <div class="right"></div>
+    </div>
+
+    <div class="bottom-wrapper">
+      <div class="outer"></div>
+      <div class="logo-wrapper">
+        @for (logo of techlogoService.logos; track $index) {
+        <app-tech-stack-logo
+          [imgPath]="logo.imgPath"
+          [imgAltText]="logo.imgAltText"
+          [logoName]="logo.name"
+        ></app-tech-stack-logo>
+        }
+      </div>
+      <div class="outer">
+        <img
+          (click)="openSticker()"
+          (mouseleave)="closeSticker()"
+          [src]="getStickerPath"
+          alt="peel of sticker"
+        />
       </div>
     </div>
-
-    <div class="middle">
-      <p class="section-text-typo">{{ "skills.introduction" | translate }}</p>
-      <img src="images/skills/skill-hole.png" />
-    </div>
-
-    <div class="right"></div>
-  </div>
-
-  <div class="bottom-wrapper">
-    <div class="outer"></div>
-    <div class="logo-wrapper">
-      @for (logo of techlogoService.logos; track $index) {
-      <app-tech-stack-logo
-        [imgPath]="logo.imgPath"
-        [imgAltText]="logo.imgAltText"
-        [logoName]="logo.name"
-      ></app-tech-stack-logo>
-      }
-    </div>
-    <div class="outer">
-      <img
-        (click)="openSticker()"
-        (mouseleave)="closeSticker()"
-        [src]="getStickerPath"
-        alt="peel of sticker"
-      />
-    </div>
-  </div>
-</section>
+  </section>
 </div>

@@ -8,19 +8,27 @@ import { RouterLink } from '@angular/router';
 @Component({
   standalone: true,
   selector: 'app-header',
-  imports: [CommonModule, MobileHeaderComponent, LangSwitchComponent, HeaderLinksComponent, RouterLink],
+  imports: [
+    CommonModule,
+    MobileHeaderComponent,
+    LangSwitchComponent,
+    HeaderLinksComponent,
+    RouterLink,
+  ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  @Input() public linkColor: string[] = [];
+  @Input() public langSwitchTxtColor: string = '';
 
-  @Input() linkColor:string[] = [];
-  @Input() langSwitchTxtColor:string = '';
+  public yellowLogo: boolean = false;
 
-  yellowLogo:boolean = false;
-
-    logoYellow(){
+  /**
+   * Sets the yellowLogo variable to true and after a timeout to false again.
+   */
+  public logoYellow() {
     this.yellowLogo = true;
-    setTimeout(() => this.yellowLogo = false, 1000);
+    setTimeout(() => (this.yellowLogo = false), 1000);
   }
 }

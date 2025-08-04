@@ -9,8 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class TechStackLogoComponent {
 
-  @Input() imgPath: string = ''; 
-  @Input() imgAltText: string = ''; 
-  @Input() logoName: string = ''; 
+  @Input() public imgPath: string = ''; 
+  @Input() public imgAltText: string = ''; 
+  @Input() public logoName: string = ''; 
   
 }

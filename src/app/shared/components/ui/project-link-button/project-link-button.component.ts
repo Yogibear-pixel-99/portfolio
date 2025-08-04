@@ -8,19 +8,21 @@ import { ProjectDetailsService } from '../../../services/project-details/project
   selector: 'app-project-link-button',
   imports: [CommonModule, TranslateModule, RouterLink],
   templateUrl: './project-link-button.component.html',
-  styleUrl: './project-link-button.component.scss'
+  styleUrl: './project-link-button.component.scss',
 })
 export class ProjectLinkButtonComponent {
+  public translate = inject(TranslateService);
+  public projectService = inject(ProjectDetailsService);
 
-  translate = inject(TranslateService);
-  projectService = inject(ProjectDetailsService);
+  @Input({ required: true }) public color: string = 'dark-button';
+  @Input({ required: true }) public translateText: string = '';
+  @Input({ required: true }) public linkHref: string = '';
+  @Input({ required: true }) public projPos: string = '';
 
-@Input({required : true}) color: string = 'dark-button';
-@Input({required : true}) translateText:string = '';
-@Input({required : true}) linkHref: string = '';
-@Input({required : true}) projPos: string = '';
-
-setProject(){
-this.projectService.setProject(this.projPos);
-}
+  /**
+   * Sets the active project for the project details.
+   */
+  public setProject() {
+    this.projectService.setProject(this.projPos);
+  }
 }

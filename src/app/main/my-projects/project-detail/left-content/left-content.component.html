@@ -34,12 +34,12 @@
       }}</span>
     </div>
     <div class="tech-stack-wrapper">
-        @for (logo of projectService.usedTechs; track $index) {
-            <div>
-                <img [src]="logo.imgPath" [alt]="logo.imgAltText">
-                <span class="project-techlogo-font">{{logo.name}}</span>
-            </div>
-        }
+      @for (logo of projectService.usedTechs; track $index) {
+      <div>
+        <img [src]="logo.imgPath" [alt]="logo.imgAltText" />
+        <span class="project-techlogo-font">{{ logo.name }}</span>
+      </div>
+      }
     </div>
   </div>
 </div>

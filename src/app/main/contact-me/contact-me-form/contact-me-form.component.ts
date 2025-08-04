@@ -12,31 +12,27 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact-me-form.component.scss',
 })
 export class ContactMeFormComponent {
-  translate = inject(TranslateService);
-  http = inject(HttpClient);
+  public translate = inject(TranslateService);
+  public http = inject(HttpClient);
 
-  contactData: UserContactInfo = {
+  public contactData: UserContactInfo = {
     name: '',
     email: '',
     message: '',
     privacy: false,
   };
 
-  privacyCheck: boolean = false;
+  public placeholderName: string = 'contactMe.form.name.placeholder';
+  public placeholderEmail: string = 'contactMe.form.email.placeholder';
+  public placeholderMessage: string = 'contactMe.form.message.placeholder';
+  public placeholderPrivacy: string = 'contactMe.form.privacy.placeholder';
 
-  placeholderName: string = 'contactMe.form.name.placeholder';
-  placeholderEmail: string = 'contactMe.form.email.placeholder';
-  placeholderMessage: string = 'contactMe.form.message.placeholder';
-  placeholderPrivacy: string = 'contactMe.form.privacy.placeholder';
+  public nameError: boolean = false;
+  public emailError: boolean = false;
+  public messageError: boolean = false;
+  public privacyError: boolean = false;
 
-  nameError = false;
-  emailError = false;
-  messageError = false;
-  privacyError = false;
-
-  // mailTest = false;
-
-  post = {
+  private post = {
     endPoint: 'https://www.puercherjoachim.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
@@ -47,15 +43,17 @@ export class ContactMeFormComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
+  /**
+   * Trims the input, check if the input fields are valid/display error if not.
+   * Submits the contact form.
+   *
+   * @param ngForm The contact Form.
+   */
+  public onSubmit(ngForm: NgForm) {
     this.trimInput();
     this.checkPrivacy();
     this.checkErrors();
-  
-
-    // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
     if (ngForm.submitted && ngForm.form.valid) {
-      // console.log(ngForm);
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -72,7 +70,10 @@ export class ContactMeFormComponent {
     }
   }
 
-  trimInput() {
+  /**
+   * Trims the input in the contact data object.
+   */
+  private trimInput() {
     this.contactData = {
       name: this.contactData.name.trim(),
       email: this.contactData.email.trim(),
@@ -81,7 +82,12 @@ export class ContactMeFormComponent {
     };
   }
 
-  checkButton() {
+  /**
+   * Checks the validation of all input fields from the contact form and sets an error to the HTML if not.
+   *
+   * @returns
+   */
+  public checkButton() {
     if (
       this.contactData.name &&
       this.contactData.email &&
@@ -94,7 +100,10 @@ export class ContactMeFormComponent {
     }
   }
 
-  checkErrors() {
+  /**
+   * Checks the input fields from the contact form and displays the placeholder or the error text from the ngx/translate i18.
+   */
+  private checkErrors() {
     const config = ['name', 'email', 'message'];
 
     config.forEach((element) => {
@@ -113,15 +122,14 @@ export class ContactMeFormComponent {
     });
   }
 
-  checkPrivacy() {
+  /**
+   * Checks if the privacy input field is checked and returns a boolean to the privacy error variable
+   */
+  private checkPrivacy() {
     if (this.contactData.privacy === false) {
       this.privacyError = true;
     } else {
       this.privacyError = false;
     }
-  }
-
-  getPlaceholder(typeName: string) {
-    return `contactMe.form.${typeName}.placeholder`;
   }
 }

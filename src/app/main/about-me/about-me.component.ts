@@ -6,8 +6,8 @@ import { MainButtonComponent } from '../../shared/components/ui/main-button/main
   selector: 'app-about-me',
   imports: [TranslateModule, MainButtonComponent],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-translate = inject(TranslateService);
+  public translate = inject(TranslateService);
 }

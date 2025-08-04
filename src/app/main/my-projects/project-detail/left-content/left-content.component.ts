@@ -6,11 +6,9 @@ import { ProjectDetailsService } from '../../../../shared/services/project-detai
   selector: 'app-left-content',
   imports: [TranslateModule],
   templateUrl: './left-content.component.html',
-  styleUrl: './left-content.component.scss'
+  styleUrl: './left-content.component.scss',
 })
 export class LeftContentComponent {
-
-  translate = inject(TranslateService);
-  projectService = inject(ProjectDetailsService);
-
+  public translate = inject(TranslateService);
+  public projectService = inject(ProjectDetailsService);
 }

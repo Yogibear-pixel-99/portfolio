@@ -16,21 +16,14 @@ import { RightContentComponent } from './right-content/right-content.component';
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
 })
-export class ProjectDetailComponent implements OnInit, AfterViewInit {
-  translate = inject(TranslateService);
-  projectService = inject(ProjectDetailsService);
+export class ProjectDetailComponent implements AfterViewInit {
+  public translate = inject(TranslateService);
+  public projectService = inject(ProjectDetailsService);
 
-  ngOnInit(): void {
-    let pos = sessionStorage.getItem('projectPos');
-    if (pos !== null) {
-    this.projectService.setProject(pos);
-    } else {
-      return
-    }
-
-  }
-
-  ngAfterViewInit(): void {
-    scrollTo({top: 0, behavior: 'smooth'});
+  /**
+   * Scrolls to the top of the page if component is initialized.
+   */
+  public ngAfterViewInit(): void {
+    scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

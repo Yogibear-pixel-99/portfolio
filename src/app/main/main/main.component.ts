@@ -24,13 +24,21 @@ import { ViewportScroller } from '@angular/common';
 export class MainComponent implements AfterViewInit {
   constructor(private activatedRoute: ActivatedRoute) {}
 
-  ngAfterViewInit() {
+  /**
+   * Subscribes the fragment observable and calls a function jump to the expected section.
+   */
+  public ngAfterViewInit() {
     this.activatedRoute.fragment.subscribe((fragment: string | null) => {
       if (fragment) this.jumpToSection(fragment);
     });
   }
 
-  jumpToSection(fragment: string | null) {
+  /**
+   * Gets the HTML element from the fragment and scroll to the section at block start.
+   *
+   * @param fragment The fragement of the main site where scroll to.
+   */
+  private jumpToSection(fragment: string | null) {
     if (fragment) {
       document
         .getElementById(fragment)

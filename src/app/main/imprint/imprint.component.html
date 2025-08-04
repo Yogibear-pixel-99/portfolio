@@ -1,92 +1,105 @@
 <section>
-<app-header></app-header>
-<div class="section-padding">
+  <app-header></app-header>
+  <div class="section-padding">
+    <h3 class="section-header-typo">{{ "imprint.header" | translate }}</h3>
 
+    <br />
+    <div class="wrapper">
+      <p class="h3-header-typo-imprint">
+        <strong>{{ "imprint.privacy.header" | translate }}</strong>
+      </p>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "imprint.privacy.textOne" | translate }}
+    </p>
+    <p>
+      {{ "imprint.privacy.textTwo" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "imprint.contactUs.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p></p>
+    <p>
+      {{ "imprint.contactUs.textOne" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "imprint.cookies.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "imprint.cookies.textOne" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "imprint.serverLog.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "imprint.serverLog.textOne" | translate }}
+    </p>
+    <ul>
+      @for (element of 'imprint.serverLog.list' | translate; track $index) {
+      <li>{{ element }}</li>
+      }
+    </ul>
+    <p>
+      {{ "imprint.serverLog.textTwo" | translate }}
+    </p>
+    <p>
+      {{ "imprint.serverLog.textThree" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "imprint.rights.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "imprint.rights.textOne" | translate }}
+    </p>
+    <ul>
+      @for (element of 'imprint.rights.list' | translate; track $index) {
+      <li>{{ element }}</li>
+      }
+    </ul>
+    <p></p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "imprint.reach.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      <b>{{ "imprint.reach.operator" | translate }}</b>
+      <a href="#"> Joachim Pürcher</a><br />
+    </p>
+    <p>
+      <b>{{ "imprint.reach.phoneText" | translate }}</b
+      ><a href="tel:+436767704199"> +43 676 770 41 99</a><br />
+    </p>
+    <p>
+      <b>Email:</b
+      ><a href="mailto:contact@PuercherJoachim.com">
+        contact&#64;PuercherJoachim.com</a
+      >
+    </p>
 
-<h3 class="section-header-typo">{{'imprint.header' | translate }}</h3>
-
-<br />
-<div class="wrapper">
-<p class="h3-header-typo-imprint"><strong>{{'imprint.privacy.header' | translate }}</strong></p>
-<img src="images/imprint/imprint_header_line.svg" alt="underline">
-</div>
-<p>
- {{ 'imprint.privacy.textOne' | translate }}
-</p>
-<p>
-  {{'imprint.privacy.textTwo' | translate }}
-</p>
-<div class="wrapper">
-<h5 class="h3-header-typo-imprint">{{'imprint.contactUs.header' | translate }}</h5>
-<img src="images/imprint/imprint_header_line.svg" alt="underline">
-</div>
-<p></p>
-<p>
-  {{'imprint.contactUs.textOne' | translate }}
-</p>
-<div class="wrapper">
-<h5 class="h3-header-typo-imprint">{{'imprint.cookies.header' | translate }}</h5>
-<img src="images/imprint/imprint_header_line.svg" alt="underline">
-</div>
-<p>
-  {{'imprint.cookies.textOne' | translate }}
-</p>
-<div class="wrapper">
-<h5 class="h3-header-typo-imprint">{{'imprint.serverLog.header' | translate }}</h5>
-<img src="images/imprint/imprint_header_line.svg" alt="underline">
-</div>
-<p>
-  {{'imprint.serverLog.textOne' | translate }}
-</p>
-<ul>
-  @for (element of 'imprint.serverLog.list' | translate; track $index) {
-    <li>{{element}}</li>
-  }
-</ul>
-<p>
-  {{'imprint.serverLog.textTwo' | translate }}
-</p>
-<p>
- {{'imprint.serverLog.textThree' | translate }}
-</p>
-<div class="wrapper">
-<h5 class="h3-header-typo-imprint">{{'imprint.rights.header' | translate }}</h5>
-<img src="images/imprint/imprint_header_line.svg" alt="underline">
-</div>
-<p>
-  {{'imprint.rights.textOne' | translate }}
-</p>
-<ul>
-    @for (element of 'imprint.rights.list' | translate; track $index) {
-    <li>{{element}}</li>
-  }
-</ul>
-<p>
-  
-</p>
-<div class="wrapper">
-<h5 class="h3-header-typo-imprint">{{'imprint.reach.header' | translate }}</h5>
-<img src="images/imprint/imprint_header_line.svg" alt="underline">
-</div>
-<p>
-  <b>{{'imprint.reach.operator' | translate }}</b> <a href="#"> Joachim Pürcher</a><br />
-</p>
-<p>
-  <b>{{'imprint.reach.phoneText' | translate }}</b><a href="tel:+436767704199"> +43 676 770 41 99</a><br />
-</p>
-<p>
-  <b>Email:</b><a href="mailto:contact@PuercherJoachim.com"> contact&#64;PuercherJoachim.com</a>
-</p>
-
-<p>
-  {{'imprint.reach.source' | translate }}
-  <b
-    ><a
-      href="https://www.fairesrecht.at/kostenlos-datenschutzerklaerung-erstellen-generator.php"
-      >Datenschutzgenerator Österreich DSGVO</a
-    ></b
-  >
-</p>
-</div>
-<app-footer></app-footer>
+    <p>
+      {{ "imprint.reach.source" | translate }}
+      <b
+        ><a
+          href="https://www.fairesrecht.at/kostenlos-datenschutzerklaerung-erstellen-generator.php"
+          >Datenschutzgenerator Österreich DSGVO</a
+        ></b
+      >
+    </p>
+  </div>
+  <app-footer></app-footer>
 </section>

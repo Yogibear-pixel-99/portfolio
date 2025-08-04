@@ -6,24 +6,29 @@ import { SocialLinksService } from '../../../services/links/circle-links.service
 import { CircleLinkComponent } from '../../ui/circle-link/circle-link.component';
 @Component({
   selector: 'app-mobile-header-menu',
-  imports: [CommonModule, LangSwitchComponent, HeaderLinksComponent, CircleLinkComponent],
+  imports: [
+    CommonModule,
+    LangSwitchComponent,
+    HeaderLinksComponent,
+    CircleLinkComponent,
+  ],
   templateUrl: './mobile-header-menu.component.html',
-  styleUrl: './mobile-header-menu.component.scss'
+  styleUrl: './mobile-header-menu.component.scss',
 })
 export class MobileHeaderMenuComponent {
+  public socialLinkService = inject(SocialLinksService);
 
-  socialLinkService = inject(SocialLinksService);
+  // showFlexDisplay: boolean = false;
+  @Input() public  openMenu: boolean = false;
+  @Input() public  showMenu: boolean = false;
+  @Output() public closeMenuParent = new EventEmitter();
 
-  showFlexDisplay:boolean = false;
-  @Input() openMenu:boolean = false;
-  @Input() showMenu:boolean = false;
-
-  @Output() closeMenuParent = new EventEmitter();
-
-  closeMenu(){
+  /**
+   * Sets the openMenu and showMenu variable to false and calls by emit a parent funktion to close the menu.
+   */
+  public closeMenu() {
     this.openMenu = false;
-    setTimeout(() => this.showMenu = false, 500);
+    setTimeout(() => (this.showMenu = false), 500);
     setTimeout(() => this.closeMenuParent.emit(), 510);
   }
-
 }

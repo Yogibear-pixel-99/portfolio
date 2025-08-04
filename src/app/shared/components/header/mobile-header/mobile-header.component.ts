@@ -9,23 +9,32 @@ import { RouterLink } from '@angular/router';
   styleUrl: './mobile-header.component.scss',
 })
 export class MobileHeaderComponent {
-  showMenu: boolean = false;
-  openMenu: boolean = false;
+  public showMenu: boolean = false;
+  public openMenu: boolean = false;
 
-   yellowLogo:boolean = false;
+  public yellowLogo: boolean = false;
 
-  openOverlay() {
+  /**
+   * Opens the overlay by setting showMenu and openMenu variables to true.
+   */
+  public openOverlay() {
     this.showMenu = true;
     requestAnimationFrame(() => (this.openMenu = true));
   }
 
-  closeOverlay() {
-   this.openMenu = false;
-   setTimeout(() => this.showMenu = false, 500);
+  /**
+   * Closes the overlay by setting openMenu and showMenu variables to false.
+   */
+  public closeOverlay() {
+    this.openMenu = false;
+    setTimeout(() => (this.showMenu = false), 500);
   }
 
-  logoYellow(){
+  /**
+   * Sets the yellowLogo variable to true and after a timeout to false.
+   */
+  public logoYellow() {
     this.yellowLogo = true;
-    setTimeout(() => this.yellowLogo = false, 1000);
+    setTimeout(() => (this.yellowLogo = false), 1000);
   }
 }

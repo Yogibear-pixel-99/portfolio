@@ -10,13 +10,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  translate = inject(TranslateService);
-  socialLinks = inject(SocialLinksService);
+  public translate = inject(TranslateService);
+  public socialLinks = inject(SocialLinksService);
 
-  yellowLogo:boolean = false;
-
- getImprint (): string {
-    return "imprint-" + this.translate.currentLang;
-  }
-  
+  public yellowLogo: boolean = false;
 }

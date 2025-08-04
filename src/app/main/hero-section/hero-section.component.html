@@ -1,94 +1,134 @@
 <div class="background">
-<section id="hero-normal-link" class="max-content-width">
-  <app-header></app-header>
-  <div class="main-wrapper">
-    <div class="roll-out-wrapper">
-      <app-roll-out-button
-        [translatePathNormal]="'hero.hello'"
-        [translatePathHover]="'hero.helloHover'"
-        [imgPath]="'images/hero-section/waving_hand.svg'"
-        [linkHref]="'#about-me-section'"
-        [buttonType]="'hero'"
-        [animateType]="'hero'"
-      >
-      </app-roll-out-button>
-    </div>
-    <div class="main-text-wrapper">
-      <div class="frontend-wrapper" (mouseleave)="setFrontLetterHovered(null)">
-
-        <div>
-          <span class="letter-hover-wrapper" (mouseleave)="fLetterHovered=false">
-        <span class="single-letter hover-letter-first">F</span>
-        <span [ngClass]="['single-letter', 'hover-letter-second']">F</span>
-        <span [ngClass]="['single-letter', 'hover-letter-third', fLetterHovered === true ? 'upper-hover-letter-third-animate' : '']"
-        (mouseenter)="fLetterHovered=true; setFrontLetterHovered(null)">F</span>
-        </span>
-        @for (letter of 'hero.mainSingle.frontendLast' | translate; track $index) {
-        <span class="letter-hover-wrapper">
-        <span class="single-letter hover-letter-first">{{ letter }}</span>
-        <span [ngClass]="['single-letter', 'hover-letter-second']">{{ letter }}</span>
-        <span [ngClass]="['single-letter', 'hover-letter-third', frontLetterHovered === $index ? 'lower-hover-letter-third-animate' : '']"
-        (mouseenter)="setFrontLetterHovered($index)"
-        >{{ letter }}</span>
-        </span>
-        }
-       </div>
-        <div
-          (mouseenter)="profilHovered = true"
-          (mouseleave)="profilHovered = false"
-          class="pic-wrapper display-hide-550-width"
+  <section id="hero-normal-link" class="max-content-width">
+    <app-header></app-header>
+    <div class="main-wrapper">
+      <div class="roll-out-wrapper">
+        <app-roll-out-button
+          [translatePathNormal]="'hero.hello'"
+          [translatePathHover]="'hero.helloHover'"
+          [imgPath]="'images/hero-section/waving_hand.svg'"
+          [linkHref]="'#about-me-section'"
+          [buttonType]="'hero'"
+          [animateType]="'hero'"
         >
-          <img src="images/hero-section/pic-hero.png" alt="profil picture" />
-          <span
-            >Joachim @if (profilHovered === !true) {
-            <span>:&#41;</span>
-            } @else {
-            <span>:D</span>
-            }</span
+        </app-roll-out-button>
+      </div>
+      <div class="main-text-wrapper">
+        <div
+          class="frontend-wrapper"
+          (mouseleave)="setFrontLetterHovered(null)"
+        >
+          <div>
+            <span
+              class="letter-hover-wrapper"
+              (mouseleave)="fLetterHovered = false"
+            >
+              <span class="single-letter hover-letter-first">F</span>
+              <span [ngClass]="['single-letter', 'hover-letter-second']"
+                >F</span
+              >
+              <span
+                [ngClass]="[
+                  'single-letter',
+                  'hover-letter-third',
+                  fLetterHovered === true
+                    ? 'upper-hover-letter-third-animate'
+                    : ''
+                ]"
+                (mouseenter)="
+                  fLetterHovered = true; setFrontLetterHovered(null)
+                "
+                >F</span
+              >
+            </span>
+            @for (letter of 'hero.mainSingle.frontendLast' | translate; track
+            $index) {
+            <span class="letter-hover-wrapper">
+              <span class="single-letter hover-letter-first">{{ letter }}</span>
+              <span [ngClass]="['single-letter', 'hover-letter-second']">{{
+                letter
+              }}</span>
+              <span
+                [ngClass]="[
+                  'single-letter',
+                  'hover-letter-third',
+                  frontLetterHovered === $index
+                    ? 'lower-hover-letter-third-animate'
+                    : ''
+                ]"
+                (mouseenter)="setFrontLetterHovered($index)"
+                >{{ letter }}</span
+              >
+            </span>
+            }
+          </div>
+          <div
+            (mouseenter)="profilHovered = true"
+            (mouseleave)="profilHovered = false"
+            class="pic-wrapper display-hide-550-width"
           >
+            <img src="images/hero-section/pic-hero.png" alt="profil picture" />
+            <span
+              >Joachim @if (profilHovered === !true) {
+              <span>:&#41;</span>
+              } @else {
+              <span>:D</span>
+              }</span
+            >
+          </div>
+        </div>
+        <div class="dev-wrapper" (mouseleave)="setDevLetterHovered(null)">
+          @for (letter of 'hero.mainSingle.developer' | translate; track $index)
+          {
+          <span class="letter-hover-wrapper">
+            <span class="single-letter hover-letter-first">{{ letter }}</span>
+            <span [ngClass]="['single-letter', 'hover-letter-second']">{{
+              letter
+            }}</span>
+            <span
+              [ngClass]="[
+                'single-letter',
+                'hover-letter-third',
+                devLetterHovered === $index
+                  ? 'upper-hover-letter-third-animate'
+                  : ''
+              ]"
+              (mouseenter)="setDevLetterHovered($index)"
+              >{{ letter }}</span
+            >
+          </span>
+          }
         </div>
       </div>
-      <div class="dev-wrapper"  (mouseleave)="setDevLetterHovered(null)">
-        @for (letter of 'hero.mainSingle.developer' | translate; track $index) {
-          <span class="letter-hover-wrapper">
-        <span class="single-letter hover-letter-first">{{ letter }}</span>
-        <span [ngClass]="['single-letter', 'hover-letter-second']">{{ letter }}</span>
-        <span [ngClass]="['single-letter', 'hover-letter-third', devLetterHovered === $index ? 'upper-hover-letter-third-animate' : '']"
-        (mouseenter)="setDevLetterHovered($index)"
-        >{{ letter }}</span>
-        </span>
-        }
-      </div>
-    </div>
 
-    <app-main-button
-      [translateText]="'hero.touch'"
-      [color]="'light-button'"
-      [hrefPath]="'#contact-me-section'"
-    ></app-main-button>
-  </div>
-  <div
-    (mouseenter)="profilHovered = true"
-    (mouseleave)="profilHovered = false"
-    class="pic-wrapper display-flex-mobile550-width"
-  >
-    <img src="images/hero-section/pic-hero.png" alt="profil picture" />
-    <span
-      >Joachim @if (profilHovered === !true) {
-      <span>:&#41;</span>
-      } @else {
-      <span>:D</span>
-      }</span
+      <app-main-button
+        [translateText]="'hero.touch'"
+        [color]="'light-button'"
+        [hrefPath]="'#contact-me-section'"
+      ></app-main-button>
+    </div>
+    <div
+      (mouseenter)="profilHovered = true"
+      (mouseleave)="profilHovered = false"
+      class="pic-wrapper display-flex-mobile550-width"
     >
-  </div>
-  <div class="social-links">
-    @for (link of socialLinkService.socialLinks; track $index) {
-    <app-circle-link
-      [linkHref]="link.linkHref"
-      [imgPath]="link.imgPath"
-      [imgAltText]="link.imgAltText"
-    ></app-circle-link>
-    }
-  </div>
-</section>
+      <img src="images/hero-section/pic-hero.png" alt="profil picture" />
+      <span
+        >Joachim @if (profilHovered === !true) {
+        <span>:&#41;</span>
+        } @else {
+        <span>:D</span>
+        }</span
+      >
+    </div>
+    <div class="social-links">
+      @for (link of socialLinkService.socialLinks; track $index) {
+      <app-circle-link
+        [linkHref]="link.linkHref"
+        [imgPath]="link.imgPath"
+        [imgAltText]="link.imgAltText"
+      ></app-circle-link>
+      }
+    </div>
+  </section>
 </div>

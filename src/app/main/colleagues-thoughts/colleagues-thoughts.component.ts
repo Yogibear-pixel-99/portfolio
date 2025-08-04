@@ -10,6 +10,6 @@ import { CommentStickerComponent } from "./comment-sticker/comment-sticker.compo
 })
 export class ColleaguesThoughtsComponent {
 
-  translate = inject(TranslateService);
+ public translate = inject(TranslateService);
 
 }
