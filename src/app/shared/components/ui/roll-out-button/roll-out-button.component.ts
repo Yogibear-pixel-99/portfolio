@@ -17,6 +17,7 @@ export class RollOutButtonComponent {
   @Input({ required: true }) public  translatePathHover: string = '';
   @Input({ required: true }) public  buttonType: string = '';
   @Input({ required: true }) public  animateType: string = '';
+  @Input({ required: true }) public  externalLink: boolean = false;
 
   public helloEnterAnimate: boolean = false;
   public helloEnterText: boolean = false;

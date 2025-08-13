@@ -21,6 +21,7 @@
   </div>
 </div>
 
+@if(externalLink) {
 <a [href]="linkHref" target="_blank" class="display-none-touch-device">
   <div
     (mouseover)="showName(); helloEnterAnimate = true"
@@ -51,7 +52,9 @@
     ></div>
   </div>
 </a>
+}
 
+@if (externalLink) {
 <div (click)="visitExternLink(linkHref)" class="display-block-touch-device">
   <div
     (mouseover)="showName(); helloEnterAnimate = true"
@@ -81,3 +84,37 @@
     ></div>
   </div>
 </div>
+}
+
+@if(!externalLink) {
+<div class="display-none-touch-device">
+  <div
+    (mouseover)="showName(); helloEnterAnimate = true"
+    (mouseout)="hideName(); helloEnterAnimate = false"
+    class=""
+    [ngClass]="[
+      'standard-button',
+      buttonType + '-button',
+      'hello-button',
+      helloEnterAnimate ? animateType + '-hover' : animateType + '-hover-back'
+    ]"
+  >
+    <span
+      class="hide-hello-name"
+      [ngClass]="{ 'show-hello-name': helloEnterText === true }"
+    >
+      {{ translatePathHover | translate }}
+    </span>
+    <span
+      class="hide-hello-name"
+      [ngClass]="{ 'show-hello-name': helloEnterText === false }"
+    >
+      {{ translatePathNormal | translate }}
+    </span>
+    <div
+      class="hello-name-mask"
+      [ngClass]="{ 'hello-button-hover': helloEnterAnimate === true }"
+    ></div>
+  </div>
+</div>
+}
