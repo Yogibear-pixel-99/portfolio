@@ -98,7 +98,7 @@
     />
     <button
       type="submit"
-      [ngClass]="['send-button', checkButton() === true ? 'active-button' : '']"
+      [ngClass]="['send-button', checkButton(contactMeForm) === true ? 'active-button' : 'inactive-button']"
     >
       {{ "contactMe.sendButton" | translate }}
     </button>

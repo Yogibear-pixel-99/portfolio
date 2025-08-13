@@ -87,12 +87,13 @@ export class ContactMeFormComponent {
    *
    * @returns
    */
-  public checkButton() {
+  public checkButton(ngForm: NgForm) {
     if (
       this.contactData.name &&
       this.contactData.email &&
       this.contactData.message &&
-      this.contactData.privacy === true
+      this.contactData.privacy === true &&
+      ngForm.form.valid
     ) {
       return true;
     } else {

@@ -3,7 +3,7 @@ import {
   importProvidersFrom,
   provideZoneChangeDetection,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular/router';
 import { routes } from './app.routes';
 
 import { provideHttpClient } from '@angular/common/http';
@@ -18,7 +18,15 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
+    provideRouter(routes,
+      withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled',
+      }),
+      withRouterConfig({
+        onSameUrlNavigation: 'reload',
+      })
+    ),
     provideHttpClient(),
     importProvidersFrom([
       TranslateModule.forRoot({

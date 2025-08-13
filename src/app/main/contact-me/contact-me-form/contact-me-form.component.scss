@@ -111,9 +111,9 @@ form {
   }
 
   > input[type="checkbox"]:checked::after {
-    content: "✔";
+    content: url("../../../../../public/images/contact-me/check.png");
     position: absolute;
-    top: -4px;
+    top: 6px;
     min-width: 18px;
     min-height: 18px;
     max-width: 18px;
@@ -173,7 +173,14 @@ form {
   &:hover {
     transform: translate(2px, 4px);
     background-color: colors.$main-red;
+    // cursor: url("../../../../../public/images/contact-me/stop.png");
     cursor: pointer;
     box-shadow: 0 0 0 0 colors.$main-white;
+  }
+}
+
+.inactive-button {
+  &:hover {
+    cursor: url("../../../../../public/images/contact-me/stop.png"), pointer;
   }
 }
