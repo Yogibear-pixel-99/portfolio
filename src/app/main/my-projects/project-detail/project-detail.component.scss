@@ -24,8 +24,24 @@
     background-position: 50% -40px;
   }
 
+  @media (max-width: 900px) {
+    background-size: 130%;
+  }
+
   @media (max-width: 650px) {
-    background-position: 50% 0;
+    background-size: 190%;
+  }
+
+  @media (max-width: 500px) {
+    background-size: 240%;
+  }
+
+  @media (max-width: 420px) {
+    background-size: 320%;
+  }
+
+  @media (max-width: 340px) {
+    background-size: 380%;
   }
 }
 
