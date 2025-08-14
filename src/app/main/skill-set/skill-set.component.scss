@@ -214,18 +214,12 @@ section {
   height: 200px;
   transform: rotate(8deg);
 
-  // @media (max-width: 1250px) {
-  //   margin-left: 40px;
-  //   transform: translate(120px, -160px) rotate(8deg);
-  // }
-
-  @media (max-width: 850px) {
-    // margin-left: 0;
-    // transform: translate(50px, -140px) rotate(8deg);
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
   }
 
   @media (max-width: 700px) {
-    // margin-left: 0;
     transform: translate(50px, -140px) rotate(8deg);
   }
 }

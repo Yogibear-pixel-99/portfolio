@@ -2,7 +2,7 @@ import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LangSwitchComponent } from '../../ui/lang-switch/lang-switch.component';
 import { HeaderLinksComponent } from '../header-links/header-links.component';
-import { SocialLinksService } from '../../../services/links/circle-links.service';
+import { SocialLinksService } from '../../../services/links/social-links.service';
 import { CircleLinkComponent } from '../../ui/circle-link/circle-link.component';
 @Component({
   selector: 'app-mobile-header-menu',

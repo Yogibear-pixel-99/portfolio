@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CircleLinkServiceService } from './circle-link/circle-link.service.';
+import { SocialLinksService } from './social-links.service';
 
 describe('CircleLinkServiceService', () => {
-  let service: CircleLinkServiceService;
+  let service: SocialLinksService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CircleLinkServiceService);
+    service = TestBed.inject(SocialLinksService);
   });
 
   it('should be created', () => {

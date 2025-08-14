@@ -31,7 +31,7 @@
             ],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "stylePreprocessorOptions" : {
+            "stylePreprocessorOptions": {
               "includePaths": ["src/app/shared/styles"]
             }
           },
@@ -87,7 +87,10 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app/shared/styles"]
+            }
           }
         }
       }

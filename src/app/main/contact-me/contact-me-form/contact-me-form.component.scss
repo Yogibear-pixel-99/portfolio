@@ -173,7 +173,6 @@ form {
   &:hover {
     transform: translate(2px, 4px);
     background-color: colors.$main-red;
-    // cursor: url("../../../../../public/images/contact-me/stop.png");
     cursor: pointer;
     box-shadow: 0 0 0 0 colors.$main-white;
   }

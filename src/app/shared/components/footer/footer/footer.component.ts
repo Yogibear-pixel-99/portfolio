@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RollOutButtonComponent } from '../../ui/roll-out-button/roll-out-button.component';
-import { SocialLinksService } from '../../../services/links/circle-links.service';
+import { SocialLinksService } from '../../../services/links/social-links.service';
 import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-footer',

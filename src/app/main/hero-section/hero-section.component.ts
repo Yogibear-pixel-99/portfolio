@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CircleLinkComponent } from '../../shared/components/ui/circle-link/circle-link.component';
-import { SocialLinksService } from '../../shared/services/links/circle-links.service';
+import { SocialLinksService } from '../../shared/services/links/social-links.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { MainButtonComponent } from '../../shared/components/ui/main-button/main-button.component';
 import { RollOutButtonComponent } from '../../shared/components/ui/roll-out-button/roll-out-button.component';
