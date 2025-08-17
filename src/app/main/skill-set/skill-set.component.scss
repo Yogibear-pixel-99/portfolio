@@ -210,9 +210,15 @@ section {
 }
 
 .outer {
+
   width: 200px;
   height: 200px;
   transform: rotate(8deg);
+  
+  > img {
+    width: 200px;
+    height: 200px;
+  }
 
   &:hover {
     cursor: pointer;

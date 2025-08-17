@@ -15,13 +15,24 @@ export class SkillSetComponent {
 
   private stickerOpen: boolean = false;
   private activeSticker: number = 0;
-  public stickerLogo: string[] = [
+  public stickerLogoEn: string[] = [
     'images/skills/sticker_close.png',
     'images/skills/sticker_middle.png',
     'images/skills/sticker_open.png',
   ];
+  public stickerLogoDe: string[] = [
+    'images/skills/peel_de_one.png',
+    'images/skills/sticker_middle.png',
+     'images/skills/peel_de_third.png',
+  ];
   public get getStickerPath() {
-    return this.stickerLogo[this.activeSticker];
+    let lang = this.translate.currentLang;
+    console.log(lang);
+    if (lang === "de") {
+    return this.stickerLogoDe[this.activeSticker];
+    } else {
+      return this.stickerLogoEn[this.activeSticker]   
+      }
   }
 
   /**
