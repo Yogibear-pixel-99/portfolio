@@ -70,3 +70,12 @@ app-header-links {
 .burger-inactive-logo {
   @include mixins.absolute-ctr();
 }
+
+.logo-wrapper {
+  > img {
+    width: 50px;
+    height: 46px;
+    object-fit: fill !important;
+    display: block;
+  }
+}

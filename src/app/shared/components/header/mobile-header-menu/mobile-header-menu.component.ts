@@ -17,7 +17,7 @@ import { CircleLinkComponent } from '../../ui/circle-link/circle-link.component'
 })
 export class MobileHeaderMenuComponent {
   public socialLinkService = inject(SocialLinksService);
-
+  
   // showFlexDisplay: boolean = false;
   @Input() public  openMenu: boolean = false;
   @Input() public  showMenu: boolean = false;
