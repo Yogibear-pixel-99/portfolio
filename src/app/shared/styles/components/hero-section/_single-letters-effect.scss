@@ -29,19 +29,12 @@
 
   &:hover {
     color: colors.$main-yellow;
-    cursor: default;
   }
 }
 
 .letter-hover-wrapper {
   position: relative;
   display: inline-block;
-
-  > span {
-    &:hover {
-      cursor: default;
-    }
-  }
 }
 
 .hover-letter-first {

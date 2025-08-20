@@ -25,7 +25,7 @@
   border: solid colors.$main-white 1px;
 
     &:hover {
-    cursor: pointer;
+    cursor: url('../../../../../../public/images/cursor_portfolio.png'), pointer;
   }
 }
 
@@ -34,7 +34,7 @@
   border: none;
 
       &:hover {
-    cursor: pointer !important;
+    cursor: url('../../../../../../public/images/cursor_portfolio_hover.png'), pointer !important;
   }
 }
 

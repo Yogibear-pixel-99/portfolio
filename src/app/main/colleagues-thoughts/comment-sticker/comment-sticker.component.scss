@@ -90,7 +90,7 @@ section {
 
   &:hover {
     color: colors.$main-white;
-    cursor: pointer;
+    cursor: url('../../../../../public/images/cursor_portfolio_hover_blue.png'), pointer;
   }
 
   &:hover > svg > path {

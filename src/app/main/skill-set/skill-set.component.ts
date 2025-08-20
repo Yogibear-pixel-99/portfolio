@@ -27,7 +27,6 @@ export class SkillSetComponent {
   ];
   public get getStickerPath() {
     let lang = this.translate.currentLang;
-    console.log(lang);
     if (lang === "de") {
     return this.stickerLogoDe[this.activeSticker];
     } else {

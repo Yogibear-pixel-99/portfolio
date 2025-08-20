@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 
 html, body {
@@ -17,7 +18,7 @@ html, body {
 
 body {
     margin: 0;
-
+cursor: url('../public/images/cursor_portfolio.png'), pointer;
     
 }
 
@@ -29,4 +30,8 @@ body {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    cursor: url('../public/images/cursor_portfolio_hover.png'), pointer;
+  }
 }

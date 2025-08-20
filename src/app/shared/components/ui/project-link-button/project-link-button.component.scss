@@ -16,7 +16,7 @@ button {
   height: 40px;
 
   &:hover {
-    cursor: pointer;
+    cursor: url('../../../../../../public/images/cursor_portfolio_hover_blue.png'), pointer;
     box-shadow: 0 0 0 0 colors.$main-white;
   }
 
