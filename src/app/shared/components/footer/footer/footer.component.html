@@ -7,17 +7,29 @@
         (mouseleave)="yellowLogo = false"
       >
         @if (yellowLogo) {
-        <img
-          class="my-logo"
-          src="images/hero-section/meinlogo_yellow.svg"
-          alt="my logo"
-        />
+        <div class="logo-wrapper">
+          <img
+            class="my-logo"
+            src="images/hero-section/meinlogo_yellow.svg"
+            alt="my logo"
+          />
+          <img
+            src="images/footer/top_arrow_hover.png"
+            alt="top icon"
+          />
+        </div>
         } @else {
-        <img
-          class="my-logo"
-          src="images/hero-section/meinlogo.svg"
-          alt="my logo"
-        />
+        <div class="logo-wrapper">
+          <img
+            class="my-logo"
+            src="images/hero-section/meinlogo.svg"
+            alt="my logo"
+          />
+          <img
+            src="images/footer/top_arrow.png"
+            alt="top hover icon"
+          />
+        </div>
         }
       </a>
       <span class="footer-font-bold">&#64; Joachim Pürcher 2025</span>

@@ -95,13 +95,27 @@ a {
   }
 }
 
-.my-logo {
-  width: 80px;
-  height: 66px;
-  object-fit: fill;
-  display: block;
+.logo-wrapper {
+  position: relative;
+
 
   @media (max-width: 768px) {
     transform: translateX(10px);
+  }
+
+  > img:nth-child(1) {
+    width: 80px;
+  height: 66px;
+  object-fit: fill;
+  display: block;
+  }
+
+  > img:nth-child(2) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+        width: 30px;
+  object-fit: fill;
+  display: block;
   }
 }

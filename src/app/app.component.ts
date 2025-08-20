@@ -2,7 +2,6 @@ import {
   AfterViewInit,
   Component,
   OnInit,
-  Inject,
   HostListener,
   inject,
 } from '@angular/core';
@@ -21,32 +20,41 @@ export class AppComponent implements OnInit, AfterViewInit {
   private translate = inject(TranslateService);
   private document = inject(DOCUMENT);
 
-  ngOnInit() {
+  /**
+   * Initialise the ngx/translate service.
+   */
+  public ngOnInit() {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('en');
-
- 
   }
 
-  ngAfterViewInit() {
-       AOS.init({
+  /**
+   * Initialise the scroll animations for the whole app after.
+   */
+  public ngAfterViewInit() {
+    AOS.init({
       duration: 1000,
       once: true,
     });
-    AOS.refresh();
   }
   title = 'portfolio';
 
   private colors = ['rgba(247, 197, 24, 1)', 'rgba(51, 85, 255, 1)', '#f87a55'];
+  private animationFrame: number | null = null;
 
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
+  /**
+   * Creates an mouse animation behind the cursor if moving.
+   * 
+   * @param event 
+   */
+@HostListener('document:mousemove', ['$event'])
+onMouseMove(event: MouseEvent) {
+  if (this.animationFrame) return;
+
+  this.animationFrame = requestAnimationFrame(() => {
     const dot = this.document.createElement('div');
     const size = Math.random() * 2 + 2;
-
-    const offsetX = (Math.random() - 0.25) * 5;
-    const offsetY = (Math.random() - 0.25) * 5;
 
     dot.style.width = `${size}px`;
     dot.style.height = `${size}px`;
@@ -55,12 +63,12 @@ export class AppComponent implements OnInit, AfterViewInit {
     dot.style.pointerEvents = 'none';
     dot.style.background =
       this.colors[Math.floor(Math.random() * this.colors.length)];
-    dot.style.left = `${event.clientX + offsetX}px`;
-    dot.style.top = `${event.clientY + offsetY}px`;
-    dot.style.transform = 'translate(15px, 15px)';
+    dot.style.left = `${event.clientX}px`;
+    dot.style.top = `${event.clientY}px`;
     dot.style.opacity = '0.8';
-    dot.style.transition = 'opacity 0.3s, transform 0.3s';
+    dot.style.transition = 'opacity 1.3s, transform 1.3s';
     dot.style.zIndex = '9999';
+    dot.style.transform = 'translate(15px, 15px)';
 
     this.document.body.appendChild(dot);
 
@@ -70,5 +78,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     }, 50);
 
     setTimeout(() => dot.remove(), 300);
-  }
+
+    this.animationFrame = null;
+  });
+}
 }
