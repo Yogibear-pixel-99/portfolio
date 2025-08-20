@@ -1,11 +1,11 @@
 <div>
   <div class="img-wrapper">
-    <img [src]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].img" />
+    <img [src]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].img"  />
     @if(projectService.projectPos === 0) {
-    <img [src]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].sticker" />
+    <img [src]="projectService.projectInfos[projectService.projectArr[projectService.projectPos]].sticker" data-aos="fade" data-aos-delay="300" />
     } @else {
 
-    <div class="sticker-wrapper">
+    <div class="sticker-wrapper" data-aos="fade" data-aos-delay="300">
       <app-my-logo-sticker
         [stickerImgPath]="
           'images/projects/project-details/elpolloloco/gold_sticker.png'

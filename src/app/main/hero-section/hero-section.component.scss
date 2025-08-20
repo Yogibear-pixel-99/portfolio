@@ -160,7 +160,8 @@ section {
 }
 
 .dev-wrapper {
-  justify-self: flex-end;
+  margin-left: auto;
+  width: fit-content;
 
   @media (max-width: 850px) {
     height: 77px;

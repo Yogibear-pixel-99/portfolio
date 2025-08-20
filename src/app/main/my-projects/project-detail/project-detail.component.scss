@@ -74,17 +74,18 @@ section {
   margin: 0 auto 0 0;
   color: colors.$main-black;
 
+      &:hover {
+      color: colors.$main-red !important;
+      cursor: url("../../../../../public/images/cursor_portfolio_hover_blue.png"),
+        pointer;
+    }
+
   @media (max-width: 1250px) {
     margin: 0;
   }
 
   @media (max-height: 750px) {
     margin: 0 auto auto 0;
-  }
-
-  &:hover {
-    color: colors.$main-red;
-    cursor: pointer;
   }
 }
 
@@ -115,13 +116,22 @@ section {
     margin: 0;
   }
 
-  > div > span {
+  > div > span:nth-child(1) {
     color: colors.$main-white;
+    &:hover {
+      color: colors.$main-yellow;
+      cursor: url("../../../../../public/images/cursor_portfolio_hover_blue.png"),
+        pointer;
+    }
   }
 
-  &:hover {
-    color: colors.$main-yellow;
-    cursor: pointer;
+  > div > span:nth-child(2) {
+    color: colors.$main-white;
+    &:hover {
+      color: colors.$main-red;
+      cursor: url("../../../../../public/images/cursor_portfolio_hover_blue.png"),
+        pointer;
+    }
   }
 }
 

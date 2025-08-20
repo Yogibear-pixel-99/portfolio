@@ -26,13 +26,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
 
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+ 
   }
 
   ngAfterViewInit() {
+       AOS.init({
+      duration: 1000,
+      once: true,
+    });
     AOS.refresh();
   }
   title = 'portfolio';
