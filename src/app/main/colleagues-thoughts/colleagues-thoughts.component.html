@@ -3,7 +3,7 @@
 <section class="section-padding inner-section-two-col">
   <div></div>
 
-  <div class="header-wrapper">
+  <div class="header-wrapper" data-aos="fade-left">
     <div class="img-wrapper">
       <img src="images/thoughts/blue_arrow.svg" alt="underline" />
       <span class="section-header-small-text-typo">{{
@@ -14,7 +14,8 @@
   </div>
 </section>
 <section class="section-padding inner-section-two-col whole-sticker-container">
-  <div class="sticker-section">
+  
+  <div data-aos="fade" data-aos-delay="100" data-aos-anchor-placement="top-bottom" class="sticker-section">
     <app-comment-sticker
     [bgImgPath]="'images/thoughts/sticker_bg.png'"
     [hoverImgPath]="'images/thoughts/sticker_lines.png'"
@@ -23,7 +24,7 @@
     [profileLink]="false"
     [role]="'thoughts.colleagues.first.role'"></app-comment-sticker>
   </div>
-  <div class="sticker-section">
+  <div data-aos="fade" data-aos-delay="200" data-aos-anchor-placement="top-bottom" class="sticker-section">
     <app-comment-sticker
     [bgImgPath]="'images/thoughts/sticker_bg_2.png'"
     [hoverImgPath]="'images/thoughts/sticker_lines_2.png'"
@@ -32,7 +33,7 @@
     [profileLink]="'thoughts.colleagues.second.link'"
     [role]="'thoughts.colleagues.second.role'"></app-comment-sticker>
   </div>
-  <div class="sticker-section">
+  <div data-aos="fade" data-aos-delay="300" data-aos-anchor-placement="top-bottom" class="sticker-section">
     <app-comment-sticker
     [bgImgPath]="'images/thoughts/sticker_bg_3.png'"
     [hoverImgPath]="'images/thoughts/sticker_lines.png'"
