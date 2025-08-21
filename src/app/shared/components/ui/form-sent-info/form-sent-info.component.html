@@ -1,0 +1,43 @@
+@if (sentSuccess){
+<section class="overlay">
+  <span class="section-text-typo">
+    {{ "contactMe.sentMessage.headerText.resolve" | translate }}</span
+  >
+  <span class="section-text-typo">{{
+    "contactMe.sentMessage.mainText.resolve" | translate
+  }}</span>
+  <div>
+    <button class="light-button">
+      {{ "contactMe.sentMessage.buttonText" | translate }}
+    </button>
+    <div class="roll-out-wrapper">
+      <img
+        [class.animate-hand]="showHand === true"
+        src="images/contact-me/waving_hand.svg"
+        alt="waving hand icon"
+      />
+    </div>
+  </div>
+</section>
+} @else {
+    <section class="overlay">
+  <span class="section-text-typo error-text">
+    {{ "contactMe.sentMessage.headerText.error" | translate }}</span
+  >
+  <span class="section-text-typo error-text">{{
+    "contactMe.sentMessage.mainText.error" | translate
+  }}</span>
+  <div>
+    <button class="light-button">
+      {{ "contactMe.sentMessage.buttonText" | translate }}
+    </button>
+    <div class="roll-out-wrapper">
+      <img
+        [class.animate-hand]="showHand === true"
+        src="images/contact-me/waving_hand.svg"
+        alt="waving hand icon"
+      />
+    </div>
+  </div>
+</section>
+}

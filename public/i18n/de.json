@@ -66,19 +66,19 @@
         "name": "Bernadette Pöltl",
         "comment": "Joachim ist nicht nur fachlich stark, sondern auch menschlich eine echte Bereicherung. Der Austausch mit ihm ist immer offen, ehrlich und inspirierend – als hilfsbereiter Kollege und reflektierter Frontend Developer ist er für mich eine große Unterstützung im Ausbildungsalltag.",
         "link": ".",
-        "role" : "Frontend Entwickler"
+        "role": "Frontend Entwickler"
       },
       "second": {
         "name": "Dominic Duchaczek",
         "comment": "Joachim hatte stets ein offenes Ohr für meine Anliegen, Wünsche und Fragen. Selbst in stressigen Situationen behielt er den Überblick und verlor dabei nie das große Ganze aus den Augen. Seine ruhige und lösungsorientierte Art machte ihn zu einem verlässlichen Kollegen, auf den man sich jederzeit verlassen konnte.",
         "link": "https://www.linkedin.com/in/dominic-duchaczek-397b641b6/",
-        "role" : "Projektmanager"
+        "role": "Projektmanager"
       },
       "third": {
         "name": "Eduard Fray",
         "comment": "Die Zusammenarbeit mit Joachim war durchweg positiv. Er verstand es, das Team zu motivieren und gleichzeitig den Fokus auf unsere Ziele nicht aus den Augen zu verlieren. Durch seine offene und hilfsbereite Art war er ein echter Gewinn für das Team.",
         "link": "https://www.linkedin.com/in/eduard-fray-696ba81a9/",
-        "role" : "Frontend Entwickler"
+        "role": "Frontend Entwickler"
       }
     },
     "profile": "Profil"
@@ -113,7 +113,18 @@
         "error": "Bitte die Datenschutzerklärung akzeptieren"
       }
     },
-    "sendButton": "Senden"
+    "sendButton": "Senden",
+    "sentMessage": {
+      "headerText": {
+        "resolve": "Nachricht wurde erfolgreich gesendet.",
+        "error": "Ups, da ist etwas schiefgelaufen."
+      },
+      "mainText": {
+        "resolve": "Vielen Dank! Ich melde mich unverzüglich.",
+        "error": "Leider konnte deine Nachricht nicht gesendet werden. Bitte kontaktiere mich direkt per E-Mail."
+      },
+      "buttonText": "Schließen"
+    }
   },
   "footer": {
     "legal": "Impressum",

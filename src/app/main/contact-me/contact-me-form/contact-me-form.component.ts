@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { UserContactInfo } from '../../../shared/interfaces/model';
@@ -14,6 +14,10 @@ import { HttpClient } from '@angular/common/http';
 export class ContactMeFormComponent {
   public translate = inject(TranslateService);
   public http = inject(HttpClient);
+  public showMessage:boolean = true;
+
+  @Output() public sentError = new EventEmitter();
+  @Output() public sentSuccess = new EventEmitter();
 
   public contactData: UserContactInfo = {
     name: '',
@@ -50,25 +54,28 @@ export class ContactMeFormComponent {
    * @param ngForm The contact Form.
    */
   public onSubmit(ngForm: NgForm) {
-    this.trimInput();
-    this.checkPrivacy();
-    this.checkErrors();
-    if (ngForm.submitted && ngForm.form.valid) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid) {
-      ngForm.resetForm();
-    }
+    this.sentError.emit();
   }
+  // public onSubmit(ngForm: NgForm) {
+  //   this.trimInput();
+  //   this.checkPrivacy();
+  //   this.checkErrors();
+  //   if (ngForm.submitted && ngForm.form.valid) {
+  //     this.http
+  //       .post(this.post.endPoint, this.post.body(this.contactData))
+  //       .subscribe({
+  //         next: (response) => {
+  //           ngForm.resetForm();
+  //         },
+  //         error: (error) => {
+  //           console.error(error);
+  //         },
+  //         complete: () => console.info('send post complete'),
+  //       });
+  //   } else if (ngForm.submitted && ngForm.form.valid) {
+  //     ngForm.resetForm();
+  //   }
+  // }
 
   /**
    * Trims the input in the contact data object.
@@ -133,4 +140,10 @@ export class ContactMeFormComponent {
       this.privacyError = false;
     }
   }
+
+  displayInfo(){
+    this.showMessage = true;
+  }
+
+
 }

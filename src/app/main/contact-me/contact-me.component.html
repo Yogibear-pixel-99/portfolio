@@ -1,48 +1,69 @@
-<div class="section-wrapper">
-  <section class="section-padding inner-section-two-col max-content-width">
-    <div class="left">
-      <div class="sticker-wrapper-small display-hide-over-1250px-width">
-        <app-my-logo-sticker
-          [stickerImgPath]="'images/contact-me/contact_sticker.png'"
-          [logoImgPath]="'images/contact-me/meinlogo_black.svg'"
-        ></app-my-logo-sticker>
-      </div>
-      <div class="header-wrapper" data-aos="fade-right" data-aos-anchor-placement="top-center">
-        <div>
-          <span class="section-header-small-text-typo">{{
-            "contactMe.headerWords" | translate
-          }}</span>
-          <div class="header-inner-wrapper">
-            <h2 class="section-header-typo">
-              {{ "contactMe.header" | translate }}
-            </h2>
+<div class="overlay-wrapper">
+  <div class="section-wrapper">
+    <section class="section-padding inner-section-two-col max-content-width">
+      <div class="left">
+        <div class="sticker-wrapper-small display-hide-over-1250px-width">
+          <app-my-logo-sticker
+            [stickerImgPath]="'images/contact-me/contact_sticker.png'"
+            [logoImgPath]="'images/contact-me/meinlogo_black.svg'"
+          ></app-my-logo-sticker>
+        </div>
+        <div
+          class="header-wrapper"
+          data-aos="fade-right"
+          data-aos-anchor-placement="top-center"
+        >
+          <div>
+            <span class="section-header-small-text-typo">{{
+              "contactMe.headerWords" | translate
+            }}</span>
+            <div class="header-inner-wrapper">
+              <h2 class="section-header-typo">
+                {{ "contactMe.header" | translate }}
+              </h2>
+            </div>
           </div>
-        </div>
-        <div>
-          <p class="section-text-typo">
-            {{ "contactMe.mainTextFirst" | translate }}
-          </p>
-          <p class="section-text-typo">
-            {{ "contactMe.mainTextSecond" | translate }}
-          </p>
-        </div>
+          <div>
+            <p class="section-text-typo">
+              {{ "contactMe.mainTextFirst" | translate }}
+            </p>
+            <p class="section-text-typo">
+              {{ "contactMe.mainTextSecond" | translate }}
+            </p>
+          </div>
 
-        <img
-          class="contact-arrow display-hide-1250px-width"
-          src="images/contact-me/contact_arrow.png"
-          alt="contact arrow"
-        />
+          <img
+            class="contact-arrow display-hide-1250px-width"
+            src="images/contact-me/contact_arrow.png"
+            alt="contact arrow"
+          />
+        </div>
       </div>
-    </div>
-    <div class="right" data-aos="fade-left" data-aos-anchor-placement="top-center">
-      <div class="sticker-wrapper display-hide-1250px-width" data-aos="fade" data-aos-delay="400">
-        <app-my-logo-sticker
-          [stickerImgPath]="'images/contact-me/contact_sticker.png'"
-          [logoImgPath]="'images/contact-me/meinlogo_black.svg'"
-        ></app-my-logo-sticker>
+      <div
+        class="right"
+        data-aos="fade-left"
+        data-aos-anchor-placement="top-center"
+      >
+        <div
+          class="sticker-wrapper display-hide-1250px-width"
+          data-aos="fade"
+          data-aos-delay="400"
+        >
+          <app-my-logo-sticker
+            [stickerImgPath]="'images/contact-me/contact_sticker.png'"
+            [logoImgPath]="'images/contact-me/meinlogo_black.svg'"
+          ></app-my-logo-sticker>
+        </div>
+        <app-contact-me-form
+        (sentSuccess)="triggerMessageSuccess()"
+        (sentError)="triggerMessageError()"></app-contact-me-form>
       </div>
-      <app-contact-me-form></app-contact-me-form>
-    </div>
-  </section>
-  <app-footer></app-footer>
+    </section>
+    <app-footer></app-footer>
+  </div>
+  <div [ngClass]="['sent-wrapper', messageMenuOpen ? 'show-menu' : '', showMessageMenu ? 'open-menu' : '']">
+    <app-form-sent-info
+    [sentSuccess]="sentMessage"
+    [showHand]="waveMessageHand"> </app-form-sent-info>
+  </div>
 </div>

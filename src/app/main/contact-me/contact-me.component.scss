@@ -9,6 +9,12 @@
   background-image: url("../../../../public/images/contact-me/contact_bg.png");
   background-size: cover;
   color: colors.$main-white;
+  position: relative;
+  filter: opacity(0.3);
+}
+
+.overlay-wrapper {
+  position: relative;
 }
 
 .section-padding {
@@ -82,4 +88,20 @@
   @media (max-width: 1250px) {
     padding-top: 90px;
   }
+}
+
+.sent-wrapper {
+  display: none;
+  @include mixins.absolute-ctr();
+  transform: translate(-50%, 100dvh);
+  transition: transform ease-in-out 0.3s;
+  z-index: 100;
+}
+
+.open-menu {
+  transform: translate(-50%, -50%);
+}
+
+.show-menu {
+  display: flex;
 }
