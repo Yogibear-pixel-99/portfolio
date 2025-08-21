@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
@@ -13,8 +13,8 @@ import { RouterLink } from '@angular/router';
 export class HeaderLinksComponent {
   @Input() public linkColor: string[] = [];
   public translate = inject(TranslateService);
-
   public clickedLinkIndex: number | null = null;
+  @Output() public closeMobileMenu = new EventEmitter;
 
   /**
    * Sets the clickedLinkIndex variable to the pos parameter and after a timeout back to null.
@@ -47,5 +47,9 @@ export class HeaderLinksComponent {
     } else {
       return '#F8F9FA';
     }
+  }
+
+  closeMenu(){
+    this.closeMobileMenu.emit();
   }
 }

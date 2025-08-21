@@ -1,6 +1,6 @@
 <nav>
   <a
-    (click)="setLinkIndex(0)"
+    (click)="setLinkIndex(0); closeMenu()"
     class="link-wrapper"
     routerLink="/"
     fragment="about-me-section"
@@ -16,7 +16,7 @@
 </nav>
 <nav>
   <a
-    (click)="setLinkIndex(1)"
+    (click)="setLinkIndex(1); closeMenu()"
     class="link-wrapper"
     routerLink="/"
     fragment="skills-section"
@@ -33,7 +33,7 @@
 </nav>
 <nav>
   <a
-    (click)="setLinkIndex(2)"
+    (click)="setLinkIndex(2); closeMenu()"
     class="link-wrapper"
     routerLink="/"
     fragment="projects-section"
@@ -49,7 +49,7 @@
 </nav>
 <nav>
   <a
-    (click)="setLinkIndex(3)"
+    (click)="setLinkIndex(3); closeMenu()"
     class="link-wrapper"
     routerLink="/"
     fragment="contact-me-section"

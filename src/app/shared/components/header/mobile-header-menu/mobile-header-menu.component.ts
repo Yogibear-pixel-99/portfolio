@@ -21,7 +21,7 @@ export class MobileHeaderMenuComponent {
   // showFlexDisplay: boolean = false;
   @Input() public  openMenu: boolean = false;
   @Input() public  showMenu: boolean = false;
-  @Output() public closeMenuParent = new EventEmitter();
+  @Output() public closeMobileMenu = new EventEmitter();
 
   /**
    * Sets the openMenu and showMenu variable to false and calls by emit a parent funktion to close the menu.
@@ -29,6 +29,6 @@ export class MobileHeaderMenuComponent {
   public closeMenu() {
     this.openMenu = false;
     setTimeout(() => (this.showMenu = false), 500);
-    setTimeout(() => this.closeMenuParent.emit(), 510);
+    setTimeout(() => this.closeMobileMenu.emit(), 510);
   }
 }

@@ -32,16 +32,19 @@
       </div>
     </div>
     <div class="middle">
-      <app-header-links></app-header-links>
+      <app-header-links
+      (closeMobileMenu)="closeMenu()"></app-header-links>
       <app-lang-switch></app-lang-switch>
     </div>
     <div class="bottom">
       @for (link of socialLinkService.socialLinks; track $index) {
+        <div (click)="closeMenu()">
       <app-circle-link
         [linkHref]="link.linkHref"
         [imgPath]="link.imgPath"
         [imgAltText]="link.imgAltText">
       </app-circle-link>
+      </div>
       }
     </div>
   </div>
