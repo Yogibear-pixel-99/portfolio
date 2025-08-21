@@ -26,7 +26,6 @@ export class ContactMeComponent {
   public showMessageMenu: boolean = false;
   public waveMessageHand: boolean = false;
   public overlayOpen: boolean = false;
-
   public sentMessage: boolean = false;
 
   /**

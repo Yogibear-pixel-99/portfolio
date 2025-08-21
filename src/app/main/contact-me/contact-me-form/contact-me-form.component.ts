@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 export class ContactMeFormComponent {
   public translate = inject(TranslateService);
   public http = inject(HttpClient);
-  public showMessage:boolean = true;
+  public showMessage: boolean = true;
 
   @Output() public sentError = new EventEmitter();
   @Output() public sentSuccess = new EventEmitter();
@@ -69,13 +69,12 @@ export class ContactMeFormComponent {
             this.setEmptyContactObj();
           },
           error: (error) => {
-            console.error(error)
+            console.error(error);
             this.sentError.emit();
           },
           complete: () => {
-            console.info('send post complete')
+            console.info('send post complete');
           },
-          
         });
     }
   }
@@ -83,13 +82,13 @@ export class ContactMeFormComponent {
   /**
    * Sets the data object to default standards.
    */
-  private setEmptyContactObj(){
+  private setEmptyContactObj() {
     this.contactData = {
-    name: '',
-    email: '',
-    message: '',
-    privacy: false,
-  };
+      name: '',
+      email: '',
+      message: '',
+      privacy: false,
+    };
   }
 
   /**

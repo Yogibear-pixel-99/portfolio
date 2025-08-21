@@ -24,13 +24,10 @@ import { HeaderComponent } from '../../shared/components/header/header/header.co
 export class HeroSectionComponent implements OnInit {
   public translate = inject(TranslateService);
   public socialLinkService = inject(SocialLinksService);
-
   public profilHovered: boolean = false;
-
   public fLetterHovered: boolean = false;
   public frontLetterHovered: number | null = null;
   public devLetterHovered: number | null = null;
-
   public showAllLetters: boolean = false;
 
   /**

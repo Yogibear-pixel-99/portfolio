@@ -2,10 +2,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { MobileHeaderMenuComponent } from '../mobile-header-menu/mobile-header-menu.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { MyLogoComponent } from "../../ui/my-logo/my-logo.component";
+import { MyLogoComponent } from '../../ui/my-logo/my-logo.component';
 @Component({
   selector: 'app-mobile-header',
-  imports: [MobileHeaderMenuComponent, CommonModule, RouterLink, MyLogoComponent],
+  imports: [
+    MobileHeaderMenuComponent,
+    CommonModule,
+    RouterLink,
+    MyLogoComponent,
+  ],
   templateUrl: './mobile-header.component.html',
   styleUrl: './mobile-header.component.scss',
 })
@@ -16,11 +21,10 @@ export class MobileHeaderComponent {
   public yellowLogo: boolean = false;
   @Output() public logoClicked = new EventEmitter();
 
-
   /**
    * Sends the click to the parent component.
    */
-  public sendClickToNextParent(){
+  public sendClickToNextParent() {
     this.logoClicked.emit();
   }
   /**
