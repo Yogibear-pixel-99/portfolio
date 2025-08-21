@@ -17,6 +17,26 @@ section {
   }
 }
 
+.header-wrapper {
+  padding: 0 160px;
+
+    @media (max-width: 1500px) {
+    padding: 0 80px;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 420px) {
+    padding: 0 8px;
+  }
+}
+
 a {
   color: colors.$main-blue;
   text-decoration: none;

@@ -4,10 +4,11 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { UserContactInfo } from '../../../shared/interfaces/model';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me-form',
-  imports: [TranslateModule, FormsModule, CommonModule],
+  imports: [TranslateModule, FormsModule, CommonModule, RouterLink],
   templateUrl: './contact-me-form.component.html',
   styleUrl: './contact-me-form.component.scss',
 })

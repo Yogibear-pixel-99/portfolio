@@ -59,7 +59,8 @@
         (sentError)="triggerMessageError()"></app-contact-me-form>
       </div>
     </section>
-    <app-footer></app-footer>
+    <app-footer
+    [showTop]="true"></app-footer>
   </div>
   <div [ngClass]="['sent-wrapper', messageMenuOpen ? 'show-menu' : '', showMessageMenu ? 'open-menu' : '']">
     <app-form-sent-info

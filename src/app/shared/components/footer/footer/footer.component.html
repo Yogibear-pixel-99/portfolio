@@ -3,6 +3,7 @@
     <div class="top-wrapper">
       <div class="logo-wrapper">
         <app-my-logo></app-my-logo>
+        @if (showTop) {
         <svg
           (click)="navigateToTop()"
           width="800px"
@@ -24,6 +25,7 @@
             id="path1"
           />
         </svg>
+      }
       </div>
       <span class="footer-font-bold">&#64; Joachim Pürcher 2025</span>
     </div>

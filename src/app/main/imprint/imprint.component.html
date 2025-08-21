@@ -1,6 +1,8 @@
 <section>
+  <div class="header-wrapper max-content-width">
   <app-header></app-header>
-  <div class="section-padding">
+  </div>
+  <div class="section-padding max-content-width">
     <h3 class="section-header-typo">{{ "imprint.header" | translate }}</h3>
 
     <br />
@@ -101,5 +103,6 @@
       >
     </p>
   </div>
-  <app-footer></app-footer>
+  <app-footer 
+  [showTop]="false"></app-footer>
 </section>
