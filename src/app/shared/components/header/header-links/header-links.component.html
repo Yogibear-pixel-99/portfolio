@@ -1,6 +1,51 @@
 <nav>
+  <div (click)="goToSection(0, '/', 'about-me-section')" class="link-wrapper">
+    <div class="link" [ngStyle]="{ color: getLinkColor(0) }">
+      {{ "header.aboutme" | translate }}
+    </div>
+    <img
+      [class.show-link-img]="clickedLinkIndex === 0"
+      src="images/header/1.png"
+    />
+  </div>
+</nav>
+<nav>
+  <div (click)="goToSection(1, '/', 'skills-section')" class="link-wrapper">
+    <div class="link" [ngStyle]="{ color: getLinkColor(1) }">
+      {{ "header.skills" | translate }}
+    </div>
+    <img
+      [ngClass]="checkLang() === 'de' ? 'de-underline' : 'en-underline'"
+      [class.show-link-img]="clickedLinkIndex === 1"
+      src="images/header/2.png"
+    />
+  </div>
+</nav>
+<nav>
+  <div (click)="goToSection(2, '/', 'projects-section')" class="link-wrapper">
+    <div class="link" [ngStyle]="{ color: getLinkColor(2) }">
+      {{ "header.projects" | translate }}
+    </div>
+    <img
+      [class.show-link-img]="clickedLinkIndex === 2"
+      src="images/header/3.png"
+    />
+  </div>
+</nav>
+<nav>
+  <div (click)="goToSection(3, '/', 'contact-me-section')" class="link-wrapper">
+    <div class="link" [ngStyle]="{ color: getLinkColor(3) }">
+      {{ "header.contact" | translate }}
+    </div>
+    <img
+      [class.show-link-img]="clickedLinkIndex === 3"
+      src="images/header/4.png"
+    />
+  </div>
+</nav>
+<!-- <nav>
   <a
-    (click)="setLinkIndex(0); closeMenu()"
+    (click)="setLinkIndex(0); "
     class="link-wrapper"
     routerLink="/"
     fragment="about-me-section"
@@ -16,7 +61,7 @@
 </nav>
 <nav>
   <a
-    (click)="setLinkIndex(1); closeMenu()"
+    (click)="setLinkIndex(1); "
     class="link-wrapper"
     routerLink="/"
     fragment="skills-section"
@@ -33,7 +78,7 @@
 </nav>
 <nav>
   <a
-    (click)="setLinkIndex(2); closeMenu()"
+    (click)="setLinkIndex(2); "
     class="link-wrapper"
     routerLink="/"
     fragment="projects-section"
@@ -49,7 +94,7 @@
 </nav>
 <nav>
   <a
-    (click)="setLinkIndex(3); closeMenu()"
+    (click)="setLinkIndex(3); "
     class="link-wrapper"
     routerLink="/"
     fragment="contact-me-section"
@@ -62,4 +107,4 @@
       src="images/header/4.png"
     />
   </a>
-</nav>
+</nav> -->

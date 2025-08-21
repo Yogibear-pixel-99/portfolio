@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { MobileHeaderMenuComponent } from '../mobile-header-menu/mobile-header-menu.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { MyLogoComponent } from "../../ui/my-logo/my-logo.component";
 @Component({
   selector: 'app-mobile-header',
-  imports: [MobileHeaderMenuComponent, CommonModule, RouterLink],
+  imports: [MobileHeaderMenuComponent, CommonModule, RouterLink, MyLogoComponent],
   templateUrl: './mobile-header.component.html',
   styleUrl: './mobile-header.component.scss',
 })

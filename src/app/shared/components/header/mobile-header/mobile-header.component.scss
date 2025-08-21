@@ -5,7 +5,7 @@
 .mobile-header {
   display: none;
   padding: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  z-index: 500;
 
   @media (max-width: 850px) {
     display: flex;
@@ -31,11 +31,3 @@
   @include mixins.absolute-ctr();
 }
 
-.logo-wrapper {
-  > img {
-    width: 50px;
-    height: 46px;
-    object-fit: fill !important;
-    display: block;
-  }
-}

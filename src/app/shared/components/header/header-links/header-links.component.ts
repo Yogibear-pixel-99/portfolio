@@ -1,7 +1,7 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -13,15 +13,22 @@ import { RouterLink } from '@angular/router';
 export class HeaderLinksComponent {
   @Input() public linkColor: string[] = [];
   public translate = inject(TranslateService);
+  private router = inject(Router);
   public clickedLinkIndex: number | null = null;
-  @Output() public closeMobileMenu = new EventEmitter;
+  @Output() public closeMobileMenu = new EventEmitter();
+
+  public goToSection(linkIndex: number, section: string, fragment: string) {
+    this.showAnimation(linkIndex);
+    this.closeMenu();
+    this.navigateToSection(section, fragment);
+  }
 
   /**
    * Sets the clickedLinkIndex variable to the pos parameter and after a timeout back to null.
    *
    * @param pos The number (position) of the clicked link.
    */
-  public setLinkIndex(pos: number) {
+  private showAnimation(pos: number) {
     this.clickedLinkIndex = pos;
     setTimeout(() => (this.clickedLinkIndex = null), 500);
   }
@@ -49,7 +56,28 @@ export class HeaderLinksComponent {
     }
   }
 
-  closeMenu(){
-    this.closeMobileMenu.emit();
+  /**
+   * Closes the mobile header menu.
+   */
+  public closeMenu() {
+    setTimeout(() => {
+      this.closeMobileMenu.emit();
+    }, 500);
+  }
+
+  /**
+   * Navigates to the specified section.
+   *
+   * @param section The main site.
+   * @param fragment The section of the main site.
+   */
+  private navigateToSection(section: string, fragment: string) {
+    if (window.innerWidth <= 850) {
+      setTimeout(() => {
+        this.router.navigate([section], { fragment });
+      }, 500);
+    } else {
+      this.router.navigate([section], { fragment });
+    }
   }
 }

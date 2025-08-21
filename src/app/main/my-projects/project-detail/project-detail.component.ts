@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, inject } from '@angular/core';
 import { HeaderComponent } from '../../../shared/components/header/header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ProjectDetailsService } from '../../../shared/services/project-details/project-details.service';

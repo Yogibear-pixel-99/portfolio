@@ -3,14 +3,10 @@
 @use "fonts";
 
 section {
-  padding: 0 72px;
+  padding: 0 5px 0 0;
   color: white;
   height: 80px;
-  @include mixins.flex-spbtw-ctr-row();
-
-  @media (max-width: 1350px) {
-    padding: 0 30px;
-  }
+  @include mixins.flex-spbtw-ctr-row(); 
 
   @media (max-width: 850px) {
     display: none;
@@ -22,24 +18,9 @@ section {
 }
 
 .logo-wrapper {
-  > img {
-    width: 80px;
-    height: 60px;
-    object-fit: fill !important;
-    display: block;
-  }
-}
-
-.logo {
-  height: 40px;
-}
-
-.logo path {
-  transition: fill 0.5s ease-in-out;
-}
-
-.logo:hover path {
-  fill: colors.$main-yellow;
+  width: 60px;
+  height: 80px;
+  display: block;
 }
 
 .middle {

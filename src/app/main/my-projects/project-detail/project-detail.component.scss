@@ -61,6 +61,24 @@ section {
   }
 }
 
+.desktop-header-wrapper {
+  padding: 0 40px;
+  
+
+}
+
+.mobile-header-wrapper {
+  padding: 0;
+
+    @media (max-width: 1250px) {
+    padding: 0 72px;
+  }
+
+    @media (max-width: 850px) {
+    padding: 0 16px;
+  }
+}
+
 .main {
   @include mixins.flex-spbtw-ctr-row(flex-start);
   flex-direction: column;

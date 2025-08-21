@@ -1,25 +1,6 @@
 <div class="mobile-header">
   <a routerLink="/">
-    <div
-      class="logo-wrapper"
-      (click)="logoYellow()"
-      (mouseenter)="yellowLogo = true"
-      (mouseleave)="yellowLogo = false"
-    >
-      @if (yellowLogo) {
-      <img
-        class="my-logo"
-        src="images/hero-section/meinlogo_yellow.svg"
-        alt="my logo"
-      />
-      } @else {
-      <img
-        class="my-logo"
-        src="images/hero-section/meinlogo.svg"
-        alt="my logo"
-      />
-      }
-    </div>
+    <app-my-logo></app-my-logo>
   </a>
   <div (click)="openOverlay()">
     <svg
