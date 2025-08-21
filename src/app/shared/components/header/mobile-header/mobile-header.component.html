@@ -1,6 +1,6 @@
 <div class="mobile-header">
   <a routerLink="/">
-    <app-my-logo></app-my-logo>
+    <app-my-logo (logoClicked)="sendClickToNextParent()"></app-my-logo>
   </a>
   <div (click)="openOverlay()">
     <svg

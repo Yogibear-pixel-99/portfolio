@@ -1,12 +1,12 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { RouterLink, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-header-links',
-  imports: [CommonModule, TranslateModule, RouterLink],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header-links.component.html',
   styleUrl: './header-links.component.scss',
 })
@@ -17,6 +17,13 @@ export class HeaderLinksComponent {
   public clickedLinkIndex: number | null = null;
   @Output() public closeMobileMenu = new EventEmitter();
 
+  /**
+   * Starts animation/close/link after clicking on a link.
+   *
+   * @param linkIndex The clicked link index for the animation.
+   * @param section The main site for the router to navigate.
+   * @param fragment The fragment on the main site to navigate.
+   */
   public goToSection(linkIndex: number, section: string, fragment: string) {
     this.showAnimation(linkIndex);
     this.closeMenu();

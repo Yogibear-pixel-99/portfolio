@@ -26,7 +26,16 @@ export class AppComponent implements OnInit, AfterViewInit {
   public ngOnInit() {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.use(this.getLang());
+  }
+
+  /**
+   * Checks if the user already selected a lang or returns the default setting 'en'.
+   *
+   * @returns Language string to use
+   */
+  private getLang() {
+    return localStorage.getItem('usedLang') ?? 'en';
   }
 
   /**
@@ -45,41 +54,41 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   /**
    * Creates an mouse animation behind the cursor if moving.
-   * 
-   * @param event 
+   *
+   * @param event
    */
-@HostListener('document:mousemove', ['$event'])
-onMouseMove(event: MouseEvent) {
-  if (this.animationFrame) return;
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    if (this.animationFrame) return;
 
-  this.animationFrame = requestAnimationFrame(() => {
-    const dot = this.document.createElement('div');
-    const size = Math.random() * 2 + 2;
+    this.animationFrame = requestAnimationFrame(() => {
+      const dot = this.document.createElement('div');
+      const size = Math.random() * 2 + 2;
 
-    dot.style.width = `${size}px`;
-    dot.style.height = `${size}px`;
-    dot.style.position = 'fixed';
-    dot.style.borderRadius = '50%';
-    dot.style.pointerEvents = 'none';
-    dot.style.background =
-      this.colors[Math.floor(Math.random() * this.colors.length)];
-    dot.style.left = `${event.clientX}px`;
-    dot.style.top = `${event.clientY}px`;
-    dot.style.opacity = '0.8';
-    dot.style.transition = 'opacity 1.3s, transform 1.3s';
-    dot.style.zIndex = '9999';
-    dot.style.transform = 'translate(15px, 15px)';
+      dot.style.width = `${size}px`;
+      dot.style.height = `${size}px`;
+      dot.style.position = 'fixed';
+      dot.style.borderRadius = '50%';
+      dot.style.pointerEvents = 'none';
+      dot.style.background =
+        this.colors[Math.floor(Math.random() * this.colors.length)];
+      dot.style.left = `${event.clientX}px`;
+      dot.style.top = `${event.clientY}px`;
+      dot.style.opacity = '0.8';
+      dot.style.transition = 'opacity 1.3s, transform 1.3s';
+      dot.style.zIndex = '9999';
+      dot.style.transform = 'translate(15px, 15px)';
 
-    this.document.body.appendChild(dot);
+      this.document.body.appendChild(dot);
 
-    setTimeout(() => {
-      dot.style.opacity = '0';
-      dot.style.transform = 'scale(0)';
-    }, 50);
+      setTimeout(() => {
+        dot.style.opacity = '0';
+        dot.style.transform = 'scale(0)';
+      }, 50);
 
-    setTimeout(() => dot.remove(), 300);
+      setTimeout(() => dot.remove(), 300);
 
-    this.animationFrame = null;
-  });
-}
+      this.animationFrame = null;
+    });
+  }
 }

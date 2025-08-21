@@ -13,11 +13,12 @@ export class LangSwitchComponent {
   public translate = inject(TranslateService);
 
   /**
-   * Changes the language by changing the string in the ngx/translate module.
+   * Changes the language by changing the string in the ngx/translate module and saves the user choice.
    *
    * @param lang The language string "de"/"en".
    */
   public changeLang(lang: string) {
+    localStorage.setItem('usedLang', lang);
     this.translate.use(lang);
   }
 

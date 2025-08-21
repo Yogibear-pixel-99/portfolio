@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { MobileHeaderMenuComponent } from '../mobile-header-menu/mobile-header-menu.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -14,7 +14,15 @@ export class MobileHeaderComponent {
   public openMenu: boolean = false;
 
   public yellowLogo: boolean = false;
+  @Output() public logoClicked = new EventEmitter();
 
+
+  /**
+   * Sends the click to the parent component.
+   */
+  public sendClickToNextParent(){
+    this.logoClicked.emit();
+  }
   /**
    * Opens the overlay by setting showMenu and openMenu variables to true.
    */

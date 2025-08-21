@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CircleLinkComponent } from '../../shared/components/ui/circle-link/circle-link.component';
 import { SocialLinksService } from '../../shared/services/links/social-links.service';
@@ -21,7 +21,7 @@ import { HeaderComponent } from '../../shared/components/header/header/header.co
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })
-export class HeroSectionComponent {
+export class HeroSectionComponent implements OnInit {
   public translate = inject(TranslateService);
   public socialLinkService = inject(SocialLinksService);
 
@@ -30,6 +30,8 @@ export class HeroSectionComponent {
   public fLetterHovered: boolean = false;
   public frontLetterHovered: number | null = null;
   public devLetterHovered: number | null = null;
+
+  public showAllLetters: boolean = false;
 
   /**
    * Sets the devLetterHovered variable to the letterNr (index) from the @for HTML pattern.
@@ -49,5 +51,45 @@ export class HeroSectionComponent {
    */
   public setFrontLetterHovered(letterNr: number | null) {
     this.frontLetterHovered = letterNr;
+  }
+
+  /**
+   *  Initialize the start animation.
+   */
+  ngOnInit() {
+    console.log('logo click emits through all');
+    let firstIndex: number;
+    let secondIndex: number;
+    let animateInterval: ReturnType<typeof setInterval>;
+    if (this.translate.currentLang === 'en') {
+      secondIndex = 8;
+      firstIndex = -2;
+    } else {
+      secondIndex = 9;
+      firstIndex = -3;
+    }
+    this.fLetterHovered = true;
+    animateInterval = setInterval(() => {
+      if (firstIndex < 8) {
+        this.fLetterHovered = false;
+        this.frontLetterHovered = firstIndex;
+        this.devLetterHovered = secondIndex;
+        firstIndex++;
+        secondIndex--;
+      } else {
+        clearInterval(animateInterval);
+        this.frontLetterHovered = null;
+        this.devLetterHovered = null;
+        this.startAnimation();
+      }
+    }, 350);
+  }
+
+  /**
+   * Shows an animation for all main letters.
+   */
+  startAnimation() {
+    this.showAllLetters = true;
+    setTimeout(() => (this.showAllLetters = false), 500);
   }
 }

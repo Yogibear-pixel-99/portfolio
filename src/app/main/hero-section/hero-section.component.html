@@ -1,6 +1,9 @@
 <div class="background">
   <section id="hero-normal-link" class="max-content-width">
-    <app-header></app-header>
+    <div class="header-wrapper">
+    <app-header
+    (logoClicked)="startAnimation()"></app-header>
+    </div>
     <div class="main-wrapper">
       <div class="roll-out-wrapper">
         <app-roll-out-button
@@ -34,7 +37,10 @@
                   'hover-letter-third',
                   fLetterHovered === true
                     ? 'upper-hover-letter-third-animate'
-                    : ''
+                    : '',
+                  showAllLetters === true
+                  ? 'upper-hover-letter-third-animate'
+                  : ''
                 ]"
                 (mouseenter)="
                   fLetterHovered = true; setFrontLetterHovered(null)
@@ -55,7 +61,10 @@
                   'hover-letter-third',
                   frontLetterHovered === $index
                     ? 'lower-hover-letter-third-animate'
-                    : ''
+                    : '',
+                    showAllLetters === true
+                  ? 'upper-hover-letter-third-animate'
+                  : ''
                 ]"
                 (mouseenter)="setFrontLetterHovered($index)"
                 >{{ letter }}</span
@@ -92,6 +101,9 @@
                 'hover-letter-third',
                 devLetterHovered === $index
                   ? 'upper-hover-letter-third-animate'
+                  : '',
+                  showAllLetters === true
+                  ? 'upper-hover-letter-third-animate'
                   : ''
               ]"
               (mouseenter)="setDevLetterHovered($index)"
@@ -113,9 +125,9 @@
       (mouseleave)="profilHovered = false"
       class="pic-wrapper display-flex-mobile550-width"
     >
-      <img src="images/hero-section/pic-hero.png" alt="profil picture" />
+      <img  src="images/hero-section/pic-hero.png" alt="profil picture" />
       <span
-        >Joachim @if (profilHovered === !true) {
+        >Joachim @if (profilHovered === false) {
         <span>:&#41;</span>
         } @else {
         <span>:D</span>

@@ -2,7 +2,8 @@
   <section class="max-content-width">
     <div class="left">
     
-        <app-my-logo></app-my-logo>
+        <app-my-logo
+        (logoClicked)="sendClickToNextParent()"></app-my-logo>
       
     </div>
     <div class="middle">
@@ -14,5 +15,6 @@
       ></app-lang-switch>
     </div>
   </section>
-  <app-mobile-header></app-mobile-header>
+  <app-mobile-header
+  (logoClicked)="sendClickToNextParent()"></app-mobile-header>
 </div>

@@ -1,8 +1,12 @@
 .section-padding {
   padding: 100px 160px;
 
-  @media (max-width: 1350px) {
-    padding: 80px 30px;
+  @media (max-width: 1500px) {
+    padding: 80px 80px;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 40px 50px;
   }
 
   @media (max-width: 600px) {
