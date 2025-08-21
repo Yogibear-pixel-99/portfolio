@@ -53,29 +53,43 @@ export class ContactMeFormComponent {
    *
    * @param ngForm The contact Form.
    */
+
   public onSubmit(ngForm: NgForm) {
-    this.sentError.emit();
+    this.trimInput();
+    this.checkPrivacy();
+    this.checkErrors();
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+            this.sentSuccess.emit();
+            this.setEmptyContactObj();
+          },
+          error: (error) => {
+            console.error(error)
+            this.sentError.emit();
+          },
+          complete: () => {
+            console.info('send post complete')
+          },
+          
+        });
+    }
   }
-  // public onSubmit(ngForm: NgForm) {
-  //   this.trimInput();
-  //   this.checkPrivacy();
-  //   this.checkErrors();
-  //   if (ngForm.submitted && ngForm.form.valid) {
-  //     this.http
-  //       .post(this.post.endPoint, this.post.body(this.contactData))
-  //       .subscribe({
-  //         next: (response) => {
-  //           ngForm.resetForm();
-  //         },
-  //         error: (error) => {
-  //           console.error(error);
-  //         },
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //   } else if (ngForm.submitted && ngForm.form.valid) {
-  //     ngForm.resetForm();
-  //   }
-  // }
+
+  /**
+   * Sets the data object to default standards.
+   */
+  private setEmptyContactObj(){
+    this.contactData = {
+    name: '',
+    email: '',
+    message: '',
+    privacy: false,
+  };
+  }
 
   /**
    * Trims the input in the contact data object.
@@ -140,10 +154,4 @@ export class ContactMeFormComponent {
       this.privacyError = false;
     }
   }
-
-  displayInfo(){
-    this.showMessage = true;
-  }
-
-
 }

@@ -1,5 +1,5 @@
-<div class="overlay-wrapper">
-  <div class="section-wrapper">
+<div [ngClass]="['overlay-wrapper']">
+  <div [ngClass]="['section-wrapper']">
     <section class="section-padding inner-section-two-col max-content-width">
       <div class="left">
         <div class="sticker-wrapper-small display-hide-over-1250px-width">
@@ -64,6 +64,13 @@
   <div [ngClass]="['sent-wrapper', messageMenuOpen ? 'show-menu' : '', showMessageMenu ? 'open-menu' : '']">
     <app-form-sent-info
     [sentSuccess]="sentMessage"
-    [showHand]="waveMessageHand"> </app-form-sent-info>
+    [showHand]="waveMessageHand"
+    (closeSentMessageMenu)="closeMessageMenu()"> </app-form-sent-info>
   </div>
+  @if (overlayOpen) {
+<div class="overlay-mask"
+(click)="closeMessageMenu()">
+
+</div>
+  }
 </div>

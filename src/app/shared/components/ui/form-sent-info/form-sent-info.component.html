@@ -7,7 +7,7 @@
     "contactMe.sentMessage.mainText.resolve" | translate
   }}</span>
   <div>
-    <button class="light-button">
+    <button (click)="closeSentMessage()" class="light-button">
       {{ "contactMe.sentMessage.buttonText" | translate }}
     </button>
     <div class="roll-out-wrapper">
@@ -20,7 +20,7 @@
   </div>
 </section>
 } @else {
-    <section class="overlay">
+<section class="overlay">
   <span class="section-text-typo error-text">
     {{ "contactMe.sentMessage.headerText.error" | translate }}</span
   >
@@ -28,7 +28,7 @@
     "contactMe.sentMessage.mainText.error" | translate
   }}</span>
   <div>
-    <button class="light-button">
+    <button (click)="closeSentMessage()" class="light-button">
       {{ "contactMe.sentMessage.buttonText" | translate }}
     </button>
     <div class="roll-out-wrapper">

@@ -1,37 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-html, body {
-  overflow-y: scroll;         
-  scrollbar-width: none;       
-  -ms-overflow-style: none;   
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
   &::-webkit-scrollbar {
-    display: none; 
+    display: none;
   }
 }
 
 body {
-    margin: 0;
-cursor: url('../public/images/cursor_portfolio.png'), pointer;
-    
+  margin: 0;
+  cursor: url("../public/images/cursor_portfolio.png"), pointer;
 }
 
 @media (orientation: landscape) and (max-width: 850px) {
-body {
+  body {
     overflow: hidden;
-}
+  }
 }
 
 a {
   text-decoration: none;
 
   &:hover {
-    cursor: url('../public/images/cursor_portfolio_hover.png'), pointer;
+    cursor: url("../public/images/cursor_portfolio_hover.png"), pointer;
   }
+}
+
+.no-scroll {
+  overflow: hidden !important;
 }

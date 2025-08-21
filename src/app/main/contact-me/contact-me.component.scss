@@ -10,7 +10,13 @@
   background-size: cover;
   color: colors.$main-white;
   position: relative;
-  filter: opacity(0.3);
+}
+
+.overlay-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgba(248, 122, 85,0.2);
 }
 
 .overlay-wrapper {
@@ -95,7 +101,7 @@
   @include mixins.absolute-ctr();
   transform: translate(-50%, 100dvh);
   transition: transform ease-in-out 0.3s;
-  z-index: 100;
+  z-index: 950;
 }
 
 .open-menu {

@@ -27,37 +27,42 @@ section {
   }
 }
 
-.open-menu {
-  transform: translateY(0);
-}
-
 .error-text {
-    color: red;
+  color: red;
 }
 
 .roll-out-wrapper {
-    width: 150px;
-    display: flex;
+  width: 150px;
+  display: flex;
 
-    > img {
-        margin: 0 0 0 auto;
-        transform: translateX(-100px);
-    }
+  > img {
+    margin: 0 0 0 auto;
+    transform: translateX(-100px);
+    opacity: (0);
+  }
 }
 
 .animate-hand {
-    animation: wave-hand ease-in-out 600ms forwards;
+  animation: wave-hand ease-in-out 1200ms forwards;
 }
 
 @keyframes wave-hand {
-0% {
+  0% {
     transform: translateX(-100px) rotate(0);
     opacity: (0);
-}
-100% {
+  }
+  70% {
+    transform: translateX(2px) rotate(365deg);
+    opacity: (1);
+  }
+  85% {
+    transform: translateX(-2px) rotate(355deg);
+    opacity: (1);
+  }
+  100% {
     transform: translateX(0) rotate(360deg);
     opacity: (1);
-}
+  }
 }
 
 button {
