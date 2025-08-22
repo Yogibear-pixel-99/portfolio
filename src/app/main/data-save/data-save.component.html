@@ -1,0 +1,108 @@
+<section>
+  <div class="header-wrapper max-content-width">
+  <app-header></app-header>
+  </div>
+  <div class="section-padding max-content-width">
+    <h3 class="section-header-typo">{{ "dataSave.header" | translate }}</h3>
+
+    <br />
+    <div class="wrapper">
+      <p class="h3-header-typo-imprint">
+        <strong>{{ "dataSave.privacy.header" | translate }}</strong>
+      </p>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "dataSave.privacy.textOne" | translate }}
+    </p>
+    <p>
+      {{ "dataSave.privacy.textTwo" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "dataSave.contactUs.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p></p>
+    <p>
+      {{ "dataSave.contactUs.textOne" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "dataSave.cookies.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "dataSave.cookies.textOne" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "dataSave.serverLog.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "dataSave.serverLog.textOne" | translate }}
+    </p>
+    <ul>
+      @for (element of 'dataSave.serverLog.list' | translate; track $index) {
+      <li>{{ element }}</li>
+      }
+    </ul>
+    <p>
+      {{ "dataSave.serverLog.textTwo" | translate }}
+    </p>
+    <p>
+      {{ "dataSave.serverLog.textThree" | translate }}
+    </p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "dataSave.rights.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      {{ "dataSave.rights.textOne" | translate }}
+    </p>
+    <ul>
+      @for (element of 'dataSave.rights.list' | translate; track $index) {
+      <li>{{ element }}</li>
+      }
+    </ul>
+    <p></p>
+    <div class="wrapper">
+      <h5 class="h3-header-typo-imprint">
+        {{ "dataSave.reach.header" | translate }}
+      </h5>
+      <img src="images/imprint/imprint_header_line.svg" alt="underline" />
+    </div>
+    <p>
+      <b>{{ "dataSave.reach.operator" | translate }}</b>
+      <a href="#"> Joachim Pürcher</a><br />
+    </p>
+    <p>
+      <b>{{ "dataSave.reach.phoneText" | translate }}</b
+      ><a href="tel:+436767704199"> +43 676 770 41 99</a><br />
+    </p>
+    <p>
+      <b>Email:</b
+      ><a href="mailto:contact@PuercherJoachim.com">
+        contact&#64;PuercherJoachim.com</a
+      >
+    </p>
+
+    <p>
+      {{ "dataSave.reach.source" | translate }}
+      <b
+        ><a
+          href="https://www.fairesrecht.at/kostenlos-datenschutzerklaerung-erstellen-generator.php"
+          >Datenschutzgenerator Österreich DSGVO</a
+        ></b
+      >
+    </p>
+  </div>
+  <app-footer 
+  [showTop]="false"></app-footer>
+</section>

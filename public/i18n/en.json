@@ -131,7 +131,7 @@
     "legal": "Legal Notice",
     "imprint": "Imprint"
   },
-  "imprint": {
+  "dataSave": {
     "header": "Information Obligation Statement",
     "privacy": {
       "header": "Privacy Policy",
@@ -180,5 +180,19 @@
       "phoneText": "Phone number:",
       "source": "Source"
     }
-  }
+  },
+    "imprint": {
+      "header": "Legal Notice",
+      "info": "Information about the service provider",
+      "phoneText" : "Phone: ",
+      "liabilityHeader": "Liability for Content on This Website",
+      "liabilityText": "We strive to keep the content on this website up to date and accurate. However, we cannot guarantee the completeness, correctness, or timeliness of all information, especially that provided by third parties. As a service provider, we are not obligated to monitor transmitted or stored information or investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information in accordance with general laws remain unaffected, even if we are not responsible for the content. If you notice any problematic or unlawful content, please inform us promptly. Our contact details can be found in this legal notice.",
+      "linksHeader": "Liability for External Links",
+      "linksText": "This website contains links to external websites. We are not responsible for the content of those websites. Liability cannot be assumed, as we had no knowledge of any illegal activities at the time of linking and such activities have not come to our attention. If we become aware of any unlawful links, we will remove them immediately. Should you discover any such links, please notify us. You will find our contact details in the legal notice.",
+      "copyrightHeader": "Copyright Notice",
+      "copyrightText": "All content on this website (texts, images, videos, etc.) is protected by copyright. Please contact us before using, copying, or distributing any content – for example, by republishing it on other websites. We reserve the right to take legal action against unauthorized use of any part of our content. If you find any material that infringes copyright, please let us know.",
+      "onlineLinksHeader": "Additional Online Profiles",
+      "onlineLinksSubText": "This legal notice also applies to",
+      "onlineLinksText": "All content is protected by copyright"
+    }
 }

@@ -44,7 +44,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   public ngAfterViewInit() {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
     });
   }
   title = 'portfolio';

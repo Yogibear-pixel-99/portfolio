@@ -130,7 +130,7 @@
     "legal": "Impressum",
     "imprint": "Impressum"
   },
-  "imprint": {
+  "dataSave": {
     "header": "Erklärung zur Informationspflicht",
     "privacy": {
       "header": "Datenschutzerklärung",
@@ -179,5 +179,19 @@
       "phoneText": "Telefonnummer:",
       "source": "Quelle"
     }
+  },
+  "imprint": {
+    "header": "Impressum",
+    "info": "Angaben zum Diensteanbieter",
+      "phoneText" : "Tel.: ",
+    "liabilityHeader": "Haftung für den Inhalte dieser Seite",
+    "liabilityText": "Wir sind stets bemüht, die Inhalte dieser Website aktuell und korrekt zu halten. Dennoch können wir keine Gewähr für die Vollständigkeit, Richtigkeit und Aktualität sämtlicher Inhalte übernehmen, insbesondere nicht für solche, die von Dritten stammen. Als Anbieter von Diensten sind wir nicht verpflichtet, übermittelte oder gespeicherte Informationen zu überwachen oder nach Hinweisen auf rechtswidrige Aktivitäten zu suchen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen gemäß den allgemeinen Gesetzen bleiben hiervon unberührt – auch wenn wir nicht für den Inhalt verantwortlich sind. Wenn Ihnen problematische oder rechtswidrige Inhalte auffallen, bitten wir Sie, uns rasch zu informieren. Die entsprechenden Kontaktdaten finden Sie im Impressum.",
+    "linksHeader": "Externe Links auf dieser Seite",
+    "linksText": "Unsere Website enthält Verweise auf externe Internetseiten. Für deren Inhalte übernehmen wir keine Verantwortung. Eine Haftung kommt nicht in Betracht, da uns keine Hinweise auf rechtswidrige Inhalte vorlagen und auch keine solchen bekannt geworden sind. Sollte sich dies ändern, entfernen wir die entsprechenden Verlinkungen umgehend. Wenn Sie auf rechtswidrige Links stoßen, benachrichtigen Sie uns bitte. Die Kontaktdaten finden Sie im Impressum.",
+    "copyrightHeader": "Hinweis zum Urheberrecht",
+    "copyrightText": "Sämtliche Inhalte dieser Website (Texte, Bilder, Videos etc.) unterliegen dem Urheberrecht. Bitte kontaktieren Sie uns, bevor Sie Inhalte weiterverbreiten, kopieren oder anderweitig nutzen – beispielsweise durch Veröffentlichung auf anderen Seiten. Bei unberechtigter Nutzung behalten wir uns rechtliche Schritte vor. Falls Sie Inhalte entdecken, die Urheberrechte verletzen, bitten wir um eine kurze Mitteilung.",
+    "onlineLinksHeader": "Zusätzliche Onlinepräsenzen",
+    "onlineLinksSubText": "Dieses Impressum gilt ebenfalls für",
+    "onlineLinksText": "Alle Inhalte sind urheberrechtlich geschützt"
   }
 }
