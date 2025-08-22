@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CircleLinkComponent } from '../../shared/components/ui/circle-link/circle-link.component';
 import { SocialLinksService } from '../../shared/services/links/social-links.service';
@@ -21,7 +21,7 @@ import { HeaderComponent } from '../../shared/components/header/header/header.co
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })
-export class HeroSectionComponent implements OnInit {
+export class HeroSectionComponent implements AfterViewInit {
   public translate = inject(TranslateService);
   public socialLinkService = inject(SocialLinksService);
   public profilHovered: boolean = false;
@@ -51,9 +51,31 @@ export class HeroSectionComponent implements OnInit {
   }
 
   /**
-   *  Initialize the start animation.
+   *  Initialize the start animation onload or on redirect from a diffrent site.
    */
-  ngOnInit() {
+  ngAfterViewInit() {
+    const animation = sessionStorage.getItem('firstAnimation');
+    if (animation) {
+      this.callAnimation();
+    }
+    window.addEventListener('load', () => {
+      if (!animation) this.callAnimation();
+      sessionStorage.setItem('firstAnimation', 'true');
+    });
+  }
+
+  /**
+   * Shows an animation for all main letters.
+   */
+  startAnimation() {
+    this.showAllLetters = true;
+    setTimeout(() => (this.showAllLetters = false), 500);
+  }
+
+  /**
+   * Shows the start animation by iterate through the letters.
+   */
+  callAnimation() {
     let firstIndex: number;
     let secondIndex: number;
     let animateInterval: ReturnType<typeof setInterval>;
@@ -84,13 +106,5 @@ export class HeroSectionComponent implements OnInit {
         this.startAnimation();
       }
     }, 350);
-  }
-
-  /**
-   * Shows an animation for all main letters.
-   */
-  startAnimation() {
-    this.showAllLetters = true;
-    setTimeout(() => (this.showAllLetters = false), 500);
   }
 }

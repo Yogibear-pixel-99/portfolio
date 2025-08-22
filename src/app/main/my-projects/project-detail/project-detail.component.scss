@@ -10,6 +10,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
   position: absolute;
   top: 0;
+  pointer-events: none;
 }
 
 .background {
@@ -63,18 +64,16 @@ section {
 
 .desktop-header-wrapper {
   padding: 0 40px;
-  
-
 }
 
 .mobile-header-wrapper {
   padding: 0;
 
-    @media (max-width: 1250px) {
+  @media (max-width: 1250px) {
     padding: 0 72px;
   }
 
-    @media (max-width: 850px) {
+  @media (max-width: 850px) {
     padding: 0 16px;
   }
 }
@@ -92,11 +91,11 @@ section {
   margin: 0 auto 0 0;
   color: colors.$main-black;
 
-      &:hover {
-      color: colors.$main-red !important;
-      cursor: url("../../../../../public/images/cursor_portfolio_hover_blue.png"),
-        pointer;
-    }
+  &:hover {
+    color: colors.$main-red !important;
+    cursor: url("../../../../../public/images/cursor_portfolio_hover_blue.png"),
+      pointer;
+  }
 
   @media (max-width: 1250px) {
     margin: 0;
