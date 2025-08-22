@@ -111,7 +111,7 @@ form {
   }
 
   > input[type="checkbox"]:checked::after {
-    content: url("../../../../../public/images/contact-me/check.png");
+    content: url("../../../../../public/images/contact-me/check.webp");
     position: absolute;
     top: 6px;
     min-width: 18px;
@@ -180,6 +180,6 @@ form {
 
 .inactive-button {
   &:hover {
-    cursor: url("../../../../../public/images/contact-me/stop.png"), pointer;
+    cursor: url("../../../../../public/images/contact-me/stop.webp"), pointer;
   }
 }

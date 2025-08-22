@@ -7,7 +7,7 @@ section {
   position: fixed;
   inset: 0;
   background-color: colors.$main-white;
-  background-image: url("../../../../../public/images/hero-section/hero-bg.png");
+  background-image: url("../../../../../public/images/hero-section/hero-bg.webp");
   background-size: cover;
   background-position: bottom;
   color: colors.$main-red;
@@ -33,7 +33,7 @@ section {
     left: 20px;
     top: 20px;
     width: 80px;
-    transform: rotate(7deg);
+    height: auto;
   }
 }
 

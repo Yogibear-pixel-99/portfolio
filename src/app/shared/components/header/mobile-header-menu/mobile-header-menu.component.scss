@@ -8,7 +8,7 @@
   top: 0;
   right: 0;
   height: 85dvh;
-  background-image: url("../../../../../../public/images/hero-section/hero-bg.png");
+  background-image: url("../../../../../../public/images/hero-section/hero-bg.webp");
   background-position: bottom;
   background-size: cover;
   z-index: 800;
@@ -36,12 +36,10 @@
 
 .top {
   @include mixins.flex-spbtw-ctr-row();
-  padding: 16px;
+  padding: 16px 26px 16px 16px;
   width: 100%;
 
   > div {
-    width: 32px;
-    height: 32px;
     @include mixins.flex-spbtw-ctr-row(center);
     position: relative;
   }
@@ -71,11 +69,11 @@ app-header-links {
   @include mixins.absolute-ctr();
 }
 
-.logo-wrapper {
-  > img {
-    width: 50px;
-    height: 46px;
-    object-fit: fill !important;
-    display: block;
-  }
-}
+// .logo-wrapper {
+//   > svg {
+//     width: 50px;
+//     height: auto;
+//     object-fit: fill !important;
+//     display: block;
+//   }
+// }

@@ -92,14 +92,14 @@ section {
 .wrapper:nth-child(1) {
   z-index: 15;
   align-self: flex-start;
-  transform: translate(0, 80px);
+  transform: translate(0, 80px) rotate(-4deg);
 
   @media (max-width: 1250px) {
     transform: translate(0, 45%);
   }
 
   > .inner-wrapper {
-    transform: rotate(-4deg) translate(-50%, -110%);
+    transform: rotate(-1deg) translate(-50%, -110%);
   }
 }
 .wrapper:nth-child(2) {
@@ -108,12 +108,12 @@ section {
 }
 
 .wrapper:nth-child(3) {
-  transform: translateY(-25%);
+  transform: rotate(4deg) translateY(-25%);
   z-index: 5;
   align-self: flex-end;
 
   > .inner-wrapper {
-    transform: rotate(8deg) translate(-50%, -35%);
+    transform: rotate(4deg) translate(-50%, -35%);
   }
 }
 

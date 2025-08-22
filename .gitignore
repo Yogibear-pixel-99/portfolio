@@ -42,4 +42,6 @@ testem.log
 Thumbs.db
 
 design_material
-sendMail
+sendMail.php
+
+public/images/originals

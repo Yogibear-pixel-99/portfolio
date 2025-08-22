@@ -54,7 +54,6 @@ export class HeroSectionComponent implements OnInit {
    *  Initialize the start animation.
    */
   ngOnInit() {
-    console.log('logo click emits through all');
     let firstIndex: number;
     let secondIndex: number;
     let animateInterval: ReturnType<typeof setInterval>;

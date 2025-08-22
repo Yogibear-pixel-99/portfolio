@@ -4,6 +4,7 @@ import { LangSwitchComponent } from '../../ui/lang-switch/lang-switch.component'
 import { HeaderLinksComponent } from '../header-links/header-links.component';
 import { SocialLinksService } from '../../../services/links/social-links.service';
 import { CircleLinkComponent } from '../../ui/circle-link/circle-link.component';
+import { MyLogoComponent } from "../../ui/my-logo/my-logo.component";
 @Component({
   selector: 'app-mobile-header-menu',
   imports: [
@@ -11,7 +12,8 @@ import { CircleLinkComponent } from '../../ui/circle-link/circle-link.component'
     LangSwitchComponent,
     HeaderLinksComponent,
     CircleLinkComponent,
-  ],
+    MyLogoComponent
+],
   templateUrl: './mobile-header-menu.component.html',
   styleUrl: './mobile-header-menu.component.scss',
 })
