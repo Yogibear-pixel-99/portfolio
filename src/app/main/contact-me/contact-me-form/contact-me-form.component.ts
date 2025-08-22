@@ -4,7 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { UserContactInfo } from '../../../shared/interfaces/model';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me-form',
@@ -15,6 +15,7 @@ import { RouterLink } from '@angular/router';
 export class ContactMeFormComponent {
   public translate = inject(TranslateService);
   public http = inject(HttpClient);
+  public router = inject(Router);
   public showMessage: boolean = true;
 
   @Output() public sentError = new EventEmitter();
@@ -67,10 +68,12 @@ export class ContactMeFormComponent {
             ngForm.resetForm();
             this.sentSuccess.emit();
             this.setEmptyContactObj();
+            this.scrollToForm();
           },
           error: (error) => {
             console.error(error);
             this.sentError.emit();
+            this.scrollToForm();
           },
           complete: () => {
             console.info('send post complete');
@@ -89,6 +92,14 @@ export class ContactMeFormComponent {
       message: '',
       privacy: false,
     };
+  }
+
+  /**
+   * Scrolls to the form after sent button is clicked.
+   */
+  public scrollToForm() {
+    let element = document.getElementById('contact-form');
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   /**

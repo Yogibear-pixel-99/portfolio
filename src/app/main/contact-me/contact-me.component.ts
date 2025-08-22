@@ -49,7 +49,7 @@ export class ContactMeComponent {
    */
   private openMessageMenu() {
     this.overlayOpen = true;
-    document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
     this.messageMenuOpen = true;
     setTimeout(() => (this.showMessageMenu = true), 100);
     setTimeout(() => (this.waveMessageHand = true), 350);
@@ -61,8 +61,10 @@ export class ContactMeComponent {
   public closeMessageMenu() {
     this.waveMessageHand = false;
     this.showMessageMenu = false;
-    setTimeout(() => (this.messageMenuOpen = false), 350);
-    setTimeout(() => (this.overlayOpen = false), 350);
-    setTimeout(() => document.body.classList.remove('no-scroll'), 350);
+    setTimeout(() => {
+      this.messageMenuOpen = false;
+      this.overlayOpen = false;
+      document.documentElement.classList.remove('no-scroll');
+    }, 350);
   }
 }

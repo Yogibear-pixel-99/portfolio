@@ -65,10 +65,15 @@ export class HeroSectionComponent implements OnInit {
       secondIndex = 9;
       firstIndex = -3;
     }
-    this.fLetterHovered = true;
+
     animateInterval = setInterval(() => {
-      if (firstIndex < 8) {
+      if (firstIndex === -1) {
+        this.fLetterHovered = true;
+      } else {
         this.fLetterHovered = false;
+      }
+
+      if (firstIndex < 8) {
         this.frontLetterHovered = firstIndex;
         this.devLetterHovered = secondIndex;
         firstIndex++;

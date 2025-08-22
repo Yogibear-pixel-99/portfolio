@@ -1,5 +1,5 @@
-
 <form
+  id="contact-form"
   (ngSubmit)="onSubmit(contactMeForm)"
   #contactMeForm="ngForm"
   autocomplete="off"
@@ -99,11 +99,14 @@
     />
     <button
       type="submit"
-      [ngClass]="['send-button', checkButton(contactMeForm) === true ? 'active-button' : 'inactive-button']"
+      [ngClass]="[
+        'send-button',
+        checkButton(contactMeForm) === true
+          ? 'active-button'
+          : 'inactive-button'
+      ]"
     >
       {{ "contactMe.sendButton" | translate }}
     </button>
   </div>
 </form>
-
-
