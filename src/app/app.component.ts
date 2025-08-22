@@ -3,7 +3,7 @@ import {
   Component,
   OnInit,
   HostListener,
-  inject,
+  inject
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaskOverlayComponent } from './shared/components/mask-overlay/mask-overlay.component';
@@ -45,6 +45,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     AOS.init({
       duration: 1000,
       once: false,
+      // disable: true,
     });
   }
   title = 'portfolio';

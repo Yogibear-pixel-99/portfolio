@@ -6,7 +6,7 @@ section {
   padding: 0 5px 0 0;
   color: white;
   height: 80px;
-  @include mixins.flex-spbtw-ctr-row(); 
+  @include mixins.flex-spbtw-ctr-row();
 
   @media (max-width: 850px) {
     display: none;

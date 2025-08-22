@@ -6,7 +6,6 @@ import { MyProjectsComponent } from '../my-projects/my-projects.component';
 import { ColleaguesThoughtsComponent } from '../colleagues-thoughts/colleagues-thoughts.component';
 import { ContactMeComponent } from '../contact-me/contact-me.component';
 import { ActivatedRoute } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-main',
@@ -16,8 +15,8 @@ import { ViewportScroller } from '@angular/common';
     SkillSetComponent,
     MyProjectsComponent,
     ColleaguesThoughtsComponent,
-    ContactMeComponent,
-  ],
+    ContactMeComponent
+],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })

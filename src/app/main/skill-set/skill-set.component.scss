@@ -163,6 +163,8 @@ section {
   }
 
   > .outer:nth-child(1) {
+    cursor: url("../../../../public/images/cursor_portfolio.png"), pointer;
+
     @media (max-width: 1250px) {
       display: none;
     }
@@ -201,18 +203,17 @@ section {
 }
 
 .outer {
-
   width: 200px;
   height: 200px;
   transform: rotate(8deg);
-  
+
   > img {
     width: 200px;
     height: 200px;
   }
 
   &:hover {
-    cursor: url('../../../../public/images/cursor_portfolio_hover.png'), pointer;
+    cursor: url("../../../../public/images/cursor_portfolio_hover.png"), pointer;
     filter: brightness(1.1);
   }
 

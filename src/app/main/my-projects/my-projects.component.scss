@@ -12,6 +12,11 @@
   }
 }
 
+.max-content {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .section-padding {
   @media (max-width: 1250px) {
     padding-bottom: 0;
