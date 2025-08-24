@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, AfterViewInit {
    */
   public ngOnInit() {
     this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('de');
     this.translate.use(this.getLang());
   }
 
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit, AfterViewInit {
    * @returns Language string to use
    */
   private getLang() {
-    return localStorage.getItem('usedLang') ?? 'en';
+    return localStorage.getItem('usedLang') ?? 'de';
   }
 
   /**

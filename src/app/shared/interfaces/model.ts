@@ -28,3 +28,8 @@ export interface UserContactInfo {
   message: string;
   privacy: boolean;
 }
+
+export interface StickerLinks {
+  dominic: string;
+  eduard: string;
+}
