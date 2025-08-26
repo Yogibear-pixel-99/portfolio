@@ -21,7 +21,7 @@
     "remote": "Offen für Homeoffice",
     "who": "WER IST JOACHIM",
     "header": "Über mich",
-    "text": "Ich bin kein Programmierer – nein, ich bin ein Frontend-Webentwickler. Ein neues Stück digitaler Kunst zu erschaffen bedeutet nicht einfach nur, in einer Computersprache zu schreiben und den neuesten Technologie-Stack zu verwenden. Es geht um Analyse, Problemlösung, Strukturierung, Architektur und vieles mehr. Es geht darum, Dinge so umzusetzen, wie meine Kunden es sich wünschen. Darin besteht die meiste Arbeit. Ich sammle die Ideen aus einer Vision und erwecke diese zum Leben. Es ist meine Leidenschaft, Webanwendungen zu erschaffen, die klar, funktional, intuitiv zu bedienen und auch nach vielen Jahren noch wartbar sind.",
+    "text": "Ich bin nicht nur Programmierer – nein, ich bin ein Frontend-Webentwickler. Ein neues Stück digitaler Kunst zu erschaffen bedeutet nicht einfach nur, in einer Computersprache zu schreiben und den neuesten Technologie-Stack zu verwenden. Es geht um Analyse, Problemlösung, Strukturierung, Architektur und vieles mehr. Es geht darum, Dinge so umzusetzen, wie meine Kunden es sich wünschen. Darin besteht die meiste Arbeit. Ich sammle die Ideen aus einer Vision und erwecke diese zum Leben. Es ist meine Leidenschaft, Webanwendungen zu erschaffen, die klar, funktional, intuitiv zu bedienen und auch nach vielen Jahren noch wartbar sind.",
     "collaborate": "Herzlich willkommen auf meiner Seite. Lassen Sie uns gemeinsam etwas Großartiges schaffen!",
     "button": "Kontakt aufnehmen"
   },
@@ -84,7 +84,7 @@
     "profile": "Profil"
   },
   "contactMe": {
-    "headerWords": "CONTACT ME",
+    "headerWords": "KONTAKTIERE MICH",
     "header": "Bereit, gemeinsam loszulegen?",
     "mainTextFirst": "Ich freue mich darauf, dich kennenzulernen und gemeinsam mit dir eine perfekte Lösung für dein Problem zu finden. Über dieses Formular kannst du mir eine Nachricht zukommen lassen. Bitte trage deinen Namen, deine E-Mail-Adresse und kurz dein Anliegen ein. Abschicken – und fertig!",
     "mainTextSecond": "Moderne Zeiten brauchen moderne Lösungen und zeitloses Design. Lass uns loslegen!",

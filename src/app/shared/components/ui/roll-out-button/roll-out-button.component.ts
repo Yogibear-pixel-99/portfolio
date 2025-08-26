@@ -43,5 +43,6 @@ export class RollOutButtonComponent {
    */
  public visitExternLink(link: string) {
     setTimeout(() => open(link), 1000);
+    setTimeout(() => this.helloEnterAnimate = false, 1000);
   }
 }
