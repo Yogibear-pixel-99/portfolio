@@ -24,14 +24,14 @@ export class ProjectDetailsService {
       sticker: 'images/projects/project-details/Sticker.png',
       usedTechs: ['html', 'css', 'javascript', 'firebase'],
       gitButtonLink: 'https://github.com/Yogibear-pixel-99/join',
-      liveTestLink: 'https://www.puercherjoachim.com/join/html',
+      liveTestLink: 'https://www.puercherjoachim.com/join/html/index.html',
     },
     elpolloloco: {
       img: 'images/projects/project-details/elpolloloco/loco-screen-0.png',
       sticker: 'images/projects/project-details/Sticker.png',
       usedTechs: ['html', 'css', 'javascript'],
       gitButtonLink: 'https://github.com/Yogibear-pixel-99/el_pollo_loco',
-      liveTestLink: 'https://www.puercherjoachim.com/elpolloloco',
+      liveTestLink: 'https://www.puercherjoachim.com/elpolloloco/index.html',
     },
   };
 
