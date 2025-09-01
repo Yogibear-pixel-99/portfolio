@@ -217,6 +217,10 @@ section {
   @media (max-width: 850px) {
     display: none;
   }
+
+  @media (max-height: 700px) {
+    transform: translateY(-70px);
+  }
 }
 
 app-main-button {

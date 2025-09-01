@@ -19,9 +19,9 @@ section {
   @media (max-width: 950px) and (orientation: landscape) and (max-height: 550px) {
     display: flex;
   }
-  @media (max-height: 680px) and (orientation: landscape) {
-    display: flex;
-  }
+  // @media (max-height: 680px) and (orientation: landscape) {
+  //   display: flex;
+  // }
 
   > .rotate-logo {
     width: 60px;
