@@ -18,12 +18,12 @@ export class SkillSetComponent {
   public stickerLogoEn: string[] = [
     'images/skills/sticker_close.png',
     'images/skills/sticker_middle.png',
-    'images/skills/sticker_open.png',
+    'images/skills/sticker-open-new-en.png',
   ];
   public stickerLogoDe: string[] = [
     'images/skills/peel_de_one.png',
     'images/skills/sticker_middle.png',
-     'images/skills/peel_de_third.png',
+  'images/skills/sticker-open-new-en.png',
   ];
   public get getStickerPath() {
     let lang = this.translate.currentLang;

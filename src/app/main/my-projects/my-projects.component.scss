@@ -83,9 +83,15 @@ h2 {
   }
 }
 
+.project-wrapper:last-child {
+  margin: 0;
+}
+
 .project-wrapper {
   position: relative;
   z-index: 1;
+  margin: 0 0 40px 0;
+  
 
   > img {
     position: absolute;

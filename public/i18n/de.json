@@ -22,7 +22,7 @@
     "who": "WER IST JOACHIM",
     "header": "Über mich",
     "text": "Ich bin Frontend-Webentwickler und habe eine echte Leidenschaft für das Erstellen von Webanwendungen. Für mich geht es nicht nur darum, Code zu schreiben oder die neuesten Technologien zu nutzen – es geht darum, Lösungen zu finden, die gut durchdacht und benutzerfreundlich sind. Es ist mir wichtig, Anwendung zu erstellen, die dem Benutzer einen echte Mehrwert bieten und auch nach Jahren noch wartbar sind. Dabei halte ich mich an die aktuellen 'best practices' und sauberen Code.",
-    "collaborate": "Ich freue mich auf darauf, gemeinsam etwas Großartiges zu schaffen!",
+    "collaborate": "Ich freue mich darauf, gemeinsam etwas Großartiges zu schaffen!",
     "button": "Kontakt aufnehmen"
   },
   "skills": {
@@ -55,11 +55,21 @@
         "implementText": "Erstellung des Grundgerüsts. Schrittweise Implementierung der einzelnen Grafiken. Erstellen des Objekts oder eines vererbten Objekts (Grundgerüst) → Grafik einfügen → Animationen erstellen → Logik einbauen → Soundeffekte einfügen → Testen. Implementierung des Punkteboards (dynamisch), um jederzeit die Punktevergabe ändern zu können (REST-API). Implementierung eines Soundobjekts mit Lautstärkeregelung. Erstellung der beiden anderen Spielmodi.",
         "durHeader": "Dauer",
         "durTime": "6 Wochen"
-      }
+      },
+      "schoolInfos": {
+  "header": "Schoolinfos",
+  "descHeader": "Beschreibung",
+  "descText": "Eine Informationsseite für die Eltern unserer Schulkinder. Alle Informationen, Termine, Ferien und Tage der offenen Tür der Mittelschulen auf einer Seite. Sie wurde entwickelt, um ein kleines Problem zu lösen, das einige Eltern beschäftigte.",
+  "implementHeader": "Implementierungsdetails",
+  "implementText": "Abschnitt für Abschnitt mit grundlegenden React-Komponenten erstellt, ohne weitere Bibliotheken oder Imports. Einfach und sauber.",
+  "durHeader": "Dauer",
+  "durTime": "Eine Woche"
+}
+
     }
   },
   "thoughts": {
-    "words": "GEDANKENGUT:",
+    "words": "GEDANKEN",
     "header": "Meinungen von Kolleg:innen",
     "colleagues": {
       "first": {
@@ -110,6 +120,7 @@
         "firstPart": "Ich habe die",
         "privacyPart": " Datenschutzerklärung ",
         "lastPart": "gelesen und akzeptiere die Verarbeitung meiner Daten wie beschrieben.",
+"placeholder": "Bitte die Datenschutzerklärung akzeptieren",
         "error": "Bitte die Datenschutzerklärung akzeptieren"
       }
     },

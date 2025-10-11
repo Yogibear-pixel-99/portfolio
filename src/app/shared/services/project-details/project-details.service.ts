@@ -17,7 +17,7 @@ export class ProjectDetailsService {
   ];
 
   public projectPos: number = 0;
-  public projectArr: string[] = ['join', 'elpolloloco'];
+  public projectArr: string[] = ['join', 'elpolloloco', 'schoolInfos'];
   public projectInfos: ProjectInfos = {
     join: {
       img: 'images/projects/project-details/join/join-screen-0.png',
@@ -32,6 +32,13 @@ export class ProjectDetailsService {
       usedTechs: ['html', 'css', 'javascript'],
       gitButtonLink: 'https://github.com/Yogibear-pixel-99/el_pollo_loco',
       liveTestLink: 'https://www.puercherjoachim.com/elpolloloco/index.html',
+    },
+    schoolInfos: {
+      img: 'images/projects/project-details/schoolinfos/school-infos-details.webp',
+      sticker: 'images/projects/project-details/Sticker.png',
+      usedTechs: ['html', 'scss', 'typescript', 'react', 'vite'],
+      gitButtonLink: 'https://github.com/Yogibear-pixel-99/school_open_house',
+      liveTestLink: 'https://www.puercherjoachim.com/schoolinfos/',
     },
   };
 

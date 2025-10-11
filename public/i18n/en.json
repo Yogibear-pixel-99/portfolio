@@ -45,7 +45,7 @@
         "implementHeader": "Implementation Details",
         "implementText": "Creating the individual Kanban tasks for the team. Assigning them to the respective team members. Designing all sections based on the design template (Figma). Creating the database structure in Firebase. Implementing data processing from the API. Integrating the data into the individual sections. Testing. Consistent, responsive design according to the design template (Figma).",
         "durHeader": "Duration",
-        "durTime": "6 Weeks"
+        "durTime": "Six Weeks"
       },
       "elpolloloco": {
         "header": "El Pollo Loco",
@@ -54,7 +54,16 @@
         "implementHeader": "Implementation Details",
         "implementText": "Creation of the basic framework. Step-by-step implementation of the individual graphics. Creating the object or an inherited object (basic framework) → insert graphic → create animations → integrate logic → add sound effects → testing. Implementation of the dynamic scoreboard to be able to change the scoring at any time (REST-API). Implementation of a sound object with volume control. Creation of the two other game modes.",
         "durHeader": "Duration",
-        "durTime": "5 Weeks"
+        "durTime": "Five Weeks"
+      },
+      "schoolInfos" :{
+        "header" : "School Infos",
+        "descHeader" : "Description",
+        "descText" : "An information page for the parents of our school kids. All informations, appointments, holidays and open house from the middleschools on one page. It was built to solve a small issue some parents had.",
+        "implementHeader": "Implementation Details",
+        "implementText": "Created section by section with React components basic and vite, no other libraries or imports. Just clean",
+        "durHeader" : "Duration",
+        "durTime": "One Week"
       }
     }
   },
