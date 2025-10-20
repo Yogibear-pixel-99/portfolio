@@ -14,7 +14,7 @@ export class TechlogoService {
     {name : "TypeScript", imgPath : "images/skills/techlogos/typescript.png", imgAltText: "TS Logo"},
     {name : "Angular", imgPath : "images/skills/techlogos/angular.png", imgAltText: "Angular Logo"},
     {name : "React", imgPath : "images/skills/techlogos/react.svg", imgAltText: "React Logo"},
-    {name : "Vite", imgPath : "images/skills/techlogos/vite.svg", imgAltText: "Vite Logo"},
+    // {name : "Vite", imgPath : "images/skills/techlogos/vite.svg", imgAltText: "Vite Logo"},
     {name : "NextJs", imgPath : "images/skills/techlogos/nextjs.svg", imgAltText: "NextJs Logo"},
     {name : "Firebase", imgPath : "images/skills/techlogos/firebase.png", imgAltText: "Firebase Logo"},
     {name : "Git", imgPath : "images/skills/techlogos/git.png", imgAltText: "Git Logo"},

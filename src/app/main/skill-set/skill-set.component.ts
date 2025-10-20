@@ -23,7 +23,7 @@ export class SkillSetComponent {
   public stickerLogoDe: string[] = [
     'images/skills/peel_de_one.png',
     'images/skills/sticker_middle.png',
-  'images/skills/sticker-open-new-en.png',
+  'images/skills/sticker-open-new-de.png',
   ];
   public get getStickerPath() {
     let lang = this.translate.currentLang;
