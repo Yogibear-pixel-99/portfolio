@@ -59,12 +59,13 @@
 "simplify": {
   "header": "Simplify this life",
   "descHeader": "Description",
-  "descText": "My own vision of an organization app. Written as a responsive web application, designed for smartphones. Away from routine, towards a custom interface and simple operation. No overloaded menus, settings, or options. Only the essentials at the core, in an easy-to-use UI. Mostly everything within thumb reach. Currently in development – there is only the shopping list so far, which I will expand for more convenience.",
+  "descText": "My own vision of an organization app. Built as a responsive web application designed for smartphones. Moving away from routine toward a custom interface and simple usability. No overloaded menus, settings, or features. Only the essentials at the core, presented in an easy-to-use UI. Mostly everything is within thumb reach. Currently in development – at the moment there is only a shopping list. App in development...",
   "implementHeader": "Implementation details",
-  "implementText": "Most of the time was spent thinking about the structure of the application. Frequent restructuring of the code without visible changes took up the majority of the time. After that came the creation of the landing page, sign-up, log-in, main menu, and the collection of ideas for further applications.",
+  "implementText": "Creating a scalable and extensible architecture. The main screen serves as the foundation with expandable feature modules. Integrating TailwindCSS and shadcn components. Firebase will later be replaced by a custom backend.",
   "durHeader": "Duration",
   "durTime": "In continuous development"
 },
+
 
       "schoolInfos": {
         "header": "School Infos",
