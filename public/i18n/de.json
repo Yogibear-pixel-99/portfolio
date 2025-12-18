@@ -60,7 +60,7 @@
       "simplify": {
         "header": "Simplify this life",
         "descHeader": "Beschreibung",
-        "descText": "Meine eigene Vision einer Organisierungs Anwendung. Geschrieben als responsive Web Anwendung, ausgelegt für Smartphones. Weg von der Routine, hin zu einem eigenen Interface und einer einfachen Bedienung. Keine überladenen Menüs, Einstellungen und Möglichkeiten. Nur das Wichtigste im Kern, in einem einfach zu bedienenden UI. Großteils alles im Daumenbereich. Aktuell in der Entwicklung - es gibt momentan nur die Einkaufsliste. App in Entwicklung...",
+        "descText": "Meine eigene Vision einer Organisierungs Anwendung. Geschrieben als responsive Web Anwendung, ausgelegt für Smartphones. Keine überladenen Menüs, Einstellungen und Möglichkeiten. Nur das Wichtigste im Kern, in einem einfach zu bedienenden UI. Großteils alles im Daumenbereich. Aktuell in der Entwicklung - es gibt momentan nur die Einkaufsliste. App in Entwicklung...",
         "implementHeader": "Implementierungsdetails",
         "implementText": "Erstellen einer skalierbaren und erweiterbaren Architektur. Der Main Screen als Basis mit den erweiterbaren Featuremodulen. Intergrieren von TailwindCSS und shadcn Komponenten. Firebase wird später durch ein eigenes Back End ersetzt.",
         "durHeader": "Dauer",

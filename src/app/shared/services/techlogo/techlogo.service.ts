@@ -21,7 +21,7 @@ export class TechlogoService {
     {name : "Firebase", imgPath : "images/skills/techlogos/firebase.png", imgAltText: "Firebase Logo"},
     {name : "Scrum", imgPath : "images/skills/techlogos/scrum.png", imgAltText: "Scrum Logo"},
     {name : "Angular", imgPath : "images/skills/techlogos/angular.png", imgAltText: "Angular Logo"},
-    {name : "Material Design", imgPath : "images/skills/techlogos/material.png", imgAltText: "Material Design Logo"},
+    // {name : "Material Design", imgPath : "images/skills/techlogos/material.png", imgAltText: "Material Design Logo"},
     
   ]
 
