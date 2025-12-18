@@ -56,13 +56,23 @@
         "durHeader": "Duration",
         "durTime": "Five Weeks"
       },
-      "schoolInfos" :{
-        "header" : "School Infos",
-        "descHeader" : "Description",
-        "descText" : "An information page for the parents of our school kids. All informations, appointments, holidays and open house from the middleschools on one page. It was built to solve a small issue some parents had.",
+"simplify": {
+  "header": "Simplify this life",
+  "descHeader": "Description",
+  "descText": "My own vision of an organization app. Written as a responsive web application, designed for smartphones. Away from routine, towards a custom interface and simple operation. No overloaded menus, settings, or options. Only the essentials at the core, in an easy-to-use UI. Mostly everything within thumb reach. Currently in development – there is only the shopping list so far, which I will expand for more convenience.",
+  "implementHeader": "Implementation details",
+  "implementText": "Most of the time was spent thinking about the structure of the application. Frequent restructuring of the code without visible changes took up the majority of the time. After that came the creation of the landing page, sign-up, log-in, main menu, and the collection of ideas for further applications.",
+  "durHeader": "Duration",
+  "durTime": "In continuous development"
+},
+
+      "schoolInfos": {
+        "header": "School Infos",
+        "descHeader": "Description",
+        "descText": "An information page for the parents of our school kids. All informations, appointments, holidays and open house from the middleschools on one page. It was built to solve a small issue some parents had.",
         "implementHeader": "Implementation Details",
         "implementText": "Created section by section with React components basic and vite, no other libraries or imports. Just clean",
-        "durHeader" : "Duration",
+        "durHeader": "Duration",
         "durTime": "One Week"
       }
     }
@@ -190,18 +200,18 @@
       "source": "Source"
     }
   },
-    "imprint": {
-      "header": "Legal Notice",
-      "info": "Information about the service provider",
-      "phoneText" : "Phone: ",
-      "liabilityHeader": "Liability for Content on This Website",
-      "liabilityText": "We strive to keep the content on this website up to date and accurate. However, we cannot guarantee the completeness, correctness, or timeliness of all information, especially that provided by third parties. As a service provider, we are not obligated to monitor transmitted or stored information or investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information in accordance with general laws remain unaffected, even if we are not responsible for the content. If you notice any problematic or unlawful content, please inform us promptly. Our contact details can be found in this legal notice.",
-      "linksHeader": "Liability for External Links",
-      "linksText": "This website contains links to external websites. We are not responsible for the content of those websites. Liability cannot be assumed, as we had no knowledge of any illegal activities at the time of linking and such activities have not come to our attention. If we become aware of any unlawful links, we will remove them immediately. Should you discover any such links, please notify us. You will find our contact details in the legal notice.",
-      "copyrightHeader": "Copyright Notice",
-      "copyrightText": "All content on this website (texts, images, videos, etc.) is protected by copyright. Please contact us before using, copying, or distributing any content – for example, by republishing it on other websites. We reserve the right to take legal action against unauthorized use of any part of our content. If you find any material that infringes copyright, please let us know.",
-      "onlineLinksHeader": "Additional Online Profiles",
-      "onlineLinksSubText": "This legal notice also applies to",
-      "onlineLinksText": "All content is protected by copyright"
-    }
+  "imprint": {
+    "header": "Legal Notice",
+    "info": "Information about the service provider",
+    "phoneText": "Phone: ",
+    "liabilityHeader": "Liability for Content on This Website",
+    "liabilityText": "We strive to keep the content on this website up to date and accurate. However, we cannot guarantee the completeness, correctness, or timeliness of all information, especially that provided by third parties. As a service provider, we are not obligated to monitor transmitted or stored information or investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information in accordance with general laws remain unaffected, even if we are not responsible for the content. If you notice any problematic or unlawful content, please inform us promptly. Our contact details can be found in this legal notice.",
+    "linksHeader": "Liability for External Links",
+    "linksText": "This website contains links to external websites. We are not responsible for the content of those websites. Liability cannot be assumed, as we had no knowledge of any illegal activities at the time of linking and such activities have not come to our attention. If we become aware of any unlawful links, we will remove them immediately. Should you discover any such links, please notify us. You will find our contact details in the legal notice.",
+    "copyrightHeader": "Copyright Notice",
+    "copyrightText": "All content on this website (texts, images, videos, etc.) is protected by copyright. Please contact us before using, copying, or distributing any content – for example, by republishing it on other websites. We reserve the right to take legal action against unauthorized use of any part of our content. If you find any material that infringes copyright, please let us know.",
+    "onlineLinksHeader": "Additional Online Profiles",
+    "onlineLinksSubText": "This legal notice also applies to",
+    "onlineLinksText": "All content is protected by copyright"
+  }
 }

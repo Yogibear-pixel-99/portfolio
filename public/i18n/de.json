@@ -56,16 +56,26 @@
         "durHeader": "Dauer",
         "durTime": "6 Wochen"
       },
-      "schoolInfos": {
-  "header": "Schoolinfos",
-  "descHeader": "Beschreibung",
-  "descText": "Eine Informationsseite für die Eltern unserer Schulkinder. Alle Informationen, Termine, Ferien und Tage der offenen Tür der Mittelschulen auf einer Seite. Sie wurde entwickelt, um ein kleines Problem zu lösen, das einige Eltern beschäftigte.",
-  "implementHeader": "Implementierungsdetails",
-  "implementText": "Abschnitt für Abschnitt mit grundlegenden React-Komponenten erstellt, ohne weitere Bibliotheken oder Imports. Einfach und sauber.",
-  "durHeader": "Dauer",
-  "durTime": "Eine Woche"
-}
 
+      "simplify": {
+        "header": "Simplify this life",
+        "descHeader": "Beschreibung",
+        "descText": "Meine eigene Vision einer Organisierungs Anwendung. Geschrieben als responsive Web Anwendung, ausgelegt für Smartphones. Weg von der Routine, hin zu einem eigenen Interface und einer einfachen Bedienung. Keine überladenen Menüs, Einstellungen und Möglichkeiten. Nur das Wichtigste im Kern, in einem einfach zu bedienenden UI. Großteils alles im Daumenbereich. Aktuell in der Entwicklung - es gibt momentan nur die Einkaufsliste. App in Entwicklung...",
+        "implementHeader": "Implementierungsdetails",
+        "implementText": "Erstellen einer skalierbaren und erweiterbaren Architektur. Der Main Screen als Basis mit den erweiterbaren Featuremodulen. Intergrieren von TailwindCSS und shadcn Komponenten. Firebase wird später durch ein eigenes Back End ersetzt.",
+        "durHeader": "Dauer",
+        "durTime": "In ständiger Weiterentwicklung"
+      },
+
+      "schoolInfos": {
+        "header": "Schoolinfos",
+        "descHeader": "Beschreibung",
+        "descText": "Eine Informationsseite für die Eltern unserer Schulkinder. Alle Informationen, Termine, Ferien und Tage der offenen Tür der Mittelschulen auf einer Seite. Sie wurde entwickelt, um ein kleines Problem zu lösen, das einige Eltern beschäftigte.",
+        "implementHeader": "Implementierungsdetails",
+        "implementText": "Abschnitt für Abschnitt mit grundlegenden React-Komponenten erstellt, ohne weitere Bibliotheken oder Imports. Einfach und sauber.",
+        "durHeader": "Dauer",
+        "durTime": "Eine Woche"
+      }
     }
   },
   "thoughts": {
@@ -120,7 +130,7 @@
         "firstPart": "Ich habe die",
         "privacyPart": " Datenschutzerklärung ",
         "lastPart": "gelesen und akzeptiere die Verarbeitung meiner Daten wie beschrieben.",
-"placeholder": "Bitte die Datenschutzerklärung akzeptieren",
+        "placeholder": "Bitte die Datenschutzerklärung akzeptieren",
         "error": "Bitte die Datenschutzerklärung akzeptieren"
       }
     },
@@ -194,7 +204,7 @@
   "imprint": {
     "header": "Impressum",
     "info": "Angaben zum Diensteanbieter",
-      "phoneText" : "Tel.: ",
+    "phoneText": "Tel.: ",
     "liabilityHeader": "Haftung für den Inhalte dieser Seite",
     "liabilityText": "Wir sind stets bemüht, die Inhalte dieser Website aktuell und korrekt zu halten. Dennoch können wir keine Gewähr für die Vollständigkeit, Richtigkeit und Aktualität sämtlicher Inhalte übernehmen, insbesondere nicht für solche, die von Dritten stammen. Als Anbieter von Diensten sind wir nicht verpflichtet, übermittelte oder gespeicherte Informationen zu überwachen oder nach Hinweisen auf rechtswidrige Aktivitäten zu suchen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen gemäß den allgemeinen Gesetzen bleiben hiervon unberührt – auch wenn wir nicht für den Inhalt verantwortlich sind. Wenn Ihnen problematische oder rechtswidrige Inhalte auffallen, bitten wir Sie, uns rasch zu informieren. Die entsprechenden Kontaktdaten finden Sie im Impressum.",
     "linksHeader": "Externe Links auf dieser Seite",

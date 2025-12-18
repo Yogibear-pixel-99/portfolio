@@ -78,10 +78,10 @@
 
     <div class="project-wrapper" data-aos="fade-right">
       <app-project-overview
-        [imgPath]="'images/projects/school-infos.webp'"
-        [imgAltText]="'school infos image'"
-        [translateHeaderPath]="'projects.projectDetails.schoolInfos.header'"
-        [translateTextPath]="'projects.projectDetails.schoolInfos.descText'"
+        [imgPath]="'images/projects/simplify-main-screen.webp'"
+        [imgAltText]="'simplify this life screen'"
+        [translateHeaderPath]="'projects.projectDetails.simplify.header'"
+        [translateTextPath]="'projects.projectDetails.simplify.descText'"
         [animate]="false"
       >
         <app-project-link-button
@@ -102,12 +102,34 @@
           [linkHref]="'project-details'"
         ></app-project-link-button>
       </div>
-      <!-- <img
-        src="images/projects/Sticker.png"
-        alt="featured project sticker"
-        data-aos="fade"
-        data-aos-delay="400"
-      /> -->
-    </div>
+      </div>
+      <div class="project-wrapper" data-aos="fade-right">
+        <app-project-overview
+          [imgPath]="'images/projects/school-infos.webp'"
+          [imgAltText]="'school infos image'"
+          [translateHeaderPath]="'projects.projectDetails.schoolInfos.header'"
+          [translateTextPath]="'projects.projectDetails.schoolInfos.descText'"
+          [animate]="false"
+        >
+          <app-project-link-button
+            [projPos]="'3'"
+            class="display-none-touch-device display-hide-768px-width"
+            [translateText]="'projects.buttonText'"
+            [color]="'light-button'"
+            [linkHref]="'project-details'"
+          ></app-project-link-button>
+        </app-project-overview>
+        <div
+          class="display-block-touch-device display-block-768px-width touch-button"
+        >
+          <app-project-link-button
+            [projPos]="'3'"
+            [translateText]="'projects.buttonText'"
+            [color]="'dark-button'"
+            [linkHref]="'project-details'"
+          ></app-project-link-button>
+        </div>
+      </div>
+    
   </section>
 </div>
