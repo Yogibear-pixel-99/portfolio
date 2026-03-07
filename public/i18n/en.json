@@ -59,9 +59,13 @@
 "simplify": {
   "header": "Simplify this life",
   "descHeader": "Description",
-  "descText": "My own vision of an organization app. Built as a responsive web application designed for smartphones. Moving away from routine toward a custom interface and simple usability. No overloaded menus, settings, or features. Only the essentials at the core, presented in an easy-to-use UI. Mostly everything is within thumb reach. Currently in development – at the moment there is only a shopping list. App in development...",
+  "descText": "My own vision of an organization app. Built as a responsive web application designed for smartphones. Moving away from routine toward a custom interface and simple usability. No overloaded menus, settings, or features. Only the essentials at the core, presented in an easy-to-use UI. Mostly everything is within thumb reach. Currently in development – at the moment there is a shopping list and a todo list with priorities.",
   "implementHeader": "Implementation details",
-  "implementText": "Creating a scalable and extensible architecture. The main screen serves as the foundation with expandable feature modules. Integrating TailwindCSS and shadcn components. Firebase will later be replaced by a custom backend.",
+  "implementText": "Creating a scalable and extensible architecture. The main screen serves as the foundation with expandable feature modules. Firebase will later be replaced by a custom backend. UPDATE 18.01.2025 - ToDo list feature implemented",
+  "implementUpdateToDo": "UPDATE 18.01.2025 - Completions implemented",
+  "implementUpdateToDoInfo": "Create tasks. Long-term, short-term, for work. Set priorities. Edit and move to trash.",
+  "implementUpdateFinance": "UPDATE 07.03.2025 - Finance overview implemented",
+  "implementUpdateFinanceText": "Enter and edit monthly income and expenses. Log daily expenses with name and category. Overview of the available amount for the current day. Calculated based on the entered data and the current month. Past data can be accessed when the month changes.",
   "durHeader": "Duration",
   "durTime": "In continuous development"
 },

@@ -36,7 +36,7 @@ export class ProjectDetailsService {
     simplify: {
       img: 'images/projects/project-details/simplify/simplify-details-screen.webp',
       sticker: 'images/projects/project-details/Sticker.png',
-      usedTechs: ['html', 'scss', 'typescript', 'react', 'next', 'firebase', 'tailwind'],
+      usedTechs: ['html', 'scss', 'typescript', 'react', 'next', 'firebase', 'tailwind css'],
       gitButtonLink: 'https://github.com/Yogibear-pixel-99/simplifythislife',
       liveTestLink: 'https://www.puercherjoachim.com/simplify/',
     },

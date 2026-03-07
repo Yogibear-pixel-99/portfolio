@@ -60,9 +60,13 @@
       "simplify": {
         "header": "Simplify this life",
         "descHeader": "Beschreibung",
-        "descText": "Meine eigene Vision einer Organisierungs Anwendung. Geschrieben als responsive Web Anwendung, ausgelegt für Smartphones. Keine überladenen Menüs, Einstellungen und Möglichkeiten. Nur das Wichtigste im Kern, in einem einfach zu bedienenden UI. Großteils alles im Daumenbereich. Aktuell in der Entwicklung - es gibt momentan nur die Einkaufsliste. App in Entwicklung...",
+        "descText": "Meine eigene Vision einer Organisierungs Anwendung. Geschrieben als responsive Web Anwendung, ausgelegt für Smartphones. Keine überladenen Menüs, Einstellungen und Möglichkeiten. Nur das Wichtigste im Kern, in einem einfach zu bedienenden UI. Großteils alles im Daumenbereich.",
         "implementHeader": "Implementierungsdetails",
-        "implementText": "Erstellen einer skalierbaren und erweiterbaren Architektur. Der Main Screen als Basis mit den erweiterbaren Featuremodulen. Intergrieren von TailwindCSS und shadcn Komponenten. Firebase wird später durch ein eigenes Back End ersetzt.",
+        "implementText": "Erstellen einer skalierbaren und erweiterbaren Architektur. Der Main Screen als Basis mit den erweiterbaren Featuremodulen. Firebase wird später durch ein eigenes Back End ersetzt.",
+        "implementUpdateToDo": "UPDATE 18.01.2025 - Erledigungen implementiert",
+        "implementUpdateToDoInfo": "Erledigungen erstellen. Langfristige, Kurzfristige, für die Arbeit. Mit Prioritäten versehen. Editieren und in den Papierkorb verschieben.",
+        "implementUpdateFinance": "UPDATE 07.03.2025 - Finanzübersicht implementiert",
+        "implementUpdateFinanceText": "Monatliche Ein- und Ausgaben eingeben und editieren. Tägliche Ausgaben mit Name und Kategorie eintragen. Übersicht des am aktuellen Tag zur Verfügung stehenden Betrages. Kalkuliert anhand der eingegebenen Daten und des aktuellen Monats. Bei Monatswechsel, aufrufen der vergangenen Daten möglich.",
         "durHeader": "Dauer",
         "durTime": "In ständiger Weiterentwicklung"
       },

@@ -11,4 +11,13 @@ import { ProjectDetailsService } from '../../../../shared/services/project-detai
 export class LeftContentComponent {
   public translate = inject(TranslateService);
   public projectService = inject(ProjectDetailsService);
+  public activeUpdatePopup: string | null = null;
+
+  openPopup(infoKey: string) {
+    this.activeUpdatePopup = infoKey;
+  }
+
+  closePopup() {
+    this.activeUpdatePopup = null;
+  }
 }

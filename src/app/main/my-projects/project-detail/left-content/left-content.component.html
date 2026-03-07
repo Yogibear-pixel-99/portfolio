@@ -24,6 +24,16 @@
       <span class="h4-text-typo">{{
         `projects.projectDetails.${projectService.projectArr[projectService.projectPos]}.implementText` | translate
       }}</span>
+      @if(projectService.projectPos === 2) {
+        <div class="update-entries-wrapper">
+          <span class="update-entry h4-text-typo" (click)="openPopup('implementUpdateToDoInfo')">
+            {{ 'projects.projectDetails.simplify.implementUpdateToDo' | translate }}
+          </span>
+          <span class="update-entry h4-text-typo" (click)="openPopup('implementUpdateFinanceText')">
+            {{ 'projects.projectDetails.simplify.implementUpdateFinance' | translate }}
+          </span>
+        </div>
+      }
     </div>
     <div class="dur-wrapper">
       <span class="project-detail-button">{{
@@ -43,3 +53,12 @@
     </div>
   </div>
 </div>
+
+@if(activeUpdatePopup) {
+  <div class="popup-overlay" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+      <button class="popup-close" (click)="closePopup()">✕</button>
+      <p class="h4-text-typo">{{ ('projects.projectDetails.simplify.' + activeUpdatePopup) | translate }}</p>
+    </div>
+  </div>
+}
